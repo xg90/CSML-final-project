@@ -1,0 +1,4002 @@
+[
+  {
+    "NL": "Some movies are filmed in New York.",
+    "FOL": "∃x (FilmedIn(x, newYork))"
+  },
+  {
+    "NL": "James wants to have a long vacation.",
+    "FOL": "WantlongVacation(james)"
+  },
+  {
+    "NL": "All workers are human.",
+    "FOL": "∀x (Worker(x) → Human(x))"
+  },
+  {
+    "NL": "Phuoc Binh is not managed by the Ministry of Agriculture.",
+    "FOL": "¬Mangedby(phuocBinh, ministryofAgriculture)"
+  },
+  {
+    "NL": "A roundel is a rounded artillery fortification.",
+    "FOL": "∀x (Roundel(x) → Rounded(x) ∧ ArtilleryFortification(x))"
+  },
+  {
+    "NL": "Peter Parker is a either a superhero or a civilian.",
+    "FOL": "Superhero(peter) ⊕ Civilian(peter)"
+  },
+  {
+    "NL": "If Guan sent an athlete to the Calgary Winter Olympics, then it participated in the Calgary Winter Olympics.",
+    "FOL": "SendAthletes(guam) → ParticipatedIn(guam, winterolympics)"
+  },
+  {
+    "NL": "All devices belonging to employees are connected to the company's wifi.",
+    "FOL": "∀x (Employee(x) → Wifi(x))"
+  },
+  {
+    "NL": "Thomas Barber was an English professional footballer.",
+    "FOL": "English(thomasBarber) ∧ ProfessionalFootballer(thomasBarber)"
+  },
+  {
+    "NL": "Boves is served by regional TER Hauts-de-France trains.",
+    "FOL": "Serve(hautsDeFrance, boves)"
+  },
+  {
+    "NL": "All people who eat salads regularly are very conscious about their health and eating habits.",
+    "FOL": "∀x (Salad(x) → HealthyHabits(x))"
+  },
+  {
+    "NL": "Jack either does not hire a maid or cleaning service or, if he does, then he does not own at least one pet.",
+    "FOL": "¬(HireCleaning(jack) ⊕ OwnPet(jack))"
+  },
+  {
+    "NL": "The 2028 Summer Olympics is scheduled to take place in Los Angeles(LA).",
+    "FOL": "SummerOlympicsCity(y2028, la)"
+  },
+  {
+    "NL": "Rose is a human or Jerry is a manager.",
+    "FOL": "Human(rose) ∨ Manager(jerry)"
+  },
+  {
+    "NL": "If George likes music, he wants to compose.",
+    "FOL": "LikesMusic(george) → WantsToCompose(george)"
+  },
+  {
+    "NL": "Coursing involves spectators betting on a hare being pursued by greyhounds.",
+    "FOL": "∀x ∃y ∃z (Coursing(x) → Hare(y) ∧ SpectatorsBetOn(x, y) ∧ GreyHound(z) ∧ Pursue(z, y))"
+  },
+  {
+    "NL": "If a person coach a football club, the person is a football coach.",
+    "FOL": "∀x ∀y (Coach(x, y) ∧ IsFootballClub(y) → IsFootballCoach(x))"
+  },
+  {
+    "NL": "All households with a high net income have people who have parents who are very busy with their regular jobs.",
+    "FOL": "∀x (HighIncome(x) → BusyParents(x))"
+  },
+  {
+    "NL": "Peter is either a foodie who goes out frequently to find new food restaurants to try or belongs to a household with a high net income.",
+    "FOL": "Foodie(peter) ∨ HighIncome(peter)"
+  },
+  {
+    "NL": "If someone is an introvert, then they are shy and reticent.",
+    "FOL": "∀x (Introverts(x) → ShyAndReticentPerson(x))"
+  },
+  {
+    "NL": "Charlie has a naughty pet dog named Leo.",
+    "FOL": "HasPet(charlie) ∧ Pet(leo) ∧ Dog(leo) ∧ Naughty(leo)"
+  },
+  {
+    "NL": "Intro Microeconomics is the only prerequisite for Intermediate Microeconomics.",
+    "FOL": "(Prereq(intromicro, intermediatemicro) ∧ Taken(intromicro)) → CanTake(intermediatemicro)"
+  },
+  {
+    "NL": "Badults piloted in July 2013 on BBC Three.",
+    "FOL": "PilotedIn(badults, july2013) ∧ PilotedOn(badults, bbcthree)"
+  },
+  {
+    "NL": "Some bears are in zoos.",
+    "FOL": "∃x (Bear(x) ∧ InZoo(x))"
+  },
+  {
+    "NL": "Platypus have no teeth.",
+    "FOL": "¬Have(platypus, teeth)"
+  },
+  {
+    "NL": "Evangelos Eleftheriou is a Greek electrical engineer.",
+    "FOL": "Greek(evangeloseleftheriou) ∧ ElectricalEngineer(evangeloseleftheriou)"
+  },
+  {
+    "NL": "2000$ is more than $1500.",
+    "FOL": "∀x (TomRent(x) ↔ (ManagedBuilding(x) ∧ AllowPet(x) ∧ DepositNoMoreThan1500(x)))"
+  },
+  {
+    "NL": "There are five grades including A+, A, B+, B, and C in English.",
+    "FOL": "Grade(a+) ∨ Grade(a) ∨ Grade(b+) ∨ Grade(b) ∨ Grade(c)"
+  },
+  {
+    "NL": "If something eats, then it is not a plant.",
+    "FOL": "∀x (Eat(x) → ¬Plant(x))"
+  },
+  {
+    "NL": "Machine translation is a natural language processing task.",
+    "FOL": "NLP(machineTranslation)"
+  },
+  {
+    "NL": "Customers either subscribe to AMC service or HBO service.",
+    "FOL": "∀x (AMC(x) ∨ HBO(x))"
+  },
+  {
+    "NL": "KO is a mature company’s stock.",
+    "FOL": "MatureCompanies’Stocks(kO)"
+  },
+  {
+    "NL": "All video games supporting users to simulate playing soccer games online are in the FIFA series.",
+    "FOL": "∀x (SoccerOnline(x) → FIFA(x))"
+  },
+  {
+    "NL": "Captain America does not come from DC universe.",
+    "FOL": "¬ComeFrom(captain america, dc universe)"
+  },
+  {
+    "NL": "Some federal districts of Russia were established in 2000.",
+    "FOL": "∃x (FederalDistrictOfRussia(x) → EstablishedIn(x, 2000))"
+  },
+  {
+    "NL": "No watch that is battery-powered is automatic.",
+    "FOL": "∀x (BatteryPoweredWatch(x) → ¬AutomaticWatch(x))"
+  },
+  {
+    "NL": "Ben is either yellow and ugly or neither yellow nor ugly.",
+    "FOL": "(Yellow(ben) ∧ Ugly(ben)) ⊕ (¬Yellow(ben) ∧ ¬Ugly(ben))"
+  },
+  {
+    "NL": "Guam has participated in the Winter Olympics.",
+    "FOL": "ParticipatedIn(guam, winterolympics)"
+  },
+  {
+    "NL": "Quiksilver sells sportswear, clothing, footwear, and accessories.",
+    "FOL": "∀x (QuiksilverSells(x) → Sportswear(x) ∨ Clothing(x) ∨ Footwear(x) ∨ Accessory(x))"
+  },
+  {
+    "NL": "Most passengers on flights to Seattle from New York City are not in first class.",
+    "FOL": "∃x (¬InFirstClass(x) ∧ TravelingFrom(x, newyorkcity) ∧ TravelingTo(x, seattle))"
+  },
+  {
+    "NL": "G-910 is either displayed on the homepage or cheaper.",
+    "FOL": "¬(DisplayedInHomepage(g910) ⊕ Cheaper(g910))"
+  },
+  {
+    "NL": "Family History is a novel written in 2003.",
+    "FOL": "IsNovel(family_History) ∧ WrittenIn(family_History, y2003)"
+  },
+  {
+    "NL": "Platypus are mammals with no teeth.",
+    "FOL": "Mammal(platypus) ∧ ¬Have(platypus, teeth)"
+  },
+  {
+    "NL": "If a band writes a album winning an award, then this band wins this award.",
+    "FOL": "∀x ∀y ∀z (AlbumByBand(x, y) ∧ AlbumAward(x, z) → RockBandAward(y, z))"
+  },
+  {
+    "NL": "If people have a lot of commitments they voluntarily signed up for, then they are hardworking individuals with high ambitions and goals for the future.",
+    "FOL": "∀x (Committments(x) → Hardworking(x))"
+  },
+  {
+    "NL": "William Dickinson supported the Portland Whigs.",
+    "FOL": "Supported(williamdickinson, portlandwhigs)"
+  },
+  {
+    "NL": "Neapolitan Chronicles is an English book.",
+    "FOL": "Book(neapolitanchronicles) ∧ In(neapolitanchronicles, english)"
+  },
+  {
+    "NL": "1984 is not a streaming service.",
+    "FOL": "¬StreamingService(y1984)"
+  },
+  {
+    "NL": "Breaking Bad is not a reality TV show.",
+    "FOL": "¬RealityTVShow(breakingbad)"
+  },
+  {
+    "NL": "Leon is not studying or a researcher.",
+    "FOL": "¬Study(leon) ⊕ Researcher(leon)"
+  },
+  {
+    "NL": "The SAT test is intended to assess student's readiness for college.",
+    "FOL": "Test(sat, readiness)"
+  },
+  {
+    "NL": "There is a national park in Vietnam classified as a UNESCO World Heritage Site.",
+    "FOL": "∃x (NationalPark(x) ∧ Locatedin(x, vietnam) ∧ UNESCOWorldHeritageSite(x))"
+  },
+  {
+    "NL": "People are either fascinated by the history of the Renaissance and other past eras, or are not nostalgic academics who enjoy learning.",
+    "FOL": "∀x (HistoryRenaissance(x) ∨ NotAcademics(x))"
+  },
+  {
+    "NL": "People either order a lot of Amazon packages or are environmentally conscious.",
+    "FOL": "∀x (Amazon(x) ⊕ Environmental(x))"
+  },
+  {
+    "NL": "All Romance languages are Indo-European languages.",
+    "FOL": "∀x (RomanceLanguage(x) → IndoEuropeanLanguage(x))"
+  },
+  {
+    "NL": "If Nike is clothes, then Nike is perfect and a dress.",
+    "FOL": "Clothes(nike) → Perfect(nike) ∧ Dress(nike)"
+  },
+  {
+    "NL": "Some monitors equipped in the lab are produced by the company named AOC.",
+    "FOL": "∃x (Lab(x) ∧ AOC(x))"
+  },
+  {
+    "NL": "No mass product design is timeless.",
+    "FOL": "∀x (MassProductDesign(x) → ¬Timeless(x))"
+  },
+  {
+    "NL": "It cost below US $300 to take the GRE test.",
+    "FOL": "CostBelow300(gre)"
+  },
+  {
+    "NL": "All planes are empty.",
+    "FOL": "∀x (Plane(x) → Empty(x))"
+  },
+  {
+    "NL": "The first automobiles built by Carrozzeria Colli were racing cars.",
+    "FOL": "∀x (FirstAutomobilesBy(x, carrozzeriacolli) → Racingcar(x))"
+  },
+  {
+    "NL": "The video game named “Be Lionel” is in the Pokemon series or supports users to simulate playing football games online.",
+    "FOL": "Pokemon(belionel) ⊕ SoccerOnline(belionel)"
+  },
+  {
+    "NL": "Ainderby Quernhow is a village and civil parish in the Hambleton District.",
+    "FOL": "∀x (AinderbyQuernhow(x) → Village(x) ∧ CivilParish(x) ∧ Hambleton(x))"
+  },
+  {
+    "NL": "Dominique does not live in Europe.",
+    "FOL": "∀x (DominiqueLive(x) → ¬Europe(x))"
+  },
+  {
+    "NL": "Harry either yells and flies, or neither yells nor flies.",
+    "FOL": "(Yell(harry) ∧ Fly(harry)) ⊕ (¬Yell(harry) ∧ ¬Fly(harry))"
+  },
+  {
+    "NL": "Cristiano Ronaldo can use his right foot very efficiently.",
+    "FOL": "Efficient(ronaldo, right)"
+  },
+  {
+    "NL": "Michael can block any shooting from a person as long as the person does not jump when shooting.",
+    "FOL": "∀x (¬JumpWhenShooting(x) → CanBlock(michael, x))"
+  },
+  {
+    "NL": "Museum ships are open to the public.",
+    "FOL": "∀x (MuseumShip(x) → OpenToPublic(x))"
+  },
+  {
+    "NL": "James does not attend the conference in person and is not provided with souvenirs.",
+    "FOL": "¬(InPerson(james) ∧ Souvenirs(james))"
+  },
+  {
+    "NL": "Stonefish is a fish.",
+    "FOL": "Fish(stonefish)"
+  },
+  {
+    "NL": "A Greyhound is not a Boeing 707.",
+    "FOL": "¬Boeing707(greyhound)"
+  },
+  {
+    "NL": "If Ted is a cow, then Ted is not a pet.",
+    "FOL": "Cow(ted) → ¬Pet(ted)"
+  },
+  {
+    "NL": "If people grew up as only children with no siblings, then they tidy their spaces consistently and enjoy the process of cleaning.",
+    "FOL": "∀x (OnlyChild(x) → Tidy(x))"
+  },
+  {
+    "NL": "If a man is taller than another man, the taller one can block the other's shooting.",
+    "FOL": "∀x ∀y (IsMan(x) ∧ IsMan(y) ∧ Taller(x, y) → CanBlock(x, y))"
+  },
+  {
+    "NL": "If people have high ambitions and future career goals, then they can pack and move out of their rooms very easily.",
+    "FOL": "∀x (Ambitious(x) → MoveOut(x))"
+  },
+  {
+    "NL": "If people make their own matcha teas every morning with ceremonial-grade matcha powder, then they do not wake up late and start their schedules past noon regularly.",
+    "FOL": "∀x (Matcha(x) → ¬Late(x))"
+  },
+  {
+    "NL": "Roy Richardson was old when he debuted in cricket.",
+    "FOL": "Old(royrichardson) ∧ DebutedIn(royrichardson, cricket)"
+  },
+  {
+    "NL": "The Emmet Building was built in 1915.",
+    "FOL": "∀x (Emmet(x) → Construct(x, year1915))"
+  },
+  {
+    "NL": "Monkeypox is an infectious disease caused by the monkeypox virus.",
+    "FOL": "∃x (OccurMonkeypoxVirus(x) ∧ GetMonkeypox(x))"
+  },
+  {
+    "NL": "All Mac are OS.",
+    "FOL": "∀x (Mac(x) → OS(x))"
+  },
+  {
+    "NL": "No fruits shipped from Columbia are fruits sold in New York.",
+    "FOL": "∀x (ShippedFromColumbia(x) → ¬SoldNewYork(x))"
+  },
+  {
+    "NL": "All fruits sold in Boston are shipped from Columbia.",
+    "FOL": "∀x (SoldBoston(x) → ShippedFromColumbia(x))"
+  },
+  {
+    "NL": "Some companies’ stocks are growth companies’ stocks.",
+    "FOL": "∃x (Companies’Stocks(x) ∧ GrowthCompanies’Stocks(x))"
+  },
+  {
+    "NL": "Dani Shapiro is an American writer.",
+    "FOL": "IsAmerican(dani_Shapiro) ∧ IsWriter(dani_Shapiro)"
+  },
+  {
+    "NL": "One of the actors from Hamilton won the best actor award.",
+    "FOL": "∃x (Actor(x) ∧ PlayedIn(x, hamilton) ∧ WonBestActorAward(x))"
+  },
+  {
+    "NL": "Quincy McDuffie can catch many footballs easily.",
+    "FOL": "∃x (Football(x) ∧ CanCatch(quincymcduffie, x))"
+  },
+  {
+    "NL": "Beijing is located in Northern China.",
+    "FOL": "InNorthernChina(beijing)"
+  },
+  {
+    "NL": "Vacuums suck.",
+    "FOL": "∀x (Vacuum(x) → Suck(x))"
+  },
+  {
+    "NL": "If something is mild, then no lab tests or imaging is required.",
+    "FOL": "∀x (Mild(x) → ¬LabTestsOrImagingRequired(x))"
+  },
+  {
+    "NL": "Rappers release rap albums.",
+    "FOL": "ReleasedAlbum(tyga, wellDone3)"
+  },
+  {
+    "NL": "If a legislator is found guilty of stealing government funds, they will be suspended from office.",
+    "FOL": "∀x (IsLegislator(x) ∧ StealsFunds(x) → Suspended(x))"
+  },
+  {
+    "NL": "Common utilities include water, electricity, gas, heating, sewer, trash, and recycling.",
+    "FOL": "CommonUtilities(water) ∧ CommonUtilities(electricity) ∧ CommonUtilities(gas) ∧ CommonUtilities(heating)"
+  },
+  {
+    "NL": "All apples are fruits with the color red.",
+    "FOL": "∀x (Apple(x) → RedFruit(x))"
+  },
+  {
+    "NL": "Billings is a city in Montana.",
+    "FOL": "CityIn(billings, montana)"
+  },
+  {
+    "NL": "The rent of the apartment where Ava lives does not cover any utility expenses.",
+    "FOL": "∀x (¬Cover(ava, x))"
+  },
+  {
+    "NL": "Joe's vehicle registration plate is from Istanbul.",
+    "FOL": "Vehicleregistrationplate(joe, istanbul)"
+  },
+  {
+    "NL": "All birds fly.",
+    "FOL": "∀x  (Bird (x)→  Fly (x))"
+  },
+  {
+    "NL": "Phoenix's album \"Wolfgang Amadeus Phoenix\" sold over 500,000 copies.",
+    "FOL": "Album(wolfgangamadeusphoenix) ∧ IsAlbumOf(wolfgangamadeusphoenix, phoenix) ∧ SoldOver(wolfgangamadeusphoenix, l500000)"
+  },
+  {
+    "NL": "If a Netflix show is popular, Karen will binge-watch it.",
+    "FOL": "∀x ((NetflixShow(x) ∧ Popular(x)) → BingeWatch(karen, x))"
+  },
+  {
+    "NL": "Ailton Silva, born in 1995, is commonly known as Ailton.",
+    "FOL": "BornIn(ailtonsilva, y1995) ∧ CommonlyKnownAs(ailtonsilva, ailton)"
+  },
+  {
+    "NL": "All popular things are well-known.",
+    "FOL": "∀x (Popular(x) → WellKnown(x))"
+  },
+  {
+    "NL": "All cats are mammals.",
+    "FOL": "∀x (Cat(x) → Mammal(x))"
+  },
+  {
+    "NL": "The Golden State Warriors won the NBA finals.",
+    "FOL": "Won(goldenstatewarriors, nbafinals)"
+  },
+  {
+    "NL": "All people who attend weddings are getting married or have friends who are getting married.",
+    "FOL": "∀x Weddings(x) → GettingMarried(x)"
+  },
+  {
+    "NL": "Walter Folger Brown was an American politician and lawyer, and served as the postmaster general.",
+    "FOL": "AmericanPolitician(walterbrown) ∧ Lawyer(walterbrown) ∧ ServedAs(walterbrown, postamastergeneral)"
+  },
+  {
+    "NL": "Subway has a rating greater than 9 or is popular among local residents.",
+    "FOL": "RatingGreaterThan9(subway) ⊕ PopularAmongLocalResidents(subway)"
+  },
+  {
+    "NL": "All books written by Cixin Liu have sold more than 1 million copies.",
+    "FOL": "∀x (Book(x) ∧ WrittenBy(x, cixinliu) → SoldMoreThan(x, onemillion))"
+  },
+  {
+    "NL": "If a person from a city on the East coast is traveling to a city on the west coast, they will be on a long flight.",
+    "FOL": "∀x ∀y ∀z ((TravelingFrom(x, y) ∧ On(y, eastcoast) ∧ TravelingTo(x, z) ∧ On(z, westcoast)) → OnLongFlight(x))"
+  },
+  {
+    "NL": "If Karen binge-watches a Netflix show, she will share it to Lisa.",
+    "FOL": "∀x ((NetflixShow(x) ∧ BingeWatch(karen, x)) → Share(x, lisa))"
+  },
+  {
+    "NL": "If an employee has lunch at home, then he/she is working remotely from home.",
+    "FOL": "∀x (LunchAtHome(x) → WorkRemotelyFromHome(x))"
+  },
+  {
+    "NL": "The University of Edinburgh is a university located in the United Kingdom.",
+    "FOL": "LocatedIn(universityofedinburgh, unitedkingdom) ∧ University(universityofedinburgh)"
+  },
+  {
+    "NL": "Homesick, Psyche and The Void are plays from Deborah Wallace.",
+    "FOL": "Play(homesick) ∧ From(homesick, deborahwallace) ∧ Play(psyche) ∧ From(psyche, deborahwallace) ∧ Play(thevoid) ∧ From(thevoid, deborahwallace)"
+  },
+  {
+    "NL": "Detroit City is a horse.",
+    "FOL": "Horse(detroitcity)"
+  },
+  {
+    "NL": "Zaha Hadid was born on 31 October 1950 in Baghdad, Iraq.",
+    "FOL": "BornIn(zahaHadid, y1950)"
+  },
+  {
+    "NL": "Dagfinn Aarskog is a Norwegian physician.",
+    "FOL": "Norwegian(dagfinnAarskog) ∧ Physician(dagfinnAarskog)"
+  },
+  {
+    "NL": "If the monitor has a type-c port, then it is not produced by AOC.",
+    "FOL": "∀x (TypeC(x) → ¬AOC(x))"
+  },
+  {
+    "NL": "If something is a plant, then it is not a cute animal.",
+    "FOL": "∀x (Plant(x) → ¬CuteAnimal(x))"
+  },
+  {
+    "NL": "If people want to work in the software engineering industry, then they practice coding questions.",
+    "FOL": "∀x Industry(x) → Coding(x)"
+  },
+  {
+    "NL": "At least one event is happy.",
+    "FOL": "∃x (Event(x) ∧ Happy(x))"
+  },
+  {
+    "NL": "Pets are allowed in some managed buildings.",
+    "FOL": "∃x (ManagedBuilding(x) ∧ AllowPet(x))"
+  },
+  {
+    "NL": "Beijing is the second largest Chinese city by urban population.",
+    "FOL": "SecondLargestChineseCity(beijing)"
+  },
+  {
+    "NL": "All animals from Australia are loved by tourists.",
+    "FOL": "∀x (AnimalsFromAustralia(x) → AnimalsLovedByTourists(x))"
+  },
+  {
+    "NL": "If Robin neither enjoys healthcare fields and wants to help people with medical issues nor grew up with parents who worked as doctors, then Robin is either a person who studies hard or grew up with parents who worked as doctors.",
+    "FOL": "¬(Healthcare(Robin) ∨ ParentDoctors(Robin)) → (Study(Robin) ∨ ParentDoctors(Robin))"
+  },
+  {
+    "NL": "Tower A is managed by the Yale Housing.",
+    "FOL": "YaleHousing(tower-a)"
+  },
+  {
+    "NL": "Everything that requires talent requires practice.",
+    "FOL": "∀x (RequiresTalent(x) → RequiresPractice(x))"
+  },
+  {
+    "NL": "People are either miserly and need to save a large portion of their income, or people that frivolously spend a lot of money every time they go out.",
+    "FOL": "∀x Miserly(x) ∨ Frivolous(x)"
+  },
+  {
+    "NL": "John is a student learning piano.",
+    "FOL": "Student(john) ∧ LearningPiano(john)"
+  },
+  {
+    "NL": "Basque is a Romance language.",
+    "FOL": "RomanceLanguage(basque)"
+  },
+  {
+    "NL": "A British is a European.",
+    "FOL": "∀x (British(x) → European(x))"
+  },
+  {
+    "NL": "Some chess players are grandmasters.",
+    "FOL": "∃x (IsChestPlayer(x) ∧ IsGrandMaster(x))"
+  },
+  {
+    "NL": "No sports cars are vehicles intended to be driven at moderate speeds.",
+    "FOL": "∀x (SportsCar(x) → ¬IntendedToBeDrivenAtModerateSpeeds(x))"
+  },
+  {
+    "NL": "If something requires a medical diagnosis, then lab tests or imaging is required.",
+    "FOL": "∀x (RequiresAMedicalDiagnosis(x) → LabTestsOrImagingRequired(x))"
+  },
+  {
+    "NL": "Composers write music pieces.",
+    "FOL": "∀x ∀y ((MusicPiece(x) ∧ Writtenby(x, y)) → Composer(y))"
+  },
+  {
+    "NL": "If people value quality manufacturing and luxury items, then they enjoy shopping for materialistic items in their free time.",
+    "FOL": "∀x Luxury(x) → Shopping(x)"
+  },
+  {
+    "NL": "Bile duct cancer is a severe cancer.",
+    "FOL": "∀x (BileDuctCancer(x) → SevereCancer(x))"
+  },
+  {
+    "NL": "If a song is not \"Perfect\", Sam will never play it.",
+    "FOL": "∀x (¬Be(x, perfect) → ¬Play(sam, x))"
+  },
+  {
+    "NL": "ON is a state of Canada.",
+    "FOL": "State(on, canada)"
+  },
+  {
+    "NL": "All Leetcode problems recommended to novices are easy.",
+    "FOL": "∀x (Recommended(x) → Easy(x))"
+  },
+  {
+    "NL": "Heeinrich Scmidt was also a member of the Prussian State Parliament and the Nazi Reichstag.",
+    "FOL": "Member(heinrichScmidt, prussianStateParliament) ∧ Member(heinrichScmidt, naziReichstag)"
+  },
+  {
+    "NL": "If someone plays football, then they use a football.",
+    "FOL": "∀x (PlayFootball(x) → UseFootball(x))"
+  },
+  {
+    "NL": "All young working professionals who have regular 9-5 jobs also have pets.",
+    "FOL": "∀x (Working(x) → Pets(x))"
+  },
+  {
+    "NL": "If Coco Gauff is a player who is ranked highly by the Women's Tennis Association or a player who lost to Rafael Nadal, then Coco Gauff is not a male tennis player at Roland Garros 2022.",
+    "FOL": "RankedHighlyByWomenTennisAssociation(cocoGauff) ∨ LostToRafaelNadal(cocoGauff) → ¬MaleTennisPlayersAtRolandGarros2022(cocoGauff)"
+  },
+  {
+    "NL": "All who attend the conference in person are provided with souvenirs.",
+    "FOL": "∀x (InPerson(x) → Souvenirs(x))"
+  },
+  {
+    "NL": "It is not true that Rose is a student and Jerry is a human.",
+    "FOL": "¬(Student(rose) ∧ Human(jerry))"
+  },
+  {
+    "NL": "Wu's English score is lower than 90.",
+    "FOL": "LowerThan90(wu)"
+  },
+  {
+    "NL": "The Mona Lisa is a portrait painted by Leonardo da Vinci.",
+    "FOL": "PaintedBy(monaLisa, leonardodaVinci) ∧ Portrait(monaLisa)"
+  },
+  {
+    "NL": "A person likes Spain as their favorite country or likes eating cheese.",
+    "FOL": "∀x (SpainFav(x) ∨ Cheese(x))"
+  },
+  {
+    "NL": "For two different teams, either one team wins or the other team wins.",
+    "FOL": "∀x ∀y (Different(x, y) → WonGame(x, y) ⊕ WonGame(y, x))"
+  },
+  {
+    "NL": "People feel tired when they get a glu.",
+    "FOL": "∀x (Human(x) ∧ Flu(x) → Tired(x))"
+  },
+  {
+    "NL": "No fish are plants.",
+    "FOL": "∀x  (Fish (x)→ ¬ Plant (x))"
+  },
+  {
+    "NL": "Daniel’s dad and older sister both graduated from Stanford University.",
+    "FOL": "GraduatedFromStanfordUniversity(danielsOlderSister) ∧ GraduatedFromStanfordUniversity(danielsDad)"
+  },
+  {
+    "NL": "Some pets are not mammals.",
+    "FOL": "∃x (Pet(x) ∧ ¬Mammal(x))"
+  },
+  {
+    "NL": "Fiedler eigenvalue is the second smallest eigenvalue of the graph Laplacian.",
+    "FOL": "TheSecondSmallestEigenvalueOf(fiedlerEigenvalue, theGraphLaplacian)"
+  },
+  {
+    "NL": "Robert Zimmer is an essayist.",
+    "FOL": "IsEssayist(robertZimmer)"
+  },
+  {
+    "NL": "Thor is a god.",
+    "FOL": "God(thor)"
+  },
+  {
+    "NL": "Tom is not a grumpy person and mean to animals.",
+    "FOL": "¬(Grumpy(tom) ∧ Mean(tom))"
+  },
+  {
+    "NL": "No easy Leetcode problems have an AC rate lower than 20 percent.",
+    "FOL": "∀x (Easy(x) → ¬LowerAC(x))"
+  },
+  {
+    "NL": "[BG] If a person gains knowledge, they become smarter.",
+    "FOL": "∀x (GainKnowledge(x) → Smarter(x))"
+  },
+  {
+    "NL": "Dagfinn is a given name.",
+    "FOL": "∀x (Dagfinn(x) → GivenName(x))"
+  },
+  {
+    "NL": "Maggie Friedman produced and developed Eastwick.",
+    "FOL": "Produced(maggiefriedman, eastwick) ∧ Developed(maggiefriedman, eastwick)"
+  },
+  {
+    "NL": "Górnik Zabrze's stadium was named after a soccer player from Ruda Śląska.",
+    "FOL": "∃x (NamedAfter(gornikzabrze, x) ∧ FootballPlayer(x) ∧ From(x, rudaslaska))"
+  },
+  {
+    "NL": "Rock is a turtle.",
+    "FOL": "Turtle(rock)"
+  },
+  {
+    "NL": "If John has a high IQ, then he is a PhD student or a graduate student.",
+    "FOL": "HighIQ(john) → PhDStudent(john) ⊕ GraduateStudent(john)"
+  },
+  {
+    "NL": "All devices belonging to the company are connected to Google Home.",
+    "FOL": "∀x (Company(x) → GoogleHome(x))"
+  },
+  {
+    "NL": "Moonwatch is not a digital watch or an automatic.",
+    "FOL": "¬DigitalWatch(moonwatch) ⊕ AutomaticWatch(moonwatch)"
+  },
+  {
+    "NL": "Clay either both prefers to work at home over going to the office every day and makes his own matcha teas every morning with ceremonial-grade matcha powder, or he neither prefers to work at home over going to the office every day nor makes his own matcha teas every morning with ceremonial-grade matcha powder.",
+    "FOL": "(WorkHome(clay) ∧ Matcha(clay)) ⊕ (¬WorkHome(clay) ∧ ¬Matcha(clay))"
+  },
+  {
+    "NL": "If people hire a maid or cleaning service, then they have tidy houses.",
+    "FOL": "∀x (HireCleaning(x) → TidyHouse(x))"
+  },
+  {
+    "NL": "Either Zaha Hadid's design style or Kelly Wearstler's design style.",
+    "FOL": "∀x (ZahaHadidDesignStyle(x) ∨ KellyWearstlerDesignStyle(x))"
+  },
+  {
+    "NL": "Drishti is open-source.",
+    "FOL": "OpenSource(drishti)"
+  },
+  {
+    "NL": "If people are fascinated by the history of the Renaissance and other past eras, then they attend Renaissance fairs regularly.",
+    "FOL": "∀x (HistoryRenaissance(x) → RenaissanceFair(x))"
+  },
+  {
+    "NL": "Lana Wilson directed After Tiller, The Departure, and Miss Americana.",
+    "FOL": "DirectedBy(after_Tiller, lana_Wilson) ∧ DirectedBy(the_Departure, lana_Wilson) ∧ DirectedBy(miss_Americana, lana_Wilson)"
+  },
+  {
+    "NL": "The indie pop band Phoenix has released 6 albums.",
+    "FOL": "AlbumsReleased(phoenix, l6)"
+  },
+  {
+    "NL": "Cancer biology is finding genetic alterations that confer selective advantage to cancer cells.",
+    "FOL": "FindingGeneticAlterationsConferSelectiveAdvantageCancerCells(cancerBiology)"
+  },
+  {
+    "NL": "If Tom is not a grumpy person and mean to animals, then Tom is neither a grumpy person nor an Animal Lover.",
+    "FOL": "¬(Grumpy(tom) ∧ Mean(tom)) → ¬(Grumpy(tom) ∨ AnimalLover(tom))"
+  },
+  {
+    "NL": "An American superhero comes from either DC universe or Marvel universe.",
+    "FOL": "∀x (Superhero(x) ∧ American(x) → (ComeFrom(x, dc universe) ⊕ ComeFrom(x, marvel universe)))"
+  },
+  {
+    "NL": "The only style of music Vic DiCara plays is punk music.",
+    "FOL": "¬(∃x (Music (vicdicara, punk) ∧ Music (vicdicara, x)))"
+  },
+  {
+    "NL": "All buildings managed by the Yale Housing are located in New Haven.",
+    "FOL": "∀x (YaleHousing(x) → Located(newhaven, x))"
+  },
+  {
+    "NL": "If Rock is neither a fly nor a bird, then Rock neither flies nor breathes.",
+    "FOL": "¬ Fly (rock) ∧ ¬ Bird (rock) → ¬ Fly (rock) ∧ ¬ Breathe (rock)"
+  },
+  {
+    "NL": "The Working title \"The Secret Dude Society\" was used for Badults.",
+    "FOL": "WorkingTitle(thesecretdudesociety, badults)"
+  },
+  {
+    "NL": "All environment-friendly things are good.",
+    "FOL": "∀x (EnvironmentFriendly(x) → Good(x))"
+  },
+  {
+    "NL": "After Tiller is a documentary.",
+    "FOL": "IsDocumentary(after_Tiller)"
+  },
+  {
+    "NL": "Customers who prefer TV series will not watch TV series in cinemas.",
+    "FOL": "∀x (Prefer(x, tvseries) → ¬WatchTVIn(x, cinemas))"
+  },
+  {
+    "NL": "Mary can get from New Haven to New York City either by train or car.",
+    "FOL": "Train(mary) ⊕ Car(mary)"
+  },
+  {
+    "NL": "All young children below the age of ten eat cereal and milk every day for breakfast.",
+    "FOL": "∀x (YoungChildren(x) → BusyMorning(x))"
+  },
+  {
+    "NL": "All nonflying birds in Antarctica are penguins.",
+    "FOL": "∀x (NonFlyingBirdAntartica(x) → Penguin(x))"
+  },
+  {
+    "NL": "Dan is also a songwriter.",
+    "FOL": "SongWriter(dan)"
+  },
+  {
+    "NL": "Either disposable chopsticks or reusable chopsticks.",
+    "FOL": "∀x (DisposableChopsticks(x) ⊕ Reusable(x))"
+  },
+  {
+    "NL": "If a person is uncomfortable, the person is unhappy.",
+    "FOL": "∀x (Uncomfortable(x) → ¬Happy(x))"
+  },
+  {
+    "NL": "All brain image acquisition is preceded by data processing.",
+    "FOL": "∀x (BrainImageAcquisition(x) → PrecededByDataProcessing(x))"
+  },
+  {
+    "NL": "Everyone from Earth is a human.",
+    "FOL": "∀x (FromEarth(x) → Human(x))"
+  },
+  {
+    "NL": "The Emmet Building is a five-story building in Portland, Oregon.",
+    "FOL": "∀x (Emmet(x) → Building(x) ∧ FiveStory(x) ∧ Locate(x, portland))"
+  },
+  {
+    "NL": "If a team wins or loses at the NBA finals, then they are attending the finals.",
+    "FOL": "∀x (Won(x, nbafinals) ∨ Lost(x, nbafinals) → Attending(x, nbafinals))"
+  },
+  {
+    "NL": "All hotpots are spicy.",
+    "FOL": "∀x (Hotpot(x) → Spicy(x))"
+  },
+  {
+    "NL": "The world championships is a sporting event.",
+    "FOL": "SportingEvent(champs)"
+  },
+  {
+    "NL": "No politicans are part of the Nazi Reichstag.",
+    "FOL": "∀x (Politician(x) → ¬Member(x, naziReichstag))"
+  },
+  {
+    "NL": "If John has a wedding that is well-attended, then John has a wedding in July or, if not, then John travels to Paris for their honeymoon.",
+    "FOL": "WellAttended(john) → July(john) ⊕ Paris(john)"
+  },
+  {
+    "NL": "If people are environmentally conscious, then they have solar panels in their homes.",
+    "FOL": "∀x (Environmental(x) → Solar(x))"
+  },
+  {
+    "NL": "Pets can be either a dog or a cat.",
+    "FOL": "∀x (Pet(x) → Dog(x) ⊕ Cat(x))"
+  },
+  {
+    "NL": "The South Shetland Islands include Snow Island, Greenwich Island, and Deception Island.",
+    "FOL": "Locate(snow, shetland) ∧ Locate(greenwich, shetland) ∧ Locate(deception, shetland)"
+  },
+  {
+    "NL": "A worksheet is either paper or is environment-friendly.",
+    "FOL": "Paper(worksheet) ⊕ EnvironmentFriendly(worksheet)"
+  },
+  {
+    "NL": "Erica is someone who plays a lot of chess.",
+    "FOL": "PlaysLots(erica)"
+  },
+  {
+    "NL": "Susan doesn't have influenza.",
+    "FOL": "¬Have(susan, influenza)"
+  },
+  {
+    "NL": "A building contractor is responsible for the day-to-day oversight of a construction site.",
+    "FOL": "∀x ∃y (BuildingContractor(x) ∧ ConstructionSite(y) → Oversee(x, y))"
+  },
+  {
+    "NL": "Products are either produced in China or the US.",
+    "FOL": "∀x (China(x) ⊕ US(x))"
+  },
+  {
+    "NL": "Ben is either from The Simpsons or funny.",
+    "FOL": "Simpsons(ben) ⊕ Funny(ben)"
+  },
+  {
+    "NL": "A La Liga soccer team ranks higher than another if it receives more points.",
+    "FOL": "∀x ∀y (LaLiga(x) ∧ LaLiga(y) ∧ MorePoints(x, y) → HigherRank(x, y))"
+  },
+  {
+    "NL": "Thomas Barber played in the Football League for Aston Villa.",
+    "FOL": "PlayedInTheFootballLeagueFor(thomasBarber, astonVilla)"
+  },
+  {
+    "NL": "John has a high salary.",
+    "FOL": "HighSalary(john)"
+  },
+  {
+    "NL": "All advocates of high tariff rates are Republicans.",
+    "FOL": "∀x (AdvocateOfHighTariff(x) → Republican(x))"
+  },
+  {
+    "NL": "Yale University has the largest university endowment of any educational institution.",
+    "FOL": "LargestUniversityEndowmentOf(yale, anyeducationalinstitution)"
+  },
+  {
+    "NL": "Selymbria is a colony of the city-state Megara.",
+    "FOL": "Colony(selymbia, megara) ∧ CityState(megara)"
+  },
+  {
+    "NL": "Callus 4 is written in an unusual iambic trimeter to convey a sense of speed over the waves.",
+    "FOL": "Poem(callus4) → Lambic(callus4) ∧ Waves(callus4)"
+  },
+  {
+    "NL": "No preteens and other young children are getting married or have friends who are getting married.",
+    "FOL": "∀x PreTeen(x) → ¬GettingMarried(x)"
+  },
+  {
+    "NL": "All Knicks players are NBA players.",
+    "FOL": "∀x (KnicksPlayer(x) → NBAPlayer(x))"
+  },
+  {
+    "NL": "Tom is an Eastern wild turkey.",
+    "FOL": "Eastern(tom)"
+  },
+  {
+    "NL": "Many of the assessments ETS develops are associated with entry to the US tertiary and quaternary education institutions.",
+    "FOL": "∃x (Develops(ets, x) ∧ AssociatedWith(x, entrytouseducationinstitutions))"
+  },
+  {
+    "NL": "If John has at least one child, then John does not travel to Paris for his honeymoon and does not have a wedding.",
+    "FOL": "Child(john) → ¬(Paris(john) ∧ Wedding(john))"
+  },
+  {
+    "NL": "Everyone who works in person is a commuter.",
+    "FOL": "∀x (InPerson(x) → Commuter(x))"
+  },
+  {
+    "NL": "Karen will share \"Black Mirror\" to Lisa.",
+    "FOL": "Share(blackMirror, lisa)"
+  },
+  {
+    "NL": "All juices are drinks.",
+    "FOL": "∀x (Juice(x) → Drink(x))"
+  },
+  {
+    "NL": "Maya will play violin if and only if she never injures her fingers.",
+    "FOL": "CanInjureFingures(maya) → ¬WillPlayViolin(maya)"
+  },
+  {
+    "NL": "Tintin was produced by Paramount.",
+    "FOL": "Produced(paramount, tintin)"
+  },
+  {
+    "NL": "Everyone who has a car will choose to drive to their destination.",
+    "FOL": "∀x (HaveCars(x) → Drive(x))"
+  },
+  {
+    "NL": "All buildings managed by Yale Housing are in New Haven.",
+    "FOL": "∀x (YaleHousing(x) → NewHaven(x))"
+  },
+  {
+    "NL": "If something is a deadly disease, then its survival rate is low.",
+    "FOL": "∀x (DeadlyDiseases(x) → SurvivalRateIsLow(x))"
+  },
+  {
+    "NL": "All enzymes are organic compounds.",
+    "FOL": "∀x (Enzyme(x) → OrganicCompound(x))"
+  },
+  {
+    "NL": "If people live with at least one roommate then they do not own at least one pet.",
+    "FOL": "∀x (Roommate(x) → ¬Pet(x))"
+  },
+  {
+    "NL": "All people who are vegetarian are conscious of the environment or their health.",
+    "FOL": "∀x (Vegetarian(x) → Conscious(x))"
+  },
+  {
+    "NL": "Camera accessory for the system is compatible with that system",
+    "FOL": "∀x ∀y (Accessory(x, y) → Compatible(x, y))"
+  },
+  {
+    "NL": "Benji is not a person who likes eating cheese and a person who studies Spanish.",
+    "FOL": "¬(Cheese(benji) ∧ Spanish(benji))"
+  },
+  {
+    "NL": "Kangaroo is an animal.",
+    "FOL": "∀x (Kangaroo(x) → Animal(x))"
+  },
+  {
+    "NL": "A thing is either food or clothes.",
+    "FOL": "∀x (Food(x) ⊕ Clothes(x))"
+  },
+  {
+    "NL": "Monkeypox virus can occur in certain animals, including humans.",
+    "FOL": "∃x (Animal(x) ∧ OccurMonkeypoxVirus(x))"
+  },
+  {
+    "NL": "If a person is respected by others, then he/she contributes to the country.",
+    "FOL": "∀x (Respected(x) → ContributeToCountry(x))"
+  },
+  {
+    "NL": "A design by Max is a mass product design.",
+    "FOL": "MassProductDesign(aDesignByMax)"
+  },
+  {
+    "NL": "Sally works for the US Securities and Exchange Commission.",
+    "FOL": "WorksFor(sally, ussecuritiesandexchangecommission)"
+  },
+  {
+    "NL": "Asa Hoffman is a chess player.",
+    "FOL": "IsChessPlayer(asaHoffmann)"
+  },
+  {
+    "NL": "All buildings owned by Bloomberg are located in Manhattans.",
+    "FOL": "∀x (Bloomberg(x) → Located(manhattans, x))"
+  },
+  {
+    "NL": "If entertainment is interesting, it will be popular.",
+    "FOL": "∀x ((Entertainment(x) ∧ Interesting(x)) → Popular(x))"
+  },
+  {
+    "NL": "If people have siblings who are the same age, then they are twins or triplets.",
+    "FOL": "∀x (SameAge(x) → TwinTriplet(x))"
+  },
+  {
+    "NL": "If people complain often about annoying siblings, then they have siblings who are the same age.",
+    "FOL": "∀x (Complain(x) → SameAge(x))"
+  },
+  {
+    "NL": "Hyraxes are mammals.",
+    "FOL": "∀x (Hyrax(x) → Mammal(x))"
+  },
+  {
+    "NL": "Bananas are grass or fruit.",
+    "FOL": "Grass(banana) ∨ Fruit(banana)"
+  },
+  {
+    "NL": "People either regularly drink coffee or joke about being addicted to caffeine.",
+    "FOL": "∀x (Drinks(x) ⊕ Jokes(x))"
+  },
+  {
+    "NL": "All pirates are bad.",
+    "FOL": "∀x (Pirate(x) → Bad(x))"
+  },
+  {
+    "NL": "Anything that is lazy is unproductive.",
+    "FOL": "∀x (Lazy(x) → Unproductive(x))"
+  },
+  {
+    "NL": "Spain is in Europe.",
+    "FOL": "∀x (Spain(x) → Europe(x))"
+  },
+  {
+    "NL": "Remy either both goes to bed late and wakes up every day after noon and spends their free time tidying and organizing the spaces in their home, or they do not go to bed late and wake up every day after noon nor spend their free time tidying and organizing the spaces in their home.",
+    "FOL": "(Late(remy) ∧ Tidying(remy)) ⊕ (¬Late(remy) ∧ ¬Tidying(remy))"
+  },
+  {
+    "NL": "Rhos Aelwyd F.C. is the only club based in Ponciau.",
+    "FOL": "∀x (BasedInPonciau(x) ↔ Rhosaelwydfc(x))"
+  },
+  {
+    "NL": "Every advocate is a lawyer.",
+    "FOL": "∀x (Advocate(x) → Lawyer(x))"
+  },
+  {
+    "NL": "Jeff is not an extrovert and someone who likes to talk to strangers.",
+    "FOL": "¬Extroverts(jeff) ∧ ¬LikeToTalkToStrangers(jeff)"
+  },
+  {
+    "NL": "A cat named Garfield, which is the main character of the film Garfield, is orange and fat and likes having lasagna.",
+    "FOL": "Cat(garfield) ∧ MainCharacterGarfield(garfield) ∧ BeOrange(garfield) ∧ BeFat(garfield) ∧ LikeLasagna(garfield)"
+  },
+  {
+    "NL": "Some Heck cattle are artificially selected.",
+    "FOL": "∃x (HeckCattle(x) ∧ ArtificiallySelect(x))"
+  },
+  {
+    "NL": "Each building is tall.",
+    "FOL": "∀x (Building(x) → ¬Tall(x))"
+  },
+  {
+    "NL": "All scares are surprises.",
+    "FOL": "∀x (Scare(x) → Surprise(x))"
+  },
+  {
+    "NL": "All horses have hooves.",
+    "FOL": "∀x (Horse(x) → Hooves(x))"
+  },
+  {
+    "NL": "David Ha'ivri is a Zionist leader.",
+    "FOL": "ZionstLeader(davidhaivri)"
+  },
+  {
+    "NL": "No payment cards issued by Russian banks can be used with ApplePay.",
+    "FOL": "∀x (RussianBank(x) → ¬ApplePay(x))"
+  },
+  {
+    "NL": "All products favored by young people are commonly used in China.",
+    "FOL": "∀x (FavoredByYoungPeople(x) → CommonlyUsedChina(x))"
+  },
+  {
+    "NL": "Every swimmer can go underwater.",
+    "FOL": "∀x (Swimmer(x) → GoesUnderwater(x))"
+  },
+  {
+    "NL": "If Greyhound is not an airline, then there are no Greyhound planes.",
+    "FOL": "¬Airline(greyhound) → ¬(Airline(greyhound) ∨ Plane(greyhound))"
+  },
+  {
+    "NL": "The documentary is a type of films.",
+    "FOL": "∀x (IsDocumentary(x) → IsFilm(x))"
+  },
+  {
+    "NL": "North Yorkshire is in England.",
+    "FOL": "∀x (NorthYorkshire(x) → England(x))"
+  },
+  {
+    "NL": "All students not in summer camp do not have class during the weekend.",
+    "FOL": "∀x (SummerCamp(x) → NoClass(x))"
+  },
+  {
+    "NL": "All of Zaha Hadid's design styles are timeless.",
+    "FOL": "∀x (ZahaHadidDesignStyle(x) → Timeless(x))"
+  },
+  {
+    "NL": "A-2017 supports the type-c port.",
+    "FOL": "TypeC(a-2017)"
+  },
+  {
+    "NL": "The Harding Pegmatite Mine, located in the Picuris Mountains, was donated.",
+    "FOL": "In(hardingpegmatitemine, picurismountains) ∧ Mine(hardingpegmatitemine) ∧ Donated(hardingpegmatitemine)"
+  },
+  {
+    "NL": "Some students who start working on coordination between the left and the right hands become good at it. The other students find it challenging.",
+    "FOL": "∀x (Student(x) ∧ StartCoordination(x) → GoodAtCoordination(x) ⊕ FindCoordinationChallenging(x))"
+  },
+  {
+    "NL": "Something is either an invasive neuroimaging technique or a noninvasive neuroimaging technique.",
+    "FOL": "∀x (InvasiveNeuroimagingTechnique(x) ∨ NoninvasiveNeuroimagingTechnique(x))"
+  },
+  {
+    "NL": "New York City is Located in the United States of America.",
+    "FOL": "Locate(nyc, usa)"
+  },
+  {
+    "NL": "All dispensable things are environment-friendly.",
+    "FOL": "∀x (Dispensable(x) → EnvironmentFriendly(x))"
+  },
+  {
+    "NL": "If a universal language exists, then for every two people if they both know the same universal language they can communicate.",
+    "FOL": "∀x ∀y (∃z (Know(x, z) ∧ Know(y, z) ∧ UniversalLanguage(z)) → Communicate(x, y))"
+  },
+  {
+    "NL": "When Olivia sleeps, she prefers cool temperature.",
+    "FOL": "∀x (SleepingDuring(olivia, x) → PrefersCoolAt(olivia, x))"
+  },
+  {
+    "NL": "James has a part-time job offered by the university.",
+    "FOL": "PartTime(james)"
+  },
+  {
+    "NL": "Intro Geology has no prerequisites.",
+    "FOL": "∀x (¬Prereq(x, introgeology))"
+  },
+  {
+    "NL": "The Lumina APV is produced by Chevrolet.",
+    "FOL": "Chevrolet(luminaAPV)"
+  },
+  {
+    "NL": "Sam is either both addicted to coffee or other caffeinated drinks or leads very busy lives that include 12-hour work hours, or she is neither addicted to coffee and other caffeinated drinks nor leads very busy lives that include 12-hour work hours",
+    "FOL": "(CaffeineAddict(sam) ∧ Busy(sam)) ⊕ (¬CaffeineAddict(sam) ∧ ¬Busy(sam))"
+  },
+  {
+    "NL": "Several Zionist leaders have been elected to the Shomron Regional Municipal council.",
+    "FOL": "∃x (ZionistLeader(x) ∧ ElectedTo(x, shomronmunicipalcouncil))"
+  },
+  {
+    "NL": "Barutin Cove is named after the Bulgarian settlement of Barutin.",
+    "FOL": "Cove(barutin) ∧ NameAfter(barutin, settlement) ∧ Locate(settlement, bulgaria)"
+  },
+  {
+    "NL": "Jason Kramer hosted a show on a public radio station.",
+    "FOL": "HostShowOnPublicRadioStation(jasonKramer)"
+  },
+  {
+    "NL": "And some streets are roads.",
+    "FOL": "∃x (Street(x) ∧ Road(x))"
+  },
+  {
+    "NL": "If something is a bovine, then it is domesticated.",
+    "FOL": "∀x (Bovine(x) → Domesticated(x))"
+  },
+  {
+    "NL": "If colorectal cancer is not a mild flu and a Cholangiocarcinoma, then colorectal cancer is a bile duct cancer or a Cholangiocarcinoma.",
+    "FOL": "¬MildFlu(colorectalCancer) ∨ ¬Cholangiocarcinoma(colorectalCancer) → BileDuctCancer(colorectalCancer) ∨ Cholangiocarcinoma(colorectalCancer)"
+  },
+  {
+    "NL": "A bottle is either standing upright or toppled over.",
+    "FOL": "Upright(bottle) ⊕ ToppledOver(bottle)"
+  },
+  {
+    "NL": "Some restaurants that do not provide take-out service receive many negative reviews.",
+    "FOL": "∃x (NoTakeOutService(x) ∧ NegativeReview(x))"
+  },
+  {
+    "NL": "All brain decoding is extracting information from BOLD signals.",
+    "FOL": "∀x (BrainDecoding(x) → ExtractingInformationFromBOLDSignals(x))"
+  },
+  {
+    "NL": "All buildings operated by Yale Housing staff are managed by Yale Housing.",
+    "FOL": "∀x (OperatedByYaleHousingStaffs(x) → ManagedByYaleHousing(x))"
+  },
+  {
+    "NL": "Seattle is on the West Coast.",
+    "FOL": "On(seattle, westcoast)"
+  },
+  {
+    "NL": "James Cocks was a British lawyer.",
+    "FOL": "British(james) ∧ Lawyer(james)"
+  },
+  {
+    "NL": "Not all art pieces require talent.",
+    "FOL": "∃x (ArtPiece(x) ∧ ¬RequiresTalent(x))"
+  },
+  {
+    "NL": "Gasteren is village located in the province of Drenthe.",
+    "FOL": "Village(gasteren) ∧ Province(drenthe) ∧ LocatedIn(gasteren, drenthe)"
+  },
+  {
+    "NL": "Peter Parker wears a uniform when he is a superhero.",
+    "FOL": "Superhero(peter) → WearUniform(peter)"
+  },
+  {
+    "NL": "If something is a household appliance, it sucks.",
+    "FOL": "∀x (HouseHoldApp(x) → Suck(x))"
+  },
+  {
+    "NL": "Tom's license plate begins with the number 35.",
+    "FOL": "Beginwith(tom, number35)"
+  },
+  {
+    "NL": "People who have the talent of cooking can distinguish the taste of different condiments.",
+    "FOL": "∀x (People(x) ∧ TalentCooking(x) → DistinguishCondiments(x))"
+  },
+  {
+    "NL": "No pets are cats.",
+    "FOL": "∀x (Pet(x) → ¬Cat(x))"
+  },
+  {
+    "NL": "All centerbacks are defenders.",
+    "FOL": "∀x (Centerback(x) → Defender(x))"
+  },
+  {
+    "NL": "Ann J. Land defeated Michael Nutter and ran for the Philadelphia City Council in 1987.",
+    "FOL": "Year(y1987) → PhiladephiaCouncil(annJLand) ∧ RunFor(annJLand) ∧ Defeated(annJLand, nutter)"
+  },
+  {
+    "NL": "Bank of America payment cards can be used with ApplePay.",
+    "FOL": "ApplePay(boapaymentcards)"
+  },
+  {
+    "NL": "No players who are solid at shooting 2-pointers are bad at mid-range shots.",
+    "FOL": "∀x (TwoPointer(x) → ¬BadMid(x))"
+  },
+  {
+    "NL": "Animals that enjoy water splash water around.",
+    "FOL": "∀x (EnjoysWater(x) → Splashes(x))"
+  },
+  {
+    "NL": "If Benji is neither a person who studies Spanish nor a person that studies French, then Benji is a person who studies Spanish or a person that studies French.",
+    "FOL": "¬(Spanish(benji) ∨ French(benji)) → ¬(Cheese(benji) ⊕ French(benji))"
+  },
+  {
+    "NL": "If Sam has high ambitions and future career goals, then Sam is a big fan of pop bands and singers.",
+    "FOL": "Ambitious(sam) → Fans(sam)"
+  },
+  {
+    "NL": "Marvin Minsky is recognized by his contributions to the field of artificial intelligence.",
+    "FOL": "ContributedTo(marvinMinsky, ai)"
+  },
+  {
+    "NL": "Santiago is the capital and largest city of Chile.",
+    "FOL": "Capital(santiago, chile) ∧ LargestCity(santiago, chile)"
+  },
+  {
+    "NL": "If people love to travel and vacation often, then they often take study abroad semesters to Europe.",
+    "FOL": "∀x (Travel(x) → Europe(x))"
+  },
+  {
+    "NL": "If a city hold a Summer Olympics, and the city is a US city, then the Summer Olympics will be in the US.",
+    "FOL": "∀x ∀y (SummerOlympicsCity(x, y) ∧ CityInCountry(y, us) → SummerOlympicsCountry(x, us))"
+  },
+  {
+    "NL": "Karen will share \"Stranger Things\" to Lisa.",
+    "FOL": "Share(strangerThings, lisa)"
+  },
+  {
+    "NL": "The National Lobster Hatchery is open to visitors.",
+    "FOL": "OpenToVisitors(nationallobsterhatchery)"
+  },
+  {
+    "NL": "Michael cannot block Windy's shooting.",
+    "FOL": "¬CanBlock(michael, windy)"
+  },
+  {
+    "NL": "Some defenders are centerback.",
+    "FOL": "∃x (Defender(x) ∧ Centerback(x))"
+  },
+  {
+    "NL": "If Subway provides take-out service and receives many negative reviews, then its rating is greater than 9 and it does not provide take-out service.",
+    "FOL": "NoTakeOutService(subway)"
+  },
+  {
+    "NL": "Hadid was a visiting professor of Architectural Design at the Yale School of Architecture.",
+    "FOL": "Visitingprofessor(zahaHadid, yaleSchoolofArchitecture)"
+  },
+  {
+    "NL": "Writing a novel is without statistical pattern analysis.",
+    "FOL": "∀x (WritingANovel(x) → WithoutStatisticalPatternAnalysis(x))"
+  },
+  {
+    "NL": "All students instructed by professor David are taking the database course.",
+    "FOL": "∀x (ProfessorDavid(x) → Database(x))"
+  },
+  {
+    "NL": "Everyone that uses a football can throw a football.",
+    "FOL": "∀x (UseFootball(x) → ThrowFootball(x))"
+  },
+  {
+    "NL": "No student good at planning is awarded the Dean's List.",
+    "FOL": "∀x (Planning(x) → ¬Award(x))"
+  },
+  {
+    "NL": "Everyone who has lunch in the company schedules meetings with their customers.",
+    "FOL": "∀x (LunchInCompany(x) → Meetings(x))"
+  },
+  {
+    "NL": "All people taking classes are students.",
+    "FOL": "∀x (TakingClass(x) → Student(x))"
+  },
+  {
+    "NL": "Koalas love to sleep and are quokka.",
+    "FOL": "LoveToSleep(koala) ∧ Quokka(koala)"
+  },
+  {
+    "NL": "All light things are unstable.",
+    "FOL": "∀x (Light(x) → Unstable(x))"
+  },
+  {
+    "NL": "[BG] Books contain tons of knowledge.",
+    "FOL": "∀x (Book(x) → Knowledge(x))"
+  },
+  {
+    "NL": "A hatchery is either for profit, or for conservation.",
+    "FOL": "∀x (Hatchery(x) → ForConservation(x) ∨ ForProfit(x))"
+  },
+  {
+    "NL": "All produced in China are labeled.",
+    "FOL": "∀x (China(x) → Labeled(x))"
+  },
+  {
+    "NL": "The National Lobster Hatchery is a hatchery located in Padstow England.",
+    "FOL": "Hatchery(nationallobsterhatchery) ∧ LocatedIn(nationallobsterhatchery, padstowengland)"
+  },
+  {
+    "NL": "All people who enjoy gambling regularly spend a lot of money at casinos and other betting games.",
+    "FOL": "∀x (Gambling(x) → Casinos(x))"
+  },
+  {
+    "NL": "Once the police complete investigations of a crime, they hand the evidence to the prosecutor.",
+    "FOL": "∀x ∀y (Crime(y) ∧ PoliceCompInves(y) ∧ Prosecutor(x) → Evidence(y) ∧ HandToProsecutor(x, y))"
+  },
+  {
+    "NL": "Grace is either a cat and a dog, or neither a cat nor a dog.",
+    "FOL": "(Cat(grace) ∧ Dog(grace)) ⊕ (¬Cat(grace) ∧ ¬Dog(grace))"
+  },
+  {
+    "NL": "Joe's license plate begins with the number 34.",
+    "FOL": "Beginwith(joe, number34)"
+  },
+  {
+    "NL": "Aside from indie pop, pop rock and synth-pop are two other genres of music.",
+    "FOL": "∀x (IndiePop(x) → ¬PopRock(x) ∧ ¬SynthPop(x))"
+  },
+  {
+    "NL": "If someone has a job at a school, then they are on the payroll.",
+    "FOL": "∀x (JobAtSchool(x) → OnPayroll(x))"
+  },
+  {
+    "NL": "All people who work regularly and often at home visit the office supply store regularly.",
+    "FOL": "∀x (WorkHome(x) → OfficeStore(x))"
+  },
+  {
+    "NL": "A person is either a planner or a creative person.",
+    "FOL": "∀x (Plans(x) ∨ Creative(x))"
+  },
+  {
+    "NL": "Garfield hates Odie.",
+    "FOL": "Hate(garfield, odie)"
+  },
+  {
+    "NL": "Science fiction novels are not about mythological creatures",
+    "FOL": "∀x ∀y (ScienceFiction(x) ∧ Mythological(y) ∧ Creature(y) → ¬About(x, y))"
+  },
+  {
+    "NL": "Taylor Swift has received three Grammy Album of the Year Awards.",
+    "FOL": "HaveAlbum(taylorSwift)"
+  },
+  {
+    "NL": "The departure and arrival can not be the same airport.",
+    "FOL": "∀x ∀y (FlyFrom(x, y) ⊕ FlyTo(x, y))"
+  },
+  {
+    "NL": "If something is an iguana, then it is a reptile.",
+    "FOL": "∀x (Iguana(x) → Reptile(x))"
+  },
+  {
+    "NL": "Juan de Onate visited a mountain range in Texas.",
+    "FOL": "∃x (Visited(juandeonate, x) ∧ MountainRange(x) ∧ In(x, texas))"
+  },
+  {
+    "NL": "Breeding back is a form of artificial selection by the deliberate selective breeding of domestic animals.",
+    "FOL": "∀x ∀y (BreedingBack(x, y) → ArtificiallySelect(x))"
+  },
+  {
+    "NL": "James does not have class during the weekend.",
+    "FOL": "NoClass(james)"
+  },
+  {
+    "NL": "Tower A is neither in New Haven nor in Manhattan.",
+    "FOL": "¬(NewHaven(towera) ⊕ Manhattan(towera))"
+  },
+  {
+    "NL": "All products of Baked by Melissa are cupcakes.",
+    "FOL": "∀x (ProductsOfBakedByMelissa(x) → Cupcakes(x))"
+  },
+  {
+    "NL": "All people who have pets are people who have at least one child.",
+    "FOL": "∀x (Pets(x) → Child(x))"
+  },
+  {
+    "NL": "All multivoxel (pattern) analyses are implementing machine learning algorithms.",
+    "FOL": "∀x (MultivoxelPatternAnalysis(x) → ImplementingMachineLearningAlgorithms(x))"
+  },
+  {
+    "NL": "All authors are writers.",
+    "FOL": "∀x (Author(x) → Writer(x))"
+  },
+  {
+    "NL": "If the police hand the evidence to the prosecutor and the evidence is satisfactory, the prosecutor will prosecute the offender in an appropriate court.",
+    "FOL": "∀x ∀y (Evidence(y) ∧ HandToProsecutor(x, y) ∧ Satisfactory(y) → ProsecuteTheOffender(x, y))"
+  },
+  {
+    "NL": "Richard Hamming did research on numerical methods.",
+    "FOL": "ContributedTo(richardHamming, numericalMethods)"
+  },
+  {
+    "NL": "Either Max listens to classical music or Max listens to rap.",
+    "FOL": "∀x (MaxListensToClassicalMusic(x) ∨ MaxListensToRap(x))"
+  },
+  {
+    "NL": "All fast fashion products are disposable products.",
+    "FOL": "∀x (FastFashionProducts(x) → DisposableProducts(x))"
+  },
+  {
+    "NL": "All Cholangiocarcinoma is bile duct cancer.",
+    "FOL": "∀x (Cholangiocarcinoma(x) → BileDuctCancer(x))"
+  },
+  {
+    "NL": "Emma's favorite season is summer.",
+    "FOL": "Love(emma, summer)"
+  },
+  {
+    "NL": "All videos aired on Video Gag are in French.",
+    "FOL": "∀x (VideoGag(x) → AirsWeekly(x) ∧ French(x))"
+  },
+  {
+    "NL": "If a class has prerequisites the student must take the prerequisites to take the class.",
+    "FOL": "∀x ∀y ((Prereq(x, y) ∧ Taken(x)) ↔ CanTake(y))"
+  },
+  {
+    "NL": "A hawk never lands.",
+    "FOL": "∀x (Hawk(x) → ¬Lands(x))"
+  },
+  {
+    "NL": "Singh Kaur is a musician and famous.",
+    "FOL": "Musician(singhKaur) ∧ Famous(singhKaur)"
+  },
+  {
+    "NL": "Harry Potter was published by New Vessel Press.",
+    "FOL": "PublishedBy(harrrypotter, newvesselpress)"
+  },
+  {
+    "NL": "Rock is a monkey.",
+    "FOL": "Monkey(rock)"
+  },
+  {
+    "NL": "If Jane saves enough money for the summer, she will fly to Germany.",
+    "FOL": "EnoughMoney(jane) → FlyTo(jane, germany)"
+  },
+  {
+    "NL": "Daniel is a software engineer and he works at Palantir Technologies.",
+    "FOL": "SoftwareEngineer(daniel) ∧ WorksAt(daniel, palantirTechnologies)"
+  },
+  {
+    "NL": "All kids are students.",
+    "FOL": "∀x (Kid(x) → Student(x))"
+  },
+  {
+    "NL": "If roses are given out during Breaking Bad, then it is on Monday at 8 pm.",
+    "FOL": "RoseGivenOutOnTv(breakingbad) → Mondayat8(breakingbad)"
+  },
+  {
+    "NL": "All clothes are wearable.",
+    "FOL": "∀x (Clothes(x) → Wearable(x))"
+  },
+  {
+    "NL": "Mort is not a Stamp catalogue.",
+    "FOL": "¬Stamp(mort)"
+  },
+  {
+    "NL": "Only the Playstation Camera is compatible with more than one system.",
+    "FOL": "¬Compatible(pseye, ps2) ∧ ¬Compatible(pseye, ps4)∧¬Compatible(pseye, ps5)∧¬Compatible(pseyetoy, ps3)∧¬Compatible(pseyetoy, ps4)∧¬Compatible(pseyetoy, ps5)"
+  },
+  {
+    "NL": "Adam is either a person who values physical touch as an especially important love language or a person who loves animals.",
+    "FOL": "Physical(adam) ⊕ LoveAnimals(adam)"
+  },
+  {
+    "NL": "If people enjoy healthcare fields and want to help people with medical issues, then they are studying to go to medical school to become a doctor.",
+    "FOL": "∀x Healthcare(x) → StudyingToBeDoctor(x)"
+  },
+  {
+    "NL": "Some students are kids.",
+    "FOL": "∃x (Student(x) ∧ Kid(x))"
+  },
+  {
+    "NL": "All fir trees are evergreens.",
+    "FOL": "∀x (FirTree(x) → Evergreen(x))"
+  },
+  {
+    "NL": "If person x is taller than person y, and person y is taller than person z, than x is taller than z",
+    "FOL": "∀x ∀y ∀z ((Taller(x, y) ∧ Taller(y, z)) → Taller(x, z))"
+  },
+  {
+    "NL": "Harry is smarter than before.",
+    "FOL": "Smarter(harry)"
+  },
+  {
+    "NL": "All severe cancers are deadly diseases.",
+    "FOL": "∀x (SevereCancer(x) → DeadlyDiseases(x))"
+  },
+  {
+    "NL": "You can play games on a computer.",
+    "FOL": "∀x (Computer(x) → CanPlayGames(x))"
+  },
+  {
+    "NL": "The Spanish Nationalists opposed anyone who supported the Popular Front",
+    "FOL": "∀x (SupportPopulists(x) → Opposed(nationalists, x))"
+  },
+  {
+    "NL": "All video applications are software.",
+    "FOL": "∀x (App(x) → Software(x))"
+  },
+  {
+    "NL": "Minnesota Vikings was in the National Football League in 1997.",
+    "FOL": "NFLTeamYear(minnesota_Vikings, y1997)"
+  },
+  {
+    "NL": "If the air conditioner is running and someone is cooking in the downstairs kitchen, all the smoke travels to the second floor.",
+    "FOL": "(Cook(downstairs) ∧ Run(ac)) → Smokey(secondFloor)"
+  },
+  {
+    "NL": "Elephantopus scaber is a traditional medicine.",
+    "FOL": "∀x (ElephantopusScaber(x) → TraditionalMedicine(x))"
+  },
+  {
+    "NL": "If a person is the leader of a country for life, that person is in a monarchy.",
+    "FOL": "∀x (Leader(x) → InMonarchy(x))"
+  },
+  {
+    "NL": "All software is programmed.",
+    "FOL": "∀x (Software(x) → Program(x))"
+  },
+  {
+    "NL": "Yale University has been organized into 27 constituent colleges and schools: the residential colleges, the Yale Graduate School of Arts and Sciences, and twelve professional schools.",
+    "FOL": "∃x (OrganizedInto(yale, x) ∧ ConstituentCollegesandSchools(x) ∧ ((ResidentialCollege(x) ⊕ GraduateSchool(x)) ⊕ ProfessionalSchool(x)))"
+  },
+  {
+    "NL": "Zhang got an A in English.",
+    "FOL": "GetGrade(zhang, a)"
+  },
+  {
+    "NL": "EndGame is a movie released in 2006.",
+    "FOL": "Movie(endGame) ∧ Released(endGame, year2006)"
+  },
+  {
+    "NL": "No one with mild flu has a low survival rate.",
+    "FOL": "∀x (MildFlu(x) → ¬SurvivalRateIsLow(x))"
+  },
+  {
+    "NL": "Benjamin only ate oranges and grapes at the party.",
+    "FOL": "Eat(orange, benjamin) ∧ Eat(grape, benjamin) ∧ ¬Eat(blueberry, benjamin) ∧ ¬Eat(cherry, benjamin) ∧ ¬Eat(strawberry, benjamin)"
+  },
+  {
+    "NL": "George splashes water around and can swim.",
+    "FOL": "Splashes(george) ∧ CanSwim(george)"
+  },
+  {
+    "NL": "The Far Eastern federal district has the largest area among all federal districts in Russia.",
+    "FOL": "FederalDistrictOfRussia(fareastern) ∧ LargestAreaIn(fareastern)"
+  },
+  {
+    "NL": "If an animal is terricolous, then it has legs.",
+    "FOL": "∀x (Terricolous(x) → HaveLegs(x))"
+  },
+  {
+    "NL": "If 1984 is a streaming service, then 1984 is a hardcover book.",
+    "FOL": "StreamingService(y1984) → HardcoverBook(y1984)"
+  },
+  {
+    "NL": "European soccer clubs can attend UCL, UEL and UECL.",
+    "FOL": "∀x (European(x) ∧ SoccerClub(x) → Attend(x, ucl) ∨ Attend(x, uel) ∨ Attend(x, uecl))"
+  },
+  {
+    "NL": "Wasserburg am Inn is in Germany.",
+    "FOL": "LocatedIn(wasserbAmInn, germany)"
+  },
+  {
+    "NL": "Humans are mammals.",
+    "FOL": "∀x (Human(x) → Mammal(x))"
+  },
+  {
+    "NL": "At the end of the party, strawberries had the lowest remaining weight.",
+    "FOL": "LowestAmount(strawberries)"
+  },
+  {
+    "NL": "Edwin Smith went to Rose Road Primary School, located in Grey Lynn.",
+    "FOL": "WentTo(edwinsmith, roseroadprimaryschool) ∧ LocatedIn(roseroadprimaryschool, greylynn)"
+  },
+  {
+    "NL": "Rochelle lives in Europe.",
+    "FOL": "∀x (RochelleLive(x) → Europe(x))"
+  },
+  {
+    "NL": "Every rose given out on TV is on the Bachelor.",
+    "FOL": "∀x (RoseGivenOutOnTv(x) → OnBachelor(x))"
+  },
+  {
+    "NL": "People either value physical touch as an especially important love language or value words of affirmation as an especially important love language.",
+    "FOL": "∀x (Physical(x) ∨ Words(x))"
+  },
+  {
+    "NL": "All those providing a tutorial session at the conference are invited to join the club.",
+    "FOL": "∀x (Tutorial(x) → Invited(x))"
+  },
+  {
+    "NL": "Yuri is not an American basketball player.",
+    "FOL": "¬(American(yuri) ∧ BasketballPlayer(yuri))"
+  },
+  {
+    "NL": "Either present their work at the conference or provide a tutorial session at the conference.",
+    "FOL": "∀x ( Present(x) ∨ Tutorial(x))"
+  },
+  {
+    "NL": "All British are European.",
+    "FOL": "∀x ( British(x)→  European(x))"
+  },
+  {
+    "NL": "Nothing preceded by data processing acquires data.",
+    "FOL": "∀x (PrecededByDataProcessing(x) → ¬AcquiringData(x))"
+  },
+  {
+    "NL": "V is depressing.",
+    "FOL": "∀x (V(x) → Depressing(x))"
+  },
+  {
+    "NL": "All students studying in the morning are good at time management.",
+    "FOL": "∀x (StudyMorning(x) → GoodAtTimeManagement(x))"
+  },
+  {
+    "NL": "No one unproductive is an energetic person.",
+    "FOL": "∀x (Unproductive(x) → ¬Energetic(x))"
+  },
+  {
+    "NL": "Elephantopus is widespread over much of Africa, southern Asia, Australia, and the Americas.",
+    "FOL": "∀x (Elephantopus(x) → WidespreadOver(x, africa) ∧ WidespreadOver(x, southernasia) ∧ WidespreadOver(x, australia) ∧ WidespreadOver(x, americas))"
+  },
+  {
+    "NL": "James's favorite season is fall.",
+    "FOL": "Love(james, fall)"
+  },
+  {
+    "NL": "Superman is not a man.",
+    "FOL": "¬Man(superman)"
+  },
+  {
+    "NL": "No mammals are invertebrates.",
+    "FOL": "∀x (Mammal(x) → ¬Invertebrate(x))"
+  },
+  {
+    "NL": "Anyone who hosts a show on a public radio station is a radio personality.",
+    "FOL": "∀x (HostShowOnPublicRadioStation(x) → RadioPersonality(x))"
+  },
+  {
+    "NL": "Some pets are cows.",
+    "FOL": "∃x (Pet(x) ∧ Cow(x))"
+  },
+  {
+    "NL": "Sūduva Marijampolė is a soccer team.",
+    "FOL": "SoccerTeam(suduva)"
+  },
+  {
+    "NL": "If Remy either goes to bed late and wakes up every day after noon or visits the office supply store regularly, then Remy neither spends their free time tidying and organizing the spaces in their home nor has a fully stocked and impressive home office.",
+    "FOL": "Late(remy) ∨ OfficeStore(remy) → ¬(Tidying(remy) ∨ HomeOffice(remy))"
+  },
+  {
+    "NL": "Yekaterinburg is the administrative center of the Ural federal district.",
+    "FOL": "AdministrativeCenterOf(yekaterinburg, ural)"
+  },
+  {
+    "NL": "All birds have wings.",
+    "FOL": "∀x (Bird(x) → Winged(x))"
+  },
+  {
+    "NL": "Either non-rare earth metals or rare earth metals.",
+    "FOL": "∀x (Non-rareEarthMetals(x) ∨ RareEarthMetals(x))"
+  },
+  {
+    "NL": "A design by Max is evocative and dreamy.",
+    "FOL": "Evocative(aDesignByMax) ∧ Dreamy(aDesignByMax)"
+  },
+  {
+    "NL": "The Legend of Zelda is not in the Top 10 list.",
+    "FOL": "¬Top10(thelegendofzelda)"
+  },
+  {
+    "NL": "Edwin Smith was also known as Ted Smith.",
+    "FOL": "KnownAs(edwinsmith, tedsmith)"
+  },
+  {
+    "NL": "Bobby Flynn is a singer-songwriter.",
+    "FOL": "Singer(bobbyFlynn) ∧ SongWriter(bobbyFlynn)"
+  },
+  {
+    "NL": "While they were both in Toledo, Walter Folger Brown's father practiced law with Walter Folger Brown.",
+    "FOL": "In(walterbrown, toledo) ∧ In(walterbrownfather, toledo) ∧ PracticedLawTogether(walterbrownfather, walterbrown)"
+  },
+  {
+    "NL": "The Premier Division in 2009–10 was won by the same team that won in 2005-06.",
+    "FOL": "∀x (WonPremierDivisionDuring(x, y2009) ↔ WonPremierDivisionDuring(x, y2005))"
+  },
+  {
+    "NL": "All person who breaks the law is a criminals.",
+    "FOL": "∀x (BreakLaw(x) → Criminal(x))"
+  },
+  {
+    "NL": "If people upgrade to the newest iPhone model every year, then they are not saving money for a down payment on a new house.",
+    "FOL": "∀x (Iphone(x) → ¬House(x))"
+  },
+  {
+    "NL": "Thick as Thieves is a young adult fantasy novel, written by Megan Whalen Turner.",
+    "FOL": "YoungAdultFantasyNovel(thickastheives) ∧ WrittenBy(thickastheives, megan)"
+  },
+  {
+    "NL": "If Reformation is not helping slow down global warming, then Reformation is an eco-friendly brand or a sustainable fashion brand.",
+    "FOL": "¬HelpSlowDownGlobalWarming(reformation) → Eco-friendlyBrand(reformation) ∨ SustainableFashionBrand(reformation)"
+  },
+  {
+    "NL": "The taiga vole is a large vole found in northwestern North America.",
+    "FOL": "Vole(taigaVole) ∧ Find(taigaVole, northAmerica)"
+  },
+  {
+    "NL": "Diethylcarbamazine can be used to treat river blindness.",
+    "FOL": "∀x ∀y (Diethylcarbamazine(x) ∧ RiverBlindness(y) → Treats(x, y))"
+  },
+  {
+    "NL": "All Nobel laureates are scientists.",
+    "FOL": "∀x (NobelLaureate(x) → Scientist(x))"
+  },
+  {
+    "NL": "Musicians are either permanent members of an orchestra or have a unique musical voice or style.",
+    "FOL": "∀x (Orchestra(x) ⊕ Unique(x))"
+  },
+  {
+    "NL": "John flies from LGA airport.",
+    "FOL": "FlyFrom(john, lga)"
+  },
+  {
+    "NL": "Cats like playing with all voles.",
+    "FOL": "∀x (Vole(x) → CatLikePlayingWith(x))"
+  },
+  {
+    "NL": "Every basketball player is tall.",
+    "FOL": "∀x (BasketballPlayer(x) → Tall(x))"
+  },
+  {
+    "NL": "Henry is a soccer player.",
+    "FOL": "SoccerPlayer(henry)"
+  },
+  {
+    "NL": "White Sulphur Springs and Butte are cities in the same state.",
+    "FOL": "∃x (CityIn(whitesulphursprings, x) ∧ CityIn(butte, x))"
+  },
+  {
+    "NL": "No people that are good with pets are scared of animals.",
+    "FOL": "∀x (GoodWithPets(x) → ¬ScaredOfAnimals(x))"
+  },
+  {
+    "NL": "Open-source software is free to modify.",
+    "FOL": "∀x (OpenSource(x) → ModifyFree(x))"
+  },
+  {
+    "NL": "When someone is cooking in the downstairs kitchen, the first floor becomes smokey unless the air conditioner is running.",
+    "FOL": "(Cook(downstairs) ∧ ¬Run(ac)) → Smokey(firstFloor)"
+  },
+  {
+    "NL": "Some teachers working at a pool are not nice.",
+    "FOL": "∃x (TeacherWorkingAtPool(x) ∧ ¬Nice(x))"
+  },
+  {
+    "NL": "Every animal that travels on land enjoys basking in the sun.",
+    "FOL": "∀x (TravelsOnLand(x) → EnjoysBasking(x))"
+  },
+  {
+    "NL": "The installment sales method is the approach to recognize revenue under the US GAAP.",
+    "FOL": "∀x (UsesGAAP(x) → UsesInstallmentMethod(x))"
+  },
+  {
+    "NL": "Jack neither has a part-time job offered by the university nor works in the lab.",
+    "FOL": "¬PartTime(jack) ∧ ¬WorkInLab(jack)"
+  },
+  {
+    "NL": "China won the most gold medals (48) in the 2008 Summer Olympics.",
+    "FOL": "Won(china, mostgoldmedals)"
+  },
+  {
+    "NL": "1984 is a streaming service.",
+    "FOL": "StreamingService(y1984)"
+  },
+  {
+    "NL": "Everything is either big or small.",
+    "FOL": "∀x (Big(x) ⊕ Small(x))"
+  },
+  {
+    "NL": "\"Your Woman\" is a song by British one-man band White Town.",
+    "FOL": "Produce(whiteTown, yourWoman)"
+  },
+  {
+    "NL": "If someone is a teacher, then Bob will talk to him.",
+    "FOL": "∀x (Teacher(x) → Talk(bob, x))"
+  },
+  {
+    "NL": "Phuoc Binh national park is a national park in Vietnam.",
+    "FOL": "NationalPark(phuocBinh) ∧ Locatedin(phuocBinh, vietnam)"
+  },
+  {
+    "NL": "If you lose time, you will be late for work.",
+    "FOL": "∀x (LoseTime(x) ↔ LateForWork(x))"
+  },
+  {
+    "NL": "All lawyers are gentlemen.",
+    "FOL": "∀x (Lawyer(x) → Gentleman(x))"
+  },
+  {
+    "NL": "Peter was invited to play piano at the concert hall.",
+    "FOL": "PlayInConcert(peter, piano)"
+  },
+  {
+    "NL": "No homework is fun.",
+    "FOL": "∀x (Homework(x) → ¬IsFun(x))"
+  },
+  {
+    "NL": "All univariate analyses use a generalized linear model.",
+    "FOL": "∀x (UnivariateAnalysis(x) → UsesGeneralizedLinearModel(x))"
+  },
+  {
+    "NL": "Tom is not an Osceola wild turkey.",
+    "FOL": "¬(WildTurkey(tom) ∧ Osceola(tom))"
+  },
+  {
+    "NL": "turkey, Rio Grande wild turkey, and Ocellated wild turkey.",
+    "FOL": "∀x (WildTurkey(x) → (Eastern(x) ∨ Osceola(x) ∨ Goulds(x) ∨ Merriams(x) ∨ Riogrande(x) ∨ Ocellated(x)))"
+  },
+  {
+    "NL": "If the Latent Dirichlet allocation model does not learn and classify multivariate data, then the Latent Dirichlet allocation model uses a generalized linear model and a multivoxel (pattern) analysis.",
+    "FOL": "¬LearnAndClassifyMultivariateData(latentDirichletAllocationModel) → UsesGeneralizedLinearModel(latentDirichletAllocationModel) ∧ MultivoxelPatternAnalysis(latentDirichletAllocationModel)"
+  },
+  {
+    "NL": "If two La Liga soccer teams recieve the same points, the team which recieves more points from the games between the two teams ranks higher.",
+    "FOL": "∀x ∀y (LaLiga(x) ∧ LaLiga(y) ∧ ¬MorePoints(x, y) ∧ ¬MorePoints(y, x) ∧ MorePointsInGameBetween(x, y) → HigherRank(x, y))"
+  },
+  {
+    "NL": "All employees working in software engineering are from China.",
+    "FOL": "∀x (SoftwareEngineering(x) → FromChina(x))"
+  },
+  {
+    "NL": "Steinhauer was not the winner of the 1992 du Maurier Classic.",
+    "FOL": "¬Winner(maurier, steinhauer)"
+  },
+  {
+    "NL": "Tom will rent an apartment in The Olive Garden.",
+    "FOL": "TomRent(oliveGarden)"
+  },
+  {
+    "NL": "Tom is an Ocellated wild turkey.",
+    "FOL": "Ocellated(tom)"
+  },
+  {
+    "NL": "If Jumbo is sleepy, then Jumbo is a baby elephant or an elephant.",
+    "FOL": "Sleepy(jumbo) → BabyElephant(jumbo) ∨ Mammal(jumbo)"
+  },
+  {
+    "NL": "A horse is a racehorse if it is in a race.",
+    "FOL": "∀x (Horse(x) ∧ Racing(x) → Racehorse(x))"
+  },
+  {
+    "NL": "An animal is either a rabbit or a squirrel.",
+    "FOL": "∀x (Rabbit(x) ∨ Squirrel(x))"
+  },
+  {
+    "NL": "Yale university's endowment was valued at $42.3 billion.",
+    "FOL": "ValuedAt(yalesendowment, y42.3billion)"
+  },
+  {
+    "NL": "If George can compose and wants to compose, he will compose.",
+    "FOL": "(WantsToCompose(george) ∧ CanCompose(george)) → WillCompose(george)"
+  },
+  {
+    "NL": "Ernest Pohl was a Polish football player.",
+    "FOL": "PolishFootballPlayer(ernestpohl)"
+  },
+  {
+    "NL": "If a European plays football, they play what Americans call soccer.",
+    "FOL": "∀x ((FootballPlayer(x) ∧ European(x)) → PlaysAmericanSoccer(x))"
+  },
+  {
+    "NL": "All imaginative processes are produced in human brains.",
+    "FOL": "∀x (ImaginativeProcess(x) → ProducedInHumanBrains(x))"
+  },
+  {
+    "NL": "To get a job at Google, you need to have a lot of work experience or a good education.",
+    "FOL": "∀x (Employed(x, google) → WorkExp(x) ∨ GoodEduc(x))"
+  },
+  {
+    "NL": "Rafa Nadal is a professional tennis player.",
+    "FOL": "ProfessionalTennisPlayer(rafaNadal)"
+  },
+  {
+    "NL": "Elephantopus is a genus of perennial plants in the daisy family.",
+    "FOL": "∀x (Elephantopus(x) → Genus(x, perennialplants) ∧ BelongTo(x, daisyfamily))"
+  },
+  {
+    "NL": "If people own a large desktop monitor at their home, then they work regularly and often at home.",
+    "FOL": "∀x (Desktop(x) → WorkHome(x))"
+  },
+  {
+    "NL": "If a person is a celebrity then they are well paid.",
+    "FOL": "∀x (Celebrity(x) → WellPaid(x))"
+  },
+  {
+    "NL": "The Eiffel Tower is one of the main tourist attractions located in Paris.",
+    "FOL": "TouristAttraction(eiffelTower) ∧ LocatedIn(eiffelTower, paris)"
+  },
+  {
+    "NL": "A werewolf is a human that can turn into a wolf.",
+    "FOL": "∀x (Human(x) ∧ CanTurnInto(x, wolf) → Werewolf(x))"
+  },
+  {
+    "NL": "If someone is a lifeguard, then they work at a pool.",
+    "FOL": "∀x (Lifeguard(x) → WorkAtPool(x))"
+  },
+  {
+    "NL": "The Controlled Substances Act was an act passed in 1971.",
+    "FOL": "PassedIn(controlledSubstancesAct, year1971) ∧ Act(controlledSubstancesAct)"
+  },
+  {
+    "NL": "Deodorant is poisonous.",
+    "FOL": "Poisonous(deodorant)"
+  },
+  {
+    "NL": "Marvin is neither a human nor from Mars.",
+    "FOL": "¬Human(marvin) ∧ ¬FromMars(marvin)"
+  },
+  {
+    "NL": "All sold in the US are sold in Walmart.",
+    "FOL": "∀x (SoldInUS(x) → SoldInWalmart(x))"
+  },
+  {
+    "NL": "Battery towers are an artillery fortification.",
+    "FOL": "∀x (BatteryTower(x) → ArtilleryFortification(x))"
+  },
+  {
+    "NL": "If a real number equals another real number adding one, the first number is larger.",
+    "FOL": "∀x ∀y (RealNum(x) ∧ RealNum(y) ∧ EqualAddOne(x, y) → Larger(x, y))"
+  },
+  {
+    "NL": "If people invest in the public stock market regularly, then they read the Wall Street Journal and other newspapers regularly to keep updated on financial metrics.",
+    "FOL": "∀x (Invests(x) → Newspapers(x))"
+  },
+  {
+    "NL": "Chemical Endangerment is harmful.",
+    "FOL": "∀x (ChemicalEndangerment(x) → Harmful(x))"
+  },
+  {
+    "NL": "The Premier Division was won in 2005–06 by a team from Ponciau.",
+    "FOL": "∃x (BasedInPonciau(x) ∧ WonPremierDivisionDuring(x, y2005))"
+  },
+  {
+    "NL": "Robert Lewandowski left Bayern Munchen.",
+    "FOL": "LeftTeam(robertLewandowski, bayernMunchen)"
+  },
+  {
+    "NL": "No shy and reticent person likes to talk to strangers.",
+    "FOL": "∀x (ShyAndReticentPerson(x) → ¬LikeToTalkToStrangers(x))"
+  },
+  {
+    "NL": "Dried Thai chilies are cupcakes and a product of Baked by Melissa.",
+    "FOL": "Cupcake(driedThaiChilies) ∧ ProductsOfBakedByMelissa(driedThaiChilies)"
+  },
+  {
+    "NL": "If and only if Karen binge-watches a Netflix show, she will download it.",
+    "FOL": "∀x ((NetflixShow(x) ∧ BingeWatch(karen, x)) ↔ Download(karen, x))"
+  },
+  {
+    "NL": "No Kangaroos live in Germany.",
+    "FOL": "∀x (Kangaroo(x) → ¬LiveIn(x, germany))"
+  },
+  {
+    "NL": "John is neither an iguana nor a bird.",
+    "FOL": "¬Iguana(john) ⊕ Bird(john)"
+  },
+  {
+    "NL": "All pupils are human.",
+    "FOL": "∀x (Pupil(x) → Human(x))"
+  },
+  {
+    "NL": "Vladivostok is the administrative center of the Far Eastern federal district.",
+    "FOL": "AdministrativeCenterOf(vladivostok, fareastern)"
+  },
+  {
+    "NL": "All of Max's favorite animals are very fluffy.",
+    "FOL": "∀x (MaxFavoriteAnimals(x) → VeryFluffy(x))"
+  },
+  {
+    "NL": "The security deposit at the Olive Garden is either $2000 or more.",
+    "FOL": "DepositNoLessThan2000(oliveGarden)"
+  },
+  {
+    "NL": "Some Whigs speak French.",
+    "FOL": "∃x (Whig(x) ∧ SpeakFrench(x))"
+  },
+  {
+    "NL": "Deng Xiaoping was praised for his reaffirmation of the reform program in his Southern Tour of 1992 as well as the reversion of Hong Kong to Chinese control in 1997 and the return of Macau in 1999.",
+    "FOL": "PraisedFor(dengxiaoping, reaffirmationofreformprogram) ∧ PraisedFor(dengxiaoping, reversionofhongkong) ∧ PraisedFor(dengxiaoping, returnofmacau)"
+  },
+  {
+    "NL": "If Susan is a Harvard student, then she is a young adult.",
+    "FOL": "HarvardStudent(susan) → YoungAdult(susan)"
+  },
+  {
+    "NL": "No digital media are analog.",
+    "FOL": "∀x (Digital(x) → ¬Analog(x))"
+  },
+  {
+    "NL": "All young teenage girls who attend college are big fans of pop bands and singers.",
+    "FOL": "∀x (CollegeTeen(x) → Ambitious(x))"
+  },
+  {
+    "NL": "An APP is either related to YouTube or Instagram.",
+    "FOL": "∀x (Youtube(x) ∨ Instagram(x))"
+  },
+  {
+    "NL": "If Harry is either both evil and ugly, or neither evil nor ugly, then Harry is neither kind nor a CEO.",
+    "FOL": "(Evil(harry) ∧ Ugly(harry)) ⊕ (¬Evil(harry) ∧ ¬Ugly(harry)) → ¬Kind(harry) ∧ ¬CEO(harry)"
+  },
+  {
+    "NL": "Luke is either both a twin or triplet and develops strong bonds with his family members, or he neither is a twin or triplet nor develops strong bonds with his family members.",
+    "FOL": "(TwinTriplet(luke) ∧ StrongBonds(luke)) ⊕ (¬TwinTriplet(luke) ∧ ¬StrongBonds(luke))"
+  },
+  {
+    "NL": "Amy Odell is a British singer-songwriter.",
+    "FOL": "British(amyOdell) ∧ Singer(amyOdell) ∧ SongWriter(amyOdell)"
+  },
+  {
+    "NL": "No cookie is healthy.",
+    "FOL": "∀x (Cookie(x) → ¬Healthy(x))"
+  },
+  {
+    "NL": "Mia's favorite season is not the same as Emma's.",
+    "FOL": "¬Love(mia, emma)"
+  },
+  {
+    "NL": "Nautico is a football club along with Braga.",
+    "FOL": "FootballClub(nautico) ∧ FootballClub(braga)"
+  },
+  {
+    "NL": "All bread is food.",
+    "FOL": "∀x (Bread(x) → Food(x))"
+  },
+  {
+    "NL": "The Great Lakes began to form at the end of the Last Glacial Period.",
+    "FOL": "∀x (GreatLake(x) → FormAtEndOf(x, lastglacialperiod))"
+  },
+  {
+    "NL": "If people come to work every day with a positive attitude, then they work well in teams in their workplace.",
+    "FOL": "∀x (PositiveAttitude(x) → WorkTeams(x))"
+  },
+  {
+    "NL": "If Marcy either gets a lot of mail and is very involved with her neighborhood or if she does not order a lot of Amazon packages nor is very involved with her neighborhood, then Marcy does not both get a lot of daily mail and order a lot of Amazon packages.",
+    "FOL": "¬(DailyMail(marcy) ⊕ Neighborhood(marcy)) → (¬DailyMail(marcy) ∨ ¬Amazon(marcy))"
+  },
+  {
+    "NL": "An animal is either a monkey or a bird.",
+    "FOL": "∀x ( Monkey (x) ∨  Bird (x))"
+  },
+  {
+    "NL": "Robert Lewandowski plays for Bayern Munchen.",
+    "FOL": "PlaysForTeam(robertLewandowski, bayernMunchen)"
+  },
+  {
+    "NL": "The Legend of Zelda sold more than one million copies.",
+    "FOL": "SellsMoreThan(thelegendofzelda, onemillioncopies)"
+  },
+  {
+    "NL": "Queens are female.",
+    "FOL": "∀x (Queen(x) → Female(x))"
+  },
+  {
+    "NL": "All skirts are dresses.",
+    "FOL": "∀x (Skirt(x) → Dress(x))"
+  },
+  {
+    "NL": "If you are on the payroll, then you are being paid by the school.",
+    "FOL": "∀x (OnPayroll(x) → PaidBySchool(x))"
+  },
+  {
+    "NL": "All people who are very consistent and enjoy sticking to their regular routines do not like surprises.",
+    "FOL": "∀x (Consistent(x) → NoSurprises(x))"
+  },
+  {
+    "NL": "All of Max's favorite animals love to sleep.",
+    "FOL": "∀x (MaxFavoriteAnimals(x) → LoveToSleep(x))"
+  },
+  {
+    "NL": "All books about the future are inspired by Shakespeare.",
+    "FOL": "∀x (AboutFuture(x) → InspiredFromShakespeare(x))"
+  },
+  {
+    "NL": "There is a WeTab product.",
+    "FOL": "∃x (WeTab(x))"
+  },
+  {
+    "NL": "If a hatchery is for conservation, it might release animals into the wild.",
+    "FOL": "∃x (Hatchery(x) ∧ ForConservation(x) ∧ ReleasesAnimalsToWild(x))"
+  },
+  {
+    "NL": "If Prius is neither a sports car nor a loud car, then Prius is a Maranello-made car or a loud car.",
+    "FOL": "∀x (¬SportsCar(prius) ∨ ¬LoudCar(prius) → MadeInMaranello(prius) ∨ LoudCar(prius))"
+  },
+  {
+    "NL": "Taylor Swift gives a commencement speech in New York University in 2022.",
+    "FOL": "Speech(taylorSwift, nyc)"
+  },
+  {
+    "NL": "If an animal has legs, then it jumps.",
+    "FOL": "∀x (HaveLegs(x) → Jump(x))"
+  },
+  {
+    "NL": "There are no people who can resist the hallmark delectable drinks and desserts that are famed in Italy.",
+    "FOL": "∀x (¬Resist(x))"
+  },
+  {
+    "NL": "All dogs are animals that bark.",
+    "FOL": "∀x (Dog(x) → Bark(x))"
+  },
+  {
+    "NL": "If Nancy is not a teacher, then they are not paid by the school.",
+    "FOL": "¬Teacher(nancy) → ¬OnPayroll(nancy)"
+  },
+  {
+    "NL": "Supervised learning is used to train the state-of-the-art text summarization model.",
+    "FOL": "TrainTextSumModel(supervisedLearning)"
+  },
+  {
+    "NL": "To apply for a Schengen Visa, you need to provide financial guarantees.",
+    "FOL": "∀x (ApplyVisa(x) → FinancialGuarantees(x))"
+  },
+  {
+    "NL": "Paris is the capital of France.",
+    "FOL": "CapitalOf(paris, france)"
+  },
+  {
+    "NL": "Columbia University is one of the Ivy League schools.",
+    "FOL": "IvyLeague(columbiaUniversity)"
+  },
+  {
+    "NL": "Seven equals six plus one.",
+    "FOL": "EqualAddOne(seven, six)"
+  },
+  {
+    "NL": "All measurements of brain activity are used by neuroscience researchers.",
+    "FOL": "∀x (MeasurementOfBrainActivity(x) → UsedByNeuroscienceResearchers(x))"
+  },
+  {
+    "NL": "Thick as Thieves was published by Greenwillow Books.",
+    "FOL": "PublishedBy(thickastheives, greenwillowbooks)"
+  },
+  {
+    "NL": "Eastwick is a series by ABC.",
+    "FOL": "Series(eastwick) ∧ By(eastwick, abc)"
+  },
+  {
+    "NL": "Grebes are not platypuses and also not echidnas.",
+    "FOL": "∀x (Grebes(x) → (¬Platypuses(x) ∧ ¬Echidnas(x)))"
+  },
+  {
+    "NL": "All people who have a lot of disposable income have a horse ranch.",
+    "FOL": "∀x (DisposableIncome(x) → Ranch(x))"
+  },
+  {
+    "NL": "Jack attends the conference and he is a student from China.",
+    "FOL": "China(jack) ∧ Attend(jack)"
+  },
+  {
+    "NL": "Beijing is located in southern China.",
+    "FOL": "InSouthernChina(beijing)"
+  },
+  {
+    "NL": "Show Your Love contains a hopeful message.",
+    "FOL": "Contains(showyourlove, hopefulmessage)"
+  },
+  {
+    "NL": "Subway does not provide take-out service.",
+    "FOL": "¬(NoTakeOutService(subway) ∧ NegativeReview(subway)) → PopularAmongLocalResidents(subway) ∧ NoTakeOutService(subway)"
+  },
+  {
+    "NL": "If a student gets up early, then he/she will study in the morning.",
+    "FOL": "∀x (GetUpEarly(x) → StudyMorning(x))"
+  },
+  {
+    "NL": "If a cartoon character is ugly, then it is not popular.",
+    "FOL": "∀x (Ugly(x) → ¬Popular(x))"
+  },
+  {
+    "NL": "1984 is printed text.",
+    "FOL": "PrintedText(y1984)"
+  },
+  {
+    "NL": "Tom's license plate is from Istanbul.",
+    "FOL": "Vehicleregistrationplate(tom, istanbul)"
+  },
+  {
+    "NL": "If people have very high energy and are impulsive, then they like surprises.",
+    "FOL": "∀x (Impulsive(x) → ¬NoSurprises(x))"
+  },
+  {
+    "NL": "All reusable chopsticks are made from metal.",
+    "FOL": "∀x (Reusable(x) → MadeFromMetals(x))"
+  },
+  {
+    "NL": "All coffee supplied by the company is sold in Walmart.",
+    "FOL": "∀x (Company(x) → Walmart(x))"
+  },
+  {
+    "NL": "All Asians are human.",
+    "FOL": "∀x ( Asian(x)→  Human(x))"
+  },
+  {
+    "NL": "There is an animal.",
+    "FOL": "∃x (Animal(x))"
+  },
+  {
+    "NL": "Sarah doesn’t own a car.",
+    "FOL": "¬Own(sarah, car)"
+  },
+  {
+    "NL": "KiKi is terricolous.",
+    "FOL": "Terricolous(kiki)"
+  },
+  {
+    "NL": "Max is an aspiring architecture student, and he plans to apply to Yale School of Architecture.",
+    "FOL": "AspiringArchitectureStudent(max) ∧ PlansToApplyTo(max, yaleSchoolofArchitecture)"
+  },
+  {
+    "NL": "The US is in North America.",
+    "FOL": "In(us, northamerica)"
+  },
+  {
+    "NL": "James's favorite season is summer.",
+    "FOL": "Love(james, summer)"
+  },
+  {
+    "NL": "FIFA 22 is made by a Japanese video game company.",
+    "FOL": "∀x (Created(fifa22, x) → Japanese(x) ∧ VideoGameCompany(x))"
+  },
+  {
+    "NL": "No type of cancer is without a tumor.",
+    "FOL": "∀x (ATypeOfCancer(x) → ¬WithoutTumor (x))"
+  },
+  {
+    "NL": "Roderick strong leads a professional wrestling stable.",
+    "FOL": "∃x (Leads(roderickstrong, x) ∧ ProfessionalWrestlingStable(x))"
+  },
+  {
+    "NL": "Some affection is positive.",
+    "FOL": "∃x (Affection(x) ∧ Positive(x))"
+  },
+  {
+    "NL": "Any company that has offices in different countries is a multinational company.",
+    "FOL": "∀x ∀y ∀z (OfficeIn(x, y) ∧ OfficeIn(x, z) ∧ ¬SameCountry(y, z) → IsMultinationalCompany(x))"
+  },
+  {
+    "NL": "All planes in Delta are of type Boeing-737.",
+    "FOL": "∀x (Delta(x) → Boeing737(x))"
+  },
+  {
+    "NL": "No young person teaches.",
+    "FOL": "∀x (Young(x) → ¬Teach(x))"
+  },
+  {
+    "NL": "All snakes are reptiles.",
+    "FOL": "∀x (Snake(x) → Reptile(x))"
+  },
+  {
+    "NL": "Every printed text is analog.",
+    "FOL": "∀x (PrintedText(x) → Analog(x))"
+  },
+  {
+    "NL": "All squares are shapes.",
+    "FOL": "∀x (Square(x) → IsShape(x))"
+  },
+  {
+    "NL": "James is not popular among students.",
+    "FOL": "¬Popular(james)"
+  },
+  {
+    "NL": "The Mongol region was where Ambiorus Dementjevi lived.",
+    "FOL": "∀x (AmbiortusDementjevi(x) → Lived(x, mongolregion))"
+  },
+  {
+    "NL": "No one gets flu.",
+    "FOL": "∀x (Human(x) → ¬Flu(x))"
+  },
+  {
+    "NL": "Buisnesses are either sanctioned or unsanctioned.",
+    "FOL": "∀x (Buisness(x) → Sanctioned(x) ⊕ ¬Sanctioned(x))"
+  },
+  {
+    "NL": "Two is positive.",
+    "FOL": "Positive(two)"
+  },
+  {
+    "NL": "If a person is hungry, the person is uncomfortable.",
+    "FOL": "∀x (Hungry(x) → Uncomfortable(x))"
+  },
+  {
+    "NL": "Some Acts prevent harmful things.",
+    "FOL": "∃x (Act(x) ∧ PreventsHarm(x))"
+  },
+  {
+    "NL": "All students who do not have class during the weekend have free time during the weekend.",
+    "FOL": "∀x (NoClass(x) → FreeTime(x))"
+  },
+  {
+    "NL": "Odell is an English surname originating in Odell, Bedfordshire.",
+    "FOL": "∀x (Odell(x) → Surname(x))"
+  },
+  {
+    "NL": "Asa Hoffman lives in Manhattan.",
+    "FOL": "LivesIn(asaHoffmann, manhattan)"
+  },
+  {
+    "NL": "All students working in the lab are instructed by professor David.",
+    "FOL": "∀x (WorkInLab(x) → ProfessorDavid(x))"
+  },
+  {
+    "NL": "James subscribes to AMC A List.",
+    "FOL": "SubscribedTo(james, amcalist)"
+  },
+  {
+    "NL": "All Games developed by Paradox Development Studio sold more than 1 million copies.",
+    "FOL": "∀x (DevelopedByParadox(x) → SoldMillion(x))"
+  },
+  {
+    "NL": "Tyga released the Well Done 3 album.",
+    "FOL": "∀x ∀y (IsRapper(x) ∧ ReleasedAlbum(x, y) → IsRapAlbum(y))"
+  },
+  {
+    "NL": "Oxford Street is in London.",
+    "FOL": "∀x (OxfordStreet(x) → London(x))"
+  },
+  {
+    "NL": "All elephants are mammals.",
+    "FOL": "∀x (Elephant(x) → Mammal(x))"
+  },
+  {
+    "NL": "Susan lives in an apartment where the rent covers all utilities.",
+    "FOL": "∀x (Cover(susan, x))"
+  },
+  {
+    "NL": "All devices connected to Google Home are controlled by managers.",
+    "FOL": "∀x (GoogleHome(x) → ControlledByManager(x))"
+  },
+  {
+    "NL": "Tipped employees do not get a guaranteed minimum wage.",
+    "FOL": "∀x (Tipped(x) → ¬GetMinWage(x))"
+  },
+  {
+    "NL": "Cats are pets.",
+    "FOL": "∀x ∃y (Cat(x) → Pet(x, y))"
+  },
+  {
+    "NL": "All young adults go on a diet.",
+    "FOL": "∀x (YoungAdult(x) → GoOnDiet(x))"
+  },
+  {
+    "NL": "Phoneix's music is classified under the indie pop genre.",
+    "FOL": "IndiePop(phoenix)"
+  },
+  {
+    "NL": "If a koala is very fluffy, then the koala is not a quokka.",
+    "FOL": "VeryFluffy(koala) → ¬Quokka(koala)"
+  },
+  {
+    "NL": "If Nancy is not a toddler, then Nancy is bad.",
+    "FOL": "¬Toddler(nancy) → Bad(nancy)"
+  },
+  {
+    "NL": "CPSC 201 and CPSC 223 are prerequisites for CPSC 323.",
+    "FOL": "Prereq(cpsc201, cpsc323) ∧ Prereq(cpsc223, cpsc323)"
+  },
+  {
+    "NL": "Someone is either a Yale student or a Harvard student.",
+    "FOL": "∀x (YaleStudent(x) ∨ HarvardStudent(x))"
+  },
+  {
+    "NL": "All who present their work at the conference will attend in person.",
+    "FOL": "∀x (Present(x) → InPerson(x))"
+  },
+  {
+    "NL": "Herodicus was a Greek physician, dietician, sophist, and gymnastic-master.",
+    "FOL": "Greek(herodicus) ∧ Physician(herodicus) ∧ Dietician(herodicus) ∧ Sophist(herodicus) ∧ GymnasticMaster(herodicus)"
+  },
+  {
+    "NL": "Participating in natural disaster response is an example of volunteers working in groups on an as-needed basis.",
+    "FOL": "∃x (Volunteer(x) ∧ ContributeTo(x, naturaldisasterresponse) → WorkInGroup(x) ∧ WorkAsNeeded(x))"
+  },
+  {
+    "NL": "There is an embargo on Russian foreign trade goods.",
+    "FOL": "Embargo(russia)"
+  },
+  {
+    "NL": "Some baby elephants are sleepy.",
+    "FOL": "∃x (BabyElephant(x) ∧ Sleepy(x))"
+  },
+  {
+    "NL": "All displayed on the homepage are sold in Walmart.",
+    "FOL": "∀x (DisplayedInHomepage(x) → SoldInWalmart(x))"
+  },
+  {
+    "NL": "A cutman is responsible for preventing and treating physical damage to a fighter.",
+    "FOL": "∀x (Cutman(x) → Prevent(x, physicalDamage) ∧ Treat(x, physicalDamage))"
+  },
+  {
+    "NL": "An animal is either a cat or a dog.",
+    "FOL": "∀x (Cat(x) ⊕ Dog(x))"
+  },
+  {
+    "NL": "All iPhones are cellphones.",
+    "FOL": "∀x (Iphone(x) → Cellphone(x))"
+  },
+  {
+    "NL": "Customers are either older than 80 or are currently studying at school.",
+    "FOL": "∀x (OlderThan80(x) ∨ StudyAtSchool(x))"
+  },
+  {
+    "NL": "4k monitors are more expensive than 1080 monitors and 2k monitors.",
+    "FOL": "∀x ∀y ∀z (Monitor(x) ∧ Monitor(y) ∧ Monitor(z) ∧ FourK(x) ∧ OneOEightO(y) ∧ TwoK(z) → MoreExpensive(x, y) ∧ MoreExpensive(x, z))"
+  },
+  {
+    "NL": "Everything that eats a lot needs a large territory.",
+    "FOL": "∀x (EatsALot(x) → NeedsLargeTerritory(x))"
+  },
+  {
+    "NL": "If people order takeout frequently in college, then they work in student jobs on campus.",
+    "FOL": "∀x (Takeout(x) → StudentJobs(x))"
+  },
+  {
+    "NL": "Massages were recommended by Herodicus.",
+    "FOL": "Recommended(herodicus, massages)"
+  },
+  {
+    "NL": "Some pets are rabbits.",
+    "FOL": "∃x (Pet(x) ∧ Reptile(x))"
+  },
+  {
+    "NL": "All animals are either vertebrates or invertebrates.",
+    "FOL": "∀x (Animal(x) → Invertebrate(x) ⊕ Vertebrate(x))"
+  },
+  {
+    "NL": "If a person is bad at chess, then they don't play a lot of chess.",
+    "FOL": "∀x (BadChess(x) → ¬PlaysLots(x))"
+  },
+  {
+    "NL": "If a song peaked at No.1 at a cetain place, then it was extremely popular.",
+    "FOL": "∀x ∀y (Peak(x, y) → Popular(x))"
+  },
+  {
+    "NL": "The Hulk is a destroyer.",
+    "FOL": "Destroyer(hulk)"
+  },
+  {
+    "NL": "Any choral conductor is a musician.",
+    "FOL": "∀x (ChoralConductor(x) → Musician(x))"
+  },
+  {
+    "NL": "In Indonesia, the prosecutor only personally investigates cases of some special crimes.",
+    "FOL": "∃x ∃y (Country(indonesia) ∧ Prosecutor(x) ∧ Crime(y) → InvestigatePersonally(x, y))"
+  },
+  {
+    "NL": "All unstable things are kinetic.",
+    "FOL": "∀x (Unstable(x) → Kinetic(x))"
+  },
+  {
+    "NL": "A certified gold album or single is one which sold over half a million copies.",
+    "FOL": "∀x ((Album(x) ∨ Single(x)) ∧ SoldOver(x, l500000) → CertifiedGold(x))"
+  },
+  {
+    "NL": "If you have room for dessert, you have room for broccoli.",
+    "FOL": "∀x (RoomFor(x, dessert) → RoomFor(x, broccoli))"
+  },
+  {
+    "NL": "Electric dance music bands are bands.",
+    "FOL": "∀x (ElectronicDanceMusicBand(x) → Band(x))"
+  },
+  {
+    "NL": "Katya knows LanguageA.",
+    "FOL": "¬Communicate(katya, danil)"
+  },
+  {
+    "NL": "If coke is apple juice, then coke is a drink.",
+    "FOL": "AppleJuice(coke) → Drink(coke)"
+  },
+  {
+    "NL": "All employees who schedule a meeting with their customers will appear in the company today.",
+    "FOL": "∀x (Meeting(x) → AppearInCompany(x))"
+  },
+  {
+    "NL": "Peter is a man who is taller than Michael.",
+    "FOL": "IsMan(peter) ∧ Taller(peter, michael)"
+  },
+  {
+    "NL": "All non-breast cancers are a type of cancer.",
+    "FOL": "∀x (Non-BreastCancer(x) → ATypeOfCancer(x))"
+  },
+  {
+    "NL": "If someone can make cookies and muffins, they are a baker.",
+    "FOL": "∀x (MakeCookies(x) ∧ MakeMuffins(x) → Baker(x))"
+  },
+  {
+    "NL": "Notable people with the surname include Amy Odell, Jack Odell, and Mats Odell.",
+    "FOL": "Odell(amyOdell) ∧ NotablePeople(amyOdell) ∧ Odell(jackOdell) ∧ NotablePeople(jackOdell) ∧ Odell(matsOdell) ∧ NotablePeople(matsOdell)"
+  },
+  {
+    "NL": "No extraterrestrial is human.",
+    "FOL": "∀x (Extraterrestrial(x) → ¬Human(x))"
+  },
+  {
+    "NL": "A controlled substance is a drug.",
+    "FOL": "∀x (ControlledSubstances(x) → Drugs(x))"
+  },
+  {
+    "NL": "All cancers are malignant tumors.",
+    "FOL": "∀x (Cancer(x) → MalignantTumor(x))"
+  },
+  {
+    "NL": "Moscow is the administrative center of the Central federal district.",
+    "FOL": "AdministrativeCenterOf(moscow, central)"
+  },
+  {
+    "NL": "All Boeing 707s are planes.",
+    "FOL": "∀x (Boeing707(x) → Plane(x))"
+  },
+  {
+    "NL": "Picture memory is either an event-related design and acquiring data or neither an event-related design nor acquiring data.",
+    "FOL": "(Event-relatedDesign(pictureMemory) ∧ AcquiringData(pictureMemory)) ∨ (¬Event-relatedDesign(pictureMemory) ∧ ¬AcquiringData(pictureMemory))"
+  },
+  {
+    "NL": "Beijing hosted the 2008 Summer Olympics and 2008 Summer Paralympics Games.",
+    "FOL": "Hosted(beijing, summer2008olympic) ∧ Hosted(beijing, summer2008paralympicgames)"
+  },
+  {
+    "NL": "The Picuris Mountains are a mountain range in New Mexico or Texas.",
+    "FOL": "MountainRange(picurismountains) ∧ In(picurismountains, newmexico) ∨ In(picurismountains, texas)"
+  },
+  {
+    "NL": "All mammals are animals.",
+    "FOL": "∀x  (Mammal (x)→  Animal (x))"
+  },
+  {
+    "NL": "John Nash designed the construction on Regent Street.",
+    "FOL": "∃x (RegentStreet(x) ∧ Design(johnNash, x))"
+  },
+  {
+    "NL": "No customers rewarded a $30 gift card are older than 80.",
+    "FOL": "∀x (Award(x) → ¬OlderThan80(x))"
+  },
+  {
+    "NL": "If a person values physical touch as an especially important love language, then they are good with pets.",
+    "FOL": "∀x (Physical(x) → GoodWithPets(x))"
+  },
+  {
+    "NL": "Dogs and Cats can be naughty.",
+    "FOL": "∃x ((Cat(x) ∧ Naughty(x)) ∨ (Dog(x) ∧ Naughty(x)))"
+  },
+  {
+    "NL": "Every terrifying Halloween scare comes from a creepy haunted house.",
+    "FOL": "∀x (TerrifyingHalloweenScare(x) → CreepyHauntedHouse(x))"
+  },
+  {
+    "NL": "Joe Rogan is a radio personality.",
+    "FOL": "RadioPersonality(joeRogan)"
+  },
+  {
+    "NL": "Xiufeng, Xiangshan, Diecai, Qixing are districts in the city of Guilin.",
+    "FOL": "DistrictIn(xiufeng, guilin) ∧ DistrictIn(xiangshan, guilin) ∧ DistrictIn(diecai, guilin) ∧ DistrictIn(qixing, guilin) ∧ City(guilin)"
+  },
+  {
+    "NL": "Luke spends a lot of time hanging out and playing with his siblings.",
+    "FOL": "Playing(luke)"
+  },
+  {
+    "NL": "No faculty does homework.",
+    "FOL": "∀x (Faculty(x) → ¬DoesHomework(x))"
+  },
+  {
+    "NL": "Some weddings in July are well-attended.",
+    "FOL": "∃x (July(x) ∧ WellAttended(x))"
+  },
+  {
+    "NL": "If a competitive sport involves spectators betting on small game, then it is banned.",
+    "FOL": "∀x ∃y (CompetitiveSport(x) ∧ SmallGame(y) ∧ SpectatorsBetOn(x, y) → Banned(x))"
+  },
+  {
+    "NL": "All shows portraying the lives of real people are reality TV shows.",
+    "FOL": "∀x (PortrayLiveOfRealPeople(x) → RealityTVShow(x))"
+  },
+  {
+    "NL": "Bobby Flynn was born in Queensland.",
+    "FOL": "BornIn(bobbyFlynn, queensland)"
+  },
+  {
+    "NL": "Colorectal cancer is a severe cancer",
+    "FOL": "SevereCancer(colorectalCancer)"
+  },
+  {
+    "NL": "If people spend a lot of time hanging out with and playing with their siblings, then they often did not live at home regularly.",
+    "FOL": "∀x (Playing(x) → NotHome(x))"
+  },
+  {
+    "NL": "People liviing in Manhattan live in New York City.",
+    "FOL": "∀x (LivesIn(x, manhattan) → LivesIn(x, newyorkcity))"
+  },
+  {
+    "NL": "Captain America is an American.",
+    "FOL": "American(captain america)"
+  },
+  {
+    "NL": "If a language model is used by some researchers, it is popular.",
+    "FOL": "∀x (UsedBySomeResearchers(x) → Popular(x))"
+  },
+  {
+    "NL": "If people are conscious about the environment or their health, then they do not go to fast food places often.",
+    "FOL": "∀x (Conscious(x) → ¬FastFood(x))"
+  },
+  {
+    "NL": "The last heavy cruiser to enter service was the USS Salem.",
+    "FOL": "LastHeavyCruiserToEnterService(usssalem)"
+  },
+  {
+    "NL": "If people get many promotions from their boss at work, then they receive negative feedback from teams at work.",
+    "FOL": "∀x (BossPromotions(x) → ¬NegativeFeedback(x))"
+  },
+  {
+    "NL": "If viewers send in funny videos to the French broadcast channel, then Video Gag airs them on television.",
+    "FOL": "∀x (FunnyVideos(x) → AirsWeekly(x))"
+  },
+  {
+    "NL": "If Amy is not a Nobel laureate, then Amy is not an Olympic gold medal winner.",
+    "FOL": "¬NobelLaureate(amy) → ¬OlympicGoldMedalWinner(amy)"
+  },
+  {
+    "NL": "ETS develops various standardized tests primarily in the United States for K-12 and higher education.",
+    "FOL": "∃x (Develops(ets, x) ∧ StandardizedTest(x) ∧ In(x, unitedstates) ∧ For(x, k-12andhighereducation))"
+  },
+  {
+    "NL": "No scientists are good at sports.",
+    "FOL": "∀x (Scientist(x) → ¬GoodAtSports(x))"
+  },
+  {
+    "NL": "All Harvard students are diligent.",
+    "FOL": "∀x (HarvardStudent(x) → Diligent(x))"
+  },
+  {
+    "NL": "The Turing Award has been awarded to Donald Knuth, Marvin Minsky, Richard Hamming and John McCarthy.",
+    "FOL": "TuringAwarded(donaldKnuth) ∧ TuringAwarded(marvinMinsky) ∧ TuringAwarded(richardHamming) ∧ TuringAwarded(johnMccarthy)"
+  },
+  {
+    "NL": "If Sam uses a Mac, he will play a song.",
+    "FOL": "Use(sam, mac) → ∃x (Song(x) ∧ Play(sam, x))"
+  },
+  {
+    "NL": "Daniel’s older sister works at Meta as a technical sourcer.",
+    "FOL": "WorksAtMeta(danielsOlderSister) ∧ TechnicalSourcer(danielsOlderSister)"
+  },
+  {
+    "NL": "If someone loves animals, then they are not bad.",
+    "FOL": "∀x (LoveAnimals(x) → ¬Bad(x))"
+  },
+  {
+    "NL": "If people grew up with parents who worked as doctors, then they enjoy healthcare fields and want to help people with medical issues.",
+    "FOL": "∀x ParentDoctors(x) → Healthcare(x)"
+  },
+  {
+    "NL": "If the song Max listens to is rap, then the song is from Kanye West.",
+    "FOL": "∀x (MaxListensToRap(x) → SongsFromKanyeWest(x))"
+  },
+  {
+    "NL": "If someone is evil, then they are cold-blood.",
+    "FOL": "∀x (Evil(x) → ColdBlood(x))"
+  },
+  {
+    "NL": "The USS Salem is a heavy cruiser built for the United States navy.",
+    "FOL": "HeavyCruiser(usssalem) ∧ BuiltFor(usssalem, unitedstatesnavy)"
+  },
+  {
+    "NL": "No Boeing-737 plane is equipped with more than 300 seats.",
+    "FOL": "∀x (Boeing737(x) → ¬Seats300(x))"
+  },
+  {
+    "NL": "Amy is good at sports or Amy is an Olympic gold medal winner.",
+    "FOL": "GoodAtSports(amy) ∨ OlympicGoldMedalWinner(amy)"
+  },
+  {
+    "NL": "Deborah Wallace is a Scottish born actress, playwright and producer.",
+    "FOL": "BornIn(deborahwallace, scotland) ∧ Actress(deborahwallace) ∧ Playwright(deborahwallace) ∧ Producer(deborahwallace)"
+  },
+  {
+    "NL": "All Yale dormitories are located on York Street.",
+    "FOL": "∀x (YaleDormitory(x) → InYorkStreet(x))"
+  },
+  {
+    "NL": "People who can catch balls are good wide receivers.",
+    "FOL": "∀x ∃y (CanCatch(x, y) ∧ Ball(y) → Good(x, widereciever))"
+  },
+  {
+    "NL": "All invited to join the club are provided with delicious meals.",
+    "FOL": "∀x (Invited(x) → Meals(x))"
+  },
+  {
+    "NL": "Barutin is named after all islands in Antarctica.",
+    "FOL": "∀x (Locate(x, antarctica) → NameAfter(barutin, x))"
+  },
+  {
+    "NL": "If people publish journals, then they do not work in the entertainment industry.",
+    "FOL": "∀x (PublishJournals(x) → ¬Entertainment(x))"
+  },
+  {
+    "NL": "All faculty members have a job at a school.",
+    "FOL": "∀x (FacultyMember(x) → JobAtSchool(x))"
+  },
+  {
+    "NL": "If Mike is not both a human and a sheep, then Mike is either a man or a human.",
+    "FOL": "(¬Human(mike) ∨ ¬Sheep(mike)) → Man(mike) ⊕ Human(mike)"
+  },
+  {
+    "NL": "If an animal eats other animals, then it is a carnivore.",
+    "FOL": "∀x (EatOtherAnimals(x) → Carnivore(x))"
+  },
+  {
+    "NL": "As the party's Secretary-General under Mao and Vice Premier in he 1950s, Deng Xiaoping presided over the Anti-Rightist Campaign launched by Mao.",
+    "FOL": "PartysSecretaryGeneral(dengxiaoping) ∧ Under(dengxiaoping, mao) ∧ VicePremier(dengxiaoping) ∧ PresidedOver(dengxiaoping, antirightistcampaign) ∧ LaunchedBy(antirightistcampaign, mao)"
+  },
+  {
+    "NL": "All animal lovers are nice to animals.",
+    "FOL": "∀x (AnimalLover(x) → Nice(x))"
+  },
+  {
+    "NL": "Oxford Circus is a road junction connecting Oxford Street and Regent Street.",
+    "FOL": "OxfordStreet(oxfordCircus) ∧ RegentStreet(oxfordCircus)"
+  },
+  {
+    "NL": "John has a lot of work experience.",
+    "FOL": "WorkExp(john)"
+  },
+  {
+    "NL": "Symptons of Monkeypox include coughing.",
+    "FOL": "∃x (GetMonkeypox(x) ∧ Coughing(x))"
+  },
+  {
+    "NL": "Bakers who can also make scrambled eggs can make a good breakfast.",
+    "FOL": "∀x ((Baker(x) ∧ MakeScrambledEggs(x)) → MakeGoodBreakfast(x))"
+  },
+  {
+    "NL": "All fruits are provided in the same weight at the beginning of the party.",
+    "FOL": "∀x (Party(x) → SameWeight(x))"
+  },
+  {
+    "NL": "Ted is an aligator.",
+    "FOL": "Aligator(ted)"
+  },
+  {
+    "NL": "All Grand Slam champions are World Tour players.",
+    "FOL": "∀x (GrandSlamChampion(x) → WorldTourPlayer(x))"
+  },
+  {
+    "NL": "Roberto Roversi uses Roversi as a surname.",
+    "FOL": "UseAsSurname(roberto, roversi)"
+  },
+  {
+    "NL": "Mike has an F1 visa.",
+    "FOL": "F1(mike)"
+  },
+  {
+    "NL": "Customers either choose Plan A or Plan B.",
+    "FOL": "∀x (PlanA(x) ∨ PlanB(x))"
+  },
+  {
+    "NL": "No malignant tumor can be treated at home.",
+    "FOL": "∀x (MalignantTumor(x) → ¬CanBeTreatedAtHome(x))"
+  },
+  {
+    "NL": "If people frivolously spend a lot of money every time they go out, then they value quality manufacturing and luxury items.",
+    "FOL": "∀x Frivolous(x) → Luxury(x)"
+  },
+  {
+    "NL": "No employees working in this company are from China.",
+    "FOL": "∀x (WorkInCompany(x) → ¬FromChina(x))"
+  },
+  {
+    "NL": "All sports cars are loud.",
+    "FOL": "∀x (SportsCar(x) → LoudCar(x))"
+  },
+  {
+    "NL": "French bands write songs in French or in English.",
+    "FOL": "∀x ∀y (Band(x) ∧ France(x) ∧ Make(x, y) → FrenchSong(y) ⊕ EnglishSong(y))"
+  },
+  {
+    "NL": "Environmental volunteers contribute toward environmental management or conservation.",
+    "FOL": "∀x (Volunteer(x) ∧ Environmental(x) → (ContributeTo(x, environmentalmanagement) ∨ ContributeTo(x, environmentalconservation)))"
+  },
+  {
+    "NL": "Some books that have won Hugo Awards are written by Tomas.",
+    "FOL": "∃x (WinningHugoAward(x) ∧ WrittenByTomas(x))"
+  },
+  {
+    "NL": "If a class has no prerequisites, then the student can take the class",
+    "FOL": "∀x ∀y (¬Prereq(x, y) → CanTake(y))"
+  },
+  {
+    "NL": "Sam is using a Mac.",
+    "FOL": "Use(sam, mac)"
+  },
+  {
+    "NL": "A design by Max is either evocative or dreamy.",
+    "FOL": "Evocative(aDesignByMax) ⊕ Dreamy(aDesignByMax)"
+  },
+  {
+    "NL": "Road one is made of concrete and Road two is made of asphalt.",
+    "FOL": "Road(one) ∧ MadeOfConcrete(one) ∧ Road(two) ∧ MadeOfAsphalt(two)"
+  },
+  {
+    "NL": "Coco Gauff is not a player who lost to Iga Świątek or one of the most active players in major tennis.",
+    "FOL": "¬LostToIgaŚwiątek(cocoGauff) ∨ ¬AmongMostActivePlayersInMajorTennis(cocoGauff)"
+  },
+  {
+    "NL": "Cristiano Ronaldo have scored more than one hundred goals using his left foot.",
+    "FOL": "ScoreManyGoals(ronaldo, left)"
+  },
+  {
+    "NL": "I should not worry about things outside of my control.",
+    "FOL": "∀x (OutsideControl(x) → ¬ShouldWorry(x))"
+  },
+  {
+    "NL": "A phone is not a computer.",
+    "FOL": "∀x (Phone(x) → ¬Computer(x))"
+  },
+  {
+    "NL": "All hard Leetcode problems are starred by more than 1 thousand users.",
+    "FOL": "∀x (Hard(x) → Starred(x))"
+  },
+  {
+    "NL": "If Bonnie is either both a young child or teenager who wishes to further her academic career and educational opportunities and chaperones high school dances or neither is a young child nor teenager who wishes to further her academic career and educational opportunities, then Bonnie is either a student who attends the school or is an inactive and disinterested member of the community.",
+    "FOL": "AcademicCareer(bonnie) ⊕ Chaperone(bonnie) → AcademicCareer(bonnie) ⊕ Inactive(bonnie)"
+  },
+  {
+    "NL": "Dani Shapiro created a podcast called Family Secrets.",
+    "FOL": "IsPodcast(family_Secrets) ∧ CreatedBy(family_Secrets, dani_Shapiro)"
+  },
+  {
+    "NL": "All growth companies’ stocks are volatile.",
+    "FOL": "∀x (GrowthCompanies’Stocks(x) → PriceVolatile(x))"
+  },
+  {
+    "NL": "If someone studies, then they are a student.",
+    "FOL": "∀x (Study(x) → Student(x))"
+  },
+  {
+    "NL": "Koei Tecmo is a Japanese video game and anime holding company.",
+    "FOL": "Japanese(koeitecmo) ∧ VideoGameHoldingCompany(koeitecmo) ∧ AnimeHoldingCompany(koeitecmo)"
+  },
+  {
+    "NL": "Frederick Monhoff was an architect, artist, and illustrator.",
+    "FOL": "Architect(monhoff) ∧ Artist(monhoff) ∧ Illustrator(monhoff)"
+  },
+  {
+    "NL": "All rare diseases require a medical diagnosis.",
+    "FOL": "∀x (RareDiseases(x) → RequiresAMedicalDiagnosis(x))"
+  },
+  {
+    "NL": "No fish are birds.",
+    "FOL": "∀x (Fish(x) → ¬Bird(x))"
+  },
+  {
+    "NL": "If George will not compose, George can not compose.",
+    "FOL": "¬WantsToCompose(george) → ¬WillCompose(george)"
+  },
+  {
+    "NL": "Tom is allowed to move in an apartment in The Olive Garden with Fluffy.",
+    "FOL": "AllowPet(oliveGarden)"
+  },
+  {
+    "NL": "Andy Chang is from Hong Kong.",
+    "FOL": "From(andyChang, hongKong)"
+  },
+  {
+    "NL": "2001 is a book either inspired from Shakespeare or it has sold more than 1 million copies.",
+    "FOL": "InspiredFromShakespeare(y2001) ⊕ SoldOneMillion(y2001)"
+  },
+  {
+    "NL": "Daniel uses the zip code 98199.",
+    "FOL": "Usezipcode(daniel, number98199)"
+  },
+  {
+    "NL": "To be a good passenger and cargo vessel, ships must be quiet and good at sea.",
+    "FOL": "∀x (Passenger(x) ∧ CargoVessel(x) → Quiet(x) ∧ GoodSea(x))"
+  },
+  {
+    "NL": "Palstaves are a type of early bronze axe.",
+    "FOL": "∀x (Palstave(x) → From(x, earlybronzeage) ∧ Axe(x))"
+  },
+  {
+    "NL": "Neapolitan Chronicles was translated from Italian.",
+    "FOL": "TranslatedFrom(neapolitanchronicles, italian)"
+  },
+  {
+    "NL": "The winner of the Premier Division in 2009–10 was promoted back to the Cymru Alliance.",
+    "FOL": "∀x (WonPremierDivisionDuring(x, y2009) → Promoted(x))"
+  },
+  {
+    "NL": "FIFA22 neither supports the Linux OS system nor is it popular among young people.",
+    "FOL": "¬(SupportLinuxSystem(fifa21) ∨ Popular(fifa21))"
+  },
+  {
+    "NL": "All quokka are animals from Australia.",
+    "FOL": "∀x (Quokka(x) → AnimalsFromAustralia(x))"
+  },
+  {
+    "NL": "Neapolitan Chronicles is a book published by New Vessel Press.",
+    "FOL": "Book(neapolitanchronicles) ∧ PublishedBy(neapolitanchronicles, newvesselpress)"
+  },
+  {
+    "NL": "Only people with the talent of cooking can make delicious meals.",
+    "FOL": "∀x ∀y (MakeMeal(x, y) ∧ Delicious(y) ∧ People(x) → TalentCooking(x))"
+  },
+  {
+    "NL": "Beethoven is not a conductor.",
+    "FOL": "¬Conductor(beethoven)"
+  },
+  {
+    "NL": "Humans have teeth.",
+    "FOL": "Have(humans, teeth)"
+  },
+  {
+    "NL": "A project is written either in C++ or in Python.",
+    "FOL": "∀x (Project(x) → (WrittenIn(x, python) ⊕ WrittenIn(x, c++)))"
+  },
+  {
+    "NL": "If the output of a natural language processing task is a text sequence, then it is a language generation task.",
+    "FOL": "∀x (NLP(x) ∧ OutputSequence(x) → NLG(x))"
+  },
+  {
+    "NL": "Eight equals seven plus one.",
+    "FOL": "EqualAddOne(eight, seven)"
+  },
+  {
+    "NL": "[BG] If a player left a team they no longer play for that team.",
+    "FOL": "∀x ∀y (LeftTeam(x, y) → ¬PlaysForTeam(x, y))"
+  },
+  {
+    "NL": "All rental cars cost the renter money.",
+    "FOL": "∀x (Rent(x, car) → Spend(x, money))"
+  },
+  {
+    "NL": "Some monitors produced by LG have a type-c port.",
+    "FOL": "∃x (LG(x) ∧ TypeC(x))"
+  },
+  {
+    "NL": "Andrew Collins was the script editor for Badults",
+    "FOL": "ScriptEditor(andrewcollins) ∧ ScriptEditorFor(andrewcollins, badults)"
+  },
+  {
+    "NL": "All automobiles designed for family use are vehicles intended to be driven at moderate speeds.",
+    "FOL": "∀x (ForFamilyUse(x) → IntendedToBeDrivenAtModerateSpeeds(x))"
+  },
+  {
+    "NL": "All cows are bovines.",
+    "FOL": "∀x (Cow(x) → Bovine(x))"
+  },
+  {
+    "NL": "IPod1 belongs to employees.",
+    "FOL": "Employee(iPod1)"
+  },
+  {
+    "NL": "Rock is still.",
+    "FOL": "Still(rock)"
+  },
+  {
+    "NL": "All folk songs are songs.",
+    "FOL": "∀x (FolkSong(x) → Song(x))"
+  },
+  {
+    "NL": "Some mechanical watches are automatic.",
+    "FOL": "∃x (MechanicalWatch(x) ∧ AutomaticWatch(x))"
+  },
+  {
+    "NL": "The Blake McFall Company Building is a commercial warehouse listed on the National Register of Historic Places.",
+    "FOL": "∀x (Blake(x) → Building(x))"
+  },
+  {
+    "NL": "Germans speak English or German.",
+    "FOL": "∀x (German(x) → Speak(x, english) ∨ Speak(x, german))"
+  },
+  {
+    "NL": "All people on the leaderboard of the 1992 du Maurier Classic participated in the 1992 du Maurier Classic.",
+    "FOL": "∀x (LeaderBoard(maurier, x) → Participate(maurier, x))"
+  },
+  {
+    "NL": "Taylor visits the gym at least once a day.",
+    "FOL": "Gym(taylor)"
+  },
+  {
+    "NL": "All students who go to the movies enjoy nature.",
+    "FOL": "∀x (Movies(x) → Nature(x))"
+  },
+  {
+    "NL": "If people work in the entertainment industry as high-profile celebrities, then they wake up late and start their schedules past noon regularly.",
+    "FOL": "∀x (Celebrities(x) → Late(x))"
+  },
+  {
+    "NL": "All students do homework.",
+    "FOL": "∀x (Student(x) → DoesHomework(x))"
+  },
+  {
+    "NL": "If something is a big animal, then it will eat a lot.",
+    "FOL": "∀x (BigAnimal(x) → EatsALot(x))"
+  },
+  {
+    "NL": "Peter prefers TV series.",
+    "FOL": "Prefer(peter, tvseries)"
+  },
+  {
+    "NL": "All vehicle registration plates in Istanbul begin with the number 34.",
+    "FOL": "∀x (Vehicleregistrationplate(x, istanbul) → Beginwith(x, number34))"
+  },
+  {
+    "NL": "Symphony No. 9 is a music piece.",
+    "FOL": "MusicPiece(symphony9)"
+  },
+  {
+    "NL": "All people from India speak Hindi or English.",
+    "FOL": "∀x ∀y (From(x, y) ∧ India(y) → Speak(x, hindi) ∨ Speak(x, english))"
+  },
+  {
+    "NL": "In 1988, the Winter Olympics were held in Calgary.",
+    "FOL": "Year(y1988) → BeHeld(winterolympics, calgary)"
+  },
+  {
+    "NL": "Camp Davern is a traditional summer camp for boys and girls.",
+    "FOL": "TraditionalSummerCamp(campdavern) ∧ ForBoysAndGirls(campdavern)"
+  },
+  {
+    "NL": "If Ryan is interesting as an individual performer and has a unique musical voice or style, then Ryan is either a touring soloist musician and capable of attracting large audiences, or neither a touring soloist musician nor capable of attracting large audiences.",
+    "FOL": "(Interesting(ryan) ∧ Unique(ryan)) → ¬(Touring(ryan) ⊕ Capable(ryan))"
+  },
+  {
+    "NL": "No soccer players are professional basketball players.",
+    "FOL": "¬(∃x (SoccerPlayer(x) ∧ ProfessionalBasketballPlayer(x)))"
+  },
+  {
+    "NL": "Pets who are naughty are not liked as much.",
+    "FOL": "∀x ∀y (Pet(x) ∧ Naughty(x) → ¬Liked(x, y))"
+  },
+  {
+    "NL": "No loud cars are electric.",
+    "FOL": "∀x (LoudCar(x) → ¬ElectricCar(x))"
+  },
+  {
+    "NL": "International students in US have either an F1 visa or a J1 visa.",
+    "FOL": "∀x (InternationalStudent(x) → F1(x) ⊕ J1(x))"
+  },
+  {
+    "NL": "Broadway Sheetmetals was a buisness that was ran and owned by Edwin Smith, who was a sheetmetal worker.",
+    "FOL": "Buisness(broadwaysheetmetals) ∧ Ran(edwinsmith, broadwaysheetmetals) ∧ Owned(edwinsmith, broadwaysheetmetals) ∧ SheetmetalWorker(edwinsmith)"
+  },
+  {
+    "NL": "All rabbits have fur",
+    "FOL": "∀x (Rabbit(x) → HasFur(x))"
+  },
+  {
+    "NL": "WeTab is a MeeGo-based tablet computer.",
+    "FOL": "∀x (WeTab(x) → MeeGoBased(x) ∧ TabletComputer(x))"
+  },
+  {
+    "NL": "A superhero speaks English or Spanish.",
+    "FOL": "∀x (Superhero(x) → (Speak(x, english) ∨ Speak(x, spanish)))"
+  },
+  {
+    "NL": "4Sum is starred by more than 1 thousand users.",
+    "FOL": "Starred(foursum)"
+  },
+  {
+    "NL": "All extroverts are overtly expressive.",
+    "FOL": "∀x (Extroverts(x) → OvertlyExpressive(x))"
+  },
+  {
+    "NL": "All wizards know magic.",
+    "FOL": "∀x (Wizard(x) → KnowMagic(x))"
+  },
+  {
+    "NL": "Stonefish stings cause death if not treated.",
+    "FOL": "∀x (Sting(stonefish, x) ∧ ¬Treated(x) → CauseDeath(x))"
+  },
+  {
+    "NL": "William Dickinson was a British politician who sat in the House of Commons",
+    "FOL": "BritishPolitician(williamdickinson) ∧ SatInHouseOfCommons(williamdickinson)"
+  },
+  {
+    "NL": "Everyone that eats fish they catch themselves is a swimmer.",
+    "FOL": "∀x (EatsFishCaughtThemselves(x) → Swimmer(x))"
+  },
+  {
+    "NL": "Edwin Smith was a sergeant who served with the New Zealand 24th battalion in Italy and Egypt.",
+    "FOL": "Sergeant(edwinsmith) ∧ ServedWith(edwinsmith, newzealand24thbattalion) ∧ ServedIn(edwinsmith, italy) ∧ ServedIn(edwinsmith, egypt)"
+  },
+  {
+    "NL": "Aberdeen won the cup in the 2013 final.",
+    "FOL": "WonCup(aberdeen, twentythirteen)"
+  },
+  {
+    "NL": "No cold-blooded animals are birds.",
+    "FOL": "∀x (ColdBlooded(x) → ¬Bird(x))"
+  },
+  {
+    "NL": "All rabbits are cute.",
+    "FOL": "∀x (Rabbit(x) → Cute(x))"
+  },
+  {
+    "NL": "If a technique provides a spatial resolution of brains, then it is a measurement of brain activity.",
+    "FOL": "∀x (ProvidesSpatialResolutionOfBrains(x) → MeasurementOfBrainActivity(x))"
+  },
+  {
+    "NL": "Sūduva Marijampolė holds the Lithuanian Supercup.",
+    "FOL": "Hold(suduva, thelithuaniansupercup)"
+  },
+  {
+    "NL": "A Leetode problem is either easy or hard.",
+    "FOL": "∀x (Easy(x) ⊕ Hard(x))"
+  },
+  {
+    "NL": "All people who limp often and regularly have long-term medical issues with underlying causes.",
+    "FOL": "∀x (Limp(x) → Medical(x))"
+  },
+  {
+    "NL": "All goats are animals.",
+    "FOL": "∀x (Goat(x) → Animal(x))"
+  },
+  {
+    "NL": "Paolo Roversi is a photographer.",
+    "FOL": "Photographer(paolo)"
+  },
+  {
+    "NL": "If people have busy schedules without time to cook, then they go to fast food places often.",
+    "FOL": "∀x (Busy(x) → FastFood(x))"
+  },
+  {
+    "NL": "All footballs are balls.",
+    "FOL": "∀x (Football(x) → Ball(x))"
+  },
+  {
+    "NL": "Chopsticks at restaurants are either made from metals and made from plastics, or neither made from metals nor made from plastics.",
+    "FOL": "¬(MadeFromMetals(chopsticksAtRestaurants) ⊕ MadeFromPlastics(chopsticksAtRestaurants))"
+  },
+  {
+    "NL": "Beethoven leads the Vienna Music Society.",
+    "FOL": "Lead(beethoven, viennamusicsociety)"
+  },
+  {
+    "NL": "If exports fall sharply, the national currency cannot be in this country.",
+    "FOL": "∀x (ExportFall(x) → ¬StongCurr(x))"
+  },
+  {
+    "NL": "Germany is in Europe.",
+    "FOL": "LocatedIn(germany, europe)"
+  },
+  {
+    "NL": "MacBook is not made in China and is not commonly used in China.",
+    "FOL": "¬(MadeInChina(macbook) ∧ CommonlyUsedChina(macbook))"
+  },
+  {
+    "NL": "Mary either does not own a sports car or, if they do, then they do not have at least one child.",
+    "FOL": "¬(Car(mary) ⊕ Child(mary))"
+  },
+  {
+    "NL": "If Stephen Curry is an NBA player or a soccer player, then he is a professional basketball player.",
+    "FOL": "(NBAPlayer(stephencurry) ⊕ SoccerPlayer(stephencurry)) → ProfessionalBasketballPlayer(stephencurry)"
+  },
+  {
+    "NL": "Many of Beijing's 91 universities consistently rank among the best in the Asia-Pacific and the world.",
+    "FOL": "∃x (BeijingUniversity(x) ∧ ConsistentlyRankAmongTheBest(x))"
+  },
+  {
+    "NL": "Everyone who wants to study abroad needs to have a student visa.",
+    "FOL": "∀x (StudyAbroad(x) → StudentVisa(x))"
+  },
+  {
+    "NL": "[BG] If a game sells more than one million copies, then it will be selected into the Top 10 list.",
+    "FOL": "∀x (Game(x) ∧ SellsMoreThan(x, onemillioncopies) → Top10(x))"
+  },
+  {
+    "NL": "Jojo is not dead.",
+    "FOL": "¬Dead(jojo)"
+  },
+  {
+    "NL": "All devices belonging to employees are available to connect to the company's wifi.",
+    "FOL": "∀x (Employee(x) → Wifi(x))"
+  },
+  {
+    "NL": "Customers who prefer TV series more and will not watch TV series in cinemas.",
+    "FOL": "∀x (PreferTVSeries(x) → ¬WatchTVInCinema(x))"
+  },
+  {
+    "NL": "There exist both harmful and beneficial controlled substances.",
+    "FOL": "∃x ∃x (ControlledSubstances(x) ∧ ControlledSubstances(y) ∧ Beneficial(x) ∧ Harmful(y))"
+  },
+  {
+    "NL": "Australian Idol competitors are Australian citizens.",
+    "FOL": "∀x (CompetedOnAustralianIdol(x) → AustralianCitizen(x))"
+  },
+  {
+    "NL": "Cannons can be deployed on artillery fortifications.",
+    "FOL": "∀x (ArtilleryFortification(x) → DeployCannons(x))"
+  },
+  {
+    "NL": "Roversi is an Italian surname.",
+    "FOL": "∀x (UseAsSurname(x, roversi) → UseItalianSurname(x))"
+  },
+  {
+    "NL": "All fruits containing a large amount of vitamin C are beneficial to people.",
+    "FOL": "∀x (VC(x) → Benefit(x))"
+  },
+  {
+    "NL": "If a soccer player receives two yellow cards in one game, this player will be ejected from the rest of the game.",
+    "FOL": "∀x (SoccerPlayer(x) ∧ TwoYellow(x) → Eject(x))"
+  },
+  {
+    "NL": "Maggie Friedman was the showrunner and executive producer of the lifetime television series Witches of East End.",
+    "FOL": "ShowRunnerOf(maggiefriedman, witchesofeastend) ∧ ExecutiveProducerOf(maggiefriedman, witchesofeastend) ∧ LifetimeTelevisionSeries(maggiefriedman)"
+  },
+  {
+    "NL": "Some grumpy people are mean to animals.",
+    "FOL": "∃x (Grumpy(x) ∧ Mean(x))"
+  },
+  {
+    "NL": "If people are focused on the future and industry professions, then they are not nostalgic academics who enjoy learning.",
+    "FOL": "∀x (Industry(x) → NotAcademics(x))"
+  },
+  {
+    "NL": "System 7 has released several club singles.",
+    "FOL": "∃x (ClubSingle(x) ∧ Released(system7, x))"
+  },
+  {
+    "NL": "All CD players are delicate mechanisms.",
+    "FOL": "∀x (CDPlayer(x) → DelicateMechanism(x))"
+  },
+  {
+    "NL": "Evangelos Eleftheriou worked for IBM in Zurich.",
+    "FOL": "WorkedFor(evangeloseleftheriou, ibm) ∧ WorkedIn(evangeloseleftheriou, zurich)"
+  },
+  {
+    "NL": "FMRI is either a measurement of brain activity or a noninvasive neuroimaging technique.",
+    "FOL": "MeasurementOfBrainActivity(fMRI) ⊕ NoninvasiveNeuroimagingTechnique(fMRI)"
+  },
+  {
+    "NL": "Bernarda Bryson Shahn was married to Ben Shahn.",
+    "FOL": "MarriedTo(bernardaBrysonShahn, benShahn)"
+  },
+  {
+    "NL": "Olivia doesn't prefer warm temperature during the day.",
+    "FOL": "∀x (Day(x) → ¬PrefersWarmAt(olivia, x))"
+  },
+  {
+    "NL": "All noninvasive neuroimaging techniques provide a spatial resolution of brains.",
+    "FOL": "∀x (NoninvasiveNeuroimagingTechnique(x) → ProvidesSpatialResolutionOfBrains(x))"
+  },
+  {
+    "NL": "If people have good relationships with their parents, then they do not eat salads regularly.",
+    "FOL": "∀x (GoodRelationship(x) → ¬HealthyHabits(x))"
+  },
+  {
+    "NL": "All people available to have a visit without any fees are those respected by others.",
+    "FOL": "∀x (HaveVisitWithoutAnyFees(x) → Respected(x))"
+  },
+  {
+    "NL": "All students who attend in person have registered for the conference.",
+    "FOL": "∀x (Attend(x) → Registered(x))"
+  },
+  {
+    "NL": "A duster is a household appliance that doesn't suck.",
+    "FOL": "HouseHoldApp(duster) ∧ ¬ Suck(duster)"
+  },
+  {
+    "NL": "No Indian is European.",
+    "FOL": "∀x ( Indian(x)→ ¬ European(x))"
+  },
+  {
+    "NL": "The Scream is a creepy haunted house or a terrifying Halloween scare.",
+    "FOL": "CreepyHauntedHouse(thescream) ∨ TerrifyingHalloweenScare(thescream)"
+  },
+  {
+    "NL": "All MIR payment cards are issued by Russian banks.",
+    "FOL": "∀x (Mir(x) → RussianBank(x))"
+  },
+  {
+    "NL": "Some students good at math are good at chemistry.",
+    "FOL": "∃x (Math(x) ∧ Chemistry(x))"
+  },
+  {
+    "NL": "All restaurants with a rating greater than 9 are listed in Yelp’s recommendations.",
+    "FOL": "∀x (RatingGreaterThan9(x) → YelpRecommendation(x))"
+  },
+  {
+    "NL": "People either drink kombucha every day or drink Coca-Cola or Pepsi products every day.",
+    "FOL": "∀x (Kombucha(x) ∨ CocaCola(x))"
+  },
+  {
+    "NL": "Real Madrid and Barcelona are both La Liga soccer teams.",
+    "FOL": "LaLiga(realMadrid) ∧ LaLiga(barcelona)"
+  },
+  {
+    "NL": "Tiffany T. Alston was a legislator in Maryland's House of Delegates from 2011 to 2013.",
+    "FOL": "IsLegislator(tiffanyTAlston)"
+  },
+  {
+    "NL": "Bonnie performs in school talent shows often.",
+    "FOL": "Engaged(bonnie)"
+  },
+  {
+    "NL": "All people who grew up in health-conscious childhood homes eat salads regularly.",
+    "FOL": "∀x (HealthyChildhood(x) → Salad(x))"
+  },
+  {
+    "NL": "James does not have a part-time job offered by the university.",
+    "FOL": "¬PartTime(james)"
+  },
+  {
+    "NL": "Cities in California that they are interested in are San Francisco, Los Angeles, and San Diego.",
+    "FOL": "∀x (((SanFrancisco(x) ∨ LosAngeles(x) ∨ SanDiego(x)) ∧ California(x)) → WantToGo(x))"
+  },
+  {
+    "NL": "Volleyball players can injure their ankle, fingers, or shoulder.",
+    "FOL": "∀x (VolleyballPlayer(x) → CanInjureFingures(x))"
+  },
+  {
+    "NL": "People either are saving money for a down payment on a new house or they live in apartments in big metropolitan cities.",
+    "FOL": "∀x (House(x) ∨ Apartment(x))"
+  },
+  {
+    "NL": "No nuclear-powered submarines are commercial vessels.",
+    "FOL": "∀x (NuclearPoweredSubmarine(x) → ¬CommercialVessel(x))"
+  },
+  {
+    "NL": "Adam broke his favorite car.",
+    "FOL": "∀x ((Owns(adam, x) ∧ Favorite(adam, x)) → Broke(adam, x))"
+  },
+  {
+    "NL": "Vampires suck.",
+    "FOL": "∀x (Vampire(x) → Suck(x))"
+  },
+  {
+    "NL": "Mr. and Mrs. Smith make a travel plan, they want to go to a city in California or Florida, and where neither of them has ever been.",
+    "FOL": "∀x (WantToGo(x) → (California(x) ∨ Florida(x)) ∧ (NeverGo(x)))"
+  },
+  {
+    "NL": "Yevgeny Kurochkin was the discoverer of Ambiortus.",
+    "FOL": "Discovered(yevgenykurochkin, ambiortus)"
+  },
+  {
+    "NL": "Real Madrid and Atlético Madrid both scored zero goals in 2016 UCL final during the extra time.",
+    "FOL": "SoccerTeam(realMadrid) ∧ SoccerTeam(atleticoMadrid) ∧ SameScore(realMadrid, atleticoMadrid) ∧ During(extraTime)"
+  },
+  {
+    "NL": "Surprises are either fun or dreadful.",
+    "FOL": "∀x (Surprise(x) → (Fun(x) ⊕ Dreadful(x)))"
+  },
+  {
+    "NL": "Captain America is a superhero.",
+    "FOL": "Superhero(captain america)"
+  },
+  {
+    "NL": "If two soccer teams score the same number of goals in one UCL final during the regular time, they need to play for the extra time.",
+    "FOL": "∀x ∀y (SoccerTeam(x) ∧ SoccerTeam(y) ∧ SameScore(x, y) ∧ During(regularTime) → PlayExtra(x, y))"
+  },
+  {
+    "NL": "People either perform in school talent shows often or are inactive and disinterested members of their community.",
+    "FOL": "∀x (TalentShows(x) ∨ Inactive(x))"
+  },
+  {
+    "NL": "A song in Trouble at the Henhouse appeared in a film.",
+    "FOL": "∃x (SongInFilm(x) ∧ SongInAlbum(x, trouble_at_the_Henhouse))"
+  },
+  {
+    "NL": "All defenders are soccer players.",
+    "FOL": "∀x (Defender(x) → SoccerPlayer(x))"
+  },
+  {
+    "NL": "Some competitive sports where spectators bet on things are banned.",
+    "FOL": "∃x ∃y (CompetitiveSport(x) ∧ SpectaorsBetOn(x, y) ∧ Banned(x))"
+  },
+  {
+    "NL": "Rose is a human or a manager.",
+    "FOL": "Human(rose) ∨ Manager(rose)"
+  },
+  {
+    "NL": "Juan de Onate visited a mountain range in New Mexico.",
+    "FOL": "∃x (Visited(juandeonate, x) ∧ MountainRange(x) ∧ In(x, newmexico))"
+  },
+  {
+    "NL": "Video game holding companies are holding companies.",
+    "FOL": "∀x (VideoGameHoldingCompany(x) → HoldingCompany(x))"
+  },
+  {
+    "NL": "If the monitor is cheaper than its original prices, then its resolution is 1080p.",
+    "FOL": "∀x (Cheaper(x) → A1080p(x))"
+  },
+  {
+    "NL": "Manchester City is eligible to attend UCL next season.",
+    "FOL": "Attend(manchestercity, ucl)"
+  },
+  {
+    "NL": "Neofonie is a German producer.",
+    "FOL": "German(neofonie) ∧ Producer(neofonie)"
+  },
+  {
+    "NL": "The Playstation Camera is a camera accessory for the Playstation 4 and the Playstation 5.",
+    "FOL": "Accessory(pscamera, ps4) ∧ Accessory(pscamera, ps5)"
+  },
+  {
+    "NL": "If a monitor has a resolution of 1080p, then it does not support the type-c port.",
+    "FOL": "∀x (A1080p(x) → ¬TypeC(x))"
+  },
+  {
+    "NL": "Olivia either prefers warm temperature or prefers cool temperature.",
+    "FOL": "∀x (PrefersWarmAt(olivia, x) ∨ PrefersCoolAt(olivia, x))"
+  },
+  {
+    "NL": "Naive cynicism is a philosophy of mind.",
+    "FOL": "PhilosophyOfMind(naiveCynicism)"
+  },
+  {
+    "NL": "Musoke fought Yakovlev at UFC Fight Night.",
+    "FOL": "Event(uFCFightNight) → Fight(musoke, yakovlev)"
+  },
+  {
+    "NL": "The Hulk wakes up when he is angry.",
+    "FOL": "Angry(hulk) → Wake(hulk)"
+  },
+  {
+    "NL": "Leetcode problems that are starred by more than 1 thousand users are hard.",
+    "FOL": "∀x (Starred(x) → Hard(x))"
+  },
+  {
+    "NL": "2Sum is not recommended to novices and hard.",
+    "FOL": "¬(Recommended(twosum) ∧ Hard(twosum))"
+  },
+  {
+    "NL": "John does not have a wedding that is well-attended.",
+    "FOL": "¬WellAttended(john)"
+  },
+  {
+    "NL": "The state-of-the-art text summarization model is trained with machine learning algorithms.",
+    "FOL": "TrainTextSumModel(supervisedLearning) ∨ TrainTextSumModel(unsupervisedLearning) ∨ TrainTextSumModel(reinforcementLearning)"
+  },
+  {
+    "NL": "No cities are villages.",
+    "FOL": "∀x (City(x) → ¬Village(x))"
+  },
+  {
+    "NL": "All dogs bark.",
+    "FOL": "∀x (Dog(x) → Bark(x))"
+  },
+  {
+    "NL": "The preceding station of Boves is Longueau.",
+    "FOL": "Precede(boves, longueau)"
+  },
+  {
+    "NL": "The species Neocrepidodera Corpulenta is in the Chrysomelidae family.",
+    "FOL": "Species(neocrepidoderacorpulenta) ∧ Family(chrysomelidae) ∧ In(neocrepidoderacorpulenta, chrysomelidae)"
+  },
+  {
+    "NL": "If Rock is cute and still, then Rock is a turtle and skittish.",
+    "FOL": "Cute(rock) ∧ Still(rock) → Turtle(rock) ∧ Skittish(rock)"
+  },
+  {
+    "NL": "If something can transport multiple passengers, then they are not empty.",
+    "FOL": "∀x (TransportMultiplePassengers(x) → ¬Empty(x))"
+  },
+  {
+    "NL": "All gentlemen are handsome.",
+    "FOL": "∀x (Gentleman(x) → Handsome(x))"
+  },
+  {
+    "NL": "No products are perfect.",
+    "FOL": "∀x (Product(x) → ¬Perfect(x))"
+  },
+  {
+    "NL": "John is a person.",
+    "FOL": "Person(john)"
+  },
+  {
+    "NL": "A juice is either an orange juice or an apple juice.",
+    "FOL": "∀x (OrangeJuice(x) ∨ AppleJuice(x))"
+  },
+  {
+    "NL": "If a cartoon character is loved by children, then it is funny.",
+    "FOL": "∀x (Love(children, x) → Funny(x))"
+  },
+  {
+    "NL": "Everyone that can throw a football can throw a football with a spiral.",
+    "FOL": "∀x (ThrowFootball(x) → ThrowFootballSpiral(x))"
+  },
+  {
+    "NL": "John either is both a hardworking individual with high ambitions and goals for the future and has busy morning schedules every day, or he is neither a hardworking individual with high ambitions and goals for the future nor does he have a busy morning schedule every day.",
+    "FOL": "(Hardworking(john) ∧ BusyMorning(john)) ⊕ (¬Hardworking(john) ∧ ¬BusyMorning(john))"
+  },
+  {
+    "NL": "No Democrats are conservative.",
+    "FOL": "∀x (Democrats(x) → ¬Conservative(x))"
+  },
+  {
+    "NL": "All entertainments are interesting.",
+    "FOL": "∀x (Entertainment(x) → Interesting(x))"
+  },
+  {
+    "NL": "The Tragically Hip is a Canadian rock band.",
+    "FOL": "RockBand(the_Tragically_Hip, canada)"
+  },
+  {
+    "NL": "The Olive Garden is a managed building.",
+    "FOL": "∀x (Cat(x) → Pet(x))"
+  },
+  {
+    "NL": "ETS provides financial aid to those GRE applicants who prove economic hardship.",
+    "FOL": "∀x (Hardship(x) → FinancialAid(x))"
+  },
+  {
+    "NL": "All produced in the US are sold in the US.",
+    "FOL": "∀x (US(x) → SoldInUS(x))"
+  },
+  {
+    "NL": "[BG] Heck cattle are animals.",
+    "FOL": "∀x (HeckCattle(x) → Animal(x))"
+  },
+  {
+    "NL": "If a person has a position in a club for a position in a year, and the club is in NFL in the same year, the person plays in NFL.",
+    "FOL": "∀x ∀y ∀z (PlayFor(x, y) ∧ NFLTeamYear(y, z) ∧ InTeam(x, z) → PlayInNFL(x))"
+  },
+  {
+    "NL": "Atlanta is in Georgia(CA).",
+    "FOL": "StateInCountry(ca, us)"
+  },
+  {
+    "NL": "People died in the December 1999 earthquake in Luzon.",
+    "FOL": "∃x (Earthquake(x) ∧ StruckIn(x, december1999) ∧ Struck(x, luzon) ∧ Killed(x))"
+  },
+  {
+    "NL": "Ailton is a football player who was loaned out to Braga.",
+    "FOL": "FootballPlayer(ailton) ∧ LoanedTo(ailton, braga)"
+  },
+  {
+    "NL": "New York City is on the East Coast.",
+    "FOL": "On(newyorkcity, eastcoast)"
+  },
+  {
+    "NL": "All bears in zoos are not wild.",
+    "FOL": "∀x ((Bear(x) ∧ InZoo(x)) → ¬Wild(x))"
+  },
+  {
+    "NL": "Some turtles exist.",
+    "FOL": "∃x (Turtle(x))"
+  },
+  {
+    "NL": "If Leon is not studying, then Leon is a teacher.",
+    "FOL": "¬Study(leon) → Teacher(leon)"
+  },
+  {
+    "NL": "A game is played with three stages: red stage, yellow stage, and green stage.",
+    "FOL": "∃x (Player(x))"
+  },
+  {
+    "NL": "Extractive model can only use content from the input documents.",
+    "FOL": "∀x (Model(x) ∧ Extractive(x) → OnlyUseInputDocument(x))"
+  },
+  {
+    "NL": "A country cannot simultaneously regulate the exchange rate and successfully control inflation.",
+    "FOL": "¬(∀x (InfControl(x) ∧ ExRate(x)))"
+  },
+  {
+    "NL": "No people who never admit a mistake are good teachers.",
+    "FOL": "∀x (NeverAdmitMistakes(x) → ¬GoodTeacher(x))"
+  },
+  {
+    "NL": "John Nash designed Oxford Circus.",
+    "FOL": "Design(johnNash, oxfordCircus)"
+  },
+  {
+    "NL": "To go camping somewhere, you must go to that place.",
+    "FOL": "∀x ∀y (Camping(x, y) → GoesTo(x, y))"
+  },
+  {
+    "NL": "All non-rare earth metals are not scarce.",
+    "FOL": "∀x (Non-rareEarthMetals(x) → NotScarce(x))"
+  },
+  {
+    "NL": "Steve Hillage and Miquette Giraudy formed System 7.",
+    "FOL": "Formed(stevehillage, system7) ∧ Formed(miquettegiraudy, system7)"
+  },
+  {
+    "NL": "All games in the Top 10 list are made by Japanese game companies.",
+    "FOL": "∀x ∀y (Game(x) ∧ InTop10(x) ∧ Created(x, y) → Japanese(y))"
+  },
+  {
+    "NL": "The time is either the day or the night.",
+    "FOL": "∀x (Day(x) ∨ Night(x))"
+  },
+  {
+    "NL": "All musicians who have a unique musical voice or style are interesting as individual performers.",
+    "FOL": "∀x (Unique(x) → Interesting(x))"
+  },
+  {
+    "NL": "A podcast is not a novel.",
+    "FOL": "∀x (IsPodcast(x) → ¬IsNovel(x))"
+  },
+  {
+    "NL": "Vic DiCara played in the band Inside Out.",
+    "FOL": "Band(vicdicara, insideOut)"
+  },
+  {
+    "NL": "Sarah is going to go camping in Vermont this weekend.",
+    "FOL": "Camping(sarah, vermont)"
+  },
+  {
+    "NL": "If people work well in teams in their workplace, then they get along with all their colleagues at their work.",
+    "FOL": "∀x (WorkTeams(x) → Colleagues(x))"
+  },
+  {
+    "NL": "Effective monetary policy is possible with successful inflation control and a strong national currency.",
+    "FOL": "∀x (EffMonPolicy(x) → InfControl(x) ∧ StongCurr(x))"
+  },
+  {
+    "NL": "Belgium, France and Germany are European countries.",
+    "FOL": "EuropeanCountry(belgium) ∨ EuropeanCountry(france) ∨ EuropeanCountry(germany)"
+  },
+  {
+    "NL": "All customers who subscribe to HBO services prefer TV series to movies.",
+    "FOL": "∀x (HBO(x) → PreferTVSeries(x))"
+  },
+  {
+    "NL": "There was one six-way tie on the leaderboard and one person in the six-way tie was from Belgium.",
+    "FOL": "∃x (LeaderBoard(maurier, x) ∧ SixWayTie(x) ∧ Belgium(x))"
+  },
+  {
+    "NL": "Oxford Circus is the entrance to Oxford Circus tube station which is a part of the Central line in 1900.",
+    "FOL": "CentralLine(oxfordCircus)"
+  },
+  {
+    "NL": "Tom is not an Eastern wild turkey.",
+    "FOL": "¬(WildTurkey(tom) ∧ Eastern(tom))"
+  },
+  {
+    "NL": "If people spend their free time tidying and organizing the spaces in their home, then they do not go to bed late and wake up every day after noon.",
+    "FOL": "∀x (Tidying(x) → ¬Late(x))"
+  },
+  {
+    "NL": "All Greeks are humans.",
+    "FOL": "∀x (Greek(x) → Human(x))"
+  },
+  {
+    "NL": "If people chaperone high school dances, then they are not students who attend the school.",
+    "FOL": "∀x (Chaperone(x) → ¬Students(x))"
+  },
+  {
+    "NL": "All fruits with the color red contain a large amount of vitamin C.",
+    "FOL": "∀x (RedFruit(x) → VC(x))"
+  },
+  {
+    "NL": "If people enjoy the dining hall meals and recipes, then they spend a lot of their time eating and catching up with friends in the campus dining halls.",
+    "FOL": "∀x (DiningHall(x) → Eating(x))"
+  },
+  {
+    "NL": "German is related to Spanish.",
+    "FOL": "Related(german, spanish)"
+  },
+  {
+    "NL": "All players in the Big 3 are professionals who have a high win ratio.",
+    "FOL": "∀x (ProfessionalTennisPlayer(x) ∧ HighWinRatio(x) → InBig3(x))"
+  },
+  {
+    "NL": "If Emily is either both highly acclaimed in her profession and often holds tenured and high-ranking positions at her workplace, or she is neither highly acclaimed in her profession nor often holds tenured and high-ranking positions at her workplace, then Emily is not highly acclaimed in her profession.",
+    "FOL": "(Acclaimed(emily) ∧ Tenured(emily)) ∨ (¬Acclaimed(emily) ∧ ¬Tenured(emily)) → ¬Acclaimed(emily)"
+  },
+  {
+    "NL": "People who run unopposed for the Philadelphia City Council are elected to the positions they run for in the same year.",
+    "FOL": "∀x (RunFor(x) ∧ PhiladephiaCouncil(x) → Elected(x))"
+  },
+  {
+    "NL": "If George likes music and has access to a program, he will compose.",
+    "FOL": "(LikesMusic(george) ∧ AccesstoProgram(george)) → WillCompose(george)"
+  },
+  {
+    "NL": "A heptalogy, is a compound literary or narrative work that is made up of seven distinct works.",
+    "FOL": "∀x (SevenDistinctWorks(x) → Heptalogy(x))"
+  },
+  {
+    "NL": "There are no customers who do not choose any plans.",
+    "FOL": "∀x (¬NoPlan(x))"
+  },
+  {
+    "NL": "The South Shetland Islands are considered part of Antarctica.",
+    "FOL": "Locate(shetland, antarctica)"
+  },
+  {
+    "NL": "If you go somewhere by car and meet traffic jam, you will lose time.",
+    "FOL": "∀x ((Car(x) ∧ MeetJam(x)) → LoseTime(x))"
+  },
+  {
+    "NL": "Rock is a turtle or cute.",
+    "FOL": "Turtle(rock) ∨ Cute(rock)"
+  },
+  {
+    "NL": "Animals that can walk travel on land.",
+    "FOL": "∀x (CanWalk(x) → TravelsOnLand(x))"
+  },
+  {
+    "NL": "If James is either a manager or in other countries,  then James either has lunch at home and works remotely from home, or neither has lunch at home nor works remotely from home.",
+    "FOL": "(Manager(james) ⊕ InOtherCountries(james)) → (LunchAtHome(james) ⊕ WorkRemotelyFromHome(james))"
+  },
+  {
+    "NL": "Ambiorus Dementjevi is the only known species of Ambiortus.",
+    "FOL": "∀x (Species(x, ambiortus) → AmbiortusDementjevi(x))"
+  },
+  {
+    "NL": "Some juvenile delinquents are products of broken homes.",
+    "FOL": "∃x (JuvenileDelinquent(x)  ∧ ProductOfBrokenHome(x))"
+  },
+  {
+    "NL": "Luke complains often about annoying siblings.",
+    "FOL": "Complain(luke)"
+  },
+  {
+    "NL": "If something is justified, it is lawful.",
+    "FOL": "∀x (Justified(x) → Lawful(x))"
+  },
+  {
+    "NL": "No wearable things are airtight.",
+    "FOL": "∀x (Wearable(x) → ¬AirTight(x))"
+  },
+  {
+    "NL": "On some Mondays at 8 pm, roses are given out on TV.",
+    "FOL": "∃x (Mondayat8(x) ∧ RoseGivenOutOnTv(x))"
+  },
+  {
+    "NL": "Walter Folger Brown graduated from Harvard University with a Bachelors of Arts.",
+    "FOL": "Graduated(walterbrown, harvard) ∧ GraduatedWith(walterbrown, bachelorsofart)"
+  },
+  {
+    "NL": "All risk-averse people are people who work at corporate jobs.",
+    "FOL": "∀x (Risk-averse(x) → WorkAtCorporateJobs(x))"
+  },
+  {
+    "NL": "Ben is ugly or yellow.",
+    "FOL": "Ugly(ben) ∨ Yellow(ben)"
+  },
+  {
+    "NL": "Some American radio personalities are also music supervisors.",
+    "FOL": "∃x (American(x) ∧ MusicSupervisor(x) ∧ RadioPersonality(x))"
+  },
+  {
+    "NL": "Rafa Nadal was born in Mallorca.",
+    "FOL": "BornIn(rafaNadal, mallorca)"
+  },
+  {
+    "NL": "Montana is home to the city of Missoula.",
+    "FOL": "CityIn(missoula, montana)"
+  },
+  {
+    "NL": "Olivia works during the day.",
+    "FOL": "∀x (WorkingDuring(olivia, x) → Day(x))"
+  },
+  {
+    "NL": "If violence is good, it is justified.",
+    "FOL": "∀x ((Violence(x) ∧ Good(x)) → Justified(x))"
+  },
+  {
+    "NL": "If people are hardworking individuals with high ambitions and goals for the future, then they are not good at staying organized and motivated.",
+    "FOL": "∀x (Hardworking(x) → ¬Organized(x))"
+  },
+  {
+    "NL": "Mia's favorite season is spring.",
+    "FOL": "Love(mia, spring)"
+  },
+  {
+    "NL": "Olivia sleeps during the night.",
+    "FOL": "∀x (SleepingDuring(olivia, x) → Night(x))"
+  },
+  {
+    "NL": "All planes with a capacity of 100 passengers are scheduled for a short-distance flight.",
+    "FOL": "∀x (Passengers100(x) → ShortDistance(x))"
+  },
+  {
+    "NL": "[BG] Strikers are soccer players.",
+    "FOL": "∀x (IsStriker(x) → IsSoccerPlayer(x))"
+  },
+  {
+    "NL": "No man can run faster than Bolt.",
+    "FOL": "∀x (Man(x) → ¬FasterThanBolt(x))"
+  },
+  {
+    "NL": "Sid is not either an energetic person or a sloth.",
+    "FOL": "¬Energetic(sid) ∨ Sloth(sid)"
+  },
+  {
+    "NL": "Miroslav Venhoda published a book in 1946 called Method of Studying Gregorian Chant.",
+    "FOL": "Book(methodOfStudyingGregorianChant) ∧ Author(miroslav, methodOfStudyingGregorianChant) ∧ Publish(methodOfStudyingGregorianChant, year1946)"
+  },
+  {
+    "NL": "A thing is either plant or animal.",
+    "FOL": "∀x (Plant(x) ∨ Animal(x))"
+  },
+  {
+    "NL": "Herodicus was born in the city of Selymbria.",
+    "FOL": "Born(herodicus, selymbia) ∧ City(selymbia)"
+  },
+  {
+    "NL": "A bird is not both heavy and still.",
+    "FOL": "¬(Heavy(bird) ∧ Still(bird))"
+  },
+  {
+    "NL": "No teachers are students.",
+    "FOL": "∀x (Teacher(x) → ¬Student(x))"
+  },
+  {
+    "NL": "William Dickinson attended Westminster school for high school and then the University of Edinburgh.",
+    "FOL": "Attended(williamdickinson, westminster) ∧ Highschool(westminster) ∧ Attended(williamdickinson, universityofedinburgh)"
+  },
+  {
+    "NL": "All fruits are edible.",
+    "FOL": "∀x (Fruit(x) → Edible(x))"
+  },
+  {
+    "NL": "Every creepy haunted house is in a mansion house.",
+    "FOL": "∀x (CreepyHauntedHouse(x) → MansionHouse(x))"
+  },
+  {
+    "NL": "Bulbophyllum attenuatum is in the genus bulbophyllum.",
+    "FOL": "InGenus(bulbophyllumattenuatum, bulbophyllum)"
+  },
+  {
+    "NL": "Imperium has a feud with Diamond Mine.",
+    "FOL": "HasFeud(imperium, diamondmine)"
+  },
+  {
+    "NL": "If people study hard, then they grew up with parents who worked as doctors.",
+    "FOL": "∀x Study(x) → ParentDoctors(x)"
+  },
+  {
+    "NL": "Good wide receivers can catch with both their left and right hand.",
+    "FOL": "∀x (Good(x, widereciever) → CanCatchWith(x, lefthand) ∧ CanCatchWith(x, righthand))"
+  },
+  {
+    "NL": "Some singles of Imagine Dragons have been on Billboard Hot 100.",
+    "FOL": "∃x (PopularSingle(imagineDragon, x) ∧ BillboardHot100(x))"
+  },
+  {
+    "NL": "An OS is either Mac or Windows.",
+    "FOL": "∀x (Mac(x) ∨ Windows(x))"
+  },
+  {
+    "NL": "Everyone prefers the smoother of two roads.",
+    "FOL": "∀x ∀y ∀z (Road(x) ∧ Road(y) ∧ Smoother(x, y) → Prefers(z, x))"
+  },
+  {
+    "NL": "Some love is positive.",
+    "FOL": "∃x (Love(x) ∧ Positive(x))"
+  },
+  {
+    "NL": "UFC Fight Night was a mixed martial arts event and was held in Sweden.",
+    "FOL": "Event(uFCFightNight) ∧ MixedMartial(uFCFightNight) ∧ Sweden(uFCFightNight)"
+  },
+  {
+    "NL": "Whitney Museum of American Art is a museum in NYC.",
+    "FOL": "Museum(whitneyMuseumofAmericanArt) ∧ InNYC(whitneyMuseumofAmericanArt)"
+  },
+  {
+    "NL": "James attends the conference but he does not attend the conference remotely.",
+    "FOL": "Attend(james) ∧ ¬Remotely(james)"
+  },
+  {
+    "NL": "In 2016, a new television series named Westworld debuted on HBO.",
+    "FOL": "Debut(westworld, year2016)"
+  },
+  {
+    "NL": "No disposable products can help slow down global warming.",
+    "FOL": "∀x (DisposableProducts(x) → ¬HelpSlowDownGlobalWarming(x))"
+  },
+  {
+    "NL": "All people who once stayed in prison for some time have a bad record in the local state.",
+    "FOL": "∀x (Prison(x) → BadRecord(x))"
+  },
+  {
+    "NL": "All players who successfully shoot a high percentage of 3-pointers are solid at shooting 2-pointers.",
+    "FOL": "∀x (ThreePointer(x) → TwoPointer(x))"
+  },
+  {
+    "NL": "Ableton has an office in the USA.",
+    "FOL": "OfficeIn(ableton, usa)"
+  },
+  {
+    "NL": "Peter tidies his space consistently and enjoys the process of cleaning.",
+    "FOL": "Tidy(peter)"
+  },
+  {
+    "NL": "Quincy McDuffie is an American professional wide receiver in Canadian Football.",
+    "FOL": "American(quincymcduffie) ∧ Professional(quincymcduffie) ∧ WideReciever(quincymcduffie) ∧ In(quincymcduffie, canadianfootball)"
+  },
+  {
+    "NL": "There is a strong analogy of human aging in the poem Callus 4.",
+    "FOL": "Poem(callus4) → AgingAnalogy(callus4)"
+  },
+  {
+    "NL": "If a car is a Ferrari, then it is a sports car.",
+    "FOL": "∀x (Ferrari(x) → SportsCar(x))"
+  },
+  {
+    "NL": "If people order a lot of Amazon packages, then they get a lot of daily mail delivered.",
+    "FOL": "∀x (Amazon(x) → DailyMail(x))"
+  },
+  {
+    "NL": "Taylor eats salads regularly.",
+    "FOL": "Salad(taylor)"
+  },
+  {
+    "NL": "To get a student visa, you must be full-time enrolled in an academic program.",
+    "FOL": "∀x (StudentVisa(x) → FullTimeAcademic(x))"
+  },
+  {
+    "NL": "Imagine Dragons is an American pop rock band.",
+    "FOL": "American(imagineDragon) ∧ RockBand(imagineDragon)"
+  },
+  {
+    "NL": "If a film is directedy by a person, the person is a filmmaker.",
+    "FOL": "∀x ∃y (DirectedBy(y, x) → Filmmaker(x))"
+  },
+  {
+    "NL": "If you are a World Tour player, then you are a professional tennis player.",
+    "FOL": "∀x (WorldTourPlayer(x) → ProfessionalTennisPlayer(x))"
+  },
+  {
+    "NL": "All squirrels are skittish.",
+    "FOL": "∀x (Squirrel(x) → Skittish(x))"
+  },
+  {
+    "NL": "All people who hate working for others are entrepreneurs.",
+    "FOL": "∀x (HateWorkingForOthers(x) → Entrepreneurs(x))"
+  },
+  {
+    "NL": "After being injured, Brian Winter retired in 2012.",
+    "FOL": "Injured(brianwinter) ∧ Retired(brianwinter)"
+  },
+  {
+    "NL": "If a album is written by a rock band, then the genre of the album is rock.",
+    "FOL": "∀x ∀y ∀z (AlbumByBand(x, y) ∧ RockBand(y, z) → Genre(x, rock))"
+  },
+  {
+    "NL": "LA is a city in California(CA).",
+    "FOL": "CityInState(la, ca)"
+  },
+  {
+    "NL": "People either work in person or work from home.",
+    "FOL": "∀x (InPerson(x) ⊕ FromHome(x))"
+  },
+  {
+    "NL": "All eels are fish.",
+    "FOL": "∀x  (Eel (x)→  Fish (x))"
+  },
+  {
+    "NL": "Rangers won the cup in 2014 final.",
+    "FOL": "WonCup(rangers, twentyfourteen)"
+  },
+  {
+    "NL": "All students are humans.",
+    "FOL": "∀x (Student(x) → Human(x))"
+  },
+  {
+    "NL": "The Croton River watershed is the drainage basin of the Croton River.",
+    "FOL": "DrainageBasinOf(crotonriverwatershed, crotonriver)"
+  },
+  {
+    "NL": "Larry is a big animal.",
+    "FOL": "BigAnimal(larry)"
+  },
+  {
+    "NL": "Descampe is from Belgium and is on the leaderboard of the 1992 du Maurier Classic.",
+    "FOL": "Belgium(descampe) ∧ LeaderBoard(maurier, descampe)"
+  },
+  {
+    "NL": "Any lawyer is familiar with laws.",
+    "FOL": "∀x (Lawyer(x) → FamiliarWithLaws(x))"
+  },
+  {
+    "NL": "\"Black Mirror\" is popular.",
+    "FOL": "Popular(blackMirror)"
+  },
+  {
+    "NL": "All cats are cute.",
+    "FOL": "∀x (Cat(x) → Cute(x))"
+  },
+  {
+    "NL": "If the stock price is volatile, then it is not suitable for a retirement fund.",
+    "FOL": "∀x (PriceVolatile(x) → ¬SuitableForRetirementRund(x))"
+  },
+  {
+    "NL": "If coke is not apple juice, then coke is not edible.",
+    "FOL": "¬AppleJuice(coke) → ¬Edible(coke)"
+  },
+  {
+    "NL": "Peter can block Windy's shooting.",
+    "FOL": "CanBlock(peter, windy)"
+  },
+  {
+    "NL": "All sci-fi movies are movies.",
+    "FOL": "∀x (ScifiMovie(x) → Movie(x))"
+  }
+]

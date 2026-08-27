@@ -1,0 +1,68 @@
+{
+  "malls": [
+    [
+      "∀x∀y (Person(x) ∧ Destination(y) → (WalksTo(x, y) ⊕ RidesBikeTo(x, y)))",
+      "A person can either walk or ride a bike to reach their destination."
+    ],
+    [
+      "∀x (Gardener(x) → ((GrowFlowers(x) ⊕ GrowVegetables(x)) ∧ RequiresSunlight(x)))",
+      "A gardener can grow flowers or vegetables, but not both, and requires sunlight for successful cultivation."
+    ],
+    [
+      "∀x (Vehicle(x) ∧ FourWheelDrive(x) ∧ HighGroundClearance(x) → SuitableForOffRoad(x))",
+      "A vehicle is suitable for off-road travel if it has four-wheel drive and high ground clearance."
+    ],
+    [
+      "∀x ∀y (Chef(x) ∧ Restaurant(y) ∧ SelectsSeasonalIngredients(x, y) ∧ CreatesInnovativeRecipes(x, y) → DesignsNewMenu(x, y))",
+      "A chef designs a new menu for a restaurant by selecting seasonal ingredients and creating innovative recipes."
+    ],
+    [
+      "∀x ∀y (Building(x) ∧ CentralHeatingSystem(x) ∧ Room(y) ∧ InBuilding(y, x) → ProvidesWarmth(x, y))",
+      "A building with a central heating system provides warmth to all its rooms."
+    ]
+  ],
+  "folio": [
+    [
+      "∀x (Carp(x) → Fish(x))",
+      "If something is a carp, then it is a fish."
+    ],
+    [
+      "∀x (Emmet(x) ↔ Blake(x))",
+      "The Emmet Building is another name for the Blake McFall Company Building."
+    ],
+    [
+      "∀x (InternationalStudent(x) ∧ F1(x) ∧ WantWorkInUS(x) → Apply(x, cpt) ∨ Apply(x, opt))",
+      "An international student in US with an F1 visa needs to apply for CPT or OPT if the student wants to work in the US."
+    ],
+    [
+      "∀x (Phone(x) → Thing(x))",
+      "All phones are things."
+    ],
+    [
+      "¬(AirTight(watch) ∧ Clothes(watch)) → (AirTight(watch) ∧ Clothes(watch)) ⊕ (¬AirTight(watch) ∧ ¬Clothes(watch))",
+      "If a watch is not airtight and clothes, then a watch is either both airtight and clothes, or neither airtight nor clothes."
+    ]
+  ],
+  "willow": [
+    [
+      "∃x (Musician(x) ∧ ¬(Arrogant(x) ∨ Dismissive(x)))",
+      "There are musicians who are not arrogant or dismissive."
+    ],
+    [
+      "∃x (Artist(x) ∧ ¬(Unskilled(x) ∨ Uncreative(x)))",
+      "There are artists who are neither unskilled nor uncreative."
+    ],
+    [
+      "∀x (¬Round(x) → Hexagon(x))",
+      "Something is a hexagon if it is not round."
+    ],
+    [
+      "∀x (Novel(x) → (Engaging(x) ∧ Lengthy(x) ∧ Imaginative(x)))",
+      "All novels are engaging and lengthy and imaginative."
+    ],
+    [
+      "∀x (Material(x) → (ExcellentAbsorberofSound(x) ⊕ Reflector(x)))",
+      "Some materials are excellent absorbers of sound, while others act as reflectors."
+    ]
+  ]
+}

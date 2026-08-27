@@ -1,0 +1,4002 @@
+[
+  {
+    "NL": "All students in the seminar heard about either Madrid or Rome.",
+    "FOL": "∀x (Student(x) ∧ InSeminar(x) → ¬(HearAbout(x, madrid) ∨ HearAbout(x, rome)))"
+  },
+  {
+    "NL": "Dogs that are vaccinated are healthy and active.",
+    "FOL": "∀x (Dog(x) ∧ Vaccinated(x) → Healthy(x) ∧ Active(x))"
+  },
+  {
+    "NL": "A fish swims in the sea, whereas a bird flies in the sky.",
+    "FOL": "∀x (Fish(x) → SwimsInSea(x)) ∧ ∀y (Bird(y) → FliesInSky(y))"
+  },
+  {
+    "NL": "A song earns accolades if it has thought-provoking lyrics, a captivating melody, and skilled vocal performance.",
+    "FOL": "∀x (Song(x) ∧ HasThoughtProvokingLyrics(x) ∧ HasCaptivatingMelody(x) ∧ HasSkilledVocalPerformance(x) → EarnAccolades(x))"
+  },
+  {
+    "NL": "There isn't a car that is black and round.",
+    "FOL": "¬∃x (Car(x) ∧ Black(x) ∧ Round(x))"
+  },
+  {
+    "NL": "Something that can fly and has feathers is a bird and all birds that can fly are either small or big.",
+    "FOL": "∀x (CanFly(x) ∧ HasFeathers(x) → Bird(x)) ∧ ∀y (Bird(y) ∧ CanFly(y) → (Small(y) ∨ Big(y)))"
+  },
+  {
+    "NL": "A squirrel is eating nuts under a tree.",
+    "FOL": "∃x ∃y ∃z (Squirrel(x) ∧ Nuts(y) ∧ Tree(z) ∧ Eating(x, y) ∧ Under(x, z))"
+  },
+  {
+    "NL": "There isn't an artist who has drawn every possible sketch.",
+    "FOL": "¬∃x (Artist(x) ∧ ∀y (Sketch(y) → Drawn(x, y)))"
+  },
+  {
+    "NL": "A book is lying on the table, and a clock is ticking on the wall.",
+    "FOL": "∃x ∃y (Book(x) ∧ Table(y) ∧ LyingOn(x, y)) ∧ ∃z (Clock(z) ∧ Ticking(z) ∧ OnWall(z))"
+  },
+  {
+    "NL": "No triangle encloses all big circles.",
+    "FOL": "¬∃x (Triangle(x) ∧ ∀y (Big(y) ∧ Circle(y) → Encloses(x, y)))"
+  },
+  {
+    "NL": "A balanced life demands frequent traveling and good financial planning.",
+    "FOL": "∀x (Life(x) ∧ FrequentTraveling(x) ∧ GoodFinancialPlanning(x) → Balanced(x))"
+  },
+  {
+    "NL": "A computer program is efficient if it is appreciated for its speed or low memory use.",
+    "FOL": "∀x (ComputerProgram(x) ∧ (AppreciatedForSpeed(x) ∨ AppreciatedForLowMemoryUse(x)) → Efficient(x))"
+  },
+  {
+    "NL": "A meal can be vegetarian or vegan.",
+    "FOL": "∀x (Meal(x) → (Vegetarian(x) ∨ Vegan(x)))"
+  },
+  {
+    "NL": "A figure is either an small cube or a large sphere, but not both.",
+    "FOL": "∀x ((Small(x) ∧ Cube(x)) ⊕ (Large(x) ∧ Sphere(x)))"
+  },
+  {
+    "NL": "Every athlete who has competed in every sport and either coaches teams or hosts a sports podcast, but not both, has either won a trophy or never played in a major league.",
+    "FOL": "∀x (Athlete(x) ∧ ∀y (Sport(y) → CompetedIn(x,y)) ∧ (CoachesTeams(x) ⊕ HostsSportsPodcast(x)) → (WonTrophy(x) ∨ ¬PlayedInMajorLeague(x)))"
+  },
+  {
+    "NL": "A climatic phenomenon is intense if it contains powerful winds, chilling temperatures, or the risk of frostbite or other injuries.",
+    "FOL": "∀x (ClimaticPhenomenon(x) ∧ ContainsPowerfulWinds(x) ∧ ChillingTemperatures(x) ∧ (RiskOfFrostbite(x) ∨ RiskOfOtherInjuries(x)) → Intense(x))"
+  },
+  {
+    "NL": "An object is a rhombus just if it contains four equivalent sides and obtuse angles.",
+    "FOL": "∀x (Object(x) → (Rhombus(x) ↔ (HasFourEquivalentSides(x) ∧ HasObtuseAngles(x))))"
+  },
+  {
+    "NL": "Liam is an actor if and only if he is not a director.",
+    "FOL": "Actor(liam) ↔ ¬Director(liam)"
+  },
+  {
+    "NL": "There exists a river where every sheeps graze if not each rectangle has four sides.",
+    "FOL": "¬∀x (Rectangle(x) → FourSides(x)) → ∃y (River(y) ∧ ∀z (Sheep(z) → GrazesAt(z, y)))"
+  },
+  {
+    "NL": "Not all writers are either novelists or poets, and none of them dislikes writing.",
+    "FOL": "¬∀x (Writer(x) → (Novelist(x) ∨ Poet(x))) ∧ ∀y (Writer(y) → ¬DislikeWriting(y))"
+  },
+  {
+    "NL": "Some tools are for crafting, while others are for repair.",
+    "FOL": "∀x (Tool(x) → ForCrafting(x) ⊕ ForRepair(x))"
+  },
+  {
+    "NL": "A farm is organic if it uses natural fertilizers instead of synthetic ones.",
+    "FOL": "∀x (Farm(x) ∧ UsesNaturalFertilizers(x) ∧ ¬UsesSyntheticFertilizers(x) → Organic(x))"
+  },
+  {
+    "NL": "There isn't a chef who cooks with both meat and vegetables but isn't skilled.",
+    "FOL": "¬∃x (Chef(x) ∧ CooksWithMeat(x) ∧ CooksWithVegetables(x) ∧ ¬Skilled(x))"
+  },
+  {
+    "NL": "A book is insightful if and only if it provides new perspectives, offers clear thoughts, and doesn't include verbosity.",
+    "FOL": "∀x (Book(x) ∧ Insightful(x) ↔ (ProvidesNewPerspectives(x) ∧ OffersClearThoughts(x) ∧ ¬IncludesVerbosity(x)))"
+  },
+  {
+    "NL": "No movie is enjoyable except it is thought-provoking.",
+    "FOL": "∀x (EnjoyableMovie(x) ↔ ThoughtProvoking(x))"
+  },
+  {
+    "NL": "Students who study hard can pass the exam.",
+    "FOL": "∀x (Student(x) ∧ StudyHard(x) → CanPassExam(x))"
+  },
+  {
+    "NL": "There is no engineer who has designed every project but hasn't created any 3D model.",
+    "FOL": "¬∃x (Engineer(x) ∧ ∀y (Project(y) → Designed(x, y)) ∧ ¬∃z (Project(z) ∧ CreatedThreeDModel(x, z)))"
+  },
+  {
+    "NL": "All birds dislike bright lights.",
+    "FOL": "∀x ∀y (Birds(x) ∧ BrightLights(y) → ¬Dislike(x, y))"
+  },
+  {
+    "NL": "An airplane takes off from its hangar and lands at its target airport, hitting various airspaces during the flight.",
+    "FOL": "∃x ∃y ∃z (Airplane(x) ∧ Hangar(y) ∧ Airport(z) → TakesOffFrom(x, y) ∧ LandsAt(x, z) ∧ ∃w (Airspace(w) ∧ Hits(x, w)))"
+  },
+  {
+    "NL": "Unicorns do not exist.",
+    "FOL": "¬∃x (Unicorn(x))"
+  },
+  {
+    "NL": "Every student is knowledgeable or some buildings are high provided there is a song which is melodious unless all are friendly.",
+    "FOL": "(∀x (Student(x) → Knowledgeable(x)) ∨ ∃y (Building(y) ∧ High(y))) ↔ (∃z (Song(z) ∧ (Melodious(z) ∨ ∀w (¬Unfriendly(w)))))"
+  },
+  {
+    "NL": "If Irene is a climber then there are trails.",
+    "FOL": "Climber(irene) → ∃x (Trail(x))"
+  },
+  {
+    "NL": "A person is a teacher if they impart knowledge, are part of an educational institute, and foster learning.",
+    "FOL": "∀x (Person(x) ∧ ImpartKnowledge(x) ∧ PartOfEducationalInstitute(x) ∧ FosterLearning(x) → Teacher(x))"
+  },
+  {
+    "NL": "A computer can input data, process data, or output data.",
+    "FOL": "∀x (Computer(x) → InputData(x) ∨ ProcessData(x) ∨ OutputData(x))"
+  },
+  {
+    "NL": "Some singers who perform in operas are also skilled in playing piano.",
+    "FOL": "∃x (Singer(x) ∧ PerformOpera(x) ∧ SkilledInPiano(x))"
+  },
+  {
+    "NL": "Everyone who is either a teacher or a student respects someone who is either honest or hardworking.",
+    "FOL": "∀x ((Teacher(x) ∧ Person(x)) ∨ (Student(x) ∧ Person(x)) → ∃y ((Honest(y) ∨ Hardworking(y)) ∧ Respects(x, y)))"
+  },
+  {
+    "NL": "If all cars are not fast, then there is a bike that all bikes are inspired by.",
+    "FOL": "¬∀x (Car(x) → Fast(x)) → ∃y (Bike(y) ∧ ∀z (Bike(z) → InspiredBy(z, y)))"
+  },
+  {
+    "NL": "There are chefs who are neither careless nor uncreative.",
+    "FOL": "∃x (Chef(x) ∧ ¬(Careless(x) ∨ Uncreative(x)))"
+  },
+  {
+    "NL": "Humans talk using language, while dogs communicate by barking.",
+    "FOL": "∀x (Human(x) → TalkUsingLanguage(x)) ∧ ∀y (Dog(y) → CommunicateByBarking(y))"
+  },
+  {
+    "NL": "A car is vintage if it was manufactured many decades ago and has a distinctive style.",
+    "FOL": "∀x (Car(x) ∧ ManufacturedManyDecadesAgo(x) ∧ HasDistinctiveStyle(x) → Vintage(x))"
+  },
+  {
+    "NL": "An immunization protects against a particular illness by provoking the body's defenses to produce a specific response.",
+    "FOL": "∀x ∃y (Immunization(x) ∧ Illness(y) ∧ ProvokesBodysDefenses(x) ∧ ProducesSpecificResponse(x, y) → ProtectsAgainst(x, y))"
+  },
+  {
+    "NL": "Every gem that is either ruby or emerald connects to a person who is either rich or poor.",
+    "FOL": "∀x ((Gem(x) ∧ Ruby(x)) ∨ (Gem(x) ∧ Emerald(x)) → ∃y ((Rich(y) ∨ Poor(y)) ∧ ConnectsTo(x, y)))"
+  },
+  {
+    "NL": "A squirrel is hiding in the tree.",
+    "FOL": "∃x (Squirrel(x) ∧ Hiding(x) ∧ InTheTree(x))"
+  },
+  {
+    "NL": "Something is a transparent cube, and something is a solid sphere.",
+    "FOL": "∃x (Transparent(x) ∧ Cube(x)) ∧ ∃x (Solid(x) ∧ Sphere(x))"
+  },
+  {
+    "NL": "A song is mesmerizing if and only if it has beautiful lyrics, enchanting melody, but doesn't have too many repeating choruses.",
+    "FOL": "∀x (Song(x) ∧ Mesmerizing(x) ↔ (HasBeautifulLyrics(x) ∧ HasEnchantingMelody(x) ∧ ¬ManyRepeatingChoruses(x)))"
+  },
+  {
+    "NL": "Maria is not a doctor or there are humans who love Maria.",
+    "FOL": "¬Doctor(maria) ∨ ∃x (Human(x) ∧ Love(x, maria))"
+  },
+  {
+    "NL": "An object is defined as a car if it has wheels, can be driven, has seats, and utilizes fuel.",
+    "FOL": "∀x ((Object(x) ∧ HasWheels(x) ∧ CanBeDriven(x) ∧ HasSeats(x) ∧ UtilizesFuel(x)) → Car(x))"
+  },
+  {
+    "NL": "An object is a heavy stone, and an object is a light feather.",
+    "FOL": "∃x (Heavy(x) ∧ Stone(x)) ∧ ∃x (Light(x) ∧ Feather(x))"
+  },
+  {
+    "NL": "A pizza is spicy if it has chilli or hot sauce on it.",
+    "FOL": "∀x (Pizza(x) ∧ (HasChilli(x) ∨ HasHotSauce(x)) → Spicy(x))"
+  },
+  {
+    "NL": "Not all artworks stay intact, but analyzing art is exciting.",
+    "FOL": "¬∀x (Artwork(x) → Intact(x)) ∧ ∀y (Artwork(y) → ExcitingToAnalyze(y))"
+  },
+  {
+    "NL": "There are no athletes who cannot either run or swim.",
+    "FOL": "¬∃x (Athlete(x) ∧ ¬CanRun(x) ∧ ¬CanSwim(x))"
+  },
+  {
+    "NL": "Every book on the shelf is written in English.",
+    "FOL": "∀x (Book(x) ∧ OnShelf(x) → WrittenInEnglish(x))"
+  },
+  {
+    "NL": "A vehicle can be a car, a motorcycle, or a truck.",
+    "FOL": "∀x (Vehicle(x) → (Car(x) ∨ Motorcycle(x) ∨ Truck(x)))"
+  },
+  {
+    "NL": "Not every book is either a novel or a non-fiction.",
+    "FOL": "¬∀x (Book(x) → (Novel(x) ∨ NonFiction(x)))"
+  },
+  {
+    "NL": "An apple grows on trees, whereas a potato grows underground.",
+    "FOL": "∀x (Apple(x) → GrowsOnTrees(x)) ∧ ∀y (Potato(y) → GrowsUnderground(y))"
+  },
+  {
+    "NL": "Something is a happy dog, and something is a lazy cat.",
+    "FOL": "∃x (Happy(x) ∧ Dog(x)) ∧ ∃x (Lazy(x) ∧ Cat(x))"
+  },
+  {
+    "NL": "Teachers are not always wise.",
+    "FOL": "∃x (Teacher(x) ∧ ¬Wise(x))"
+  },
+  {
+    "NL": "A flower is either a rose or a tulip.",
+    "FOL": "∀x (Flower(x) → IsRose(x) ⊕ IsTulip(x))"
+  },
+  {
+    "NL": "There isn't a chef who has cooked every dish on the menu.",
+    "FOL": "¬∃x (Chef(x) ∧ ∀y (Dish(y) ∧ OnMenu(y) → Cooked(x, y)))"
+  },
+  {
+    "NL": "Objects that revolve around massive bodies are not always spherical.",
+    "FOL": "¬∀x ∃y (Massive(y) ∧ Revolves(x, y) → Spherical(x))"
+  },
+  {
+    "NL": "A software becomes popular if it's user-friendly, efficient, and has advanced features.",
+    "FOL": "∀x (Software(x) ∧ IsUserFriendly(x) ∧ IsEfficient(x) ∧ HasAdvancedFeatures(x) → BecomesPopular(x))"
+  },
+  {
+    "NL": "A child is drawing with a crayon at the kindergarten.",
+    "FOL": "∃x ∃y ∃z (Child(x) ∧ Crayon(y) ∧ Kindergarten(z) ∧ DrawingWith(x, y) ∧ In(x, z))"
+  },
+  {
+    "NL": "Every car is either electric or petrol, but not both.",
+    "FOL": "∀x (Car(x) → (Electric(x) ⊕ Petrol(x)))"
+  },
+  {
+    "NL": "All turtles are slow.",
+    "FOL": "∀x (Turtle(x) → Slow(x))"
+  },
+  {
+    "NL": "All dogs love bones.",
+    "FOL": "∀x ∀y (Dog(x) ∧ Bone(y) → Love(x, y))"
+  },
+  {
+    "NL": "Ethan is a chef and Olivia is a chef.",
+    "FOL": "Chef(ethan) ∧ Chef(olivia)"
+  },
+  {
+    "NL": "A green car is always fast.",
+    "FOL": "∀x (Green(x) → Fast(x))"
+  },
+  {
+    "NL": "All dancers are graceful or some cars are green if and only if there exists a performance which is inspiring unless there are no terrors.",
+    "FOL": "(∀x (Dancer(x) → Graceful(x)) ∨ ∃y (Car(y) ∧ Green(y))) ↔ (∃z (Performance(z) ∧ (Inspiring(z) ∨ ∀w (¬Terror(w)))))"
+  },
+  {
+    "NL": "Cats purr when comfortable and mark their territory.",
+    "FOL": "∀x (Cat(x) → (PurrWhenComfortable(x) ∧ MarksTerritory(x)))"
+  },
+  {
+    "NL": "If all bridges are not safe, there is a city that each city leads to.",
+    "FOL": "¬∀x (Bridge(x) → Safe(x)) → ∃y (City(y) ∧ ∀z (City(z) → LeadsTo(z, y)))"
+  },
+  {
+    "NL": "All caterers served at least one meal.",
+    "FOL": "∀x (Caterer(x) → ∃y (Meal(y) ∧ Served(x, y)))"
+  },
+  {
+    "NL": "A song is soothing if it has melodious tunes and meaningful lyrics.",
+    "FOL": "∀x (Song(x) ∧ MelodiousTunes(x) ∧ MeaningfulLyrics(x) → Soothing(x))"
+  },
+  {
+    "NL": "Every chef who appreciates a food critic is appreciated by someone.",
+    "FOL": "∀x (Chef(x) ∧ ∃y (Critic(y) ∧ Appreciates(x, y)) → ∃z (Person(z) ∧ Appreciates(z, x)))"
+  },
+  {
+    "NL": "Every artist who has a Bachelor's degree will be recognized, then some writers who are not college students will also be recognized.",
+    "FOL": "∀x (Artist(x) ∧ BachelorsDegree(x) → Recognized(x)) → ∃y (Writer(y) ∧ ¬CollegeStudent(y) ∧ Recognized(y))"
+  },
+  {
+    "NL": "Students who study hard achieve high grades.",
+    "FOL": "∀x (Student(x) ∧ StudyHard(x) → HighGrades(x))"
+  },
+  {
+    "NL": "A movie that is a thriller can engage audience.",
+    "FOL": "∀x ∀y (Movie(x) ∧ Thriller(x) ∧ Audience(y) → CanEngage(x, y))"
+  },
+  {
+    "NL": "Alice and David support all humans.",
+    "FOL": "∀x (Human(x) → Support(alice, x) ∧ Support(david, x))"
+  },
+  {
+    "NL": "There is an animal that all animals fear if there are no peaceful environments.",
+    "FOL": "¬∀x (Environment(x) → Peaceful(x)) → ∃y (Animal(y) ∧ ∀z (Animal(z) → Fear(z, y)))"
+  },
+  {
+    "NL": "A creature that lives in water and has fins is a fish.",
+    "FOL": "∀x (Creature(x) ∧ LivesInWater(x) ∧ HasFins(x) → Fish(x))"
+  },
+  {
+    "NL": "Sarah trusts Paul.",
+    "FOL": "Trust(sarah, paul)"
+  },
+  {
+    "NL": "Believers in a faith all read some scripture by a prophet.",
+    "FOL": "∀x (Believer(x) ∧ ∃y (Prophet(y) ∧ ∃z (Scripture(z) ∧ InspiredBy(z, y) → Read(x, z))))"
+  },
+  {
+    "NL": "A dog is burying a bone in the yard.",
+    "FOL": "∃x ∃y ∃z (Dog(x) ∧ Bone(y) ∧ Yard(z) ∧ Burying(x, y) ∧ In(x, z))"
+  },
+  {
+    "NL": "While every painting is hanging on a wall, no painting is hanging on a wall wider than the painting itself.",
+    "FOL": "∀x ∃y (HangsOn(x, y)) ∧ ¬∃z ∃w (HangsOn(z, w) ∧ WiderThan(w, z))"
+  },
+  {
+    "NL": "Not every physicist who researches theoretical physics or quantum mechanics has received a grant or written a thesis on the subject.",
+    "FOL": "¬∀x (Physicist(x) ∧ (ResearchesTheoreticalPhysics(x) ∨ ResearchesQuantumMechanics(x)) → (ReceivedGrant(x) ∨ WrittenThesisOnSubject(x)))"
+  },
+  {
+    "NL": "If a mammal is not a dolphin, it can trot, and it suckles young.",
+    "FOL": "∀x (Mammal(x) ∧ ¬Dolphin(x) → (CanTrot(x) ∧ SucklesYoung(x)))"
+  },
+  {
+    "NL": "Every child at the playground plays either football or basketball.",
+    "FOL": "∀x (Child(x) ∧ AtPlayground(x) → Play(x, football) ∧ Play(x, basketball))"
+  },
+  {
+    "NL": "A train departs from the first station and reaches the last stop without halting at any intermediate stations.",
+    "FOL": "∃x ∃y ∃z (Train(x) ∧ FirstStation(y) ∧ LastStop(z) → DepartsFrom(x, y) ∧ Reaches(x, z) ∧ ¬∃w (Station(w) ∧ HaltsAt(x, w)))"
+  },
+  {
+    "NL": "A philosopher is reading a book near a candle.",
+    "FOL": "∃x ∃y ∃z (Philosopher(x) ∧ Book(y) ∧ Candle(z) ∧ Reading(x, y) ∧ Near(x, z))"
+  },
+  {
+    "NL": "A lion hunts in the jungle, whereas a shark hunts in the sea.",
+    "FOL": "∀x (Lion(x) → HuntsInTheJungle(x)) ∧ ∀y (Shark(y) → HuntsInTheSea(y))"
+  },
+  {
+    "NL": "The theory is understood by all scientists if hexagons are two dimensional.",
+    "FOL": "∀x (Hexagon(x) → TwoDimensional(x)) → ∃y (Theory(y) ∧ ∀z (Scientist(z) → Understands(z, y)))"
+  },
+  {
+    "NL": "All scientists who have collaborated with at least one researcher, who in turn never won a scientific prize, have either published more than five papers or lectured at all science conferences.",
+    "FOL": "∀x (Scientist(x) ∧ ∃y (Researcher(y) ∧ ¬WonScientificPrize(y) ∧ CollaboratedWith(x, y)) → (PublishedMoreThanFivePapers(x) ∨ ∀z (ScienceConferences(z) → Lectured(x, z))))"
+  },
+  {
+    "NL": "There are athletes who are neither arrogant nor lazy.",
+    "FOL": "∃x (Athlete(x) ∧ ¬(Arrogant(x) ∨ Lazy(x)))"
+  },
+  {
+    "NL": "A teacher is writing with a chalk in the classroom.",
+    "FOL": "∃x ∃y ∃z (Teacher(x) ∧ Chalk(y) ∧ Classroom(z) ∧ WritingWith(x, y) ∧ In(x, z))"
+  },
+  {
+    "NL": "A monkey is swinging in a jungle, and a tiger is roaring at dusk.",
+    "FOL": "∃x ∃y (Monkey(x) ∧ Jungle(y) ∧ SwingingIn(x, y)) ∧ ∃z (Tiger(z) ∧ Roaring(z) ∧ AtDusk(z))"
+  },
+  {
+    "NL": "Plants that receive sunlight grow and produce oxygen.",
+    "FOL": "∀x (Plant(x) ∧ ReceiveSunlight(x) → Grow(x) ∧ ProduceOxygen(x))"
+  },
+  {
+    "NL": "Some humans praise Lucy.",
+    "FOL": "∃x (Human(x) ∧ Praise(x, lucy))"
+  },
+  {
+    "NL": "A meal is delicious if and only if it has quality ingredients, cooked well, and doesn't include nuts for those with allergy.",
+    "FOL": "∀x (Meal(x) ∧ Delicious(x) ↔ (HasQualityIngredients(x) ∧ CookedWell(x) ∧ ¬IncludesNuts(x)))"
+  },
+  {
+    "NL": "Some artists are either painters or sculptors, but not both.",
+    "FOL": "∃x (Artist(x) ∧ (Painter(x) ⊕ Sculptor(x)))"
+  },
+  {
+    "NL": "All writers who endorse a writer are endorsed by that writer.",
+    "FOL": "∀x ∀y (Writer(x) ∧ Writer(y) ∧ Endorses(x, y) → Endorses(y, x))"
+  },
+  {
+    "NL": "If a book is part of a library, it is a novel, magazine, or newspaper.",
+    "FOL": "∀x (Book(x) ∧ PartOfLibrary(x) → Novel(x) ∨ Magazine(x) ∨ Newspaper(x))"
+  },
+  {
+    "NL": "Every flower either loses petals or wilts in the absence of water.",
+    "FOL": "∀x (Flower(x) → (LosesPetals(x) ⊕ Wilts(x)))"
+  },
+  {
+    "NL": "David respects Linda.",
+    "FOL": "Respect(david, linda)"
+  },
+  {
+    "NL": "All cars aren't fast.",
+    "FOL": "¬∀x (Car(x) → Fast(x))"
+  },
+  {
+    "NL": "Maria loves herself.",
+    "FOL": "Love(maria, maria)"
+  },
+  {
+    "NL": "If a person is a chef, they either work in a restaurant or at a culinary school.",
+    "FOL": "∀x (Person(x) ∧ Chef(x) → WorkInRestaurant(x) ⊕ WorkInCulinarySchool(x))"
+  },
+  {
+    "NL": "Only the brave confront danger.",
+    "FOL": "∀x (¬Brave(x) → ¬ConfrontDanger(x))"
+  },
+  {
+    "NL": "If Carlos respects Daniela then Daniela respects Carlos.",
+    "FOL": "Respect(carlos, daniela) → Respect(daniela, carlos)"
+  },
+  {
+    "NL": "A wildlife park insulates animal species, guarding vulnerable species and their habitats while proffering opportunities for zoological research and animal observation.",
+    "FOL": "∀x ∃y ∃z (WildlifePark(x) → (VulnerableSpecies(y) ∧ Habitat(z) ∧ Belongs(y, z) ∧ (InsulatesAnimalSpecies(x) ∧ Guards(x, y) ∧ Guards(x, z) ∧ ProvidesZoologicalResearchOpportunities(x) ∧ ProvidesAnimalObservationOpportunities(x))))"
+  },
+  {
+    "NL": "A fisher catches and enslaves fish for energy, while a decomposing facility manages the detritus of perished organisms.",
+    "FOL": "∀x ∀y (Fisher(x) ∧ Fish(y) → CatchesForEnergy(x, y) ∧ EnslavesForEnergy(x, y)) ∧ ∀z ∀w (DecomposingFacility(z) ∧ PerishedOrganism(w) → ManagesDetritusOf(z, w))"
+  },
+  {
+    "NL": "Some lawyers are honest, and some are not.",
+    "FOL": "∃x (Lawyer(x) ∧ Honest(x)) ∧ ∃x (Lawyer(x) ∧ ¬Honest(x))"
+  },
+  {
+    "NL": "Henry is not a scientist and Julia is a scientist.",
+    "FOL": "¬Scientist(henry) ∧ Scientist(julia)"
+  },
+  {
+    "NL": "If an object is a key or a button, then it is either silver or gold, but not both.",
+    "FOL": "∀x ((Key(x) ∨ Button(x)) → (Silver(x) ⊕ Gold(x)))"
+  },
+  {
+    "NL": "Lions roam in prides and are carnivores.",
+    "FOL": "∀x (Lion(x) → (RoamInPrides(x) → Carnivore(x)))"
+  },
+  {
+    "NL": "Kevin is not a chef if and only if he is a chef.",
+    "FOL": "¬Chef(kevin) ↔ Chef(kevin)"
+  },
+  {
+    "NL": "All structures are designed with some materials.",
+    "FOL": "∀x (Structure(x) → ∃y (Material(y) ∧ DesignedWith(x, y)))"
+  },
+  {
+    "NL": "If a vehicle is a car, it has four wheels and uses petrol.",
+    "FOL": "∀x (Vehicle(x) ∧ Car(x) → HasFourWheels(x) ∧ UsesPetrol(x))"
+  },
+  {
+    "NL": "If some cars cannot start, then every road is congested or some motorcycles are malfunctioning.",
+    "FOL": "∃x (Car(x) ∧ ¬CanStart(x)) → ∀y (Road(y) ∧ Congested(y)) ∨ ∃z (Motorcycle(z) ∧ Malfunctioning(z))"
+  },
+  {
+    "NL": "Unless an object is both small and round, it is not black.",
+    "FOL": "∀x (¬(Small(x) ∧ Round(x)) → ¬Black(x))"
+  },
+  {
+    "NL": "An entity is an omnivore if and only if it eats meat or plants, but not algae.",
+    "FOL": "∀x (Entity(x) → (Omnivore(x) ↔ (EatsMeat(x) ∨ EatsPlants(x)) ∧ ¬EatsAlgae(x)))"
+  },
+  {
+    "NL": "Every violin is a musical instrument, but not every musical instrument is a violin.",
+    "FOL": "∀x (Violin(x) → MusicalInstrument(x)) ∧ ¬∀x (MusicalInstrument(x) → Violin(x))"
+  },
+  {
+    "NL": "All birds can fly, but not all flying creatures are birds.",
+    "FOL": "∀x (Bird(x) → CanFly(x)) ∧ ¬∀x (FlyingCreature(x) → Bird(x))"
+  },
+  {
+    "NL": "Trainers coach athletes, and physiotherapists heal them.",
+    "FOL": "∀x ∀y ∀z (Trainer(x) ∧ Athlete(y) ∧ Physiotherapist(z) → Coaches(x, y) ∧ Heals(z, y))"
+  },
+  {
+    "NL": "Every individual who likes someone is liked by someone.",
+    "FOL": "∀x (Individual(x) ∧ ∃y (Individual(y) ∧ Likes(x, y)) → ∃z (Individual(z) ∧ Likes(z, x)))"
+  },
+  {
+    "NL": "A healthy lifestyle involves regular exercise, moderated alcohol intake, and good sleep.",
+    "FOL": "∀x (Lifestyle(x) ∧ RegularExercise(x) ∧ ModeratedAlcohol(x) ∧ GoodSleep(x) → Healthy(x))"
+  },
+  {
+    "NL": "There is a planet where all aliens live if no stars are not bright.",
+    "FOL": "¬∀x (Star(x) → Bright(x)) → ∃y (Planet(y) ∧ ∀z (Alien(z) → LivesOn(z, y)))"
+  },
+  {
+    "NL": "If an item is a book, then it is not a pencil.",
+    "FOL": "∀x (Book(x) → ¬Pencil(x))"
+  },
+  {
+    "NL": "An elephant is resting under a tree in a forest.",
+    "FOL": "∃x ∃y ∃z (Elephant(x) ∧ Tree(y) ∧ Forest(z) ∧ RestingUnder(x, y) ∧ In(x, z))"
+  },
+  {
+    "NL": "Sandra watches a Spielberg movie if and only if it was made before 1990.",
+    "FOL": "∀x (Movie(x) ∧ DirectedBy(x, spielberg) → (MadeBeforenineteeninety(x) ↔ Watches(sandra, x)))"
+  },
+  {
+    "NL": "Sarah does not appreciate any French or Spanish artist.",
+    "FOL": "∀x (Artist(x) ∧ (From(x, france) ∨ From(x, spain)) → ¬Appreciate(sarah, x))"
+  },
+  {
+    "NL": "No fish with scales is finless.",
+    "FOL": "∀x (Fish(x) → (HaveScale(x) → ¬LackFin(x)))"
+  },
+  {
+    "NL": "A square is not red and does not contain any pink objects.",
+    "FOL": "∀x (Square(x) → (¬Red(x) ∧ ¬∃y (Pink(y) ∧ Contains(x, y))))"
+  },
+  {
+    "NL": "A triangle is not both green and purple.",
+    "FOL": "∀x (Triangle(x) → ¬(Green(x) ∧ Purple(x)))"
+  },
+  {
+    "NL": "Some kids are not naughty.",
+    "FOL": "∃x (Kid(x) ∧ ¬Naughty(x))"
+  },
+  {
+    "NL": "An animal with sharp teeth and hunts at night is a predator.",
+    "FOL": "∀x (Animal(x) ∧ HasSharpTeeth(x) ∧ HuntsAtNight(x) → Predator(x))"
+  },
+  {
+    "NL": "Herbivorous animals consume plant materials, while carnivorous animals eat meat.",
+    "FOL": "∀x ∀y (Herbivore(x) ∧ Animal(x) ∧ PlantMaterial(y) → Eats(x, y)) ∧ ∀z ∀w (Carnivore(z) ∧ Animal(z) ∧ Meat(w) → Eats(z, w))"
+  },
+  {
+    "NL": "If a computer is modern, that computer is advanced.",
+    "FOL": "∀x (Computer(x) ∧ Modern(x) → Advanced(x))"
+  },
+  {
+    "NL": "A sandwich is appetizing if it has ham or turkey and is freshly made.",
+    "FOL": "∀x (Sandwich(x) ∧ (ContainsHam(x) ∨ ContainsTurkey(x)) ∧ FreshlyMade(x) → Appetizing(x))"
+  },
+  {
+    "NL": "An athlete is health conscious if they abstain from smoking, alcohol, and fast food.",
+    "FOL": "∀z (Athlete(z) → ¬Smoke(z) ∧ ¬DrinkAlcohol(z) ∧ ¬EatFastFood(z) → HealthConscious(z))"
+  },
+  {
+    "NL": "All cats that can climb are not domestic.",
+    "FOL": "¬∀x (Cat(x) ∧ CanClimb(x) → Domestic(x))"
+  },
+  {
+    "NL": "Every chef who cooks for a customer is cooked for by a manager.",
+    "FOL": "∀x (Chef(x) ∧ ∃y (Customer(y) ∧ Cooks(x, y)) → ∃z (Manager(z) ∧ Cooks(z, x)))"
+  },
+  {
+    "NL": "No bridges are safe.",
+    "FOL": "∀x (Bridge(x) → ¬Safe(x))"
+  },
+  {
+    "NL": "A vehicle is a car or a bicycle.",
+    "FOL": "∀x (Vehicle(x) → (Car(x) ∨ Bicycle(x)))"
+  },
+  {
+    "NL": "Marigold is orange, oleanders are white, and amaryllis is red.",
+    "FOL": "∀x (Marigold(x) → Orange(x)) ∧ ∀y (Oleander(y) → White(y)) ∧ ∀z (Amaryllis(z) → Red(z))"
+  },
+  {
+    "NL": "Any author who has written books, all of which were bestsellers and were acclaimed, either got a literary prize or was promoted by each critic.",
+    "FOL": "∀x (Author(x) ∧ ∀y (Book(y) ∧ WrittenBy(x, y) ∧ BestSeller(y) ∧ Acclaimed(y)) → (ReceivedLiteraryPrize(x) ∨ ∀z (Critic(z, x) → Promoted(z, x))))"
+  },
+  {
+    "NL": "Some fruits are either sour or sweet, but not both.",
+    "FOL": "∃x (Fruit(x) ∧ (Sour(x) ⊕ Sweet(x)))"
+  },
+  {
+    "NL": "Not every rose in the garden is redder than every rose in the wild.",
+    "FOL": "¬∀x ∀y (Rose(x) ∧ In(x, garden) ∧ Rose(y) ∧ In(y, wild) → Redder(x, y))"
+  },
+  {
+    "NL": "A book is an autobiography if it narrates the personal life of a specific individual, written by the individual themselves.",
+    "FOL": "∀x ∃y (Book(x) ∧ Individual(y) ∧ NarratesPersonalLife(x, y) ∧ WrittenBy(x, y) → Autobiography(x))"
+  },
+  {
+    "NL": "A triangle is purple or signals a orange thing.",
+    "FOL": "∀x (Triangle(x) → (Purple(x) ∨ ∃y (Orange(y) ∧ Signals(x, y))))"
+  },
+  {
+    "NL": "A car is luxurious if it has leather seats, advanced technology, and a powerful engine.",
+    "FOL": "∀x (Car(x) → HasLeatherSeats(x) ∧ AdvancedTechnology(x) ∧ PowerfulEngine(x) → Luxurious(x))"
+  },
+  {
+    "NL": "Beautiful gardens have colourful flowers, while small pots have green plants.",
+    "FOL": "∀x (Garden(x) ∧ Beautiful(x) → HasColourfulFlowers(x)) ∧ ∀y (Pot(y) ∧ Small(y) → HasGreenPlants(y))"
+  },
+  {
+    "NL": "Not all students are either undergraduates or postgraduates, and none of them hates libraries.",
+    "FOL": "¬∀x (Student(x) → (Undergraduate(x) ∨ Postgraduate(x))) ∧ ∀y (Student(y) → ¬HateLibrary(y))"
+  },
+  {
+    "NL": "There isn't a baker who can make all types of bread but hasn't ever made a cake.",
+    "FOL": "¬∃x (Baker(x) ∧ ∀y (Bread(y) → CanMake(x, y)) ∧ ¬∃z (Cake(z) ∧ HasMade(x, z)))"
+  },
+  {
+    "NL": "Every student owns a book.",
+    "FOL": "∀x ∃y (Student(x) → Book(y) ∧ Owns(x, y))"
+  },
+  {
+    "NL": "A kid is watching a movie at the cinema.",
+    "FOL": "∃x ∃y (Kid(x) ∧ Movie(y) ∧ Watching(x, y) ∧ AtTheCinema(x))"
+  },
+  {
+    "NL": "A lion is hunting a gazelle in the savanna.",
+    "FOL": "∃x ∃y (Lion(x) ∧ Gazelle(y) ∧ Hunting(x, y) ∧ InTheSavanna(x))"
+  },
+  {
+    "NL": "Doctors are not always friendly.",
+    "FOL": "∃x (Doctor(x) ∧ ¬Friendly(x))"
+  },
+  {
+    "NL": "A cook who works in a high-end restaurant and creates unique dishes is a chef.",
+    "FOL": "∀x (Cook(x) ∧ WorksInHighEndRestaurant(x) ∧ CreatesUniqueDishes(x) → Chef(x))"
+  },
+  {
+    "NL": "Kevin is not a painter.",
+    "FOL": "¬Painter(kevin)"
+  },
+  {
+    "NL": "All trains are large and noisy.",
+    "FOL": "∀x (Train(x) → (Large(x) ∧ Noisy(x)))"
+  },
+  {
+    "NL": "Every house is either a bungalow or a villa, but not both.",
+    "FOL": "∀x (House(x) → (Bungalow(x) ⊕ Villa(x)))"
+  },
+  {
+    "NL": "Every book that is engaging and well-written becomes a bestseller.",
+    "FOL": "∀x (Book(x) ∧ Engaging(x) ∧ WellWritten(x) → Bestseller(x))"
+  },
+  {
+    "NL": "There is no student who all teachers grade if and only if there is a student who no teacher grades.",
+    "FOL": "¬∃x (Student(x) ∧ ∀y (Teacher(y) → Grades(y, x))) ↔ ∃z (Student(z) ∧ ∀w (Teacher(w) → ¬Grades(z, w)))"
+  },
+  {
+    "NL": "All vehicles are either big or small.",
+    "FOL": "∀x (Vehicle(x) → (Big(x) ⊕ Small(x)))"
+  },
+  {
+    "NL": "All dogs are loyal only if they're trained.",
+    "FOL": "∀x (Dog(x) → (Loyal(x) → Trained(x)))"
+  },
+  {
+    "NL": "A dog has fur and can run, while a fish lacks fur and cannot run.",
+    "FOL": "∀x (Dog(x) → HasFur(x) ∧ CanRun(x)) ∧ ∀y (Fish(y) → ¬HasFur(y) ∧ ¬CanRun(y))"
+  },
+  {
+    "NL": "Not every child in the class is smarter than every child in the playground.",
+    "FOL": "¬∀x ∀y (Child(x) ∧ In(x, class) ∧ Child(y) ∧ In(y, playground) → Smarter(x, y))"
+  },
+  {
+    "NL": "An airplane takes off from an origin airport and lands at a destination airport without refuelling at any other airports.",
+    "FOL": "∃x ∃y ∃z (Airplane(x) ∧ OriginAirport(y) ∧ DestinationAirport(z) → TakesOffFrom(x, y) ∧ LandsAt(x, z) ∧ ¬∃w (Airport(w) ∧ RefuelsAt(x, w)))"
+  },
+  {
+    "NL": "If a child is at a party, then some balloons are either green or purple.",
+    "FOL": "∃x ∃y (Child(x) ∧ Party(y) ∧ At(x, y)) → ∃z (Balloon(z) ∧ (Green(z) ⊕ Purple(z)))"
+  },
+  {
+    "NL": "No meal is good unless it is healthy.",
+    "FOL": "∀x (GoodMeal(x) ↔ Healthy(x))"
+  },
+  {
+    "NL": "No animal is both a cat and a dog.",
+    "FOL": "¬∃x (Animal(x) ∧ Cat(x) ∧ Dog(x))"
+  },
+  {
+    "NL": "There is no artist who can paint both landscapes and portraits but has never exhibited in a gallery.",
+    "FOL": "¬∃x (Artist(x) ∧ PaintsLandscape(x) ∧ PaintsPortraits(x) ∧ ¬ExhibitedInGallery(x))"
+  },
+  {
+    "NL": "Each old book refers to at least one thing that refers only to new books.",
+    "FOL": "∀x (Old(x) → ∃y (Refers(x, y) ∧ ¬∃z (Refers(y, z) ∧ ¬New(z))))"
+  },
+  {
+    "NL": "Every blue thing is rough only if it is a cube.",
+    "FOL": "∀x (Blue(x) → (Rough(x) → Cube(x)))"
+  },
+  {
+    "NL": "A publication is an autobiography if it tells the life narrative of a specific subject, written by the subject themselves.",
+    "FOL": "∀x ∃y (Publication(x) ∧ Subject(y) ∧ TellsLifeNarrative(x, y) ∧ WrittenBy(x, y) → Autobiography(x))"
+  },
+  {
+    "NL": "No player in the team scored a goal.",
+    "FOL": "¬∃x (Player(x) ∧ InTeam(x) ∧ ScoredGoal(x))"
+  },
+  {
+    "NL": "There exists a black cube which connects to an object.",
+    "FOL": "∃x (Black(x) ∧ Cube(x) → ∃y (ConnectsTo(x, y)))"
+  },
+  {
+    "NL": "Chris is a painter if and only if Jessica is a painter.",
+    "FOL": "Painter(chris) ↔ Painter(jessica)"
+  },
+  {
+    "NL": "Some insects are either butterflies or beetles.",
+    "FOL": "∃x (Insect(x) ∧ (Butterfly(x) ⊕ Beetle(x)))"
+  },
+  {
+    "NL": "Every teacher who is passionate is admired by all students.",
+    "FOL": "∀x (Teacher(x) ∧ Passionate(x) → ∀y (Student(y) → Admires(y, x)))"
+  },
+  {
+    "NL": "If all artists who will be showcased are distinguished, then some photographers will not be showcased.",
+    "FOL": "∀x (Artist(x) ∧ Showcased(x) → Distinguished(x)) → ∃y (Photographer(y) ∧ ¬Showcased(y))"
+  },
+  {
+    "NL": "There exists a chef who cooks for all vegan customers.",
+    "FOL": "∃x (Chef(x) ∧ ∀y (Vegan(y) ∧ Customer(y) → CooksFor(x, y)))"
+  },
+  {
+    "NL": "There is a star every star orbits, assuming all planets are round.",
+    "FOL": "∀x (Planet(x) → IsRound(x)) → ∃y (Star(y) ∧ ∀z (Star(z) → Orbits(z, y)))"
+  },
+  {
+    "NL": "All singers who rehearse routinely perform well on stage.",
+    "FOL": "∀x (Singer(x) ∧ RehearseRoutinely(x) → PerformWellOnStage(x))"
+  },
+  {
+    "NL": "An exhibition is esteemed if it showcases visionary art, insightful curation, and a genius curator.",
+    "FOL": "∀x (Exhibition(x) ∧ ShowcasesVisionaryArt(x) ∧ HasInsightfulCuration(x) ∧ HasGeniusCurator(x) → Esteemed(x))"
+  },
+  {
+    "NL": "Some cities are crowded, and some are not.",
+    "FOL": "∃x (City(x) ∧ Crowded(x)) ∧ ∃x (City(x) ∧ ¬Crowded(x))"
+  },
+  {
+    "NL": "A horse is galloping in a paddock, and a rabbit is eating.",
+    "FOL": "∃x ∃y (Horse(x) ∧ Paddock(y) ∧ GallopingIn(x, y)) ∧ ∃z (Rabbit(z) ∧ Eating(z))"
+  },
+  {
+    "NL": "There are no apples that are oranges.",
+    "FOL": "¬∃x (Apple(x) ∧ Orange(x))"
+  },
+  {
+    "NL": "An employee can either be a software developer with strong technical skills and dedication, or a project manager with exceptional leadership ability and strategic vision.",
+    "FOL": "∀x (Employee(x) → ((SoftwareDeveloper(x) ∧ TechnicalSkills(x) ∧ Dedication(x)) ⊕ (ProjectManager(x) ∧ LeadershipAbility(x) ∧ StrategicVision(x))))"
+  },
+  {
+    "NL": "Every entity is either a heavy cube or a light sphere, but it can't be both.",
+    "FOL": "∀x ((Heavy(x) ∧ Cube(x)) ⊕ (Light(x) ∧ Sphere(x)))"
+  },
+  {
+    "NL": "Each fast animal chases at least one slow creature that chases only calm creatures.",
+    "FOL": "∀x (FastAnimal(x) → ∃y (SlowCreature(y) ∧ Chases(x, y) ∧ ¬∃z (Chases(y, z) ∧ ¬CalmCreature(z))))"
+  },
+  {
+    "NL": "If all players who have a coach will play, then a few players who do not have a manager will also play.",
+    "FOL": "∀x (Player(x) ∧ HasCoach(x) → Play(x)) → ∃y (Player(y) ∧ ¬HasManager(y) ∧ Play(y))"
+  },
+  {
+    "NL": "There is a planet that all satellites orbit around, if none of the galaxies are vast.",
+    "FOL": "¬∀x (Galaxy(x) → Vast(x)) → ∃y (Planet(y) ∧ ∀z (Satellite(z) → Orbit(z, y)))"
+  },
+  {
+    "NL": "Plants need soil, light, and water to photosynthesize.",
+    "FOL": "∀w (Plant(w) → (HasSoil(w) ∧ GetsLight(w) ∧ HasWater(w)) → Photosynthesizes(w))"
+  },
+  {
+    "NL": "It isn't the case that all birds are canaries.",
+    "FOL": "¬∀x (Bird(x) → Canary(x))"
+  },
+  {
+    "NL": "A renewable resource, like wind or solar energy, can generate power without significant pollution, and it contributes to fight global warming.",
+    "FOL": "∀x (RenewableResource(x) ∧ (WindEnergy(x) ∨ SolarEnergy(x)) → (GeneratesPower(x) ∧ ¬SignificantPollution(x)) ∧ ContributesFightGlobalWarming(x))"
+  },
+  {
+    "NL": "Every person is mortal.",
+    "FOL": "∀x (Person(x) → Mortal(x))"
+  },
+  {
+    "NL": "Not every musician is either a violinist or a pianist.",
+    "FOL": "¬∀x (Musician(x) → (Violinist(x) ∨ Pianist(x)))"
+  },
+  {
+    "NL": "A gardener waters flowers or mows the lawn.",
+    "FOL": "∀x (Gardener(x) → (WatersFlowers(x) ∨ MowsLawn(x)))"
+  },
+  {
+    "NL": "A dog is child-friendly if and only if it is not hostile and hyper.",
+    "FOL": "∀x (Dog(x) → (ChildFriendly(x) ↔ ¬Hostile(x) ∧ ¬Hyper(x)))"
+  },
+  {
+    "NL": "A meal is halal if it does not contain pork.",
+    "FOL": "∀x (Meal(x) ∧ ¬ContainPork(x) → Halal(x))"
+  },
+  {
+    "NL": "Not every fish that is colorful is poisonous.",
+    "FOL": "¬∀x (Fish(x) ∧ Colorful(x) → Poisonous(x))"
+  },
+  {
+    "NL": "A person is either a child or an adult.",
+    "FOL": "∀x (Person(x) → (Child(x) ∨ Adult(x)))"
+  },
+  {
+    "NL": "An ice cream is delightful if it contains strawberry or caramel.",
+    "FOL": "∀x (Icecream(x) ∧ (ContainsStrawberry(x) ∨ ContainsCaramel(x)) → Delightful(x))"
+  },
+  {
+    "NL": "A poem is an autobiographical poem if it reflects the personal experiences of a certain poet, written by the poet themselves.",
+    "FOL": "∀x ∃y (Poem(x) ∧ Poet(y) ∧ ReflectsExperiences(x, y) ∧ WrittenBy(x, y) → AutobiographicalPoem(x))"
+  },
+  {
+    "NL": "A substance is a cube if and only if every substance directs to it is smallish.",
+    "FOL": "∀x (Cube(x) ↔ ∀y (Directs(y, x) → Smallish(y)))"
+  },
+  {
+    "NL": "There is a song that some people do not like.",
+    "FOL": "∃x ∃y (Song(x) ∧ Person(y) ∧ ¬Like(y, x))"
+  },
+  {
+    "NL": "A programmer is coding a software in the workspace, or a tester is debugging a program in the testing room.",
+    "FOL": "∃x ∃y (Programmer(x) ∧ Software(y) ∧ Coding(x, y) ∧ InTheWorkspace(x)) ∨ ∃z ∃w (Tester(z) ∧ Program(w) ∧ Debugging(z, w) ∧ InTheTestingRoom(z))"
+  },
+  {
+    "NL": "Each farmer feeds every cow.",
+    "FOL": "∀x (Farmer(x) → ∀y (Cow(y) → Feeds(x, y)))"
+  },
+  {
+    "NL": "A building is called a school if it has classrooms, admits students, and supports education.",
+    "FOL": "∀x (Building(x) ∧ HasClassrooms(x) ∧ AdmitsStudents(x) ∧ SupportsEducation(x) → School(x))"
+  },
+  {
+    "NL": "No one in the office has seen either John or Mary.",
+    "FOL": "∀z (Employee(z) ∧ InOffice(z) → ¬Seen(z, john) ∧ ¬Seen(z, mary))"
+  },
+  {
+    "NL": "A treatment safeguards against a defined ailment by promoting bodily reactions.",
+    "FOL": "∀x ∃y (Treatment(x) ∧ Ailment(y) ∧ PromotesBodilyReactions(x) → SafeguardsAgainst(x, y))"
+  },
+  {
+    "NL": "Each thriller play can excite all audience.",
+    "FOL": "∀x ∀y (Play(x) ∧ Thriller(x) ∧ Audience(y) → CanExcite(x, y))"
+  },
+  {
+    "NL": "No one in the meeting hears either Tokyo or Madrid.",
+    "FOL": "∀x (Person(x) ∧ InMeeting(x) → ¬(Hear(x, tokyo) ∨ Hear(x, madrid)))"
+  },
+  {
+    "NL": "There is no person who can teleport.",
+    "FOL": "¬∃x (Person(x) ∧ CanTeleport(x))"
+  },
+  {
+    "NL": "An appliance that leverages nuclear energy for usage, can be charged by a nuclear power station, and helps in declining radiation level is a nuclear appliance.",
+    "FOL": "∀x ∀y (Appliance(x) ∧ NuclearPowerStation(y) ∧ LeveragesNuclearEnergy(x) ∧ Chargeable(x, y) ∧ HelpsInDecliningRadiationLevel(x) → NuclearAppliance(x))"
+  },
+  {
+    "NL": "A child is playing with a toy in the room.",
+    "FOL": "∃x ∃y (Child(x) ∧ Toy(y) ∧ PlayingWith(x, y) ∧ InTheRoom(x))"
+  },
+  {
+    "NL": "A photo is a portrait when it captures a person's image, focuses on the face, and conveys emotion.",
+    "FOL": "∀x (Photo(x) ∧ CapturesPersonImage(x) ∧ FocusOnFace(x) ∧ ConveysEmotion(x) → Portrait(x))"
+  },
+  {
+    "NL": "If every athlete who holds a regional record will be awarded, then some athletes not holding a world record will also be awarded.",
+    "FOL": "∀x (Athlete(x) ∧ RegionalRecordHolder(x) → Awarded(x)) → ∃y (Athlete(y) ∧ ¬WorldRecordHolder(y) ∧ Awarded(y))"
+  },
+  {
+    "NL": "A piano is big, and a flute is small.",
+    "FOL": "∃x (Big(x) ∧ Piano(x)) ∧ ∃x (Small(x) ∧ Flute(x))"
+  },
+  {
+    "NL": "A fruit is ripe if and only if it is not green or is yellow.",
+    "FOL": "∀x (Fruit(x) → (Ripe(x) ↔ (¬Green(x) ∨ Yellow(x))))"
+  },
+  {
+    "NL": "A train pulls out from its home depot and reaches its final stop, halting at several stations on the journey.",
+    "FOL": "∃x ∃y ∃z (Train(x) ∧ Depot(y) ∧ FinalStop(z) → PullsOutFrom(x, y) ∧ Reaches(x, z) ∧ ∃w (Station(w) ∧ HaltsAt(x, w)))"
+  },
+  {
+    "NL": "Not all physicians are either cardiologists or neurologists, and none of them dislikes patients.",
+    "FOL": "¬∀x (Physician(x) → (Cardiologist(x) ∨ Neurologist(x))) ∧ ∀y (Physician(y) → ¬DislikePatients(y))"
+  },
+  {
+    "NL": "A polygon is orange or signals towards some gray object.",
+    "FOL": "∀x (Polygon(x) → (Orange(x) ∨ ∃y (Gray(y) ∧ SignalsTowards(x, y))))"
+  },
+  {
+    "NL": "A player is successful if he has talent and determination.",
+    "FOL": "∀x (Player(x) ∧ HasTalent(x) ∧ HasDetermination(x) → Successful(x))"
+  },
+  {
+    "NL": "A book is bestseller if it has a gripping plot and positive reviews.",
+    "FOL": "∀x (Book(x) ∧ HasGrippingPlot(x) ∧ HasPositiveReviews(x) → Bestseller(x))"
+  },
+  {
+    "NL": "An athlete is recognized as talented if they have disciplined training and exceptional skillset.",
+    "FOL": "∀x (Athlete(x) ∧ HasDisciplinedTraining(x) ∧ HasExceptionalSkillset(x) → Talented(x))"
+  },
+  {
+    "NL": "A line is not curved and does not intersect any orange figure.",
+    "FOL": "∀x (Line(x) → (¬Curved(x) ∧ ¬∃y (Orange(y) ∧ Intersects(x, y))))"
+  },
+  {
+    "NL": "No worker in the office recognizes either Bob or Alice.",
+    "FOL": "¬∃x (Worker(x) ∧ InOffice(x) ∧ (Recognize(x, bob) ∨ Recognize(x, alice)))"
+  },
+  {
+    "NL": "A sculpture is deemed vintage if it is aged and made from components like marble, bronze, or porcelain.",
+    "FOL": "∀x (Sculpture(x) ∧ Aged(x) ∧ (MadeFromMarble(x) ∨ MadeFromBronze(x) ∨ MadeFromPorcelain(x)) → Vintage(x))"
+  },
+  {
+    "NL": "A car can be painted in black, red or white color, but not all three simultaneously.",
+    "FOL": "∀x (Car(x) ∧ Painted(x) → (BlackPaint(x) ⊕ RedPaint(x) ⊕ WhitePaint(x)))"
+  },
+  {
+    "NL": "All roses are fragrant.",
+    "FOL": "∀x (Rose(x) → Fragrant(x))"
+  },
+  {
+    "NL": "All professors who have empathy and vast knowledge are influential.",
+    "FOL": "∀x (Professor(x) ∧ HasEmpathy(x) ∧ HasVastKnowledge(x) → Influential(x))"
+  },
+  {
+    "NL": "There is no painter who has painted every landscape.",
+    "FOL": "¬∃x (Painter(x) ∧ ∀y (Landscape(y) → Painted(x, y)))"
+  },
+  {
+    "NL": "Every athlete who swims or jogs must practice daily.",
+    "FOL": "∀x ((Athlete(x) ∧ (Swims(x) ∨ Jogs(x))) → PracticeDaily(x))"
+  },
+  {
+    "NL": "Not every meal is tasty, but every tasty meal grants satisfaction.",
+    "FOL": "¬∀x (Meal(x) → Tasty(x)) ∧ ∀y (Tasty(y) ∧ Meal(y) → GrantsSatisfaction(y))"
+  },
+  {
+    "NL": "If all humans are creative then there are some humans who support Alice.",
+    "FOL": "∀x (Human(x) → Creative(x)) → ∃x (Human(x) ∧ Support(x, alice))"
+  },
+  {
+    "NL": "A shelter provides protection when it is sturdy or obscured.",
+    "FOL": "∀x (Shelter(x) ∧ (Sturdy(x) ∨ Obscured(x)) → ProvidesProtection(x))"
+  },
+  {
+    "NL": "If not all movies are entertaining, there is a dish that everyone likes.",
+    "FOL": "¬∀x (Movie(x) → Entertaining(x)) → ∃y (Dish(y) ∧ ∀z (Person(z) → Likes(z, y)))"
+  },
+  {
+    "NL": "Everyone who observes the universe as if it were a song, fails to grasp the truth.",
+    "FOL": "∀x (ObservesUniverseAsSong(x) → FailsToGraspTruth(x))"
+  },
+  {
+    "NL": "A woman is painting a canvas, while a man is fishing by the lake.",
+    "FOL": "∃x ∃y (Woman(x) ∧ Canvas(y) ∧ PaintingOn(x, y)) ∧ ∃z (Man(z) ∧ Fishing(z) ∧ ByLake(z))"
+  },
+  {
+    "NL": "Each chef who has cooked for more than five years and either writes recipes or attends food festivals, but not both, must have either won a culinary prize or be a restaurant owner.",
+    "FOL": "∀x (Chef(x) ∧ CookedForMoreThanFiveYears(x) ∧ (WritesRecipes(x) ⊕ AttendsFoodFestivals(x)) → (WonCulinaryPrize(x) ∨ RestaurantOwner(x)))"
+  },
+  {
+    "NL": "A student is a scholar if they have outstanding academic achievement and received a scholarship.",
+    "FOL": "∀x (Student(x) ∧ HasOutstandingAcademicAchievement(x) ∧ ReceivedScholarship(x) → Scholar(x))"
+  },
+  {
+    "NL": "All kittens are not noisy or annoying.",
+    "FOL": "∃x (Kitten(x) ∧ (¬Noisy(x) ∨ ¬Annoying(x)))"
+  },
+  {
+    "NL": "An animal is recognized as a bird if it has feathers and can fly.",
+    "FOL": "∀x (Animal(x) ∧ HasFeathers(x) ∧ CanFly(x) → Bird(x))"
+  },
+  {
+    "NL": "A girl is reading in a library, and a boy is playing on the field.",
+    "FOL": "∃x ∃y (Girl(x) ∧ Library(y) ∧ ReadingIn(x, y)) ∧ ∃z (Boy(z) ∧ Playing(z) ∧ OnTheField(z))"
+  },
+  {
+    "NL": "There exist students who are neither disruptive nor disinterested.",
+    "FOL": "∃x (Student(x) ∧ ¬(Disruptive(x) ∨ Disinterested(x)))"
+  },
+  {
+    "NL": "Through the force of gravity, a giant star condenses into a dense body, birthing a neutron star.",
+    "FOL": "∀x (GiantStar(x) ∧ CondensesDueToGravity(x) ∧ BecomesDense(x) → NeutronStar(x))"
+  },
+  {
+    "NL": "All houses are either new or old, but not both.",
+    "FOL": "∀x (House(x) → (New(x) ⊕ Old(x)))"
+  },
+  {
+    "NL": "A tree is tall if and only if it has deep roots and enough sunlight.",
+    "FOL": "∀x (Tree(x) → (Tall(x) ↔ HasDeepRoots(x) ∧ HasEnoughSunlight(x)))"
+  },
+  {
+    "NL": "There are scientists who are neither inexperienced nor ruthless.",
+    "FOL": "∃x (Scientist(x) ∧ ¬(Inexperienced(x) ∨ Ruthless(x)))"
+  },
+  {
+    "NL": "A plastic bottle holds water when it is sealed or full.",
+    "FOL": "∀x (PlasticBottle(x) ∧ (Sealed(x) ∨ Full(x)) → HoldsWater(x))"
+  },
+  {
+    "NL": "A song is a melody or not a melody.",
+    "FOL": "∀x (Song(x) → (Melody(x) ⊕ ¬Melody(x)))"
+  },
+  {
+    "NL": "Every shelf holds books, but not every book holder is a shelf.",
+    "FOL": "∀x (Shelf(x) → HoldsBooks(x)) ∧ ∃y (HoldsBooks(y) ∧ ¬Shelf(y))"
+  },
+  {
+    "NL": "A man who has a medical degree, practices in a hospital, and provides healthcare is likely a doctor.",
+    "FOL": "∀x (Man(x) ∧ HasMedicalDegree(x) ∧ PracticesInHospital(x) ∧ ProvidesHealthcare(x) → Doctor(x))"
+  },
+  {
+    "NL": "There's no student who reads all thick books.",
+    "FOL": "¬∃x (Student(x) ∧ ∀y (Thick(y) ∧ Book(y) → Reads(x, y)))"
+  },
+  {
+    "NL": "Some plants are sun-dependent.",
+    "FOL": "∃x (Plant(x) ∧ SunDependent(x))"
+  },
+  {
+    "NL": "No animal is immortal.",
+    "FOL": "¬∃x (Animal(x) ∧ Immortal(x))"
+  },
+  {
+    "NL": "It is not the case that something is a blue rectangle if and only if it is giant.",
+    "FOL": "¬∀x (Blue(x) ∧ Rectangle(x) ↔ Giant(x))"
+  },
+  {
+    "NL": "Not every bird is a penguin.",
+    "FOL": "¬∀x (Bird(x) → Penguin(x))"
+  },
+  {
+    "NL": "Every mineral is dissolvable in some substance.",
+    "FOL": "∀x (Mineral(x) → ∃y (Substance(y) ∧ DissolvableIn(x, y)))"
+  },
+  {
+    "NL": "A toy wins child's love if it has an attractive design, safe materials, and fun features.",
+    "FOL": "∀x (Toy(x) ∧ HasAttractiveDesign(x) ∧ HasSafeMaterials(x) ∧ HasFunFeatures(x) → WinsChildsLove(x))"
+  },
+  {
+    "NL": "A tree is either deciduous or not deciduous.",
+    "FOL": "∀x (Tree(x) → (Deciduous(x) ⊕ ¬Deciduous(x)))"
+  },
+  {
+    "NL": "All scientists are knowledgeable in some subjects.",
+    "FOL": "∀x (Scientist(x) → ∃y (Subject(y) ∧ KnowledgeableIn(x, y)))"
+  },
+  {
+    "NL": "There exist songs that are both melancholic and have a jazz style, while all the others are lively and have a pop style.",
+    "FOL": "∀x (Song(x) → (Melancholic(x) ∧ JazzStyle(x)) ⊕ (Lively(x) ∧ PopStyle(x)))"
+  },
+  {
+    "NL": "A device is called a smartphone if it has touchscreen.",
+    "FOL": "∀x (Device(x) ∧ HasTouchscreen(x) → Smartphone(x))"
+  },
+  {
+    "NL": "There exist artists who recognize only those critics who are more creative than them.",
+    "FOL": "∃x ∀y (Artist(x) ∧ Critic(y) ∧ MoreCreativeThan(y, x) → Recognize(x, y))"
+  },
+  {
+    "NL": "Doctors cure diseases, while pharmacists dispense medications.",
+    "FOL": "∀x ∀y (Doctor(x) ∧ Disease(y) → Cures(x, y)) ∧ ∀z ∀w (Pharmacist(z) ∧ Medication(w) → Dispenses(z, w))"
+  },
+  {
+    "NL": "Every object is a smooth rectangle only if it is light.",
+    "FOL": "∀x (Smooth(x) → (Rectangle(x) → Light(x)))"
+  },
+  {
+    "NL": "A few cats meow loudly.",
+    "FOL": "∃x (Cat(x) ∧ MeowLoudly(x))"
+  },
+  {
+    "NL": "William does not respect any Australian or Canadian professor.",
+    "FOL": "∀x (Professor(x) ∧ (From(x, australia) ∨ From(x, canada)) → ¬Respect(william, x))"
+  },
+  {
+    "NL": "Dogs are mammals and bark.",
+    "FOL": "∀x (Dog(x) → (IsMammal(x) ∧ Bark(x)))"
+  },
+  {
+    "NL": "Every dog barks.",
+    "FOL": "∀x (Dog(x) → Bark(x))"
+  },
+  {
+    "NL": "Each meal that is neither big nor small is a breakfast if and only if it is healthy.",
+    "FOL": "∀x (¬Big(x) ∧ ¬Small(x) → (Breakfast(x) ↔ Healthy(x)))"
+  },
+  {
+    "NL": "Some birds are small and beautiful.",
+    "FOL": "∃x (Bird(x) ∧ Small(x) ∧ Beautiful(x))"
+  },
+  {
+    "NL": "No athlete can fly.",
+    "FOL": "¬∃x (Athlete(x) ∧ CanFly(x))"
+  },
+  {
+    "NL": "Tulips are pink, sunflowers are yellow, and roses are red.",
+    "FOL": "∀x (Tulip(x) → Pink(x)) ∧ ∀y (Sunflower(y) → Yellow(y)) ∧ ∀z (Rose(z) → Red(z))"
+  },
+  {
+    "NL": "Nothing is a big sphere or a small cube.",
+    "FOL": "¬∃x ((Big(x) ∧ Sphere(x)) ∨ (Small(x) ∧ Cube(x)))"
+  },
+  {
+    "NL": "A technology becomes trendy if it offers user-friendly interface, performs efficiently, and provides innovative features.",
+    "FOL": "∀x (Technology(x) ∧ OffersUserFriendlyInterface(x) ∧ EfficientPerformance(x) ∧ ProvidesInnovativeFeatures(x) → BecomesTrendy(x))"
+  },
+  {
+    "NL": "A recipe gets chef's approval if it includes fresh ingredients, unique flavors, and a balanced nutrition.",
+    "FOL": "∀x (Recipe(x) ∧ IncludesFreshIngredients(x) ∧ HasUniqueFlavors(x) ∧ HasBalancedNutrition(x) → GetsChefsApproval(x))"
+  },
+  {
+    "NL": "None of the lazy ones are successful.",
+    "FOL": "∀x (Lazy(x) → ¬Successful(x))"
+  },
+  {
+    "NL": "A business can be a sole proprietorship, a partnership, or a joint stock company.",
+    "FOL": "∀x (Business(x) → (SoleProprietorship(x) ∨ Partnership(x) ∨ JointStockCompany(x)))"
+  },
+  {
+    "NL": "Plants are succulents if they are not trees.",
+    "FOL": "∀w (¬Tree(w) → Succulent(w))"
+  },
+  {
+    "NL": "There isn't a cook who can prepare all Chinese dishes but hasn't ever cooked a Japanese dish.",
+    "FOL": "¬∃x (Cook(x) ∧ ∀y (ChineseDish(y) → CanPrepare(x, y)) ∧ ¬∃z (JapaneseDish(z) ∧ HasCooked(x, z)))"
+  },
+  {
+    "NL": "Mike is not a pilot if and only if he is a pilot.",
+    "FOL": "¬Pilot(mike) ↔ Pilot(mike)"
+  },
+  {
+    "NL": "A machine is a computer if it purely processes data.",
+    "FOL": "∀x (Machine(x) ∧ PurelyProcessesData(x) → Computer(x))"
+  },
+  {
+    "NL": "No student attends all math classes.",
+    "FOL": "¬∃x (Student(x) ∧ ∀y (MathClass(y) → Attends(x, y)))"
+  },
+  {
+    "NL": "If a book is a mystery novel, it is written by Agatha Christie, Arthur Conan Doyle, or Edgar Allan Poe.",
+    "FOL": "∀x (Book(x) ∧ MysteryNovel(x) → WrittenByAgathaChristie(x) ∨ WrittenByArthurConanDoyle(x) ∨ WrittenByEdgarAllanPoe(x))"
+  },
+  {
+    "NL": "Every student is either in the library or in the classroom.",
+    "FOL": "∀x (Student(x) → (InLibrary(x) ⊕ InClassroom(x)))"
+  },
+  {
+    "NL": "No movie is both entertaining and boring.",
+    "FOL": "¬∃x (Movie(x) ∧ Entertaining(x) ∧ Boring(x))"
+  },
+  {
+    "NL": "Each painting is magnificent if and only if it is either a portrait or a landscape.",
+    "FOL": "∀x (Painting(x) → (Magnificent(x) ↔ (Portrait(x) ∨ Landscape(x))))"
+  },
+  {
+    "NL": "A novel that is a thriller can incite excitement in readers",
+    "FOL": "∀x ∀y (Novel(x) ∧ Thriller(x) ∧ Reader(y) → CanInciteExcitement(x, y))"
+  },
+  {
+    "NL": "A student will submit the homework only if she studied the lessons.",
+    "FOL": "∀x (Student(x) ∧ SubmitHomework(x) → StudiedLessons(x))"
+  },
+  {
+    "NL": "No cars are boats.",
+    "FOL": "¬∃x (Car(x) ∧ Boat(x))"
+  },
+  {
+    "NL": "A restaurant can be Japanese, serving sushi and ramen, or it can be Italian, offering pizzas and pastas, and always crowded.",
+    "FOL": "∀x (Restaurant(x) → ((Japanese(x) ∧ ServeSushi(x) ∧ ServeRamen(x)) ⊕ (Italian(x) ∧ ServePizza(x) ∧ ServePasta(x) ∧ AlwaysCrowded(x))))"
+  },
+  {
+    "NL": "If some humans cannot run, then everything is moving or some animals are stationary.",
+    "FOL": "∃x (Human(x) ∧ ¬CanRun(x)) → ∀y (Moving(y)) ∨ ∃z (Animal(z) ∧ Stationary(z))"
+  },
+  {
+    "NL": "Each student who is intelligent and industrious receives good grades.",
+    "FOL": "∀x (Student(x) ∧ Intelligent(x) ∧ Industrious(x) → GoodGrades(x))"
+  },
+  {
+    "NL": "No hexagon encompasses all tiny triangles.",
+    "FOL": "¬∃x (Hexagon(x) ∧ ∀y (Tiny(y) ∧ Triangle(y) → Encompasses(x, y)))"
+  },
+  {
+    "NL": "Some instruments are either string or wind, but cannot be both.",
+    "FOL": "∃x (Instrument(x) ∧ (String(x) ⊕ Wind(x)))"
+  },
+  {
+    "NL": "Rachel is not a pilot.",
+    "FOL": "¬Pilot(rachel)"
+  },
+  {
+    "NL": "Nothing is a fast cheetah and a slow turtle.",
+    "FOL": "¬∃x ((Fast(x) ∧ Cheetah(x)) ∧ (Slow(x) ∧ Turtle(x)))"
+  },
+  {
+    "NL": "There is no artist that paints all red canvases.",
+    "FOL": "¬∃x (Artist(x) → ∀y (Red(y) ∧ Canvas(y) → Paints(x, y)))"
+  },
+  {
+    "NL": "No country is both a democracy and a dictatorship.",
+    "FOL": "¬∃x (Country(x) ∧ Democracy(x) ∧ Dictatorship(x))"
+  },
+  {
+    "NL": "Every teacher is teaching.",
+    "FOL": "∀x (Teacher(x) → Teaching(x))"
+  },
+  {
+    "NL": "A cat chases mice, whereas a dog chases balls.",
+    "FOL": "∀x (Cat(x) → ChasesMice(x)) ∧ ∀y (Dog(y) → ChasesBalls(y))"
+  },
+  {
+    "NL": "Not all birds are colorful or nocturnal.",
+    "FOL": "¬∀x (Bird(x) → (Colorful(x) ∨ Nocturnal(x)))"
+  },
+  {
+    "NL": "Every painting is beautiful if it is expressive.",
+    "FOL": "∀x (BeautifulPainting(x) ↔ Expressive(x))"
+  },
+  {
+    "NL": "Not every player on the team is stronger than every player from the opponent.",
+    "FOL": "¬∀x ∀y (Player(x) ∧ On(x, team) ∧ Player(y) ∧ From(y, opponent) → Stronger(x, y))"
+  },
+  {
+    "NL": "Someone is a quick runner, and someone is a slow walker.",
+    "FOL": "∃x (Quick(x) ∧ Runner(x)) ∧ ∃x (Slow(x) ∧ Walker(x))"
+  },
+  {
+    "NL": "A clothing company designs, sews, and markets attire, catering to diverse fashion tastes and body types.",
+    "FOL": "∀x ∃y ∃z ∃w (ClothingCompany(x) → Attire(y) ∧ FashionTaste(z) ∧ BodyType(w) ∧ Designs(x, y) ∧ Sews(x, y) ∧ Markets(x, y) ∧ Caters(x, z) ∧ Caters(x, w))"
+  },
+  {
+    "NL": "Myths are not historical events.",
+    "FOL": "∀x (Myth(x) → ¬Historicalevent(x))"
+  },
+  {
+    "NL": "Dogs that are small and scared always need extra comfort.",
+    "FOL": "∀x (Dog(x) ∧ Small(x) ∧ Scared(x) → NeedExtraComfort(x))"
+  },
+  {
+    "NL": "Any horror movie can scare all people.",
+    "FOL": "∀x ∀y (Movie(x) ∧ Horror(x) ∧ Person(y) → CanScare(x, y))"
+  },
+  {
+    "NL": "There does not exist an oval that covers all big rectangles.",
+    "FOL": "¬∃x (Oval(x) ∧ ∀y (Big(y) ∧ Rectangle(y) → Covers(x, y)))"
+  },
+  {
+    "NL": "Someone is a successful entrepreneur only if they work hard.",
+    "FOL": "∃x (Successful(x) ∧ Entrepreneur(x) → WorkHard(x))"
+  },
+  {
+    "NL": "A box is red if and only if it contains at least one blue ball.",
+    "FOL": "∀x (Box(x) → (Red(x) ↔ ∃y (Blue(y) ∧ Contains(x, y))))"
+  },
+  {
+    "NL": "An entity is a circle if and only if it refers to at least one yellow object.",
+    "FOL": "∀x (Circle(x) ↔ ∃y (Yellow(y) ∧ RefersTo(x, y)))"
+  },
+  {
+    "NL": "Each green tree houses at least one creature that houses only purple creatures.",
+    "FOL": "∀x (Green(x) → ∃y (Houses(x, y) ∧ ∀z (Houses(y, z) → Purple(z))))"
+  },
+  {
+    "NL": "A weather condition is extreme if it includes high temperatures, severe winds, and the possibility of fires or other destruction.",
+    "FOL": "∀x (WeatherCondition(x) ∧ IncludesHighTemperatures(x) ∧ IncludesSevereWinds(x) ∧ (PossibleFires(x) ∨ PossibleDestruction(x)) → Extreme(x))"
+  },
+  {
+    "NL": "A scientist is performing experiments in a crowded lab.",
+    "FOL": "∃x ∃y (Scientist(x) ∧ PerformingExperiments(x) ∧ CrowdedLab(y) ∧ In(x, y))"
+  },
+  {
+    "NL": "A writer writes fiction or non-fiction.",
+    "FOL": "∀x (Writer(x) → (WritesFiction(x) ∨ WritesNonFiction(x)))"
+  },
+  {
+    "NL": "A patient is treated by a doctor that all nurses respect",
+    "FOL": "∃x ∃y ∀z (Patient(x) ∧ Doctor(y) ∧ Nurse(z) ∧ Respect(z, y) → TreatedBy(x, y))"
+  },
+  {
+    "NL": "If there isn't a phone that every gadget is connected to, all cars are fast.",
+    "FOL": "¬∃x (Phone(x) ∧ ∀y (Gadget(y) → ConnectedTo(y, x))) → ∀z (Car(z) → Fast(z))"
+  },
+  {
+    "NL": "Every triangle covers a pentagon only if that pentagon covers it.",
+    "FOL": "∀x (Triangle(x) → ∀y (Pentagon(y) ∧ Covers(x, y) → Covers(y, x)))"
+  },
+  {
+    "NL": "A novel that is a mystery can excite readers' curiosity.",
+    "FOL": "∀x ∀y (Novel(x) ∧ Mystery(x) ∧ Reader(y) → CanExciteCuriosity(x, y))"
+  },
+  {
+    "NL": "All nurses who administer medication are also competent in patient care.",
+    "FOL": "∀x (Nurse(x) ∧ AdministerMedication(x) → CompetentInPatientCare(x))"
+  },
+  {
+    "NL": "All students are intelligent learners, or some learners are not excellent scholars.",
+    "FOL": "∀x (Student(x) → IntelligentLearner(x)) ∨ ∃y (Learner(y) ∧ ¬ExcellentScholar(y))"
+  },
+  {
+    "NL": "Only the diligent deserve reward.",
+    "FOL": "∀x (¬Diligent(x) → ¬DeserveReward(x))"
+  },
+  {
+    "NL": "A creature is a vertebrate or an invertebrate.",
+    "FOL": "∀x (Creature(x) → (Vertebrate(x) ∨ Invertebrate(x)))"
+  },
+  {
+    "NL": "A drink is enjoyable if and only if it is cold and sweet.",
+    "FOL": "∀x (Drink(x) → (Enjoyable(x) ↔ IsCold(x) ∧ IsSweet(x)))"
+  },
+  {
+    "NL": "A rabbit is safe for kids if and only if it is not ferocious and very active.",
+    "FOL": "∀z (Rabbit(z) → (SafeForKids(z) ↔ ¬Ferocious(z) ∧ ¬VeryActive(z)))"
+  },
+  {
+    "NL": "There is a woman at the park with a red hat.",
+    "FOL": "∃x (Woman(x) ∧ AtThePark(x) ∧ WithARedHat(x))"
+  },
+  {
+    "NL": "A vehicle is not both a car and a bike.",
+    "FOL": "∀x (Vehicle(x) → ¬(Car(x) ∧ Bike(x)))"
+  },
+  {
+    "NL": "A plant is viewed as a flower if it produces fruit or blooms in spring.",
+    "FOL": "∀x (Plant(x) ∧ (ProducesFruit(x) ∨ BloomsInSpring(x)) → Flower(x))"
+  },
+  {
+    "NL": "Not all novels are endless, however, it is engaging to read novels.",
+    "FOL": "¬∀x (Novel(x) → Endless(x)) ∧ ∀y (Novel(y) → EngagingToRead(y))"
+  },
+  {
+    "NL": "A movie is enjoyable if and only if it has a good storyline, great acting, and doesn't contain excessive violence.",
+    "FOL": "∀x (Movie(x) ∧ Enjoyable(x) ↔ (HasGoodStoryline(x) ∧ HasGreatActing(x) ∧ ¬HasExcessiveViolence(x)))"
+  },
+  {
+    "NL": "Every book has an author, but there is no book with an author more famous than it.",
+    "FOL": "∀x ∃y (HasAuthor(x, y)) ∧ ¬∃z ∃w (HasAuthor(z, w) ∧ MoreFamousThan(w, z))"
+  },
+  {
+    "NL": "Not all birds that can sing are nightingales.",
+    "FOL": "¬∀x (Bird(x) ∧ CanSing(x) → Nightingale(x))"
+  },
+  {
+    "NL": "An athlete is a sprinter or a marathon runner.",
+    "FOL": "∀x (Athlete(x) → (Sprinter(x) ∨ MarathonRunner(x)))"
+  },
+  {
+    "NL": "A song is moving if it does not have trite lyrics and has evocative melodies.",
+    "FOL": "∀x (Song(x) ∧ ¬HasTriteLyrics(x) ∧ HasEvocativeMelodies(x) → Moving(x))"
+  },
+  {
+    "NL": "A door is either locked or unlocked, not both.",
+    "FOL": "∀x (Door(x) → (Locked(x) ⊕ Unlocked(x)))"
+  },
+  {
+    "NL": "A monkey is swinging on a vine, and a leopard is prowling.",
+    "FOL": "∃x ∃y (Monkey(x) ∧ Vine(y) ∧ SwingingOn(x, y)) ∧ ∃z (Leopard(z) ∧ Prowling(z))"
+  },
+  {
+    "NL": "An album is auto-biographical if it reflects the life experiences of the composer himself.",
+    "FOL": "∀x ∃y (Album(x) ∧ Composer(y) ∧ ReflectsLifeExperiences(x, y) → AutoBiographicalAlbum(x))"
+  },
+  {
+    "NL": "Every guest who eats seafood is allergic to shellfish.",
+    "FOL": "∀x (Guest(x) ∧ EatsSeafood(x) → AllergicToShellfish(x))"
+  },
+  {
+    "NL": "All recipes that are healthy and tasty become popular.",
+    "FOL": "∀x (Recipe(x) ∧ Healthy(x) ∧ Tasty(x) → Popular(x))"
+  },
+  {
+    "NL": "All cats are loyal companions, but not all loyal companions are cats.",
+    "FOL": "∀x (Cat(x) → LoyalCompanion(x)) ∧ ∃y (LoyalCompanion(y) ∧ ¬Cat(y))"
+  },
+  {
+    "NL": "A worker is jovial if and only if they are pleased and have colleagues.",
+    "FOL": "∀x (Worker(x) → (Jovial(x) ↔ (Pleased(x) ∧ HasColleagues(x))))"
+  },
+  {
+    "NL": "A book is a bestseller if and only if it has high sales and it has received critical acclaim.",
+    "FOL": "∀x (Book(x) → (Bestseller(x) ↔ (HighSales(x) ∧ CriticalAcclaim(x))))"
+  },
+  {
+    "NL": "A painting is a portrait if it illustrates a particular individual, drawn by that individual.",
+    "FOL": "∀x ∃y (Painting(x) ∧ Individual(y) ∧ Illustrates(x, y) ∧ DrawnBy(x, y) → Portrait(x))"
+  },
+  {
+    "NL": "A student is smart if and only if he is not lazy or is hardworking.",
+    "FOL": "∀x (Student(x) → (Smart(x) ↔ (¬Lazy(x) ∨ Hardworking(x))))"
+  },
+  {
+    "NL": "Jacob does not value any Japanese or Chinese.",
+    "FOL": "∀x (Person(x) ∧ (From(x, japan) ∨ From(x, china)) → ¬Value(jacob, x))"
+  },
+  {
+    "NL": "A bird has wings and can fly, while a fish has fins and cannot fly.",
+    "FOL": "∀x (Bird(x) → HasWings(x) ∧ CanFly(x)) ∧ ∀y (Fish(y) → HasFins(y) ∧ ¬CanFly(y))"
+  },
+  {
+    "NL": "If a creature is a bird and green, then it attracts at least one red creature unless it is a cat.",
+    "FOL": "∀x ((Bird(x) ∧ Green(x)) → ∃y (Red(y) ∧ Attracts(x, y) ∨ Cat(x)))"
+  },
+  {
+    "NL": "No dogs are fat.",
+    "FOL": "∀v (Dog(v) → ¬Fat(v))"
+  },
+  {
+    "NL": "A vehicle is classified as a race car if it competes in races.",
+    "FOL": "∀x (Vehicle(x) ∧ CompetesInRaces(x) → RaceCar(x))"
+  },
+  {
+    "NL": "Every house is expensive, but not every expensive one is a house.",
+    "FOL": "∀x (House(x) → Expensive(x)) ∧ ¬∀x (Expensive(x) → House(x))"
+  },
+  {
+    "NL": "If a shape is a triangle, then it is either equilateral or scalene, but not both.",
+    "FOL": "∀x (Triangle(x) → (Equilateral(x) ⊕ Scalene(x)))"
+  },
+  {
+    "NL": "Brave firefighters do not fear.",
+    "FOL": "∀x (Firefighter(x) ∧ Brave(x) → ¬Fear(x))"
+  },
+  {
+    "NL": "All teachers are human, but not all humans are teachers.",
+    "FOL": "∀x (Teacher(x) → Human(x)) ∧ ¬∀x (Human(x) → Teacher(x))"
+  },
+  {
+    "NL": "If a process is regular, that process is predictable.",
+    "FOL": "∀x (Process(x) ∧ Regular(x) → Predictable(x))"
+  },
+  {
+    "NL": "Not all apples are red.",
+    "FOL": "¬∀x (Apple(x) → Red(x))"
+  },
+  {
+    "NL": "All birds cannot sing.",
+    "FOL": "¬∀x (Bird(x) → CanSing(x))"
+  },
+  {
+    "NL": "A disease is dangerous if it entails high fever, loss of appetite, and the probability of hospitalization or death.",
+    "FOL": "∀x (Disease(x) ∧ EntailsHighFever(x) ∧ LossOfAppetite(x) ∧ (ProbabilityOfHospitalization(x) ∨ ProbabilityOfDeath(x)) → Dangerous(x))"
+  },
+  {
+    "NL": "A person is considered an athlete if they participate in a sport or undergo fitness training",
+    "FOL": "∀x (Person(x) ∧ (ParticipatesInSport(x) ∨ UndergoesFitnessTraining(x)) → Athlete(x))"
+  },
+  {
+    "NL": "Every brown dog is friendly.",
+    "FOL": "∀x (Brown(x) → Friendly(x))"
+  },
+  {
+    "NL": "A county lord will endorse the bill only if he does not pay his taxes.",
+    "FOL": "∀x (CountyLord(x) ∧ EndorseBill(x) → ¬PayTaxes(x))"
+  },
+  {
+    "NL": "Python is a strong language, it supports multiple paradigms and is readable.",
+    "FOL": "∀x (Python(x) → (StrongLanguage(x) ∧ SupportsMultipleParadigms(x) ∧ IsReadable(x)))"
+  },
+  {
+    "NL": "Every day has 24 hours.",
+    "FOL": "∀x (Day(x) → HasTwentyFourHours(x))"
+  },
+  {
+    "NL": "Engineers can design structures, analyze data, and solve complex problems.",
+    "FOL": "∀x (Engineer(x) → (DesignsStructures(x) ∧ AnalyzesData(x) ∧ SolvesComplexProblems(x)))"
+  },
+  {
+    "NL": "It's false that every book is interesting.",
+    "FOL": "¬∀x (Book(x) → Interesting(x))"
+  },
+  {
+    "NL": "A computer has a screen and can process data, while a book lacks a screen and cannot process data.",
+    "FOL": "∀x (Computer(x) → HasScreen(x) ∧ CanProcessData(x)) ∧ ∀y (Book(y) → ¬HasScreen(y) ∧ ¬CanProcessData(y))"
+  },
+  {
+    "NL": "Fish swim in water.",
+    "FOL": "∀x ∀y (Fish(x) ∧ Water(y) → Swim(x, y))"
+  },
+  {
+    "NL": "No employee in the office asked questions.",
+    "FOL": "∀x (Employee(x) ∧ InOffice(x) → ¬AskedQuestion(x))"
+  },
+  {
+    "NL": "Every programmer who works with both Java and Python languages, unless they are a data analyst, either has been awarded for their work or has yet to present at a tech conference.",
+    "FOL": "∀x (Programmer(x) ∧ WorksWithJava(x) ∧ WorksWithPython(x) ∨ DataAnalyst(x) → (WonAward(x) ∨ ¬PresentedAtConference(x)))"
+  },
+  {
+    "NL": "Everyone receives something she earned and earns something she does not receive.",
+    "FOL": "∀x (Person(x) → (∃y (Earned(x, y) ∧ Receive(x, y)) ∧ ∃z (Earned(x, z) ∧ ¬Receive(x, z))))"
+  },
+  {
+    "NL": "A scientist is considered skillful if and only if they publish papers regularly or win awards.",
+    "FOL": "∀x (Scientist(x) → (Skillful(x) ↔ (PublishPapersRegularly(x) ∨ WinAwards(x))))"
+  },
+  {
+    "NL": "Chefs cook meals, and customers enjoy them.",
+    "FOL": "∀x ∀y (Chef(x) ∧ Meal(y) → Cook(x, y)) ∧ ∀z ∀w (Customer(z) ∧ Meal(w) → Enjoy(z, w))"
+  },
+  {
+    "NL": "An athlete is classified as successful if and only if they practice daily or they are naturally gifted.",
+    "FOL": "∀x (Athlete(x) → (Successful(x) ↔ (PracticesDaily(x) ∨ NaturallyGifted(x))))"
+  },
+  {
+    "NL": "If a dish is a type of pasta, it is spaghetti, lasagna or macaroni.",
+    "FOL": "∀x (Dish(x) ∧ Pasta(x) → Spaghetti(x) ∨ Lasagna(x) ∨ Macaroni(x))"
+  },
+  {
+    "NL": "A weather condition is severe if it has intense rainstorms, extremely cold temperatures, or the possibility of hypothermia or other harm.",
+    "FOL": "∀x (WeatherCondition(x) ∧ HasIntenseRainstorms(x) ∧ ExtremelyColdTemperatures(x) ∧ (PossibilityOfHypothermia(x) ∨ PossibilityOfOtherHarm(x)) → Severe(x))"
+  },
+  {
+    "NL": "If a creature is furry and small, it communicates with at least one noisy creature, unless it is a fish.",
+    "FOL": "∀x ((Furry(x) ∧ Small(x)) → ∃y (Noisy(y) ∧ CommunicatesWith(x, y) ∨ Fish(x)))"
+  },
+  {
+    "NL": "There is no airplane which is airworthy unless it has been maintained frequently, however, not every one of them is spacious.",
+    "FOL": "¬∃x (Airplane(x) ∧ (Airworthy(x) ∨ MaintainedFrequently(x))) ∧ ¬∀y (Airplane(y) → Spacious(y))"
+  },
+  {
+    "NL": "An instrument that uses battery for operation, can consume energy from a charging port, and emits significant noise is a typical instrument.",
+    "FOL": "∀x ∀y (Instrument(x) ∧ ChargingPort(y) ∧ UsesBatteryForOperation(x) ∧ CanConsumeEnergy(x, y) ∧ EmitsSignificantNoise(x) → TypicalInstrument(x))"
+  },
+  {
+    "NL": "A creature is either a herbivore or a carnivore, but cannot be both.",
+    "FOL": "∀x (Creature(x) → (Herbivore(x) ⊕ Carnivore(x)))"
+  },
+  {
+    "NL": "A cat is black or brown.",
+    "FOL": "∀x (Cat(x) → (Black(x) ∨ Brown(x)))"
+  },
+  {
+    "NL": "If a gadget is a camera and grey, then it attracts at least one pink gadget unless it is a tablet.",
+    "FOL": "∀x ((Camera(x) ∧ Grey(x)) → ∃y (Pink(y) ∧ Attracts(x, y) ∨ Tablet(x)))"
+  },
+  {
+    "NL": "A restaurant can win awards for best service, best food, or best decor, but not all three simultaneously.",
+    "FOL": "∀x (Restaurant(x) ∧ Awarded(x) → (BestServiceAward(x) ⊕ BestFoodAward(x) ⊕ BestDecorAward(x)))"
+  },
+  {
+    "NL": "George knows Helen if and only if Helen knows George.",
+    "FOL": "Know(george, helen) ↔ Know(helen, george)"
+  },
+  {
+    "NL": "Every employee who is dedicated is praised by all managers.",
+    "FOL": "∀x (Employee(x) ∧ Dedicated(x) → ∀y (Manager(y) → Praises(y, x)))"
+  },
+  {
+    "NL": "Either Ian is a writer or Olivia challenges Ian, but not both",
+    "FOL": "Writer(ian) ⊕ Challenge(olivia, ian)"
+  },
+  {
+    "NL": "A book is not both old and new.",
+    "FOL": "∀z (Book(z) → ¬(Old(z) ∧ New(z)))"
+  },
+  {
+    "NL": "A puma targets boars for consumption, whereas a buzzard profits from the cadaver of lifeless organisms.",
+    "FOL": "∀x ∀y (Puma(x) ∧ Boar(y) → TargetsForConsumption(x, y)) ∧ ∀z ∀w (Buzzard(z) ∧ LifelessOrganism(w) → ProfitsFromCadaverOf(z, w))"
+  },
+  {
+    "NL": "A tree can be an oak, a pine, or a birch.",
+    "FOL": "∀x (Tree(x) → (Oak(x) ∨ Pine(x) ∨ Birch(x)))"
+  },
+  {
+    "NL": "Vehicles with regular maintenance, careful driving, and timely servicing have longer lifespan.",
+    "FOL": "∀w (Vehicle(w) ∧ RegularMaintenance(w) ∧ CarefulDriving(w) ∧ TimelyServicing(w) → LongerLifespan(w))"
+  },
+  {
+    "NL": "Individuals who regard challenges as threats, deserve to be overtaken.",
+    "FOL": "∀x (RegardsChallengesAsThreats(x) → DeservesToBeOvertaken(x))"
+  },
+  {
+    "NL": "A beach can be a tourist spot, have white sand, and draw crowds in summer, or it can be a secluded spot, have pebbly shoreline, and draw local fishermen.",
+    "FOL": "∀x (Beach(x) → ((TouristSpot(x) ∧ HasWhiteSand(x) ∧ DrawCrowds(x)) ⊕ (SecludedSpot(x) ∧ HasPebblyShore(x) ∧ DrawFishermen(x))))"
+  },
+  {
+    "NL": "A car is a classic if and only if it has vintage design and outdated technology.",
+    "FOL": "∀x (Car(x) → (Classic(x) ↔ VintageDesign(x) ∧ OutdatedTech(x)))"
+  },
+  {
+    "NL": "Only champions win the gold medal.",
+    "FOL": "∀x (¬Champion(x) → ¬WinGoldMedal(x))"
+  },
+  {
+    "NL": "Chefs cook delicious meals.",
+    "FOL": "∀x ∀y (Chef(x) ∧ DeliciousMeal(y) → Cook(x, y))"
+  },
+  {
+    "NL": "Not every film is captivating, but every captivating film teaches a lesson.",
+    "FOL": "¬∀x (Film(x) → Captivating(x)) ∧ ∀y (Captivating(y) ∧ Film(y) → TeachesLesson(y))"
+  },
+  {
+    "NL": "If a person is a student, then they are either diligent or lazy, but not both.",
+    "FOL": "∀x (Student(x) → (Diligent(x) ⊕ Lazy(x)))"
+  },
+  {
+    "NL": "Some cars are fast and expensive.",
+    "FOL": "∃x (Car(x) ∧ Fast(x) ∧ Expensive(x))"
+  },
+  {
+    "NL": "Responsible people do not drink excessively.",
+    "FOL": "∀x (Person(x) ∧ Responsible(x) → ¬DrinkExcessively(x))"
+  },
+  {
+    "NL": "Healthy athletes do not eat junk food.",
+    "FOL": "∀x (Athlete(x) ∧ Healthy(x) → ¬EatJunkFood(x))"
+  },
+  {
+    "NL": "A painting is fascinating if and only if it has breathtaking colors, impressive design, but doesn't have overly complicated patterns.",
+    "FOL": "∀x (Painting(x) ∧ Fascinating(x) ↔ (HasBreathtakingColors(x) ∧ HasImpressiveDesign(x) ∧ ¬OverlyComplicatedPatterns(x)))"
+  },
+  {
+    "NL": "A fruit can be an apple, a banana, or a grape.",
+    "FOL": "∀x (Fruit(x) → (Apple(x) ∨ Banana(x) ∨ Grape(x)))"
+  },
+  {
+    "NL": "Every vehicle is either diesel or petrol, but not both.",
+    "FOL": "∀x (Vehicle(x) → (Diesel(x) ⊕ Petrol(x)))"
+  },
+  {
+    "NL": "Every musician isn't a guitarist.",
+    "FOL": "¬∀x (Musician(x) → Guitarist(x))"
+  },
+  {
+    "NL": "If something is a tiny triangle or a massive circle, then it is either red or orange, but not both.",
+    "FOL": "∀x ((Tiny(x) ∧ Triangle(x)) ∨ (Massive(x) ∧ Circle(x)) → (Red(x) ⊕ Orange(x)))"
+  },
+  {
+    "NL": "Mark appreciates a Beethoven symphony if and only if it is profound.",
+    "FOL": "∀x (Symphony(x) ∧ ComposedBy(x, beethoven) → (Profound(x) ↔ Appreciates(mark, x)))"
+  },
+  {
+    "NL": "There is no circle that describes all glossy circles.",
+    "FOL": "¬∃x (Circle(x) ∧ ∀y (Glossy(y) ∧ Circle(y) → Describes(x, y)))"
+  },
+  {
+    "NL": "All architects have built a design from each blueprint by an engineer.",
+    "FOL": "∀x (Architect(x) ∧ ∃y (Engineer(y) ∧ ∀z (Blueprint(z) ∧ DrawnBy(z, y) → Built(x, z))))"
+  },
+  {
+    "NL": "Some cities are either big or small, but not both.",
+    "FOL": "∃x (City(x) ∧ (Big(x) ⊕ Small(x)))"
+  },
+  {
+    "NL": "A device that consumes solar energy for operation, can be refueled through a solar panel, and aids in cutting down carbon emissions is a solar device.",
+    "FOL": "∀x ∀y (Device(x) ∧ SolarPanel(y) ∧ ConsumesSolarEnergy(x) ∧ Refuelable(x, y) ∧ AidInCuttingDownCarbonEmissions(x) → SolarDevice(x))"
+  },
+  {
+    "NL": "If a worker is diligent, that worker is productive.",
+    "FOL": "∀x (Worker(x) ∧ Diligent(x) → Productive(x))"
+  },
+  {
+    "NL": "A mammal is a cat if it isn't a dog.",
+    "FOL": "∀x (¬Dog(x) → Cat(x))"
+  },
+  {
+    "NL": "Wildfires can lead to forest destruction, cause air pollution, or create hazardous conditions.",
+    "FOL": "∀x (Wildfire(x) → (LeadsToForestDestruction(x) ∨ CausesAirPollution(x) ∨ CreatesHazardousConditions(x)))"
+  },
+  {
+    "NL": "A bird is a parrot or a sparrow.",
+    "FOL": "∀x (Bird(x) → (Parrot(x) ∨ Sparrow(x)))"
+  },
+  {
+    "NL": "All dogs either bark or wag their tail.",
+    "FOL": "∀x (Dog(x) → (Bark(x) ⊕ WagTail(x)))"
+  },
+  {
+    "NL": "An agent sells a property only if that property is bought by someone.",
+    "FOL": "∀x (Agent(x) → ∀y (Property(y) ∧ Sells(x, y) → IsBought(y, x)))"
+  },
+  {
+    "NL": "A drink can be alcoholic, non-alcoholic, or a soft drink.",
+    "FOL": "∀x (Drink(x) → (Alcoholic(x) ∨ NonAlcoholic(x) ∨ SoftDrink(x)))"
+  },
+  {
+    "NL": "Every artist who is creative is respected by all curators.",
+    "FOL": "∀x (Artist(x) ∧ Creative(x) → ∀y (Curator(y) → Respects(y, x)))"
+  },
+  {
+    "NL": "If every programmer who has a PhD will be promoted, then some programmers who do not possess a PhD will also be promoted.",
+    "FOL": "∀x (Programmer(x) ∧ PhD(x) → Promoted(x)) → ∃y (Programmer(y) ∧ ¬PhD(y) ∧ Promoted(y))"
+  },
+  {
+    "NL": "Books which are informative are often quite expensive.",
+    "FOL": "∀x (Book(x) ∧ Informative(x) → Expensive(x))"
+  },
+  {
+    "NL": "No book is both a novel and a dictionary.",
+    "FOL": "¬∃x (Book(x) ∧ Novel(x) ∧ Dictionary(x))"
+  },
+  {
+    "NL": "No bird can fly, if there is an element that all elements are heavier than.",
+    "FOL": "¬∃w (Element(w) ∧ ∀v (Element(v) → HeavierThan(v, w))) → ¬∀x (Bird(x) → CanFly(x))"
+  },
+  {
+    "NL": "Every computer is smart, modern and expensive.",
+    "FOL": "∀x (Computer(x) → (Smart(x) ∧ Modern(x) ∧ Expensive(x)))"
+  },
+  {
+    "NL": "All plants are either poisonous or edible.",
+    "FOL": "∀x (Plant(x) → (Poisonous(x) ∨ Edible(x)))"
+  },
+  {
+    "NL": "Someone is an athlete if they participate in sports.",
+    "FOL": "∀x (Person(x) ∧ ParticipatesInSports(x) → Athlete(x))"
+  },
+  {
+    "NL": "Every cat is cuddly, but not every cuddly thing is a cat.",
+    "FOL": "∀x (Cat(x) → Cuddly(x)) ∧ ¬∀x (Cuddly(x) → Cat(x))"
+  },
+  {
+    "NL": "Each book that is either interesting or boring informs either a keen student or a disinterested teacher.",
+    "FOL": "∀x ((Book(x) ∧ (Interesting(x) ∨ Boring(x))) → ∃y ((Keen(y) ∧ Student(y)) ∨ (Disinterested(y) ∧ Teacher(y)) ∧ Inform(x, y)))"
+  },
+  {
+    "NL": "No dog in the house ate the food.",
+    "FOL": "∀x (Dog(x) ∧ InHouse(x) → ¬AteFood(x))"
+  },
+  {
+    "NL": "An animal is dangerous if and only if every prey it hunts is large.",
+    "FOL": "∀x (Dangerous(x) ↔ ∀y (Hunts(x, y) → Large(y)))"
+  },
+  {
+    "NL": "All dogs are loyal friends, but not all loyal friends are dogs.",
+    "FOL": "∀x (Dog(x) → LoyalFriend(x)) ∧ ∃y (LoyalFriend(y) ∧ ¬Dog(y))"
+  },
+  {
+    "NL": "All individuals who engage in physical activity, eat balanced diets, and sleep well often have good health.",
+    "FOL": "∀x (Individual(x) ∧ PhysicalActivity(x) ∧ BalancedDiet(x) ∧ GoodSleep(x) → OftenHaveGoodHealth(x))"
+  },
+  {
+    "NL": "Some dancers either dance ballet or hip hop, but do not engage in both.",
+    "FOL": "∃x (Dancer(x) ∧ (DanceBallet(x) ⊕ DanceHipHop(x)))"
+  },
+  {
+    "NL": "There exist athletes who are neither injured nor tardy.",
+    "FOL": "∃x (Athlete(x) ∧ ¬(Injured(x) ∨ Tardy(x)))"
+  },
+  {
+    "NL": "Cougars are nocturnal and hunt at night, while hares are diurnal and feed during the day.",
+    "FOL": "∀x (Cougar(x) → (Nocturnal(x) ∧ HuntsAtNight(x))) ∧ ∀y (Hare(y) → (Diurnal(y) ∧ FeedsDuringDay(y)))"
+  },
+  {
+    "NL": "A flight takes off from its origin airport and lands at the target airport without touching down at any other airports.",
+    "FOL": "∃x ∃y ∃z (Flight(x) ∧ OriginAirport(y) ∧ TargetAirport(z) → TakesOffFrom(x, y) ∧ LandsAt(x, z) ∧ ¬∃w (Airport(w) ∧ TouchesDownAt(x, w)))"
+  },
+  {
+    "NL": "There are smartphones that are advanced and stylish, but not durable, or they are durable but not advanced and stylish.",
+    "FOL": "∀x (Smartphone(x) → ((Advanced(x) ∧ Stylish(x) ∧ ¬Durable(x)) ⊕ (Durable(x) ∧ ¬(Advanced(x) ∧ Stylish(x)))))"
+  },
+  {
+    "NL": "Well-balanced meals enhance energy and brain function.",
+    "FOL": "∀x (WellBalancedMeals(x) → EnhanceEnergy(x) ∧ EnhanceBrainFunction(x))"
+  },
+  {
+    "NL": "A drink is refreshing if it includes either mint or lemon as an ingredient.",
+    "FOL": "∀x (Drink(x) ∧ (IncludeMint(x) ∨ IncludeLemon(x)) → Refreshing(x))"
+  },
+  {
+    "NL": "Any engineer who has worked for over a decade and either designs new technology or conducts tech studies, but not both, must either have received an engineering award or a member of international engineering society.",
+    "FOL": "∀x (Engineer(x) ∧ WorkedForOverADecade(x) ∧ (DesignsNewTechnology(x) ⊕ ConductsTechStudies(x)) → (ReceivedEngineeringAward(x) ∨ MemberOfInternationalEngineeringSociety(x)))"
+  },
+  {
+    "NL": "A orchestra is presenting a symphony at an auditorium.",
+    "FOL": "∃x ∃y ∃z (Orchestra(x) ∧ Symphony(y) ∧ Auditorium(z) ∧ PresentingAt(x, y, z))"
+  },
+  {
+    "NL": "Every athlete who has competed in both swimming and running events, unless they are an Olympic medalist, has either participated in more than twenty competitions or has not been on sports television.",
+    "FOL": "∀x (Athlete(x) ∧ CompetedInSwimming(x) ∧ CompetedInRunning(x) ∨ OlympicMedalist(x) → (ParticipatedInMoreThanTwentyCompetitions(x) ∨ ¬BeenOnSportsTelevision(x)))"
+  },
+  {
+    "NL": "Not all fruits are ripe, and none of them are rotten.",
+    "FOL": "¬∀x (Fruit(x) → Ripe(x)) ∧ ∀y (Fruit(y) → ¬Rotten(y))"
+  },
+  {
+    "NL": "All engineers in the project are designing a structure.",
+    "FOL": "∀x (Engineer(x) ∧ InProject(x) → DesigningStructure(x))"
+  },
+  {
+    "NL": "Every musician who inspires a singer will be inspired by a drummer.",
+    "FOL": "∀x ∃y (Musician(x) ∧ Singer(y) ∧ Inspire(x, y) → ∃z (Drummer(z) ∧ WillInspire(z, x)))"
+  },
+  {
+    "NL": "All engineers are intelligent innovators, or some innovators are not successful entrepreneurs.",
+    "FOL": "∀x (Engineer(x) → IntelligentInnovator(x)) ∨ ∃y (Innovator(y) ∧ ¬SuccessfulEntrepreneur(y))"
+  },
+  {
+    "NL": "A politician gets elected if he or she is qualified, trustworthy, and appeals to the public.",
+    "FOL": "∀x (Politician(x) ∧ IsQualified(x) ∧ IsTrustworthy(x) ∧ AppealsToPublic(x) → GetsElected(x))"
+  },
+  {
+    "NL": "Institutions with qualified instructors, advanced resources, and a strong curriculum lead to higher student success rates.",
+    "FOL": "∀x (Institution(x) ∧ QualifiedInstructors(x) ∧ AdvancedResources(x) ∧ StrongCurriculum(x) → HigherStudentSuccessRate(x))"
+  },
+  {
+    "NL": "Every shark will chase a fish if no birds fly during the day.",
+    "FOL": "¬∀x (Bird(x) → FliesDuringDay(x)) → ∃y (Shark(y) ∧ ∀z (Fish(z) → Chase(y, z)))"
+  },
+  {
+    "NL": "A book is captivating if it presents intriguing characters, engrossing plot, and possibilities for sequels or movie adaptations.",
+    "FOL": "∀y (Book(y) ∧ PresentsIntriguingCharacters(y) ∧ EngrossingPlot(y) ∧ (PossibilitiesForSequels(y) ∨ MovieAdaptations(y)) → Captivating(y))"
+  },
+  {
+    "NL": "An individual is called an athlete if they participate in either soccer or basketball.",
+    "FOL": "∀x (Individual(x) ∧ (ParticipateInSoccer(x) ∨ ParticipateInBasketball(x)) → Athlete(x))"
+  },
+  {
+    "NL": "Eagles are predatory birds, they have sharp talons and excellent vision.",
+    "FOL": "∀x (Eagle(x) → (PredatoryBird(x) ∧ HasSharpTalons(x) ∧ HasExcellentVision(x)))"
+  },
+  {
+    "NL": "Unless a movie is neither funny nor thrilling, it is a blockbuster.",
+    "FOL": "∀w ((Funny(w) ∨ Thrilling(w)) → Blockbuster(w))"
+  },
+  {
+    "NL": "A cat is sleeping on a rug, and a dog is playing in the yard.",
+    "FOL": "∃x ∃y (Cat(x) ∧ Rug(y) ∧ SleepingOn(x, y)) ∧ ∃z (Dog(z) ∧ Playing(z) ∧ InYard(z))"
+  },
+  {
+    "NL": "A song that is soothing can relax people.",
+    "FOL": "∀x ∀y (Song(x) ∧ Soothing(x) ∧ Person(y) → CanRelax(x, y))"
+  },
+  {
+    "NL": "Any smart TV connects to the internet and provides online movies and music apps.",
+    "FOL": "∀x (SmartTV(x) → (ConnectsToInternet(x) ∧ ProvidesOnlineMovies(x) ∧ ProvidesMusicApps(x)))"
+  },
+  {
+    "NL": "Each student in the class understands the lesson.",
+    "FOL": "∀x (Student(x) ∧ InClass(x) → (Understand(x, lesson)))"
+  },
+  {
+    "NL": "Not all athletes are either footballers or basketballers, and none of the talented ones among them despise training.",
+    "FOL": "¬∀x (Athlete(x) → (Footballer(x) ∨ Basketballer(x))) ∧ ∀y (Athlete(y) ∧ talented(y) → ¬DespiseTraining(y))"
+  },
+  {
+    "NL": "A chef is preparing a dish in the kitchen, or a programmer is coding a software in the lab.",
+    "FOL": "∃x ∃y (Chef(x) ∧ Dish(y) ∧ Preparing(x, y) ∧ InTheKitchen(x)) ∨ ∃z ∃w (Programmer(z) ∧ Software(w) ∧ Coding(z, w) ∧ InTheLab(z))"
+  },
+  {
+    "NL": "No writer who pens every story is read by anybody.",
+    "FOL": "∀x (Writer(x) → ∀y ((Story(y) → Pens(x, y)) → ¬∃z (Person(z) ∧ Read(z, x))))"
+  },
+  {
+    "NL": "A child is in the playground playing with a beach ball.",
+    "FOL": "∃x (Child(x) ∧ InThePlayground(x) ∧ PlayingWithABeachBall(x))"
+  },
+  {
+    "NL": "A plane takes off from terminal A and lands in terminal B without stopping at any other terminals.",
+    "FOL": "∃x ∃y ∃z (Plane(x) ∧ TerminalA(y) ∧ TerminalB(z) → TakesOffFrom(x, y) ∧ LandsAt(x, z) ∧ ¬∃w (Terminal(w) ∧ StopsAt(x, w)))"
+  },
+  {
+    "NL": "Every bird can fly or swim.",
+    "FOL": "∀x (Bird(x) → CanFly(x) ∨ CanSwim(x))"
+  },
+  {
+    "NL": "A play that is a drama can evoke people's emotions.",
+    "FOL": "∀x ∀y (Play(x) ∧ Drama(x) ∧ Person(y) → CanEvokeEmotions(x, y))"
+  },
+  {
+    "NL": "If all staff who are promoted are hard-workers, then some employees will not be promoted.",
+    "FOL": "∀x (Staff(x) ∧ Promoted(x) → HardWorker(x)) → ∃y (Employee(y) ∧ ¬Promoted(y))"
+  },
+  {
+    "NL": "If all humans are beings then there are some humans who know Sarah.",
+    "FOL": "∀x (Human(x) → Being(x)) → ∃x (Human(x) ∧ Know(x, sarah))"
+  },
+  {
+    "NL": "Teachers teach students, and teaching assistants support them.",
+    "FOL": "∀x ∀y ∀z (Teacher(x) ∧ Student(y) ∧ TeachingAssistant(z) → Teaches(x, y) ∧ Supports(z, y))"
+  },
+  {
+    "NL": "Not all songs that are hits, and none of them are unpublished.",
+    "FOL": "¬∀x (Song(x) → Hit(x)) ∧ ∀y (Song(y) → ¬Unpublished(y))"
+  },
+  {
+    "NL": "A domestic cat sleeps on something.",
+    "FOL": "∃x (Domestic(x) ∧ Cat(x) → ∃y (SleepsOn(x, y)))"
+  },
+  {
+    "NL": "An electric vehicle, for example a Tesla or Nissan Leaf, can drive smoothly without producing gas emissions.",
+    "FOL": "∀x (ElectricVehicle(x) ∧ (Tesla(x) ∨ NissanLeaf(x)) → (DriveSmoothly(x) ∧ ¬ProduceGasEmissions(x)))"
+  },
+  {
+    "NL": "There are no players who can neither run nor hop.",
+    "FOL": "¬∃x (Player(x) ∧ ¬CanRun(x) ∧ ¬CanHop(x))"
+  },
+  {
+    "NL": "Any employee who respects a manager is respected by the same manager.",
+    "FOL": "∀x ∀y (Employee(x) ∧ Manager(y) ∧ Respects(x, y) → Respects(y, x))"
+  },
+  {
+    "NL": "No shortest distance, and no longest distance exist.",
+    "FOL": "∀x (Distance(x) → (∃y (Distance(y) ∧ Longer(y, x)) ∧ ∃z (Distance(z) ∧ Shorter(z, x))))"
+  },
+  {
+    "NL": "If not all dogs are friendly, there is a park that each park connects to.",
+    "FOL": "¬∀x (Dog(x) → Friendly(x)) → ∃y (Park(y) ∧ ∀z (Park(z) → ConnectsTo(z, y)))"
+  },
+  {
+    "NL": "All dogs bark, only cats meow.",
+    "FOL": "∀x (Dog(x) → Bark(x)) ∧ ∀y (Cat(y) → Meow(y))"
+  },
+  {
+    "NL": "A city is in Europe or Asia.",
+    "FOL": "∀x (City(x) → InEurope(x) ∨ InAsia(x))"
+  },
+  {
+    "NL": "If anything is pyramid, then everything links to a large object.",
+    "FOL": "∃x (Pyramid(x)) → ∀y ∃z (Large(z) ∧ LinksTo(y, z))"
+  },
+  {
+    "NL": "Countries with stable politics, diverse industries, and rich natural resources usually have solid financial status.",
+    "FOL": "∀x (Country(x) ∧ HasStablePolitics(x) ∧ HasDiverseIndustries(x) ∧ HasRichNaturalResources(x) → HasSolidFinancialStatus(x))"
+  },
+  {
+    "NL": "If a person is a programmer, they either work in a tech company or a startup.",
+    "FOL": "∀x (Person(x) ∧ Programmer(x) → WorkInTechCompany(x) ⊕ WorkInStartup(x))"
+  },
+  {
+    "NL": "A woman is dancing in a hall.",
+    "FOL": "∃x ∃y (Woman(x) ∧ Hall(y) ∧ DancingIn(x, y))"
+  },
+  {
+    "NL": "A child is swinging on a swing in the playground.",
+    "FOL": "∃x ∃y (Child(x) ∧ Swing(y) ∧ SwingingOn(x, y) ∧ InThePlayground(x))"
+  },
+  {
+    "NL": "Linda drinks a wine only if it was bottled in France.",
+    "FOL": "∀x (Wine(x) → (BottledInFrance(x) ↔ Drinks(linda, x)))"
+  },
+  {
+    "NL": "An object is either a pen or a pencil.",
+    "FOL": "∀x (Object(x) → (Pen(x) ⊕ Pencil(x)))"
+  },
+  {
+    "NL": "No scientist in the lab formulated a theory.",
+    "FOL": "∀x (Scientist(x) ∧ InLab(x) → ¬FormulatedTheory(x))"
+  },
+  {
+    "NL": "None but the fearless deserves the honor.",
+    "FOL": "∀x (¬Fearless(x) → ¬DeserveHonor(x))"
+  },
+  {
+    "NL": "Sophie drinks a drink if and only if it is non-alcoholic.",
+    "FOL": "∀x (Drink(x) → (NonAlcoholic(x) ↔ Drinks(sophie, x)))"
+  },
+  {
+    "NL": "There is a student in the classroom with a complex assignment.",
+    "FOL": "∃x (Student(x) ∧ InTheClassroom(x) ∧ WithComplexAssignment(x))"
+  },
+  {
+    "NL": "A circle is not black and does not point to any white object.",
+    "FOL": "∀x (Circle(x) → (¬Black(x) ∧ ¬∃y (White(y) ∧ PointsTo(x, y))))"
+  },
+  {
+    "NL": "A bicycle has brakes if it can slow down and has a braking mechanism.",
+    "FOL": "∀x (Bicycle(x) ∧ CanSlowDown(x) ∧ HasBrakingMechanism(x) → HasBrakes(x))"
+  },
+  {
+    "NL": "A movie is either watched or unwatched if it is not in production.",
+    "FOL": "∀x (Movie(x) ∧ ¬InProduction(x) → (Watched(x) ∨ Unwatched(x)))"
+  },
+  {
+    "NL": "Lawyers defend clients, and paralegals support them.",
+    "FOL": "∀x ∀y ∀z (Lawyer(x) ∧ Client(y) ∧ Paralegal(z) → Defends(x, y) ∧ Supports(z, y))"
+  },
+  {
+    "NL": "A library keeps books and lend them out when requested by users.",
+    "FOL": "∀x (Library(x) → (KeepsBooks(x) ∧ (IsRequestedByUsers(x) → LendsThemOut(x))))"
+  },
+  {
+    "NL": "All employees in the company submit reports on time and attend meetings or lack time management skills.",
+    "FOL": "∀x (EmployeeInCompany(x) → ((SubmitReportsOnTime(x) ∧ AttendMeetings(x)) ∨ LackTimeManagementSkills(x)))"
+  },
+  {
+    "NL": "A doctor treats some patients, prescribes medication, and tracks their recovery.",
+    "FOL": "∀x ∃y (Doctor(x) → Patient(y) ∧ Treats(x, y) ∧ PrescribesMedication(x) ∧ TracksRecovery(x, y))"
+  },
+  {
+    "NL": "An eco-friendly fuel, such as biomass or hydroelectric power, can provide energy without excessive carbon emission, and it aids in combating climate change.",
+    "FOL": "∀x (EcofriendlyFuel(x) ∧ (Biomass(x) ∨ HydroelectricPower(x)) → (ProvidesEnergy(x) ∧ ¬ExcessiveCarbonEmission(x)) ∧ AidsCombatClimateChange(x))"
+  },
+  {
+    "NL": "A senator is elected if they get more votes than their competitor.",
+    "FOL": "∀x ∀y (Senator(x) ∧ Senator(y) ∧ MoreVotes(x, y) → Elected(x))"
+  },
+  {
+    "NL": "An item is a slow train only if it is blue.",
+    "FOL": "∀x (Slow(x) ∧ Train(x) → Blue(x))"
+  },
+  {
+    "NL": "Nobody at the party recognizes either Samantha or Robert.",
+    "FOL": "∀x (Person(x) ∧ AtParty(x) → ¬Recognize(x, samantha) ∧ ¬Recognize(x, robert))"
+  },
+  {
+    "NL": "Fruits are not always healthy.",
+    "FOL": "∃x (Fruit(x) ∧ ¬Healthy(x))"
+  },
+  {
+    "NL": "Every person who admires someone is admired by someone.",
+    "FOL": "∀x (Person(x) ∧ ∃y (Person(y) ∧ Admires(x, y)) → ∃z (Person(z) ∧ Admires(z, x)))"
+  },
+  {
+    "NL": "The notebook is open or closed, never both.",
+    "FOL": "∀x (Notebook(x) → (Open(x) ⊕ Closed(x)))"
+  },
+  {
+    "NL": "A plane takes off from an airport and lands at another airport without making any stops.",
+    "FOL": "∃x ∃y ∃z (Plane(x) ∧ Airport(y) ∧ Airport(z) → TakesOffFrom(x, y) ∧ LandsAt(x, z) ∧ ¬∃w (Stop(w) ∧ StopsAt(x, w)))"
+  },
+  {
+    "NL": "Any company is a startup or an established one.",
+    "FOL": "∀x (Company(x) → (Startup(x) ⊕ Established(x)))"
+  },
+  {
+    "NL": "Some people are either quiet or loud, but not both.",
+    "FOL": "∃x (Person(x) ∧ (Quiet(x) ⊕ Loud(x)))"
+  },
+  {
+    "NL": "There are poets who esteem only those novelists who are more innovative than they.",
+    "FOL": "∃x ∀y (Poet(x) ∧ Novelist(y) ∧ MoreInnovativeThan(y, x) → Esteem(x, y))"
+  },
+  {
+    "NL": "All vegetables are either root or leaf.",
+    "FOL": "∀x (Vegetable(x) → (Root(x) ∨ Leaf(x)))"
+  },
+  {
+    "NL": "No software systems are bug-free unless they have been debugged extensively, but not all of them are user-friendly.",
+    "FOL": "¬∃x (SoftwareSystem(x) ∧ BugFree(x) ∨ DebuggedExtensively(x)) ∧ ¬∀y (SoftwareSystem(y) → UserFriendly(y))"
+  },
+  {
+    "NL": "There is a tree that all trees grow towards it, if not all flowers are colorful.",
+    "FOL": "¬∀x (Flower(x) → Colorful(x)) → ∃y (Tree(y) ∧ ∀z (Tree(z) → GrowsToward(z, y)))"
+  },
+  {
+    "NL": "A song that is a ballad can touch the listeners' hearts.",
+    "FOL": "∀x ∀y (Song(x) ∧ Ballad(x) ∧ Listener(y) → CanTouchHearts(x, y))"
+  },
+  {
+    "NL": "A tablet syncs with the WiFi and grants entry to movies and music streaming.",
+    "FOL": "∀x (Tablet(x) → (SyncsWithWiFi(x) ∧ GrantsEntryToMovies(x) ∧ GrantsEntryToMusicStreaming(x)))"
+  },
+  {
+    "NL": "A song is either jazz or blues.",
+    "FOL": "∀x (Song(x) → (Jazz(x) ⊕ Blues(x)))"
+  },
+  {
+    "NL": "Each teacher instructs a subject they study and studies a subject they do not instruct.",
+    "FOL": "∀x (Teacher(x) → (∃y (Study(x, y) ∧ Instruct(x, y)) ∧ ∃z (Study(x, z) ∧ ¬Instruct(x, z))))"
+  },
+  {
+    "NL": "All are slim rectangles unless they're pink.",
+    "FOL": "∀x (Slim(x) ∧ Rectangle(x) → ¬Pink(x))"
+  },
+  {
+    "NL": "All candidates are either honest or they don't win elections.",
+    "FOL": "∀x (Candidate(x) → (Honest(x) ⊕ ¬WinElection(x)))"
+  },
+  {
+    "NL": "There are mountains.",
+    "FOL": "∃x (Mountain(x))"
+  },
+  {
+    "NL": "There isn't a doctor who can cure all diseases.",
+    "FOL": "¬∃x (Doctor(x) ∧ ∀y (Disease(y) → CanCure(x, y)))"
+  },
+  {
+    "NL": "A device can record audio, display video, or store files.",
+    "FOL": "∀x (Device(x) → RecordAudio(x) ∧ DisplayVideo(x) ∧ StoreFiles(x))"
+  },
+  {
+    "NL": "Chris is not a pilot and Dana is a pilot.",
+    "FOL": "¬Pilot(chris) ∧ Pilot(dana)"
+  },
+  {
+    "NL": "A car is efficient if and only if it consumes less fuel, provides comfort, and doesn't make loud noise.",
+    "FOL": "∀x (Car(x) ∧ Efficient(x) ↔ (ConsumesLessFuel(x) ∧ ProvidesComfort(x) ∧ ¬MakesLoudNoise(x)))"
+  },
+  {
+    "NL": "An individual needs exercise, a balanced diet, and adequate sleep to be healthy.",
+    "FOL": "∀x (Individual(x) → (DoesExercise(x) ∧ HasBalancedDiet(x) ∧ GetsAdequateSleep(x)) → IsHealthy(x))"
+  },
+  {
+    "NL": "Nations with democratic governments, robust economies, and advanced infrastructure have a higher standard of living.",
+    "FOL": "∀x (Nation(x) ∧ DemocraticGovernment(x) ∧ RobustEconomy(x) ∧ AdvancedInfrastructure(x) → HaveHighStandardOfLiving(x))"
+  },
+  {
+    "NL": "A game that is a puzzle can make people frustrated.",
+    "FOL": "∀x ∀y (Game(x) ∧ Puzzle(x) ∧ Person(y) → CanMakeFrustrated(x, y))"
+  },
+  {
+    "NL": "If an employee works hard, he gets recognized and receives promotion.",
+    "FOL": "∀x (Employee(x) ∧ WorksHard(x) → GetsRecognized(x) ∧ ReceivesPromotion(x))"
+  },
+  {
+    "NL": "A song secures listener's affection if it has a catchy tune, relatable lyrics, and soothing vocals.",
+    "FOL": "∀x (Song(x) ∧ HasCatchyTune(x) ∧ HasRelatableLyrics(x) ∧ HasSoothingVocals(x) → SecuresListenersAffection(x))"
+  },
+  {
+    "NL": "A car can be a sedan, a pickup, or a sports car.",
+    "FOL": "∀x (Car(x) → (Sedan(x) ∨ Pickup(x) ∨ SportsCar(x)))"
+  },
+  {
+    "NL": "A fish is not swimming in the aquarium.",
+    "FOL": "∃x (Fish(x) ∧ ¬∃y (Aquarium(y) ∧ SwimmingIn(x, y)))"
+  },
+  {
+    "NL": "A window allows vision when it is clean or unobstructed.",
+    "FOL": "∀x (Window(x) ∧ (Clean(x) ∨ Unobstructed(x)) → AllowsVision(x))"
+  },
+  {
+    "NL": "There is no car and Bob is a mechanic.",
+    "FOL": "¬∃x (Car(x)) ∧ Mechanic(bob)"
+  },
+  {
+    "NL": "Each blue object links to at least one object that links to only green objects.",
+    "FOL": "∀x (Blue(x) → ∃y (LinksTo(x, y) ∧ ∀z (LinksTo(y, z) → Green(z))))"
+  },
+  {
+    "NL": "Not all architects are either designers or builders.",
+    "FOL": "¬∀x (Architect(x) → (Designer(x) ∨ Builder(x)))"
+  },
+  {
+    "NL": "Every student is happy or busy.",
+    "FOL": "∀x (Student(x) → (Happy(x) ∨ Busy(x)))"
+  },
+  {
+    "NL": "If a vehicle is not an aeroplane, it requires fuel and it travels on land.",
+    "FOL": "∀x (Vehicle(x) ∧ ¬Aeroplane(x) → (RequiresFuel(x) ∧ TravelsOnLand(x)))"
+  },
+  {
+    "NL": "Maria is a doctor, nurse, and pilot.",
+    "FOL": "Doctor(maria) ∧ Nurse(maria) ∧ Pilot(maria)"
+  },
+  {
+    "NL": "A garden has a rich array of plants if it consists of flowers, trees, and grasses of different types.",
+    "FOL": "∀x (Garden(x) ∧ ∃y ∃z ∃w (Flower(y) ∧ Tree(z) ∧ Grass(w) ∧ DifferentTypes(y, z, w) ∧ ConsistsOf(x, y, z, w)) → HasRichArrayOfPlants(x))"
+  },
+  {
+    "NL": "Every book has a cover, but not every cover belongs to a book.",
+    "FOL": "∀x (Book(x) → Cover(x)) ∧ ¬∀x (Cover(x) → Book(x))"
+  },
+  {
+    "NL": "All cars are not fast or expensive.",
+    "FOL": "∃x (Car(x) ∧ (¬Fast(x) ∨ ¬Expensive(x)))"
+  },
+  {
+    "NL": "Every lecturer who has taught students, all of whom have passed their examinations and expressed gratitude, either has received a teacher of the year award or has been recommended by all their peers.",
+    "FOL": "∀x (Lecturer(x) ∧ ∀y (Student(y) ∧ Taught(x, y) ∧ PassedExam(y) ∧ ExpressedGratitude(y, x)) → (ReceivedTeacherOfYearAward(x) ∨ ∀z (Peer(z, x) → Recommended(z, x))))"
+  },
+  {
+    "NL": "Every square is big.",
+    "FOL": "∀x (Square(x) → Big(x))"
+  },
+  {
+    "NL": "Every hardware store has at least one salesperson who knows multiple tool types.",
+    "FOL": "∀y (HardwareStore(y) → ∃x (SalesPerson(x) ∧ WorksAt(x, y) ∧ KnowsMultipleToolTypes(x)))"
+  },
+  {
+    "NL": "A pilot is flying an airplane in the sky, or a sailor is sailing a ship in the sea.",
+    "FOL": "∃x ∃y (Pilot(x) ∧ Airplane(y) ∧ Flying(x, y) ∧ InTheSky(x)) ∨ ∃z ∃w (Sailor(z) ∧ Ship(w) ∧ Sailing(z, w) ∧ InTheSea(z))"
+  },
+  {
+    "NL": "Nobody in the office emailed either Alice or Bob.",
+    "FOL": "¬∃x (Employee(x) ∧ InOffice(x) ∧ (Email(x, alice) ∨ Email(x, bob)))"
+  },
+  {
+    "NL": "A course is challenging if and only if its content is advanced and assignments are tough, but it doesn't assign excessive homework.",
+    "FOL": "∀x (Course(x) ∧ Challenging(x) ↔ (AdvancedContent(x) ∧ ToughAssignments(x) ∧ ¬ExcessiveHomework(x)))"
+  },
+  {
+    "NL": "A horse has hooves, while a dolphin has fins, but a butterfly has wings.",
+    "FOL": "∀x (Horse(x) → HasHooves(x)) ∧ ∀y (Dolphin(y) → HasFins(y)) ∧ ∀z (Butterfly(z) → HasWings(z))"
+  },
+  {
+    "NL": "No animal is both a cat and a dog, but all cats are animals and some dogs are friendly if and only if some cats are not friendly.",
+    "FOL": "¬∃x (Animal(x) ∧ Cat(x) ∧ Dog(x)) ∧ ((∀x (Cat(x) → Animal(x)) ∧ ∃x (Dog(x) ∧ Friendly(x))) ↔ ¬∃x (Cat(x) ∧ ¬Friendly(x)))"
+  },
+  {
+    "NL": "No one at the party knows either Jessica or Rebecca.",
+    "FOL": "¬∃x (Person(x) ∧ AtParty(x) ∧ (Knows(x, jessica) ∨ Knows(x, rebecca)))"
+  },
+  {
+    "NL": "A ship sets sail from its home port and docks at its intended port, visiting various ports en route.",
+    "FOL": "∃x ∃y ∃z (Ship(x) ∧ HomePort(y) ∧ IntendedPort(z) → SetsSailFrom(x, y) ∧ DocksAt(x, z) ∧ ∃w (Port(w) ∧ Visits(x, w)))"
+  },
+  {
+    "NL": "There is a coach who motivates all and only the players who do not motivate themselves.",
+    "FOL": "∃x (Coach(x) ∧ ∀y (Player(y) → (Motivate(x, y) ↔ ¬Motivate(y, y))))"
+  },
+  {
+    "NL": "Some white cars don't run and but some powerful cars run and do not run.",
+    "FOL": "∃x (White(x) ∧ Car(x) ∧ ¬Run(x)) ∧ ∃x (Powerful(x) ∧ Car(x) ∧ Run(x) ∧ ¬Run(x))"
+  },
+  {
+    "NL": "A mechanic fixes some cars, performs maintenance, and inspects the results.",
+    "FOL": "∀x ∃y (Mechanic(x) → Car(y) ∧ Fixes(x, y) ∧ PerformsMaintenance(x) ∧ InspectsResults(x, y))"
+  },
+  {
+    "NL": "A beverage is either a stimulating coffee or a calming tea, but not both.",
+    "FOL": "∀x ((Stimulating(x) ∧ Coffee(x)) ⊕ (Calming(x) ∧ Tea(x)))"
+  },
+  {
+    "NL": "Any cat that is either black or white sleeps next to a human who is either young or old.",
+    "FOL": "∀x ((Cat(x) ∧ Black(x)) ∨ (Cat(x) ∧ White(x)) → ∃y ((Young(y) ∨ Old(y)) ∧ SleepsNextTo(x, y)))"
+  },
+  {
+    "NL": "Each swan likes water, but not all water likers are swans.",
+    "FOL": "∀x (Swan(x) → LikesWater(x)) ∧ ¬∀x (LikesWater(x) → Swan(x))"
+  },
+  {
+    "NL": "Not all cars are sports cars.",
+    "FOL": "¬∀x (Car(x) → SportsCar(x))"
+  },
+  {
+    "NL": "Cities with efficient transportation, advanced education system, and sustainable energy have a high standard of living.",
+    "FOL": "∀x (City(x) ∧ EfficientTransportation(x) ∧ AdvancedEducationSystem(x) ∧ SustainableEnergy(x) → HighStandardOfLiving(x))"
+  },
+  {
+    "NL": "A book is enjoyable if it has an engaging storyline and relatable characters.",
+    "FOL": "∀x (Book(x) ∧ HasEngagingStoryline(x) ∧ HasRelatableCharacters(x) → Enjoyable(x))"
+  },
+  {
+    "NL": "No cars are living organisms.",
+    "FOL": "¬∃x (Car(x) ∧ LivingOrganism(x))"
+  },
+  {
+    "NL": "A book is loved if it has a captivating plot, quality writing, and memorable characters.",
+    "FOL": "∀x (Book(x) ∧ HasCaptivatingPlot(x) ∧ HasQualityWriting(x) ∧ HasMemorableCharacters(x) → IsLoved(x))"
+  },
+  {
+    "NL": "All cheetahs have fur and can't fly, while all eagles have feathers and can fly.",
+    "FOL": "∀y (Cheetah(y) → HasFur(y) ∧ ¬CanFly(y)) ∧ ∀x (Eagle(x) → HasFeathers(x) ∧ CanFly(x))"
+  },
+  {
+    "NL": "No chef who cooks Italian and Mexican cuisine, unless they have won a Michelin star, has served more than twenty famous celebrities or has not owned a restaurant.",
+    "FOL": "¬∃x (Chef(x) ∧ CooksItalian(x) ∧ CooksMexican(x) ∨ WonMichelinStar(x) ∧ (ServedMoreThanTwentyFamousCelebrities(x) ∨ ¬OwnedRestaurant(x)))"
+  },
+  {
+    "NL": "All cows hate crunchy grass.",
+    "FOL": "∀x ∀y (Cows(x) ∧ Crunchy(y) ∧ Grass(y) → ¬Hate(x, y))"
+  },
+  {
+    "NL": "A vacation can be a beach trip, require tropical attire, and allow extensive relaxation, or it can be a hiking adventure, need active gear, and provide a fitness boost.",
+    "FOL": "∀x (Vacation(x) → ((BeachTrip(x) ∧ RequiresTropicalAttire(x) ∧ AllowsExtensiveRelaxation(x)) ⊕ (HikingAdventure(x) ∧ NeedsActiveGear(x) ∧ ProvidesFitnessBoost(x))))"
+  },
+  {
+    "NL": "Every green item surrounds at least one entity that includes only red elements.",
+    "FOL": "∀x (Green(x) → ∃y (Surrounds(x, y) ∧ ∀z (Includes(y, z) → Red(z))))"
+  },
+  {
+    "NL": "A smartphone operates on Android or iOS.",
+    "FOL": "∀x (Smartphone(x) → (OperatesAndroid(x) ∨ OperatesiOS(x)))"
+  },
+  {
+    "NL": "An earthquake that includes shaking and rumbling or damage is a tremor.",
+    "FOL": "∀x (Earthquake(x) → (IncludesShaking(x) ∧ IncludesRumbling(x) ∨ CausesDamage(x) → Tremor(x)))"
+  },
+  {
+    "NL": "Snakes are reptiles that have scales and lay eggs.",
+    "FOL": "∀x (Snake(x) → Reptile(x) ∧ HasScales(x) ∧ LaysEggs(x))"
+  },
+  {
+    "NL": "Emma watches a show if and only if it is produced by Netflix.",
+    "FOL": "∀v (Show(v) ∧ ProducedBy(v, netflix) → (IsPopularShow(v) ↔ Watches(emma, v)))"
+  },
+  {
+    "NL": "An athlete triumphs if they jump higher than the rival.",
+    "FOL": "∀x ∀y (Athlete(x) ∧ Rival(y) ∧ JumpsHigher(x, y) → Triumphs(x))"
+  },
+  {
+    "NL": "Something is a circular gadget, and something is a triangular instrument.",
+    "FOL": "∃x (Circular(x) ∧ Gadget(x)) ∧ ∃x (Triangular(x) ∧ Instrument(x))"
+  },
+  {
+    "NL": "A bird is a migratory species if it travels long distances annually.",
+    "FOL": "∀x (Bird(x) ∧ AnnualTravel(x) → MigratorySpecies(x))"
+  },
+  {
+    "NL": "If all volunteers who will be appreciated are university students, then some attendees will not be appreciated.",
+    "FOL": "∀x (Volunteer(x) ∧ Appreciated(x) → UniversityStudent(x)) → ∃y (Attendee(y) ∧ ¬Appreciated(y))"
+  },
+  {
+    "NL": "Every song on the album is less than five minutes long.",
+    "FOL": "∀x (Song(x) → LessThanFiveMinutes(x))"
+  },
+  {
+    "NL": "If some humans cannot sing, then all notes are important or some songs are uncomfortable.",
+    "FOL": "∃x (Human(x) ∧ ¬CanSing(x)) → ∀y (Note(y) ∨ Important(y)) ∨ ∃z (Song(z) ∧ Uncomfortable(z))"
+  },
+  {
+    "NL": "Some foods are either fruits or vegetables.",
+    "FOL": "∃x (Food(x) ∧ (Fruit(x) ⊕ Vegetable(x)))"
+  },
+  {
+    "NL": "Someone can be a chef, or like jogging in the morning, but not both.",
+    "FOL": "∀v (Chef(v) ⊕ LikesJoggingMorning(v))"
+  },
+  {
+    "NL": "A software is either proprietary or open-source, but not both.",
+    "FOL": "∀x (Software(x) → (Proprietary(x) ⊕ OpenSource(x)))"
+  },
+  {
+    "NL": "An office has a mix of employees if it involves managers, assistants, and clerks with varying skills.",
+    "FOL": "∀x (Office(x) ∧ ∃y ∃z ∃w (Manager(y) ∧ Assistant(z) ∧ Clerk(w) ∧ VaryingSkills(y, z, w) ∧ Involves(x, y, z, w)) → HasMixOfEmployees(x))"
+  },
+  {
+    "NL": "Every artist is a creator, but not every creator is an artist.",
+    "FOL": "∀x (Artist(x) → Creator(x)) ∧ ¬∀x (Creator(x) → Artist(x))"
+  },
+  {
+    "NL": "There is someone who likes tea or coffee, but if she likes tea, she does not like milk.",
+    "FOL": "∃x ((Person(x) ∧ (LikeTea(x) ∨ LikeCoffee(x))) ∧ (LikeTea(x) → ¬LikeMilk(x)))"
+  },
+  {
+    "NL": "A manuscript is recognized as an autobiography if it illustrates the life course of a unique individual and is scribed by that individual.",
+    "FOL": "∀x ∃y (Manuscript(x) ∧ Individual(y) ∧ IllustratesLifeCourse(x, y) ∧ ScribedBy(x, y) → Autobiography(x))"
+  },
+  {
+    "NL": "A television provides entertainment and requires a power source.",
+    "FOL": "∀x (Television(x) → (ProvidesEntertainment(x) ∧ RequiresPowerSource(x)))"
+  },
+  {
+    "NL": "All children are young humans, but not all young humans are children.",
+    "FOL": "∀x (Child(x) → YoungHuman(x)) ∧ ∃y (YoungHuman(y) ∧ ¬Child(y))"
+  },
+  {
+    "NL": "No instrument is both a piano and a guitar.",
+    "FOL": "¬∃x (Instrument(x) ∧ Piano(x) ∧ Guitar(x))"
+  },
+  {
+    "NL": "Some creatures are either mammals or amphibians.",
+    "FOL": "∃x (Creature(x) ∧ (Mammal(x) ⊕ Amphibian(x)))"
+  },
+  {
+    "NL": "Dogs can come from the same breed, but they have their unique behaviours.",
+    "FOL": "∀x ∃y (Dog(x) ∧ Dog(y) ∧ SameBreed(x, y) → HaveUniqueBehaviours(x) ∧ HaveUniqueBehaviours(y))"
+  },
+  {
+    "NL": "An organism that lives in water, has gills and swims is a fish.",
+    "FOL": "∀x (Organism(x) ∧ LivesInWater(x) ∧ HasGills(x) ∧ Swims(x) → Fish(x))"
+  },
+  {
+    "NL": "A car is efficient if and only if it has good mileage and is electric.",
+    "FOL": "∀x (Car(x) → (Efficient(x) ↔ HasGoodMileage(x) ∧ IsElectric(x)))"
+  },
+  {
+    "NL": "Students who study regularly perform well in exams.",
+    "FOL": "∀x (Student(x) ∧ StudyRegularly(x) → PerformWell(x) ∧ InExams(x))"
+  },
+  {
+    "NL": "There are politicians who are neither corrupt nor incompetent.",
+    "FOL": "∃x (Politician(x) ∧ ¬(Corrupt(x) ∨ Incompetent(x)))"
+  },
+  {
+    "NL": "Every baker in town bakes bread or loves to make cakes.",
+    "FOL": "∀x (TownBaker(x) → (BakeBread(x) ∨ LoveToMakeCakes(x)))"
+  },
+  {
+    "NL": "A food could be a fruit, a vegetable, or a grain.",
+    "FOL": "∀x (Food(x) → (Fruit(x) ∨ Vegetable(x) ∨ Grain(x)))"
+  },
+  {
+    "NL": "A nation belongs to either Europe or Asia.",
+    "FOL": "∀x (Nation(x) → InEurope(x) ⊕ InAsia(x))"
+  },
+  {
+    "NL": "Vegetables are not fruits.",
+    "FOL": "∀x (Vegetables(x) → ¬Fruits(x))"
+  },
+  {
+    "NL": "A person is a musician if they play an instrument and compose music.",
+    "FOL": "∀x (Person(x) ∧ PlayInstrument(x) ∧ ComposeMusic(x) → Musician(x))"
+  },
+  {
+    "NL": "A light bulb is either on or off, not both at the same time.",
+    "FOL": "∀x (LightBulb(x) → (On(x) ⊕ Off(x)))"
+  },
+  {
+    "NL": "A mechanic fixes cars, replaces parts, and services vehicles.",
+    "FOL": "∀x ∃y (Mechanic(x) → Car(y) ∧ Fixes(x, y) ∧ ReplacesParts(x) ∧ ServicesVehicles(x, y))"
+  },
+  {
+    "NL": "All birds that are not both white and black are eagles.",
+    "FOL": "∀x ((¬(White(x) ∧ Black(x))) → Eagles(x))"
+  },
+  {
+    "NL": "A tiger has stripes and can roar, while a rabbit lacks stripes and cannot roar.",
+    "FOL": "∀x (Tiger(x) → HasStripes(x) ∧ CanRoar(x)) ∧ ∀y (Rabbit(y) → ¬HasStripes(y) ∧ ¬CanRoar(y))"
+  },
+  {
+    "NL": "All dogs are friendly only if they are golden retrievers.",
+    "FOL": "∀x (Dog(x) → (Friendly(x) → GoldenRetriever(x)))"
+  },
+  {
+    "NL": "Not all teachers are either math teachers or science teachers, and none of the adept ones among them detest teaching.",
+    "FOL": "¬∀x (Teacher(x) → (MathTeacher(x) ∨ ScienceTeacher(x))) ∧ ∀y (Teacher(y) ∧ Adept(y) → ¬DetestTeaching(y))"
+  },
+  {
+    "NL": "Every cat either likes playing with balls or prefers resting all day, while all the others like playing with strings or chasing birds.",
+    "FOL": "∀x (Cat(x) → (LikesPlayingBalls(x) ∧ PrefersResting(x)) ⊕ (LikesStrings(x) ∧ ChasingBirds(x)))"
+  },
+  {
+    "NL": "There is a node that all nodes direct to if not all streams are flowing downstream.",
+    "FOL": "¬∀x (Stream(x) → FlowsDownstream(x)) → ∃y (Node(y) ∧ ∀z (Node(z) → DirectsTo(z, y)))"
+  },
+  {
+    "NL": "If all humans are social then there are some humans who appreciate Emily.",
+    "FOL": "∀x (Human(x) → Social(x)) → ∃x (Human(x) ∧ Appreciate(x, emily))"
+  },
+  {
+    "NL": "A square points to a triangle only if that triangle points back to it.",
+    "FOL": "∀x ∀y (Square(x) ∧ Triangle(y) ∧ (PointsTo(x, y) → PointsTo(y, x)))"
+  },
+  {
+    "NL": "A girl is riding a horse in the field.",
+    "FOL": "∃x ∃y (Girl(x) ∧ Horse(y) ∧ Riding(x, y) ∧ InTheField(x))"
+  },
+  {
+    "NL": "All pilots are trained navigators, or some navigators are not capable sailors.",
+    "FOL": "∀x (Pilot(x) → TrainedNavigator(x)) ∨ ∃y (Navigator(y) ∧ ¬CapableSailor(y))"
+  },
+  {
+    "NL": "Some objects are large and some objects are small, but there are no large and small objects.",
+    "FOL": "∃x (Large(x)) ∧ ∃x (Small(x)) ∧ ¬∃x (Large(x) ∧ Small(x))"
+  },
+  {
+    "NL": "Every smart leader follows at least one principle that only adheres to ethical tenets.",
+    "FOL": "∀x (SmartLeader(x) → ∃y (Follows(x, y) ∧ ∀z (Follows(y, z) → EthicalTenet(z))))"
+  },
+  {
+    "NL": "A student who studies in college and has high grades is a scholar.",
+    "FOL": "∀x (Student(x) ∧ StudiesInCollege(x) ∧ HasHighGrades(x) → Scholar(x))"
+  },
+  {
+    "NL": "All athletes trained at least one sport.",
+    "FOL": "∀x (Athlete(x) → ∃y (Sport(y) ∧ Trained(x, y)))"
+  },
+  {
+    "NL": "If a fish is not a shark, it can secrete ink, and it has two gills.",
+    "FOL": "∀x (Fish(x) ∧ ¬Shark(x) → (CanSecreteInk(x) ∧ HasTwoGills(x)))"
+  },
+  {
+    "NL": "A person is a sibling of someone if they share one or both parents with that another person",
+    "FOL": "∀x ∃y (Person(x) ∧ Person(y) ∧ ShareParent(x, y) → SiblingOf(x, y))"
+  },
+  {
+    "NL": "Some oranges are orange and juicy.",
+    "FOL": "∃x (Orange(x) ∧ OrangeColor(x) ∧ Juicy(x))"
+  },
+  {
+    "NL": "If something is a hefty truck or a compact car, then it is either black or silver, but not both.",
+    "FOL": "∀x ((Hefty(x) ∧ Truck(x)) ∨ (Compact(x) ∧ Car(x)) → (Black(x) ⊕ Silver(x)))"
+  },
+  {
+    "NL": "Omnivores eat both plants and other animals, while herbivores eat only plants.",
+    "FOL": "∀x ∀y (Omnivore(x) ∧ (Plant(y) ∨ Animal(y)) → Eats(x, y)) ∧ ∀z ∀w (Herbivore(z) ∧ Eats(z, w) → Plant(w))"
+  },
+  {
+    "NL": "A monkey is swinging in a tree, while a snake is slithering in the grass.",
+    "FOL": "∃x ∃y (Monkey(x) ∧ Tree(y) ∧ SwingingIn(x, y)) ∧ ∃z (Snake(z) ∧ Slithering(z) ∧ InTheGrass(z))"
+  },
+  {
+    "NL": "No movies are everlasting, still, it's entertaining to watch movies.",
+    "FOL": "¬∀x (Movie(x) → Everlasting(x)) ∧ ∀y (Movie(y) → EntertainingToWatch(y))"
+  },
+  {
+    "NL": "A cat is sleeping in a basket near the fireplace.",
+    "FOL": "∃x ∃y (Cat(x) ∧ Basket(y) ∧ SleepingIn(x, y) ∧ NearTheFireplace(y))"
+  },
+  {
+    "NL": "David is a pharmacist, painter, and historian.",
+    "FOL": "Pharmacist(david) ∧ Painter(david) ∧ Historian(david)"
+  },
+  {
+    "NL": "Nobody is a happy teacher.",
+    "FOL": "¬∃x (Teacher(x) ∧ Happy(x))"
+  },
+  {
+    "NL": "Nothing is a small star or a large galaxy.",
+    "FOL": "¬∃x ((Small(x) ∧ Star(x)) ∨ (Large(x) ∧ Galaxy(x)))"
+  },
+  {
+    "NL": "A regenerative power supply is continuously recreated, diminishing the possibility of shortage and curtailing habitat destruction.",
+    "FOL": "∀x (RegenerativePowerSupply(x) → (ContinuouslyRecreated(x) ∧ DiminishedPossibilityOfShortage(x) ∧ CurtailedHabitatDestruction(x)))"
+  },
+  {
+    "NL": "There is no teacher that teaches every calculus topic.",
+    "FOL": "¬∃x (Teacher(x) ∧ ∀y (CalculusTopic(y) → Teaches(x, y)))"
+  },
+  {
+    "NL": "Every movie is not interesting.",
+    "FOL": "¬∀x (Movie(x) → Interesting(x))"
+  },
+  {
+    "NL": "All French are Europeans, but not all Europeans are French.",
+    "FOL": "∀x (French(x) → European(x)) ∧ ∃y (European(y) ∧ ¬French(y))"
+  },
+  {
+    "NL": "No appliance is judged effective unless it is either battery-driven or uses wind energy, and not every one of them is reliable.",
+    "FOL": "¬∃z (Appliance(z) ∧ Effective(z) ∨ (BatteryDriven(z) ∨ UsesWindEnergy(z))) ∧ ¬∀w (Appliance(w) → Reliable(w))"
+  },
+  {
+    "NL": "Every vehicle is either a car or a truck, but not both.",
+    "FOL": "∀x (Vehicle(x) → (Car(x) ⊕ Truck(x)))"
+  },
+  {
+    "NL": "A goat has four legs, while a pigeon has two legs, but an eel has no legs.",
+    "FOL": "∀x (Goat(x) → HasFourLegs(x)) ∧ ∀y (Pigeon(y) → HasTwoLegs(y)) ∧ ∀z (Eel(z) → ¬HasLegs(z))"
+  },
+  {
+    "NL": "Lana drinks a French wine if and only if it was bottled before 1980.",
+    "FOL": "∀x (Wine(x) ∧ BottledBy(x, french) → (BottledBeforenineteeneighty(x) ↔ Drinks(lana, x)))"
+  },
+  {
+    "NL": "If all the lessons are not interesting, then there is a test all exams are about.",
+    "FOL": "¬∀x (Lesson(x) → Interesting(x)) → ∃y (Test(y) ∧ ∀z (Exam(z) → About(z, y)))"
+  },
+  {
+    "NL": "All teachers are knowledgeable, or some students are not bright learners.",
+    "FOL": "∀x (Teacher(x) → Knowledgeable(x)) ∨ ∃y (Student(y) ∧ ¬BrightLearner(y))"
+  },
+  {
+    "NL": "A scientist is led by a research head all members abide by.",
+    "FOL": "∃x ∃y ∀z (Scientist(x) ∧ ResearchHead(y) ∧ Member(z) ∧ AbideBy(z, y) → LedBy(x, y))"
+  },
+  {
+    "NL": "A dish is either American or Italian.",
+    "FOL": "∀x (Dish(x) → (American(x) ⊕ Italian(x)))"
+  },
+  {
+    "NL": "If a house is an apartment, then it is either big or small, but not both.",
+    "FOL": "∀x (House(x) ∧ Apartment(x) → (Big(x) ⊕ Small(x)))"
+  },
+  {
+    "NL": "None of the members in the group studies either law or medicine.",
+    "FOL": "∀v (Member(v) ∧ InGroup(v) → ¬(Study(v, law) ∨ Study(v, medicine)))"
+  },
+  {
+    "NL": "A fish is swimming in a pond, and a frog is croaking at dawn.",
+    "FOL": "∃x ∃y (Fish(x) ∧ Pond(y) ∧ SwimmingIn(x, y)) ∧ ∃z (Frog(z) ∧ Croaking(z) ∧ AtDawn(z))"
+  },
+  {
+    "NL": "There is no scientist who has researched both physics and chemistry but has never published a research paper.",
+    "FOL": "¬∃x (Scientist(x) ∧ ResearchPhysics(x) ∧ ResearchChemistry(x) ∧ ¬PublishedResearch(x))"
+  },
+  {
+    "NL": "If it's not a bird, it cannot fly, and it doesn't lay eggs.",
+    "FOL": "∀x (Animal(x) ∧ ¬Bird(x) → (¬CanFly(x) ∧ ¬LaysEggs(x)))"
+  },
+  {
+    "NL": "A train leaves the station and arrives at a terminus without halting at any other stations.",
+    "FOL": "∃x ∃y ∃z (Train(x) ∧ Station(y) ∧ Terminus(z) → LeavesFrom(x, y) ∧ ArrivesAt(x, z) ∧ ¬∃w (Station(w) ∧ HaltsAt(x, w)))"
+  },
+  {
+    "NL": "A flower is blue if and only if it attracts at least one honey bee.",
+    "FOL": "∀x (Blue(x) ↔ ∃y (HoneyBee(y) ∧ Attracts(x, y)))"
+  },
+  {
+    "NL": "A race begins at its starting line and concludes at its finishing line, crossing numerous markers in between.",
+    "FOL": "∃x ∃y ∃z (Race(x) ∧ StartingLine(y) ∧ FinishingLine(z) → BeginsAt(x, y) ∧ ConcludesAt(x, z) ∧ ∃w (Marker(w) ∧ Crosses(x, w)))"
+  },
+  {
+    "NL": "Everything sweet is tasty unless it is bitter.",
+    "FOL": "∀x (Sweet(x) → (¬Bitter(x) → Tasty(x)))"
+  },
+  {
+    "NL": "A chef cooks pasta or stir fry.",
+    "FOL": "∀x (Chef(x) → (CooksPasta(x) ∨ CooksStirFry(x)))"
+  },
+  {
+    "NL": "Cars that are efficient and have good engines always perform better.",
+    "FOL": "∀x (Car(x) ∧ Efficient(x) ∧ GoodEngine(x) → PerformBetter(x))"
+  },
+  {
+    "NL": "There exist flowers that are colorful and fragrant.",
+    "FOL": "∃x (Flower(x) ∧ Colorful(x) ∧ Fragrant(x))"
+  },
+  {
+    "NL": "A figure is an ellipse if and only if every shape it compromises to is thin.",
+    "FOL": "∀x (Ellipse(x) ↔ ∀y (Compromises(x, y) → Thin(y)))"
+  },
+  {
+    "NL": "A door is opened or closed, never both.",
+    "FOL": "∀x (Door(x) → (Open(x) ⊕ Closed(x)))"
+  },
+  {
+    "NL": "All entrepreneurs who respect an innovation are respected by an innovation.",
+    "FOL": "∀x (Entrepreneur(x) ∧ ∃y (Innovation(y) ∧ Respects(x, y)) → ∃z (Innovation(z) ∧ Respects(z, x)))"
+  },
+  {
+    "NL": "Some doctors are authors.",
+    "FOL": "∃x (Doctor(x) ∧ Author(x))"
+  },
+  {
+    "NL": "All squares are small.",
+    "FOL": "∀x (Square(x) → Small(x))"
+  },
+  {
+    "NL": "If a car is fast, that car is expensive.",
+    "FOL": "∀x (Car(x) ∧ Fast(x) → Expensive(x))"
+  },
+  {
+    "NL": "Something is a thin triangle if and only if it isn't purple.",
+    "FOL": "∀z (Thin(z) ∧ Triangle(z) ↔ ¬Purple(z))"
+  },
+  {
+    "NL": "All athletes are not egocentric or overbearing.",
+    "FOL": "∃x (Athlete(x) ∧ (¬Egocentric(x) ∨ ¬Overbearing(x)))"
+  },
+  {
+    "NL": "A rainbow comes into being when sunlight refracts in rain showers and forms a spectrum of light in the sky.",
+    "FOL": "∀x (Sunlight(x) ∧ RefractsInRainShowers(x) ∧ FormsSpectrumOfLight(x) → Rainbow(x))"
+  },
+  {
+    "NL": "All musicians who have talent and instrumental proficiency are respected.",
+    "FOL": "∀x (Musician(x) ∧ HasTalent(x) ∧ HasInstrumentalProficiency(x) → Respected(x))"
+  },
+  {
+    "NL": "Everyone who sees life as a monopoly game, is bound to go bankrupt.",
+    "FOL": "∀x (SeesLifeAsMonopolyGame(x) → BoundToGoBankrupt(x))"
+  },
+  {
+    "NL": "A mechanic fixes cars, suggests maintenance, and observes their functioning.",
+    "FOL": "∀x ∃y (Mechanic(x) → Car(y) ∧ Fix(x, y) ∧ SuggestMaintenance(x) ∧ ObserveFunctioning(x, y))"
+  },
+  {
+    "NL": "A person is dubbed an inventor if they create new devices.",
+    "FOL": "∀x (Person(x) ∧ CreateNewDevices(x) → Inventor(x))"
+  },
+  {
+    "NL": "A chef can be vegan or love baking pies, but not both.",
+    "FOL": "∀x (Vegan(x) ⊕ LoveBakingPies(x))"
+  },
+  {
+    "NL": "There is no largest rational number, and no smallest rational number.",
+    "FOL": "∀x (RationalNumber(x) → (∃y (RationalNumber(y) ∧ Larger(y, x)) ∧ ∃z (RationalNumber(z) ∧ Smaller(z, x))))"
+  },
+  {
+    "NL": "A person is not both happy and sad.",
+    "FOL": "∀x (Person(x) → ¬(Happy(x) ∧ Sad(x)))"
+  },
+  {
+    "NL": "A turtle is perfect as a pet if and only if it is not aggressive and fast.",
+    "FOL": "∀x (Turtle(x) → (PerfectAsPet(x) ↔ ¬Aggressive(x) ∧ ¬Fast(x)))"
+  },
+  {
+    "NL": "Few players either play football or baseball, but do not engage in both.",
+    "FOL": "∃x (Player(x) ∧ (PlayFootball(x) ⊕ PlayBaseball(x)))"
+  },
+  {
+    "NL": "Nobody can be both a teacher and a student at the same time.",
+    "FOL": "¬∃x (Teacher(x) ∧ Student(x))"
+  },
+  {
+    "NL": "An athlete, such as a swimmer or a runner, can maintain good health without consuming harmful substances.",
+    "FOL": "∀x (Athlete(x) ∧ (Swimmer(x) ∨ Runner(x)) → (MaintainGoodHealth(x) ∧ ¬ConsumesHarmfulSubstances(x)))"
+  },
+  {
+    "NL": "A plant can be a flowering type, exhibit vibrant blooms, and be a gardener's delight, or it can be a succulent, display minimal needs, and suit indoor conditions.",
+    "FOL": "∀x (Plant(x) → ((Flowering(x) ∧ ExhibitsVibrantBlooms(x) ∧ GardenersDelight(x)) ⊕ (Succulent(x) ∧ DisplaysMinimalNeeds(x) ∧ SuitsIndoorConditions(x))))"
+  },
+  {
+    "NL": "An individual is a student if they are enrolled in a course, regularly attend classes, and are studying towards a degree.",
+    "FOL": "∀x (Individual(x) ∧ EnrolledInCourse(x) ∧ RegularlyAttendClasses(x) ∧ StudyingTowardsDegree(x) → Student(x))"
+  },
+  {
+    "NL": "Scientific theories are not assumptions.",
+    "FOL": "∀x (ScientificTheory(x) → ¬Assumption(x))"
+  },
+  {
+    "NL": "Every programmer is logical, but not every logical person is a programmer.",
+    "FOL": "∀x (Programmer(x) → Logical(x)) ∧ ¬∀x (Logical(x) → Programmer(x))"
+  },
+  {
+    "NL": "Every house can be warmed by a heater or a fireplace.",
+    "FOL": "∀x (House(x) → (WarmedByHeater(x) ⊕ WarmedByFireplace(x)))"
+  },
+  {
+    "NL": "There is no sphere that connects to every tiny circle.",
+    "FOL": "¬∃x (Sphere(x) ∧ ∀y (Tiny(y) ∧ Circle(y) → Connects(x, y)))"
+  },
+  {
+    "NL": "A squirrel is running around a field.",
+    "FOL": "∃x ∃y (Squirrel(x) ∧ Field(y) ∧ RunningAround(x, y))"
+  },
+  {
+    "NL": "A lion is roaming in the savanna.",
+    "FOL": "∃x (Lion(x) ∧ Roaming(x) ∧ InTheSavanna(x))"
+  },
+  {
+    "NL": "There is no chef who can cook both Chinese and Italian dishes but has never cooked in a restaurant.",
+    "FOL": "¬∃x (Chef(x) ∧ CookChinese(x) ∧ CookItalian(x) ∧ ¬CookedInRestaurant(x))"
+  },
+  {
+    "NL": "Every programmer codes in Python and hates Java.",
+    "FOL": "∀x (Programmer(x) → (CodesPython(x) ∧ HatesJava(x)))"
+  },
+  {
+    "NL": "Several cars honk noisily.",
+    "FOL": "∃x (Car(x) ∧ HonkNoisily(x))"
+  },
+  {
+    "NL": "A person is successful if they have wealth.",
+    "FOL": "∀x (Person(x) ∧ HaveWealth(x) → Successful(x))"
+  },
+  {
+    "NL": "If there are no priceless paintings, then no curator exhibit any artwork.",
+    "FOL": "¬∃x (PricelessPainting(x)) → ¬∃y (Curator(y) ∧ ∃z (Artwork(z) ∧ Exhibit(y, z)))"
+  },
+  {
+    "NL": "A fish is swimming in an aquarium, and a turtle is lying on a rock.",
+    "FOL": "∃x ∃y (Fish(x) ∧ Aquarium(y) ∧ SwimmingIn(x, y)) ∧ ∃z (Turtle(z) ∧ Lying(z) ∧ OnARock(z))"
+  },
+  {
+    "NL": "A student respects a teacher only if that teacher mentors the student.",
+    "FOL": "∀x ∀y (Student(x) ∧ Teacher(y) ∧ (Respects(x, y) → Mentors(y, x)))"
+  },
+  {
+    "NL": "All eagles are animals.",
+    "FOL": "∀x (Eagle(x) → Animal(x))"
+  },
+  {
+    "NL": "No writer who pens both novels and poems, unless they have won a celebrated literary award, has published in more than twenty books or has not collaborated with a publishing house.",
+    "FOL": "¬∃y (Writer(y) ∧ PensNovels(y) ∧ PensPoems(y) ∨ WonCelebratedLiteraryAward(y) ∧ (PublishedInMoreThanTwentyBooks(y) ∨ ¬CollaboratedWithPublishingHouse(y)))"
+  },
+  {
+    "NL": "A creature is distinguished as a pet if they live in a house or an apartment.",
+    "FOL": "∀x (Creature(x) ∧ (LivesInHouse(x) ∨ LivesInApartment(x)) → Pet(x))"
+  },
+  {
+    "NL": "A cat is sleeping on a rug, and a dog is playing in the garden.",
+    "FOL": "∃x ∃y (Cat(x) ∧ Rug(y) ∧ SleepingOn(x, y)) ∧ ∃z (Dog(z) ∧ Playing(z) ∧ InTheGarden(z))"
+  },
+  {
+    "NL": "If a software is user-friendly, then it requires less memory and performs efficiently.",
+    "FOL": "∀x (Software(x) ∧ UserFriendly(x) → RequiresLessMemory(x) ∧ PerformsEfficiently(x))"
+  },
+  {
+    "NL": "No scientist who researches both physics and chemistry, unless they have won a Nobel prize, has published more than ten research papers or has not delivered a conference talk.",
+    "FOL": "¬∃x (Scientist(x) ∧ ResearchesPhysics(x) ∧ ResearchesChemistry(x) ∨ WonNobelPrize(x) ∧ (PublishedMoreThanTenResearchPapers(x) ∨ ¬DeliveredConferenceTalk(x)))"
+  },
+  {
+    "NL": "No author who writes every book is unread by anyone.",
+    "FOL": "∀x (Author(x) → ∀y ((Book(y) → Write(x, y)) → ¬∃z (Person(z) ∧ Unread(z, x))))"
+  },
+  {
+    "NL": "A song is popular if and only if it is liked by at least one famous person.",
+    "FOL": "∀w (Popular(w) ↔ ∃v (Famous(v) ∧LikedBy(w, v)))"
+  },
+  {
+    "NL": "A signal transmits data when it is modulated or relayed.",
+    "FOL": "∀x (Signal(x) ∧ (Modulated(x) ∨ Relayed(x)) → TransmitsData(x))"
+  },
+  {
+    "NL": "Any software engineer coding in Python and C++, unless they are a team lead, either has received a salary hike or hasn't worked on a machine learning project.",
+    "FOL": "∀x (SoftwareEngineer(x) ∧ CodesPython(x) ∧ CodesCPlusPlus(x) ∨ TeamLead(x) → (ReceivedSalaryHike(x) ∨ ¬WorkedOnMachineLearningProject(x)))"
+  },
+  {
+    "NL": "A beverage is regarded as a cocktail if it is mixed and served using alcohol and juice.",
+    "FOL": "∀x (Beverage(x) ∧ Mixed(x) ∧ ServedByAlcohol(x) ∧ ServedByJuice(x) → Cocktail(x))"
+  },
+  {
+    "NL": "Animals that live in the wild are generally fierce.",
+    "FOL": "∀x (Animal(x) ∧ LiveInTheWild(x) → GenerallyFierce(x))"
+  },
+  {
+    "NL": "An animal that has fur, can swim, eats fish, and lives in water is an otter.",
+    "FOL": "∀x (Animal(x) ∧ HasFur(x) ∧ CanSwim(x) ∧ EatsFish(x) ∧ LivesInWater(x) → Otter(x))"
+  },
+  {
+    "NL": "A gardener plants trees, suggests fertilizers, and oversees their growth.",
+    "FOL": "∀x ∃y (Gardener(x) → Tree(y) ∧ Plant(x, y) ∧ SuggestFertilizer(x) ∧ OverseeGrowth(x, y))"
+  },
+  {
+    "NL": "A compound is an antiseptic if it is a medicinal blend, arranged to defeat or restrain germs, and influences various pathogens, such as Pseudomonas, Enterococcus, and Clostridium.",
+    "FOL": "∀x ∃y ∃z ∃w (Compound(x) ∧ MedicinalBlend(x) ∧ Pseudomonas(y) ∧ Enterococcus(z) ∧ Clostridium(w) ∧ (ArrangedToDefeatGerms(x) ∨ ArrangedToRestrainsGerms(x)) ∧ Influences(x, y) ∧ Influences(x, z) ∧ Influences(x, w) → Antiseptic(x))"
+  },
+  {
+    "NL": "Computers that are powerful and have high-speed processors always perform better.",
+    "FOL": "∀x (Computer(x) ∧ Powerful(x) ∧ HighSpeedProcessor(x) → PerformBetter(x))"
+  },
+  {
+    "NL": "Not every restaurant serves breakfast but there exists a meal that all meals are associated with it.",
+    "FOL": "¬∀x (Restaurant(x) → ServesBreakfast(x)) → ∃y (Meal(y) ∧ ∀z (Meal(z) → AssociatedWith(z, y)))"
+  },
+  {
+    "NL": "Not all paintings are beautiful.",
+    "FOL": "¬∀x (Painting(x) → Beautiful(x))"
+  },
+  {
+    "NL": "If something is a book, then all objects are associated with a huge idea.",
+    "FOL": "∃x (Book(x)) → ∀y ∃z (Huge(z) ∧ AssociatedWith(y, z))"
+  },
+  {
+    "NL": "No athletes are elite unless they are disciplined, but all of them aim to win.",
+    "FOL": "∀x (Athlete(x) → (¬Elite(x) ∨ Disciplined(x))) ∧ ∀y (Athlete(y) → AimToWin(y))"
+  },
+  {
+    "NL": "Some shapes are either square or circle.",
+    "FOL": "∃x (Shape(x) ∧ (Square(x) ⊕ Circle(x)))"
+  },
+  {
+    "NL": "A rhombus connects to a trapezoid only if that trapezoid connects back to it.",
+    "FOL": "∀x (Rhombus(x) → ∀y (Trapezoid(y) ∧ ConnectsTo(x, y) → ConnectsTo(y, x)))"
+  },
+  {
+    "NL": "Every teacher teaches at least one subject.",
+    "FOL": "∀x (Teacher(x) → ∃y (Subject(y) ∧ Teaches(x, y)))"
+  },
+  {
+    "NL": "Every city has both rich and poor areas, else it is filled with either industrial zones or commercial zones.",
+    "FOL": "∀x (City(x) → (RichArea(x) ∧ PoorArea(x)) ⊕ (IndustrialZone(x) ∧ CommercialZone(x)))"
+  },
+  {
+    "NL": "Every car is not a sedan or a truck.",
+    "FOL": "¬∀x (Car(x) → (Sedan(x) ∨ Truck(x)))"
+  },
+  {
+    "NL": "Not all humans trust Peter.",
+    "FOL": "¬∀x (Human(x) → Trust(x, peter))"
+  },
+  {
+    "NL": "An entity is classified as a reptile if it lays eggs and has scales.",
+    "FOL": "∀x ((Entity(x) ∧ LaysEggs(x) ∧ HasScales(x)) → Reptile(x))"
+  },
+  {
+    "NL": "If a flower is beautiful and fragrant, then it attracts at least one bee, unless it is artificial.",
+    "FOL": "∀x ((Beautiful(x) ∧ Fragrant(x)) → ∃y (Bee(y) ∧ Attracts(x, y) ∨ Artificial(x)))"
+  },
+  {
+    "NL": "All engineers are not lazy or con-artists.",
+    "FOL": "∃x (Engineer(x) ∧ (¬Lazy(x) ∨ ¬ConArtist(x)))"
+  },
+  {
+    "NL": "All cats are not fluffy.",
+    "FOL": "¬∀x (Cat(x) → Fluffy(x))"
+  },
+  {
+    "NL": "Every player who admires a coach is admired by that coach.",
+    "FOL": "∀x ∀y (Player(x) ∧ Coach(y) ∧ Admire(x, y) → Admire(y, x))"
+  },
+  {
+    "NL": "A movie is captivating if it includes either action or drama.",
+    "FOL": "∀x (Movie(x) ∧ (IncludeAction(x) ∨ IncludeDrama(x)) → Captivating(x))"
+  },
+  {
+    "NL": "An athlete is trained by the coach who all teammates respect.",
+    "FOL": "∃x ∃y ∀z (Athlete(x) ∧ Coach(y) ∧ Teammate(z) ∧ Respect(z, y) → TrainedBy(x, y))"
+  },
+  {
+    "NL": "Every book is interesting, but not every interesting thing is a book.",
+    "FOL": "∀x (Book(x) → Interesting(x)) ∧ ¬∀x (Interesting(x) → Book(x))"
+  },
+  {
+    "NL": "Some books are educational.",
+    "FOL": "∃x (Book(x) ∧ Educational(x))"
+  },
+  {
+    "NL": "Some dogs are fat and some dogs are fast, but there are no fat fast dogs.",
+    "FOL": "∃x (Fat(x)) ∧ ∃x (Fast(x)) ∧ ¬∃x (Fat(x) ∧ Fast(x))"
+  },
+  {
+    "NL": "Owen shares with Paula if and only if Paula shares with Owen.",
+    "FOL": "Share(owen, paula) ↔ Share(paula, owen)"
+  },
+  {
+    "NL": "If James is a scientist then Emily is a researcher.",
+    "FOL": "Scientist(james) → Researcher(emily)"
+  },
+  {
+    "NL": "No musician who plays either piano or violin is unskilled, and not every one of them is a Grammy winner.",
+    "FOL": "¬∃x (Musician(x) ∧ (PlaysPiano(x) ∨ PlaysViolin(x)) ∧ Unskilled(x)) ∧ ¬∀y (Musician(y) → GrammyWinner(y))"
+  },
+  {
+    "NL": "Every scientist who has collaborated with at least one scientist, who on the other hand, has not won a grant, has either conducted more than two experiments or attended all international symposiums.",
+    "FOL": "∀x (Scientist(x) ∧ ∃y (Scientist(y) ∧ ¬WonGrant(y) ∧ CollaboratedWith(x, y)) → (ConductedMoreThanTwoExperiments(x) ∨ ∀z (InternationalSymposium(z) → Attended(x, z))))"
+  },
+  {
+    "NL": "Every fish is an aquatic animal.",
+    "FOL": "∀x (Fish(x) → AquaticAnimal(x))"
+  },
+  {
+    "NL": "A movie is successful if it has an engaging storyline and stunning visuals.",
+    "FOL": "∀x (Movie(x) ∧ HasEngagingStoryline(x) ∧ HasStunningVisuals(x) → Successful(x))"
+  },
+  {
+    "NL": "Maria loves John or Maria is a doctor.",
+    "FOL": "Love(maria, john) ∨ Doctor(maria)"
+  },
+  {
+    "NL": "A car is either electric or gas powered if it is not hybrid.",
+    "FOL": "∀x (Car(x) ∧ ¬Hybrid(x) → (Electric(x) ∨ GasPowered(x)))"
+  },
+  {
+    "NL": "A dog becomes alpha if it asserts dominance over other pack members.",
+    "FOL": "∀x ∀y (Dog(x) ∧ Dog(y) ∧ AssertDominance(x, y) → BecomesAlpha(x))"
+  },
+  {
+    "NL": "Everything is tall only if it is a green tree.",
+    "FOL": "∀x (Tall(x) ∧ Tree(x) → Green(x))"
+  },
+  {
+    "NL": "A dress is considered a gown if it is elegant, long, and worn on formal occasions.",
+    "FOL": "∀x (Dress(x) → Elegant(x) ∧ Long(x) ∧ WornOnFormalOccasions(x) → Gown(x))"
+  },
+  {
+    "NL": "A pizza is appetizing if it contains cheese or tomatoes.",
+    "FOL": "∀x (Pizza(x) ∧ (ContainsCheese(x) ∨ ContainsTomatoes(x)) → Appetizing(x))"
+  },
+  {
+    "NL": "There is a school that all children go to if not all rectangles have eight corners.",
+    "FOL": "¬∀x (Rectangle(x) → EightCorners(x)) → ∃y (School(y) ∧ ∀z (Child(z) → GoesTo(z, y)))"
+  },
+  {
+    "NL": "All games are exciting if and only if they are either strategy or action based.",
+    "FOL": "∀x (Game(x) → (Exciting(x) ↔ (Strategy(x) ∨ Action(x))))"
+  },
+  {
+    "NL": "Cities with clean air, efficient public transport, and green spaces have better living environments.",
+    "FOL": "∀x (City(x) ∧ CleanAir(x) ∧ EfficientPublicTransport(x) ∧ GreenSpaces(x) → BetterLivingEnvironment(x))"
+  },
+  {
+    "NL": "Something is either a yellow triangle or a blue square, but not both.",
+    "FOL": "∀x ((Yellow(x) ∧ Triangle(x)) ⊕ (Blue(x) ∧ Square(x)))"
+  },
+  {
+    "NL": "A male becomes a grandfather if his offspring has a progeny.",
+    "FOL": "∀x ∃y ∃z (Male(x) ∧ Person(y) ∧ Person(z) ∧ OffspringOf(y, x) ∧ ProgenyOf(z, y) → Grandfather(x))"
+  },
+  {
+    "NL": "If a dish is part of a chef's menu, it is a soup, salad, or dessert.",
+    "FOL": "∀x (Dish(x) ∧ PartOfChefsMenu(x) → Soup(x) ∨ Salad(x) ∨ Dessert(x))"
+  },
+  {
+    "NL": "An apple tree is a type of tree that produces apples, a cherry tree is a type of tree with blossoms, and a spruce tree is a type of tree with needles and cones.",
+    "FOL": "∀x ∃y (AppleTree(x) → Apple(y) ∧ Produce(x,y)) ∧ ∀z (CherryTree(z) → HasBlossoms(z)) ∧ ∀w (SpruceTree(w) → HasNeedle(w) ∧ HasCone(w))"
+  },
+  {
+    "NL": "A tablet connects to the internet and permits users to use different apps and services.",
+    "FOL": "∀x (Tablet(x) → (ConnectsToInternet(x) ∧ AllowsUseOfApps(x) ∧ AllowsUseOfServices(x)))"
+  },
+  {
+    "NL": "Any book is interesting only if it is a mystery.",
+    "FOL": "∀x (Book(x) → (Interesting(x) → Mystery(x)))"
+  },
+  {
+    "NL": "If not all humans are rational, there exists a language that every language translates into.",
+    "FOL": "¬∀x (Human(x) → Rational(x)) → ∃y (Language(y) ∧ ∀z (Language(z) → TranslatesInto(z, y)))"
+  },
+  {
+    "NL": "Fruits that are ripe and juicy are more delicious.",
+    "FOL": "∀x (Fruit(x) ∧ Ripe(x) ∧ Juicy(x) → MoreDelicious(x))"
+  },
+  {
+    "NL": "A man is deemed a frequent traveler if he changes his city weekly.",
+    "FOL": "∀x (Man(x) ∧ ChangesCityWeekly(x) → FrequentTraveler(x))"
+  },
+  {
+    "NL": "Not every lake in Australia is larger than every lake in Asia.",
+    "FOL": "¬∀x ∀y (Lake(x) ∧ In(x, australia) ∧ Lake(y) ∧ In(y, asia) → Larger(x, y))"
+  },
+  {
+    "NL": "Any employee who admires a manager is admired by that manager in return.",
+    "FOL": "∀x ∀y (Employee(x) ∧ Manager(y) ∧ Admire(x, y) → Admire(y, x))"
+  },
+  {
+    "NL": "Alice wears a dress by Vera Wang if and only if it is white.",
+    "FOL": "∀x (Dress(x) ∧ Designer(x, verawang) → (White(x) ↔ Wears(alice, x)))"
+  },
+  {
+    "NL": "There is a barista in every coffee shop who can make multiple types of coffee.",
+    "FOL": "∀y (CoffeeShop(y) → ∃x (Barista(x) ∧ WorksAt(x, y) ∧ CanMakeMultipleTypesOfCoffee(x)))"
+  },
+  {
+    "NL": "Either Noah is a painter or Emma is a painter, but not both.",
+    "FOL": "Painter(noah) ⊕ Painter(emma)"
+  },
+  {
+    "NL": "If an individual is a doctor, they either practice in a hospital or at a medical school.",
+    "FOL": "∀x (Individual(x) ∧ Doctor(x) → PracticeInHospital(x) ⊕ PracticeInMedicalSchool(x))"
+  },
+  {
+    "NL": "If an object is a sphere, then it is either large or small, but not both.",
+    "FOL": "∀x (Sphere(x) → (Large(x) ⊕ Small(x)))"
+  },
+  {
+    "NL": "A restaurant is popular if it serves delicious food, offers a great atmosphere, and provides good service.",
+    "FOL": "∀x (Restaurant(x) ∧ ServesDeliciousFood(x) ∧ GreatAtmosphere(x) ∧ GoodService(x) → IsPopular(x))"
+  },
+  {
+    "NL": "A car is a Sedan or not a Sedan.",
+    "FOL": "∀x (Car(x) → (Sedan(x) ⊕ ¬Sedan(x)))"
+  },
+  {
+    "NL": "A plant can be a flower, a tree, or a shrub.",
+    "FOL": "∀x (Plant(x) → (Flower(x) ∨ Tree(x) ∨ Shrub(x)))"
+  },
+  {
+    "NL": "If Maria is a doctor then Claire is not a nurse.",
+    "FOL": "Doctor(maria) → ¬Nurse(claire)"
+  },
+  {
+    "NL": "A game is a board game or a card game.",
+    "FOL": "∀x (Game(x) → (BoardGame(x) ∨ CardGame(x)))"
+  },
+  {
+    "NL": "Teachers educate students, and teaching assistants help them.",
+    "FOL": "∀x ∀y ∀z (Teacher(x) ∧ Student(y) ∧ TeachingAssistant(z) → Educates(x, y) ∧ Helps(z, y))"
+  },
+  {
+    "NL": "John admires Mary or Alice.",
+    "FOL": "Admire(john, mary) ∨ Admire(john, alice)"
+  },
+  {
+    "NL": "A lecture that is informative can make people learn.",
+    "FOL": "∀x ∀y (Lecture(x) ∧ Informative(x) ∧ Person(y) → CanMakeLearn(x, y))"
+  },
+  {
+    "NL": "A book is placed on the table in the library.",
+    "FOL": "∃x ∃y (Book(x) ∧ Table(y) ∧ PlacedOn(x, y) ∧ InTheLibrary(x))"
+  },
+  {
+    "NL": "All men are finite.",
+    "FOL": "∀x (Men(x) → Finite(x))"
+  },
+  {
+    "NL": "A device that is electronic and can play music is a mp3 player.",
+    "FOL": "∀x (Device(x) ∧ IsElectronic(x) ∧ CanPlayMusic(x) → MPThreePlayer(x))"
+  },
+  {
+    "NL": "Professors teach students, and teaching assistants support them.",
+    "FOL": "∀x ∀y ∀z (Professor(x) ∧ Student(y) ∧ TeachingAssistant(z) → Teaches(x, y) ∧ Supports(z, y))"
+  },
+  {
+    "NL": "A product sells well if it is of high quality, serves a need, and is reasonably priced.",
+    "FOL": "∀x (Product(x) ∧ HighQuality(x) ∧ ServesNeed(x) ∧ ReasonablyPriced(x) → SellsWell(x))"
+  },
+  {
+    "NL": "A student is happy if and only if they are intelligent and have friends.",
+    "FOL": "∀x (Student(x) → (Happy(x) ↔ (Intelligent(x) ∧ HasFriends(x))))"
+  },
+  {
+    "NL": "A kit with four wheels driven by a motor is a car.",
+    "FOL": "∀x (Kit(x) ∧ HasFourWheels(x) ∧ DrivenByMotor(x) → Car(x))"
+  },
+  {
+    "NL": "A plant is either a tree or a bush.",
+    "FOL": "∀x (Plant(x) → (Tree(x) ⊕ Bush(x)))"
+  },
+  {
+    "NL": "A professional is a programmer if they write code efficiently and work on software projects.",
+    "FOL": "∀x (Professional(x) ∧ WriteCode(x) ∧ WorkOnSoftwareProjects(x) → Programmer(x))"
+  },
+  {
+    "NL": "Every person isn't a doctor.",
+    "FOL": "¬∀x (Person(x) → Doctor(x))"
+  },
+  {
+    "NL": "A dog is brown or grey.",
+    "FOL": "∀x (Dog(x) → (Brown(x) ∨ Grey(x)))"
+  },
+  {
+    "NL": "A heatwave is extreme if it includes high temperature, lack of rainfall, and the possible occurrence of wildfires or drought.",
+    "FOL": "∀x (Heatwave(x) ∧ IncludeHighTemperature(x) ∧ LackOfRainfall(x) ∧ (PossibleOccurrenceOfWildfires(x) ∨ PossibleOccurrenceOfDrought(x)) → Extreme(x))"
+  },
+  {
+    "NL": "A restaurant is delightful if and only if it serves savory dishes, the service is courteous, but it doesn't have exorbitant pricing.",
+    "FOL": "∀x (Restaurant(x) ∧ Delightful(x) ↔ (ServesSavoryDishes(x) ∧ CourteousService(x) ∧ ¬ExorbitantPricing(x)))"
+  },
+  {
+    "NL": "Eva is an actress or Henry is a musician or Isabel is an architect.",
+    "FOL": "Actress(eva) ∨ Musician(henry) ∨ Architect(isabel)"
+  },
+  {
+    "NL": "If Monica supports Nathan then Nathan supports Monica.",
+    "FOL": "Support(monica, nathan) → Support(nathan, monica)"
+  },
+  {
+    "NL": "A restaurant boasts a comprehensive menu if it boasts steak, salad, and pasta dishes with diverse ingredients.",
+    "FOL": "∀x (Restaurant(x) ∧ ∃y ∃z ∃w (SteakDish(y) ∧ SaladDish(z) ∧ PastaDish(w) ∧ DiverseIngredients(y, z, w) ∧ Boasts(x, y, z, w)) → HasComprehensiveMenu(x))"
+  },
+  {
+    "NL": "Lions that are hungry and aggressive are dangerous.",
+    "FOL": "∀x (Lion(x) ∧ Hungry(x) ∧ Aggressive(x) → Dangerous(x))"
+  },
+  {
+    "NL": "Some workers are either electricians or plumbers, but not both.",
+    "FOL": "∃x (Worker(x) ∧ (Electrician(x) ⊕ Plumber(x)))"
+  },
+  {
+    "NL": "A policeman is arresting a thief in the city.",
+    "FOL": "∃x ∃y (Policeman(x) ∧ Thief(y) ∧ Arresting(x, y) ∧ InTheCity(x))"
+  },
+  {
+    "NL": "A manager supervises certain employees, assigns tasks to them, and reviews their performance.",
+    "FOL": "∀x ∃y (Manager(x) → Employee(y) ∧ Supervises(x, y) ∧ AssignsTasks(x, y) ∧ ReviewsPerformance(x, y))"
+  },
+  {
+    "NL": "A team is victorious if they win more matches than their adversary.",
+    "FOL": "∀x ∀y (Team(x) ∧ Adversary(y) ∧ WinMoreMatches(x, y) → Victorious(x))"
+  },
+  {
+    "NL": "Someone is a happy individual, and someone else is a sad person.",
+    "FOL": "∃x (Happy(x) ∧ Individual(x)) ∧ ∃x (Sad(x) ∧ Person(x))"
+  },
+  {
+    "NL": "A creature is considered a bird if it can fly.",
+    "FOL": "∀x (Creature(x) ∧ CanFly(x) → Bird(x))"
+  },
+  {
+    "NL": "A bike starts off from its area of commencement and stops at the destination area without passing by any other area.",
+    "FOL": "∃x ∃y ∃z (Bike(x) ∧ StartArea(y) ∧ EndArea(z) → SetsOffFrom(x, y) ∧ StopsAt(x, z) ∧ ¬∃w (Area(w) ∧ Between(w, y, z) ∧ PassesBy(x, w)))"
+  },
+  {
+    "NL": "If an animal is a mammal, it breastfeeds its offspring and has fur.",
+    "FOL": "∀x (Animal(x) ∧ Mammal(x) → (BreastfeedOffspring(x) ∧ HasFur(x)))"
+  },
+  {
+    "NL": "A rose has thorns, while a tulip has a smooth stem, but a mushroom has no petals.",
+    "FOL": "∀x (Rose(x) → HasThorns(x)) ∧ ∀y (Tulip(y) → HasSmoothStem(y)) ∧ ∀z (Mushroom(z) → ¬HasPetals(z))"
+  },
+  {
+    "NL": "All animals that are cute and domestic become pets.",
+    "FOL": "∀x (Animal(x) ∧ Cute(x) ∧ Domestic(x) → Pet(x))"
+  },
+  {
+    "NL": "Samantha adores a Rembrandt sculpture if and only if it is ancient.",
+    "FOL": "∀x (Sculpture(x) ∧ MadeBy(x, rembrandt) → (Ancient(x) ↔ Adores(samantha, x)))"
+  },
+  {
+    "NL": "Every chef has a special dish for some customer.",
+    "FOL": "∀x (Chef(x) → ∃y (Customer(y) ∧ SpecialDishFor(x, y)))"
+  },
+  {
+    "NL": "A hormone is an insulator when it is a biocompound, formulated to regulate body functions, and targets a variety of organs such as the heart, liver, brain, and kidney, to maintain homeostasis.",
+    "FOL": "∀x ∃y ∃z ∃w ∃v (Hormone(x) ∧ BioCompound(x) ∧ Heart(y) ∧ Liver(z) ∧ Brain(w) ∧ Kidney(v) ∧ (FormulatedToRegulateBodyFunctions(x) ∧ Targets(x, y) ∧ Targets(x, z) ∧ Targets(x, w) ∧ Targets(x, v) ∧ MaintainsHomeostasis(x)) → Insulator(x))"
+  },
+  {
+    "NL": "An innovative power source, like hydrogen or nuclear energy, can create electrical power without utilizing charcoal, and it helps in lessening global warming.",
+    "FOL": "∀x (InnovativePowerSource(x) ∧ (HydrogenEnergy(x) ∨ NuclearEnergy(x)) → (CreatesElectricalPowerWithoutUtilizingCharcoal(x) ∧ HelpsLessenGlobalWarming(x)))"
+  },
+  {
+    "NL": "A cheetah chases gazelles for feeding, while an owl feeds on the remains of dead rodents.",
+    "FOL": "∀x ∀y (Cheetah(x) ∧ Gazelle(y) → ChasesForFeeding(x, y)) ∧ ∀z ∀w (Owl(z) ∧ DeadRodent(w) → FeedsOnRemainsOf(z, w))"
+  },
+  {
+    "NL": "No human is both a chef and a doctor.",
+    "FOL": "¬∃x (Human(x) ∧ Chef(x) ∧ Doctor(x))"
+  },
+  {
+    "NL": "A service that delivers food and tracks orders is a food delivery app.",
+    "FOL": "∀x (Service(x) → (DeliversFood(x) ∧ TracksOrder(x) → FoodDeliveryApp(x)))"
+  },
+  {
+    "NL": "All cats are fluffy, but not all fluffy ones are cats.",
+    "FOL": "∀x (Cat(x) → Fluffy(x)) ∧ ¬∀x (Fluffy(x) → Cat(x))"
+  },
+  {
+    "NL": "A city is deemed prosperous if it has a high employment rate and either a robust economy or innovative industries.",
+    "FOL": "∀x (City(x) ∧ HasHighEmploymentRate(x) ∧ (HasRobustEconomy(x) ∨ HasInnovativeIndustries(x)) → Prosperous(x))"
+  },
+  {
+    "NL": "People who smoke may face lung diseases.",
+    "FOL": "∀x (Person(x) ∧ Smokes(x) → MayFaceLungDiseases(x))"
+  },
+  {
+    "NL": "A theme park offers variety of rides if it has roller coasters, water slides, and Ferris wheels with different features.",
+    "FOL": "∀x (ThemePark(x) ∧ ∃y ∃z ∃w (RollerCoaster(y) ∧ WaterSlide(z) ∧ FerrisWheel(w) ∧ DifferentFeatures(y, z, w) ∧ Offers(x, y, z, w)) → HasVarietyOfRides(x))"
+  },
+  {
+    "NL": "A device is digital if it operates with a binary system instead of an analog system.",
+    "FOL": "∀z (Device(z) ∧ UsesBinarySystem(z) ∧ ¬UsesAnalogSystem(z) → Digital(z))"
+  },
+  {
+    "NL": "Individuals who grind their teeth may suffer from sleep disruption.",
+    "FOL": "∀x (Individual(x) ∧ GrindsTeeth(x) → MaySufferSleepDisruption(x))"
+  },
+  {
+    "NL": "Every tree is a plant, but not every plant is a tree.",
+    "FOL": "∀x (Tree(x) → Plant(x)) ∧ ¬∀x (Plant(x) → Tree(x))"
+  },
+  {
+    "NL": "An artist can be a painter, a sculptor, or a photographer.",
+    "FOL": "∀x (Artist(x) → (Painter(x) ∨ Sculptor(x) ∨ Photographer(x)))"
+  },
+  {
+    "NL": "There isn't a scientist who has studied all mammals but has never researched a reptile.",
+    "FOL": "¬∃x (Scientist(x) ∧ ∀y (Mammal(y) → HasStudied(x, y)) ∧ ¬∃z (Reptile(z) ∧ HasResearched(x,z)))"
+  },
+  {
+    "NL": "A person is a man or a woman.",
+    "FOL": "∀x (Person(x) → (Man(x) ∨ Woman(x)))"
+  },
+  {
+    "NL": "A hamster is running on a wheel, while a fish is swimming in the tank.",
+    "FOL": "∃x ∃y (Hamster(x) ∧ Wheel(y) ∧ RunningOn(x, y)) ∧ ∃z (Fish(z) ∧ Swimming(z) ∧ InTheTank(z))"
+  },
+  {
+    "NL": "A yellow car is always fast.",
+    "FOL": "∀x (Yellow(x) → Fast(x))"
+  },
+  {
+    "NL": "A machine is a robot or a computer.",
+    "FOL": "∀x (Machine(x) → (Robot(x) ∨ Computer(x)))"
+  },
+  {
+    "NL": "A gardener cares for some plants, prunes branches, and inspects health.",
+    "FOL": "∀x ∃y (Gardener(x) → Plant(y) ∧ Cares(x, y) ∧ PrunesBranches(x) ∧ InspectsHealth(x, y))"
+  },
+  {
+    "NL": "A green energy solution, like tidal or biomass energy, can supply power without relying on natural gas, and it contributes to decreasing greenhouse gases.",
+    "FOL": "∀x (GreenEnergySolution(x) ∧ (TidalEnergy(x) ∨ BiomassEnergy(x)) → (SuppliesPowerWithoutRelyingOnNaturalGas(x) ∧ ContributesDecreaseGreenhouseGases(x)))"
+  },
+  {
+    "NL": "There are athletes who trust only those coaches who are more skilled than them.",
+    "FOL": "∃x ∀y (Athlete(x) ∧ Coach(y) ∧ MoreSkilledThan(y, x) → Trust(x, y))"
+  },
+  {
+    "NL": "A man is reading a book on a bench in the park.",
+    "FOL": "∃x ∃y ∃z (Man(x) ∧ Book(y) ∧ Bench(z) ∧ ReadingOn(x, y, z) ∧ InThePark(x))"
+  },
+  {
+    "NL": "A picture is not both beautiful and ugly.",
+    "FOL": "∀v (Picture(v) → ¬(Beautiful(v) ∧ Ugly(v)))"
+  },
+  {
+    "NL": "There does not exist a building that shades all large trees.",
+    "FOL": "¬∃x (Building(x) ∧ ∀y (Large(y) ∧ Tree(y) → Shades(x, y)))"
+  },
+  {
+    "NL": "No one at the party tastes either pizza or salad.",
+    "FOL": "∀x (Guest(x) ∧ AtParty(x) → ¬(Taste(x, pizza) ∨ Taste(x, salad)))"
+  },
+  {
+    "NL": "A painting attracts viewers if it has striking colors, a powerful theme, and a mysterious subject.",
+    "FOL": "∀x (Painting(x) ∧ HasStrikingColors(x) ∧ HasPowerfulTheme(x) ∧ HasMysteriousSubject(x) → AttractsViewers(x))"
+  },
+  {
+    "NL": "Few boxers who do boxing also excel in golf.",
+    "FOL": "∃x (Boxer(x) ∧ DoBoxing(x) ∧ ExcelInGolf(x))"
+  },
+  {
+    "NL": "An entity is triangular only when it indicates a minuscule element.",
+    "FOL": "∀x (Triangular(x) ↔ ∃y (Minuscule(y) ∧ PointsTo(x, y)))"
+  },
+  {
+    "NL": "Rose cherishes a Beethoven symphony only if it was orchestrated before 1805.",
+    "FOL": "∀x (Symphony(x) ∧ OrchestratedBy(x, beethoven) → (OrchestratedBeforeeighteenofive(x) ↔ Cherishes(rose, x)))"
+  },
+  {
+    "NL": "Some buildings are tall.",
+    "FOL": "∃x (Building(x) ∧ Tall(x))"
+  },
+  {
+    "NL": "Every zookeeper is caring and patient.",
+    "FOL": "∀x (Zookeeper(x) → (Caring(x) ∧ Patient(x)))"
+  },
+  {
+    "NL": "All books are informative, but not every informative object is a book.",
+    "FOL": "∀x (Book(x) → Informative(x)) ∧ ¬∀x (Informative(x) → Book(x))"
+  },
+  {
+    "NL": "Every boy in the school plays soccer or is afraid of heights.",
+    "FOL": "∀x (Boy(x) ∧ InTheSchool(x) → (PlaysSoccer(x) ∨ AfraidOfHeights(x)))"
+  },
+  {
+    "NL": "There are engineers who are neither inexperienced nor unprofessional.",
+    "FOL": "∃x (Engineer(x) ∧ ¬(Inexperienced(x) ∨ Unprofessional(x)))"
+  },
+  {
+    "NL": "A shape can be two-dimensional or three-dimensional.",
+    "FOL": "∀x (Shape(x) → (TwoDimensional(x) ⊕ ThreeDimensional(x)))"
+  },
+  {
+    "NL": "All engineers who are diligent are appreciated by every manager.",
+    "FOL": "∀x (Engineer(x) ∧ Diligent(x) → ∀y (Manager(y) → Appreciates(y, x)))"
+  },
+  {
+    "NL": "A flower is a rose or not a rose.",
+    "FOL": "∀x (Flower(x) → (Rose(x) ⊕ ¬Rose(x)))"
+  },
+  {
+    "NL": "Not every university in England is older than every university in Germany.",
+    "FOL": "¬∀x ∀y (University(x) ∧ In(x, England) ∧ University(y) ∧ In(y, Germany) → Older(x, y))"
+  },
+  {
+    "NL": "There is a city where all tourists visit.",
+    "FOL": "∃x (City(x) ∧ ∀y (Tourist(y) → Visit(y, x)))"
+  },
+  {
+    "NL": "An athlete jumps hurdles or throws javelin.",
+    "FOL": "∀x (Athlete(x) → (JumpsHurdles(x) ∨ ThrowsJavelin(x)))"
+  },
+  {
+    "NL": "No scientists are brilliant unless they are curious, but all of them desire to discover a theory.",
+    "FOL": "∀x (Scientist(x) → (¬Brilliant(x) ∨ Curious(x))) ∧ ∀y (Scientist(y) → DesiresToDiscoverTheory(y))"
+  },
+  {
+    "NL": "An employee works in human resources or accounting.",
+    "FOL": "∀x (Employee(x) → WorksInHumanResources(x) ∨ WorksInAccounting(x))"
+  },
+  {
+    "NL": "A planet is in the solar system or the milky way.",
+    "FOL": "∀x (Planet(x) → InSolarSystem(x) ∨ InMilkyWay(x))"
+  },
+  {
+    "NL": "Something is a cube only if it is brown.",
+    "FOL": "∀x (Cube(x) → Brown(x))"
+  },
+  {
+    "NL": "Diplomats are not always nice.",
+    "FOL": "∃x (Diplomat(x) ∧ ¬Nice(x))"
+  },
+  {
+    "NL": "A computer game can make children happy.",
+    "FOL": "∀x ∀y (ComputerGame(x) ∧ Child(y) → CanMakeHappy(x, y))"
+  },
+  {
+    "NL": "A dance is a tango when it is a popular form of Argentinian dance, is performed by a couple, and is characterized by quick footwork.",
+    "FOL": "∀x (Dance(x) ∧ PopularArgentinianDance(x) ∧ PerformedByACouple(x) ∧ CharacterizedByQuickFootwork(x) → Tango(x))"
+  },
+  {
+    "NL": "Some products are either useful or useless, but not both.",
+    "FOL": "∃x (Product(x) ∧ (Useful(x) ⊕ Useless(x)))"
+  },
+  {
+    "NL": "There is a dog that all dogs follow if all cats are not silent.",
+    "FOL": "¬∀x (Cat(x) → Silent(x)) → ∃y (Dog(y) ∧ ∀z (Dog(z) → Follows(z, y)))"
+  },
+  {
+    "NL": "A chef is cooking a dish in the kitchen, while a waiter is serving a customer in the dining room.",
+    "FOL": "∃x ∃y (Chef(x) ∧ Dish(y) ∧ Cooking(x, y) ∧ InTheKitchen(x)) ∧ ∃z ∃w (Waiter(z) ∧ Customer(w) ∧ Serving(z, w) ∧ InTheDiningRoom(z))"
+  },
+  {
+    "NL": "A fish is swimming in the aquarium, while a bird is chirping at the balcony.",
+    "FOL": "∃x ∃y (Fish(x) ∧ Aquarium(y) ∧ SwimmingIn(x, y)) ∧ ∃z (Bird(z) ∧ Chirping(z) ∧ AtTheBalcony(z))"
+  },
+  {
+    "NL": "An apple is ripe or unripe, but not both.",
+    "FOL": "∀x (Apple(x) → (Ripe(x) ⊕ Unripe(x)))"
+  },
+  {
+    "NL": "A plant is a flower or a tree.",
+    "FOL": "∀x (Plant(x) → (Flower(x) ∨ Tree(x)))"
+  },
+  {
+    "NL": "A creature is deemed a mammal if it has fur and gives live birth, in contrast, reptiles have scales and lay eggs.",
+    "FOL": "∀x (Creature(x) → (Mammal(x) → HasFur(x) ∧ GivesLiveBirth(x))) ∧ ∀y (Reptile(y) → ¬HasFur(y) ∧ ¬GivesLiveBirth(y))"
+  },
+  {
+    "NL": "If a creature is not a bird or a mammal, it's a reptile.",
+    "FOL": "∀y ((Bird(y) ∨ Mammal(y)) → Reptile(y))"
+  },
+  {
+    "NL": "If a figure is a triangle, then it is either equilateral or scalene, but not both.",
+    "FOL": "∀x (Triangle(x) → (Equilateral(x) ⊕ Scalene(x)))"
+  },
+  {
+    "NL": "No person is both a doctor and a teacher.",
+    "FOL": "¬∃x (Person(x) ∧ Doctor(x) ∧ Teacher(x))"
+  },
+  {
+    "NL": "Every artist who inspires someone is inspired by someone else.",
+    "FOL": "∀x (Artist(x) ∧ ∃y (Human(y) ∧ Inspires(x, y)) → ∃z (Human(z) ∧ Inspires(z, x)))"
+  },
+  {
+    "NL": "If a fruit is an apple, then it is not a banana.",
+    "FOL": "∀x (Apple(x) → ¬Banana(x))"
+  },
+  {
+    "NL": "A reptile is considered a snake if it has no legs, slithers, and often has poisonous venom.",
+    "FOL": "∀x (Reptile(x) → ¬HasLegs(x) ∧ Slither(x) ∧ HasPoisonousVenom(x) → Snake(x))"
+  },
+  {
+    "NL": "A chef cooks Italian or Chinese food.",
+    "FOL": "∀x (Chef(x) → (CookItalianFood(x) ∨ CookChineseFood(x)))"
+  },
+  {
+    "NL": "Plants that are green and healthy always need more sunlight.",
+    "FOL": "∀x (Plant(x) ∧ Green(x) ∧ Healthy(x) → NeedMoreSunlight(x))"
+  },
+  {
+    "NL": "All months have at least 28 days.",
+    "FOL": "∀x (Month(x) → HasAtLeastTwentyEightDays(x))"
+  },
+  {
+    "NL": "Every leader who guides any team is revered by everyone.",
+    "FOL": "∀x (Leader(x) → ∀y ((Team(y) → Guide(x, y)) → ¬∃z (Person(z) ∧ Revered(z, x))))"
+  },
+  {
+    "NL": "All cars have wheels, but not all things with wheels are cars.",
+    "FOL": "∀x (Car(x) → Wheels(x)) ∧ ¬∀x (Wheels(x) → Car(x))"
+  },
+  {
+    "NL": "If one city is larger than another, then there is a city between them in terms of size.",
+    "FOL": "∀x ∀y ∃z (City(x) ∧ City(y) ∧ City(z) ∧ LargerThan(x, y) → Between(z, x, y))"
+  },
+  {
+    "NL": "A scientist is experimenting with chemicals in the lab.",
+    "FOL": "∃x ∃y (Scientist(x) ∧ Chemicals(y) ∧ Experimenting(x, y) ∧ InTheLab(x))"
+  },
+  {
+    "NL": "Peter watches a movie if and only if it is thrilling.",
+    "FOL": "∀v (Movie(v) → (Thrilling(v) ↔ Watches(peter, v)))"
+  },
+  {
+    "NL": "Every book is romantic if it is well written.",
+    "FOL": "∀x (Book(x) → (WellWritten(x) → Romantic(x)))"
+  },
+  {
+    "NL": "An entity can be a collective, an individual proprietorship, or an incorporated firm.",
+    "FOL": "∀x (Entity(x) → (Collective(x) ∨ IndividualProprietorship(x) ∨ IncorporatedFirm(x)))"
+  },
+  {
+    "NL": "A teacher who instructs a student will be instructed by someone else.",
+    "FOL": "∀x ∃y (Teacher(x) ∧ Student(y) ∧ Instruct(x, y) → ∃z (Person(z) ∧ WillInstruct(z, x)))"
+  },
+  {
+    "NL": "A student is studying with a laptop in the dorm.",
+    "FOL": "∃x ∃y ∃z (Student(x) ∧ Laptop(y) ∧ Dorm(z) ∧ StudyingWith(x, y) ∧ In(x, z))"
+  },
+  {
+    "NL": "Rain and snow tires Mike.",
+    "FOL": "∀x ((Rain(x) ∨ Snow(x)) → Tire(x, mike))"
+  },
+  {
+    "NL": "No human is an alien.",
+    "FOL": "¬∃x (Human(x) ∧ Alien(x))"
+  },
+  {
+    "NL": "A novel can be a slice-of-life story, have empathetic characters, and receive literary awards, or it can be a fantasy tale, have fantastical elements, and be a bestseller.",
+    "FOL": "∀x (Novel(x) → ((SliceOfLife(x) ∧ EmpatheticCharacters(x) ∧ ReceiveLiteraryAwards(x)) ⊕ (FantasyTale(x) ∧ FantasticalElements(x) ∧ Bestseller(x))))"
+  },
+  {
+    "NL": "A dog is barking in the yard.",
+    "FOL": "∃x (Dog(x) ∧ Barking(x) ∧ InTheYard(x))"
+  },
+  {
+    "NL": "Not all traditions impart wisdom, however, studying traditions is insightful.",
+    "FOL": "¬∀x (Tradition(x) → ImpartsWisdom(x)) ∧ ∀y (Tradition(y) → InsightfulToStudy(y))"
+  },
+  {
+    "NL": "Every baker bakes a cake he sells and sells a cake he does not bake.",
+    "FOL": "∀x (Baker(x) → (∃y (Bakes(x, y) ∧ Sells(x, y)) ∧ ∃z (Sells(x, z) ∧ ¬Bakes(x, z))))"
+  },
+  {
+    "NL": "John is a teacher, Emma is a lawyer, and Alex is an engineer.",
+    "FOL": "Teacher(john) ∧ Lawyer(emma) ∧ Engineer(alex)"
+  },
+  {
+    "NL": "A food business creates, makes, and offers many products, satisfying diverse consumer tastes.",
+    "FOL": "∀x ∃y ∃z (FoodBusiness(x) → Product(y) ∧ ConsumerTaste(z) ∧ Creates(x, y) ∧ Makes(x, y) ∧ Offers(x, y) ∧ Satisfies(x, z))"
+  },
+  {
+    "NL": "A hexagon is not pink and does not point to any green object.",
+    "FOL": "∀x (Hexagon(x) → (¬Pink(x) ∧ ¬∃y (Green(y) ∧ PointsTo(x, y))))"
+  },
+  {
+    "NL": "A cat is considered a housecat if it lives indoors or has a collar.",
+    "FOL": "∀x (Cat(x) ∧ (LivesIndoors(x) ∨ HasCollar(x)) → Housecat(x))"
+  },
+  {
+    "NL": "A person is defined as a chef if he can cook and works in a restaurant.",
+    "FOL": "∀x (Person(x) ∧ CanCook(x) ∧ WorksInRestaurant(x) → Chef(x))"
+  },
+  {
+    "NL": "If a piece is a painting, then all artists captivate some audiences.",
+    "FOL": "∃x (Painting(x) → ∀y ∃z (Artist(y) ∧ Audience(z) ∧ Captivates(y, z)))"
+  },
+  {
+    "NL": "If a student is a freshman, they either study in the science department or the arts department.",
+    "FOL": "∀x (Student(x) ∧ Freshman(x) → StudyInScienceDepartment(x) ⊕ StudyInArtsDepartment(x))"
+  },
+  {
+    "NL": "A plant is suitable for indoors if and only if it is not prickly and requires low light.",
+    "FOL": "∀x (Plant(x) → (SuitableForIndoors(x) ↔ ¬Prickly(x) ∧ LowLightRequired(x)))"
+  },
+  {
+    "NL": "All students are either hardworking who study consistently, or they are smart and absorb quickly.",
+    "FOL": "∀x (Student(x) → (Hardworking(x) ∧ StudyConsistently(x)) ⊕ (Smart(x) ∧ AbsorbQuickly(x)))"
+  },
+  {
+    "NL": "Not everyone who works hard prospers, but only those who work hard prosper.",
+    "FOL": "¬∀x (WorksHard(x) → Prospers(x)) ∧ ∀y (Prospers(y) → WorksHard(y))"
+  },
+  {
+    "NL": "Doctors treat patients in hospitals, while police maintain order in society.",
+    "FOL": "∀x (Doctor(x) → TreatPatientsInHospitals(x)) ∧ ∀y (Police(y) → MaintainOrderInSociety(y))"
+  },
+  {
+    "NL": "There is someone in the garden planting flowers.",
+    "FOL": "∃x (Person(x) ∧ InGarden(x) ∧ (Plant(x, flowers)))"
+  },
+  {
+    "NL": "Every plant is either a flower or a tree, but it cannot be both.",
+    "FOL": "∀x (Plant(x) → (Flower(x) ⊕ Tree(x)))"
+  },
+  {
+    "NL": "Every dessert is not perfect for diet.",
+    "FOL": "¬∀x (Dessert(x) → PerfectForDiet(x))"
+  },
+  {
+    "NL": "Can't be claimed that every dog that can fetch is trained, and no such dog can climb.",
+    "FOL": "¬∀x (Dog(x) ∧ CanFetch(x) → Trained(x)) ∧ ¬∃y (Dog(y) ∧ CanFetch(y) ∧ CanClimb(y))"
+  },
+  {
+    "NL": "A car can be labeled as a sedan, SUV, or pickup, but not all three at once.",
+    "FOL": "∀x (Car(x) ∧ Labeled(x) → (Sedan(x) ⊕ SUV(x) ⊕ Pickup(x)))"
+  },
+  {
+    "NL": "A dessert can be chocolatey, appearing dense and rich, or it can be fruity, bursting with fresh flavors, and often sold out.",
+    "FOL": "∀v (Dessert(v) → ((Chocolatey(v) ∧ Dense(v) ∧ Rich(v)) ⊕ (Fruity(v) ∧ FreshFlavors(v) ∧ SoldOut(v))))"
+  },
+  {
+    "NL": "No flowers are blue.",
+    "FOL": "∀x (Flower(x) → ¬Blue(x))"
+  },
+  {
+    "NL": "If every developer who knows Python gets hired, then there are developers who do not know Python that will also get hired.",
+    "FOL": "∀x (Developer(x) ∧ KnowsPython(x) → Hired(x)) → ∃y (Developer(y) ∧ ¬KnowsPython(y) ∧ Hired(y))"
+  },
+  {
+    "NL": "A restaurant achieves popularity if it has delicious food, good service, and a pleasant atmosphere.",
+    "FOL": "∀x (Restaurant(x) ∧ HasDeliciousFood(x) ∧ HasGoodService(x) ∧ HasPleasantAtmosphere(x) → AchievePopularity(x))"
+  },
+  {
+    "NL": "Anything green is dull only if it is a pentagon.",
+    "FOL": "∀x (Green(x) → (Dull(x) → Pentagon(x)))"
+  },
+  {
+    "NL": "Unless an object is neither brown nor black, it is a book.",
+    "FOL": "∀x ((Brown(x) ∨ Black(x)) → Book(x))"
+  },
+  {
+    "NL": "An appliance is either battery-operated or plug-in if it is not solar-powered.",
+    "FOL": "∀x (Appliance(x) ∧ ¬SolarPowered(x) → (BatteryOperated(x) ∨ Plugin(x)))"
+  },
+  {
+    "NL": "An elephant roams in the jungle, whereas a rat sneaks in the houses.",
+    "FOL": "∀x (Elephant(x) → RoamsInJungle(x)) ∧ ∀y (Rat(y) → SneaksInHouses(y))"
+  },
+  {
+    "NL": "A laptop is either portable or desktop if it is not semi-portable.",
+    "FOL": "∀x (Laptop(x) ∧ ¬SemiPortable(x) → (Portable(x) ∨ Desktop(x)))"
+  },
+  {
+    "NL": "It's incorrect to say all humans who can run are athletes, and not any of them can dance.",
+    "FOL": "¬∀x (Human(x) ∧ CanRun(x) → Athlete(x)) ∧ ¬∃y (Human(y) ∧ CanRun(y) ∧ CanDance(y))"
+  },
+  {
+    "NL": "No student in the class is smarter than every teacher in the school.",
+    "FOL": "¬∀x ∀y (Student(x) ∧ In(x, class) ∧ Teacher(y) ∧ In(y, school) → Smarter(x, y))"
+  },
+  {
+    "NL": "Anthology is a collection of poetry or prose.",
+    "FOL": "∀x (Anthology(x) → (Poetry(x) ∨ Prose(x)))"
+  },
+  {
+    "NL": "Some balls are yellow and some balls are blue, but there are no yellow and blue balls.",
+    "FOL": "∃x (Yellow(x)) ∧ ∃x (Blue(x)) ∧ ¬∃x (Yellow(x) ∧ Blue(x))"
+  },
+  {
+    "NL": "A weather pattern is fierce if it brings blizzards, typhoon level winds, and the potential of landslides or additional wreckage.",
+    "FOL": "∀x (WeatherPattern(x) ∧ BringsBlizzards(x) ∧ BringsTyphoonLevelWinds(x) ∧ (PotentialOfLandslides(x) ∨ AdditionalWreckage(x)) → Fierce(x))"
+  },
+  {
+    "NL": "A meal can either be a breakfast with nutritious ingredients and delightful flavors, or a dinner with rich courses and elegant presentation.",
+    "FOL": "∀x (Meal(x) → ((Breakfast(x) ∧ NutritiousIngredients(x) ∧ DelightfulFlavors(x)) ⊕ (Dinner(x) ∧ RichCourses(x) ∧ ElegantPresentation(x))))"
+  },
+  {
+    "NL": "Nothing is a green rectangle.",
+    "FOL": "¬∃x (Rectangle(x) ∧ Green(x))"
+  },
+  {
+    "NL": "Only the intelligent pass the test.",
+    "FOL": "∀x (¬Intelligent(x) → ¬PassTest(x))"
+  },
+  {
+    "NL": "Not all who work hard necessarily succeed, but only successful people have worked hard.",
+    "FOL": "¬∀x (WorksHard(x) → Success(x)) ∧ ∀y (Success(y) → WorksHard(y))"
+  },
+  {
+    "NL": "There are no humans who admire John.",
+    "FOL": "¬∃x (Human(x) ∧ Admire(x, john))"
+  },
+  {
+    "NL": "A number is either even or odd, but not both",
+    "FOL": "∀x (Number(x) → (Even(x) ⊕ Odd(x)))"
+  },
+  {
+    "NL": "An organism is a prokaryote or a eukaryote.",
+    "FOL": "∀x (Organism(x) → (Prokaryote(x) ∨ Eukaryote(x)))"
+  },
+  {
+    "NL": "A vehicle that has four wheels, an engine, and can carry people is a car.",
+    "FOL": "∀x (Vehicle(x) ∧ HasFourWheels(x) ∧ HasEngine(x) ∧ CanCarryPeople(x) → Car(x))"
+  },
+  {
+    "NL": "Something is a solid cube, and something is a transparent sphere.",
+    "FOL": "∃x (Solid(x) ∧ Cube(x)) ∧ ∃x (Transparent(x) ∧ Sphere(x))"
+  },
+  {
+    "NL": "A professor will approve the assignment only if he checks the sources.",
+    "FOL": "∀x (Professor(x) ∧ ApproveAssignment(x) → CheckSources(x))"
+  },
+  {
+    "NL": "Alex is a writer or Samantha is not a photographer.",
+    "FOL": "Writer(alex) ∨ ¬Photographer(samantha)"
+  },
+  {
+    "NL": "Mathematicians solve math problems, while scientists conduct experiments.",
+    "FOL": "∀x ∀y (Mathematician(x) ∧ MathProblem(y) → Solves(x, y)) ∧ ∀z ∀w (Scientist(z) ∧ Experiment(w) → Conducts(z, w))"
+  },
+  {
+    "NL": "A forest displays a variety of life forms when it contains trees, animals, and plants with distinct characteristics.",
+    "FOL": "∀x (Forest(x) ∧ ∃y ∃z ∃w (Tree(y) ∧ Animal(z) ∧ Plant(w) ∧ DistinctCharacteristics(y, z, w) ∧ Contains(x, y, z, w)) → DisplaysVarietyOfLifeForms(x))"
+  },
+  {
+    "NL": "Every chef who admires a chef is admired by that chef.",
+    "FOL": "∀x ∀y (Chef(x) ∧ Chef(y) ∧ Admires(x, y) → Admires(y, x))"
+  },
+  {
+    "NL": "Chloe misses Peter.",
+    "FOL": "Miss(chloe, peter)"
+  },
+  {
+    "NL": "Either Maria is not a doctor or Claire is not a nurse, but not both.",
+    "FOL": "¬Doctor(maria) ⊕ ¬Nurse(claire)"
+  },
+  {
+    "NL": "Students are not always intelligent.",
+    "FOL": "∃x (Student(x) ∧ ¬Intelligent(x))"
+  },
+  {
+    "NL": "A monkey is climbing a tree, and a bee is flying.",
+    "FOL": "∃x ∃y (Monkey(x) ∧ Tree(y) ∧ ClimbingOn(x, y)) ∧ ∃z (Bee(z) ∧ Flying(z))"
+  },
+  {
+    "NL": "A musician can play instruments, compose music, and perform live.",
+    "FOL": "∀x (Musician(x) → PlayInstruments(x) ∧ ComposeMusic(x) ∧ PerformLive(x))"
+  },
+  {
+    "NL": "People who save may become wealthy.",
+    "FOL": "∀x (Person(x) ∧ Saves(x) → MayBecomeWealthy(x))"
+  },
+  {
+    "NL": "Raphael relishes a Hemingway tale if and only if it is engaging.",
+    "FOL": "∀x (Tale(x) ∧ WrittenBy(x, hemingway) → (Engaging(x) ↔ Relishes(raphael, x)))"
+  },
+  {
+    "NL": "A tree is deemed deciduous if it sheds its leaves annually.",
+    "FOL": "∀x (Tree(x) ∧ ShedsLeavesAnnually(x) → Deciduous(x))"
+  },
+  {
+    "NL": "A musical instrument, like a piano or violin, can produce melodious music without needing electricity.",
+    "FOL": "∀x (MusicalInstrument(x) ∧ (Piano(x) ∨ Violin(x)) → (ProduceMelodiousMusic(x) ∧ ¬NeedsElectricity(x)))"
+  },
+  {
+    "NL": "A mechanic is working in a busy auto shop.",
+    "FOL": "∃x ∃y (Mechanic(x) ∧ Working(x) ∧ BusyAutoShop(y) ∧ In(x, y))"
+  },
+  {
+    "NL": "If not every bird sings, there exists a tree that every bird flies to.",
+    "FOL": "¬∀x (Bird(x) → Sing(x)) → ∃y (Tree(y) ∧ ∀z (Bird(z) → FliesTo(z, y)))"
+  },
+  {
+    "NL": "Not all cities are crowded.",
+    "FOL": "¬∀x (City(x) → Crowded(x))"
+  },
+  {
+    "NL": "Adam buys a car if and only if it was manufactured before 2000.",
+    "FOL": "∀z (Car(z) → (ManufacturedBeforetwothousand(z) ↔ Buys(adam, z)))"
+  },
+  {
+    "NL": "Only the responsible are promoted.",
+    "FOL": "∀x (¬Responsible(x) → ¬Promoted(x))"
+  },
+  {
+    "NL": "If something is a young cat or an old dog, then it is either friendly or hostile, but not both.",
+    "FOL": "∀x ((Young(x) ∧ Cat(x)) ∨ (Old(x) ∧ Dog(x)) → (Friendly(x) ⊕ Hostile(x)))"
+  },
+  {
+    "NL": "Every athlete is not disciplined.",
+    "FOL": "¬∀x (Athlete(x) → Disciplined(x))"
+  },
+  {
+    "NL": "The whale is a mammal.",
+    "FOL": "∀x (Whale(x) → Mammal(x))"
+  },
+  {
+    "NL": "No one in the gallery recognizes either Ford or Keaton.",
+    "FOL": "¬∃x (Person(x) ∧ InGallery(x) ∧ (Recognize(x, ford) ∨ Recognize(x, keaton)))"
+  },
+  {
+    "NL": "A home is cozy if and only if it's warm or inviting.",
+    "FOL": "∀x (Cozy(x) ↔ (Warm(x) ∨ Inviting(x)))"
+  },
+  {
+    "NL": "It's not true that all games are exciting.",
+    "FOL": "¬∀x (Game(x) → Exciting(x))"
+  },
+  {
+    "NL": "It is not the case that something is a big rhombus if and only if it is purple.",
+    "FOL": "¬∀x (Big(x) ∧ Rhombus(x) ↔ Purple(x))"
+  },
+  {
+    "NL": "A student is intelligent if and only if every book they read is complex.",
+    "FOL": "∀x (Intelligent(x) ↔ ∀y (Reads(x, y) → Complex(y)))"
+  },
+  {
+    "NL": "A power bank stores energy and provides it when required to charge devices.",
+    "FOL": "∀x (PowerBank(x) → (StoresEnergy(x) ∧ (IsRequiredToChargeDevices(x) → ProvidesEnergy(x))))"
+  },
+  {
+    "NL": "Cars run on fuel and emit carbon dioxide.",
+    "FOL": "∀x (Car(x) → (RunsOnFuel(x) ∧ EmitsCarbonDioxide(x)))"
+  },
+  {
+    "NL": "People in high-income group pay more tax, while those in the low-income group pay less tax.",
+    "FOL": "∀x (Person(x) ∧ HighIncome(x) → PaysMoreTax(x)) ∧ ∀y (Person(y) ∧ LowIncome(y) → PaysLessTax(y))"
+  },
+  {
+    "NL": "Countries with strong leaders, stable political systems, and abundant natural resources tend to be powerful.",
+    "FOL": "∀x (Country(x) ∧ StrongLeader(x) ∧ StablePoliticalSystem(x) ∧ AbundantResources(x) → Powerful(x))"
+  },
+  {
+    "NL": "If a person is a doctor, then they are not a nurse.",
+    "FOL": "∀x (Doctor(x) → ¬Nurse(x))"
+  },
+  {
+    "NL": "A laptop operates on battery, whereas a desktop works on direct power.",
+    "FOL": "∀x (Laptop(x) → OperatesOnBattery(x)) ∧ ∀y (Desktop(y) → WorksOnDirectPower(y))"
+  },
+  {
+    "NL": "A red bird sings a song.",
+    "FOL": "∃x (Red(x) ∧ Bird(x) → ∃y (Sings(x, y)))"
+  },
+  {
+    "NL": "A laptop links to the web and enables users to use programs and amenities.",
+    "FOL": "∀x (Laptop(x) → (LinksToWeb(x) ∧ EnablesUseOfPrograms(x) ∧ EnablesUseOfAmenities(x)))"
+  },
+  {
+    "NL": "Each synthetic material is durable only if it has plastic.",
+    "FOL": "∀x (SyntheticMaterial(x) → (Durable(x) → Plastic(x)))"
+  },
+  {
+    "NL": "All people desire something they possess and possess something they do not desire.",
+    "FOL": "∀x (People(x) → (∃y (Desire(x, y) ∧ Possess(x, y)) ∧ ∃z (Desire(x, z) ∧ ¬Possess(x, z))))"
+  },
+  {
+    "NL": "An entity might either be a lawyer or love cooking, but not both.",
+    "FOL": "∀x (Lawyer(x) ⊕ LoveCooking(x))"
+  },
+  {
+    "NL": "Either Dylan is not a scientist or Zoe is a lawyer, but not both.",
+    "FOL": "¬Scientist(dylan) ⊕ Lawyer(zoe)"
+  },
+  {
+    "NL": "A story that is a horror can make people scared.",
+    "FOL": "∀x ∀y (Story(x) ∧ Horror(x) ∧ Person(y) → CanMakeScared(x, y))"
+  },
+  {
+    "NL": "No food is deemed unhealthy unless it is either high in sugar or deep-fried, and not all of them are inexpensive.",
+    "FOL": "¬∃x (Food(x) ∧ Unhealthy(x) ∧ ¬(HighSugar(x) ∨ DeepFried(x))) ∧ ¬∀y (Food(y) → Inexpensive(y))"
+  },
+  {
+    "NL": "No cars are fast.",
+    "FOL": "¬∃x (Car(x) → Fast(x))"
+  },
+  {
+    "NL": "Every old tree is tall.",
+    "FOL": "∀x (OldTree(x) → Tall(x))"
+  },
+  {
+    "NL": "People that are young and inexperienced always need more guidance.",
+    "FOL": "∀x (Person(x) ∧ Young(x) ∧ Inexperienced(x) → NeedMoreGuidance(x))"
+  },
+  {
+    "NL": "All of the vegetarians at the dinner dislike chicken.",
+    "FOL": "∀x (Vegetarian(x) ∧ AtDinner(x) → DislikeChicken(x))"
+  },
+  {
+    "NL": "Some painters are writers.",
+    "FOL": "∃x (Painter(x) ∧ Writer(x))"
+  },
+  {
+    "NL": "If Eliza loves Franklin then Franklin loves Eliza.",
+    "FOL": "Love(eliza, franklin) → Love(franklin, eliza)"
+  },
+  {
+    "NL": "Not all meals are delicious or nutritious.",
+    "FOL": "¬∀x (Meal(x) → (Delicious(x) ∨ Nutritious(x)))"
+  },
+  {
+    "NL": "Computer engineers design software and hardware, while civil engineers only design buildings.",
+    "FOL": "∀x ∀y (CompEngineer(x) ∧ (Software(y) ∨ Hardware(y)) → Designs(x, y)) ∧ ∀z ∀w (CivEngineer(z) ∧ Designs(z, w) → Building(w))"
+  },
+  {
+    "NL": "Every painter who has exhibited with a gallery that is popular, either sells a masterpiece or is appreciated by all admirers.",
+    "FOL": "∀x (Painter(x) ∧ ∀y (Gallery(y) ∧ ExhibitedWith(x, y) ∧ Popular(y)) → (SellsMasterpiece(x) ∨ ∀z (Admirer(z) ∧ AppreciatedBy(x, z))))"
+  },
+  {
+    "NL": "No bird can fly over every mountain.",
+    "FOL": "¬∃x (Bird(x) ∧ ∀y (Mountain(y) → FlyOver(x, y)))"
+  },
+  {
+    "NL": "It's not accurate that every city is beautiful only if it is clean.",
+    "FOL": "¬∀x (City(x) → (Clean(x) → Beautiful(x)))"
+  },
+  {
+    "NL": "A smartphone uses Windows or Blackberry OS.",
+    "FOL": "∀x (Smartphone(x) → (Windows(x) ∨ BlackberryOS(x)))"
+  },
+  {
+    "NL": "Some items are either antiques or replicas.",
+    "FOL": "∃x (Item(x) ∧ (Antique(x) ⊕ Replica(x)))"
+  },
+  {
+    "NL": "There is a lake where some ducks swim in.",
+    "FOL": "∃x ∃y (Lake(x) ∧ Ducks(y) ∧ SwimIn(y, x))"
+  },
+  {
+    "NL": "Nobody in the seminar interacts with either John or Mary.",
+    "FOL": "∀x (Person(x) ∧ AtSeminar(x) → ¬Interact(x, john) ∧ ¬Interact(x, mary))"
+  },
+  {
+    "NL": "There is no writer who has written every novel but has never written a poem.",
+    "FOL": "¬∃x (Writer(x) ∧ ∀y (Novel(y) → HasWritten(x, y)) ∧ ¬∃z (Poem(z) ∧ HasWritten(x, z)))"
+  },
+  {
+    "NL": "A scientist is observing a specimen near a microscope.",
+    "FOL": "∃x ∃y ∃z (Scientist(x) ∧ Specimen(y) ∧ Microscope(z) ∧ Observing(x, y) ∧ Near(x, z))"
+  },
+  {
+    "NL": "All monkeys are climbing.",
+    "FOL": "∀x (Monkey(x) → Climbing(x))"
+  },
+  {
+    "NL": "A child is reading a book in the library.",
+    "FOL": "∃x ∃y (Child(x) ∧ Book(y) ∧ Reading(x, y) ∧ InTheLibrary(x))"
+  },
+  {
+    "NL": "A novel is an autobiographical fiction if it outlines the life experiences of the one who penned it.",
+    "FOL": "∀x ∃y (Novel(x) ∧ Individual(y) ∧ OutlinesLifeExperiences(x, y) ∧ PennedBy(x, y) → AutobiographicalFiction(x))"
+  },
+  {
+    "NL": "Some stars don't shine.",
+    "FOL": "∃x (Star(x) ∧ ¬Shine(x))"
+  },
+  {
+    "NL": "Regions with diverse culture, supportive communities, and ample opportunity provide a higher quality of living.",
+    "FOL": "∀x (Region(x) ∧ DiverseCulture(x) ∧ SupportiveCommunity(x) ∧ AmpleOpportunity(x) → ProvideHigherQualityOfLiving(x))"
+  },
+  {
+    "NL": "A car can be petrol or diesel.",
+    "FOL": "∀x (Car(x) → (Petrol(x) ⊕ Diesel(x)))"
+  },
+  {
+    "NL": "Not every doctor is either a pediatrician or a surgeon.",
+    "FOL": "¬∀x (Doctor(x) → (Pediatrician(x) ∨ Surgeon(x)))"
+  },
+  {
+    "NL": "If all trees are not green, there exists a garden that every garden connects to.",
+    "FOL": "¬∀x (Tree(x) → Green(x)) → ∃y (Garden(y) ∧ ∀z (Garden(z) → ConnectsTo(z, y)))"
+  },
+  {
+    "NL": "A machine is either operational or non-operational, not both at the same time.",
+    "FOL": "∀x (Machine(x) → (Operational(x) ⊕ NonOperational(x)))"
+  },
+  {
+    "NL": "Not every painting is an abstract.",
+    "FOL": "¬∀x (Painting(x) → Abstract(x))"
+  },
+  {
+    "NL": "No dogs are friendly.",
+    "FOL": "¬∃x (Dog(x) → Friendly(x))"
+  },
+  {
+    "NL": "Every pizza is either vegetarian or non-vegetarian, but not both.",
+    "FOL": "∀x (Pizza(x) → (Vegetarian(x) ⊕ NonVegetarian(x)))"
+  },
+  {
+    "NL": "There is no city that all tourists visit if and only if there exists a city that no tourist visits.",
+    "FOL": "¬∃x (City(x) ∧ ∀y (Tourist(y) → Visit(y, x))) ↔ ∃z (City(z) ∧ ∀w (Tourist(w) → ¬Visit(z, w)))"
+  },
+  {
+    "NL": "There are chefs who are neither incompetent nor uncreative.",
+    "FOL": "∃x (Chef(x) ∧ ¬(Incompetent(x) ∨ Uncreative(x)))"
+  },
+  {
+    "NL": "All people who view existence as if it was a play, overlook the essence.",
+    "FOL": "∀x (ViewsExistenceAsPlay(x) → OverlooksEssence(x))"
+  },
+  {
+    "NL": "A color can be referred to as primary, secondary, or tertiary, but not all three at once.",
+    "FOL": "∀x (Color(x) ∧ Referred(x) → (Primary(x) ⊕ Secondary(x) ⊕ Tertiary(x)))"
+  },
+  {
+    "NL": "A bird that sings in the morning, has feathers and can fly is usually a songbird.",
+    "FOL": "∀x (Bird(x) ∧ SingsInTheMorning(x) ∧ HasFeathers(x) ∧ CanFly(x) → Songbird(x))"
+  },
+  {
+    "NL": "It's false that all birds that can fly are eagles, and none of such birds can sing.",
+    "FOL": "¬∀x (Bird(x) ∧ CanFly(x) → Eagle(x)) ∧ ¬∃y (Bird(y) ∧ CanFly(y) ∧ CanSing(y))"
+  },
+  {
+    "NL": "Kelly fears Leo if and only if Leo fears Kelly.",
+    "FOL": "Fear(kelly, leo) ↔ Fear(leo, kelly)"
+  },
+  {
+    "NL": "A circle is black or directs towards some white entity.",
+    "FOL": "∀x (Circle(x) → (Black(x) ∨ ∃y (White(y) ∧ DirectsTowards(x, y))))"
+  },
+  {
+    "NL": "An individual is viewed a painter if they can color canvases, possess artistic abilities, and have quality brushes.",
+    "FOL": "∀x (Person(x) ∧ ColorCanvases(x) ∧ HaveArtisticAbilities(x) ∧ HaveQualityBrushes(x) → Painter(x))"
+  },
+  {
+    "NL": "A gadget is marked as a gaming console if it can run games, operate interface, and has a controller.",
+    "FOL": "∀x ((Gadget(x) ∧ RunGames(x) ∧ OperateInterface(x) ∧ HasController(x)) → GamingConsole(x))"
+  },
+  {
+    "NL": "A piece of writing is an essay when it presents an argument, discusses a specific topic, and includes a thesis statement.",
+    "FOL": "∀x (PieceOfWriting(x) ∧ PresentsArgument(x) ∧ DiscussesSpecificTopic(x) ∧ IncludesThesisStatement(x) → Essay(x))"
+  },
+  {
+    "NL": "A smell is pleasant or not pleasant.",
+    "FOL": "∀x (Smell(x) → (Pleasant(x) ⊕ ¬Pleasant(x)))"
+  },
+  {
+    "NL": "All students at the school will study.",
+    "FOL": "∀x (Student(x) ∧ AtSchool(x) → WillStudy(x))"
+  },
+  {
+    "NL": "There are libraries where all readers read.",
+    "FOL": "∃x (Library(x) ∧ ∀y (Reader(y) → ReadIn(y, x)))"
+  },
+  {
+    "NL": "Every student is either a freshman or a sophomore, but it cannot be both.",
+    "FOL": "∀x (Student(x) → (Freshman(x) ⊕ Sophomore(x)))"
+  },
+  {
+    "NL": "A bird will fly only if it doesn't lose its feathers.",
+    "FOL": "∀x (Bird(x) ∧ Fly(x) → ¬LoseFeathers(x))"
+  },
+  {
+    "NL": "Everyone receives something he earns and earns something he does not receive.",
+    "FOL": "∀x (Person(x) → (∃y (Earn(x, y) ∧ Receive(x, y)) ∧ ∃z (Earn(x, z) ∧ ¬Receive(x, z))))"
+  },
+  {
+    "NL": "Every doctor is a professional, but not all professionals are doctors.",
+    "FOL": "∀x (Doctor(x) → Professional(x)) ∧ ¬∀x (Professional(x) → Doctor(x))"
+  },
+  {
+    "NL": "Every scientist is analytical, but not every analytical person is a scientist.",
+    "FOL": "∀x (Scientist(x) → Analytical(x)) ∧ ¬∀x (Analytical(x) → Scientist(x))"
+  },
+  {
+    "NL": "A desktop has a mouse if it supports pointer navigation and has a work interface.",
+    "FOL": "∀x (Desktop(x) ∧ SupportsPointerNavigation(x) ∧ HasWorkInterface(x) → HasMouse(x))"
+  },
+  {
+    "NL": "If an object is large, then it is not a square.",
+    "FOL": "∀x (Large(x) → ¬Square(x))"
+  },
+  {
+    "NL": "James is a lawyer, photographer, and gardener.",
+    "FOL": "Lawyer(james) ∧ Photographer(james) ∧ Gardener(james)"
+  },
+  {
+    "NL": "Healthy habits do not ensure longevity.",
+    "FOL": "∀w (HealthyHabit(w) → ¬EnsureLongevity(w))"
+  },
+  {
+    "NL": "A fruit can be an apple, an orange, or a grape.",
+    "FOL": "∀x (Fruit(x) → (Apple(x) ∨ Orange(x) ∨ Grape(x)))"
+  },
+  {
+    "NL": "An apple is either red or not red.",
+    "FOL": "∀x (Apple(x) → (Red(x) ⊕ ¬Red(x)))"
+  },
+  {
+    "NL": "A musician will play the piano only if she does not sing songs.",
+    "FOL": "∀x (Musician(x) ∧ PlayPiano(x) → ¬SingSongs(x))"
+  },
+  {
+    "NL": "A student passes the test if and only if they studied enough or answered the questions correctly.",
+    "FOL": "∀x (Student(x) → (PassTest(x) ↔ (StudiedEnough(x) ∨ AnsweredQuestionsCorrectly(x))))"
+  },
+  {
+    "NL": "An eagle is attacking a rabbit in the mountains.",
+    "FOL": "∃x ∃y (Eagle(x) ∧ Rabbit(y) ∧ Attacking(x, y) ∧ InTheMountains(x))"
+  }
+]
